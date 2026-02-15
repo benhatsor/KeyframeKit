@@ -39,7 +39,9 @@ The primary reason to play your animation in JS is because you get way more cont
 targetedAnim.pause();
 targetedAnim.playbackRate = -1;
 const progress = targetedAnim.overallProgress; // 0 to 1 (Baseline newly available)
+await targetedAnim.finished;
 ```
+[...and more.](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API)
 
 
 ### Defining animations in JS
