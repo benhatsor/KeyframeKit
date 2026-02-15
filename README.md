@@ -1,6 +1,6 @@
 # KeyframeKit.js
 
-A lightweight and performant set of tools for working with JavaScript animations.  
+A lightweight and performant set of tools for working with CSS animations in JavaScript.  
 Powered by the [Web Animations API][1].
 
 
@@ -26,19 +26,25 @@ const rotateSmallAnim = keyframes['rotate-small'].toKeyframeEffect({
   easing: 'ease'
 });
 
+// then:
 const targetedAnim = rotateSmallAnim.toAnimation({
   target: document.querySelector('.el')
 });
 
-// then:
 targetedAnim.play();
-// targetedAnim.pause();
-// targetedAnim.playbackRate = -1;
-// const progress = targetedAnim.overallProgress; (Baseline newly available)
+```
+
+The primary reason to play your animation in JS is because you get way more control over its playback:
+```js
+targetedAnim.pause();
+targetedAnim.playbackRate = -1;
+const progress = targetedAnim.overallProgress; // 0 to 1 (Baseline newly available)
 ```
 
 
 ### Defining animations in JS
+
+This is useful for when you want to have all your animation code in one place.
 
 ```js
 import { KeyframeEffectParameters } from './KeyframeKit.js';
