@@ -1,6 +1,6 @@
 //
 // KeyframeKit.js
-// Created by Ben on 2/16/26.
+// Ben Hatsor
 // 
 // See README.md for usage.
 //
