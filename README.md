@@ -34,7 +34,7 @@ const targetedAnim = rotateSmallAnim.toAnimation({
 targetedAnim.play();
 ```
 
-The primary reason to play your animations in JS is because you get way more control over their playback:
+The primary reason to play your animation in JS is because you get way more control over its playback:
 ```js
 targetedAnim.pause();
 targetedAnim.playbackRate = -1;
