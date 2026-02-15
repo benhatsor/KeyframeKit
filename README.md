@@ -18,7 +18,7 @@ Then, in JS:
 ```js
 import KeyframeKit from './KeyframeKit.js';
 
-// get keyframes defined in document stylesheets
+// get all keyframes defined in document stylesheets
 const keyframes = KeyframeKit.getStyleSheetKeyframes();
 
 const rotateSmallAnim = keyframes['rotate-small'].toKeyframeEffect({
