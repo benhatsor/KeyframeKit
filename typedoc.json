@@ -27,7 +27,7 @@
   "expandParameters": true,
   "expandObjects": true,
 
-  //"parametersFormat": "htmlTable",
+  "interfacePropertiesFormat": "htmlTable",
 
-  //"useCodeBlocks": true
+  "useCodeBlocks": true
 }
