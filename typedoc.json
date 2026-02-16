@@ -13,7 +13,7 @@
 
   "sidebar": {
     //"autoConfiguration": false,
-    "heading": "Reference"
+    "heading": "[Reference](../wiki/Reference)"
   },
 
   "remarkPlugins": [
