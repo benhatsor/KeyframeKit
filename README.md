@@ -3,6 +3,13 @@
 An intuitive, lightweight and performant set of tools for working with CSS animations in JavaScript.  
 Powered by the [Web Animations API][1].
 
+## Installation
+
+npm
+```bash
+npm install keyframekit
+```
+
 ## Usage
 
 ### Playing CSS-defined animations with JS
