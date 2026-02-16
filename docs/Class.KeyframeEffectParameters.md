@@ -1,19 +1,19 @@
 [KeyframeKit](../wiki/Reference) / KeyframeEffectParameters
 
-Defined in: [KeyframeKit.ts:232](https://github.com/benhatsor/KeyframeKit.js/blob/bd3c190bbce7e40f265986d7d43fd0735867194d/src/KeyframeKit.ts#L232)
+Defined in: [KeyframeKit.ts:232](https://github.com/benhatsor/KeyframeKit.js/blob/886792e1530f55d27efcd793747b20129341d83c/src/KeyframeKit.ts#L232)
 
 ## Constructors
 
 ### Constructor
 
 ```ts
-new KeyframeEffectParameters(options: {
+new KeyframeEffectParameters(obj: {
   keyframes: KeyframeArgument;
   options?: number | KeyframeEffectOptions;
 }): KeyframeEffectParameters;
 ```
 
-Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blob/bd3c190bbce7e40f265986d7d43fd0735867194d/src/KeyframeKit.ts#L237)
+Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blob/886792e1530f55d27efcd793747b20129341d83c/src/KeyframeKit.ts#L237)
 
 #### Parameters
 
@@ -28,7 +28,7 @@ Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blo
 <tr>
 <td>
 
-`options`
+`obj`
 
 </td>
 <td>
@@ -40,7 +40,7 @@ Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blo
 <tr>
 <td>
 
-`options.keyframes`
+`obj.keyframes`
 
 </td>
 <td>
@@ -52,7 +52,7 @@ Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blo
 <tr>
 <td>
 
-`options.options?`
+`obj.options?`
 
 </td>
 <td>
@@ -110,13 +110,13 @@ Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blo
 ### toAnimation()
 
 ```ts
-toAnimation(options: {
+toAnimation(obj: {
   target: Element | null;
   timeline?: AnimationTimeline;
 }): Animation;
 ```
 
-Defined in: [KeyframeKit.ts:247](https://github.com/benhatsor/KeyframeKit.js/blob/bd3c190bbce7e40f265986d7d43fd0735867194d/src/KeyframeKit.ts#L247)
+Defined in: [KeyframeKit.ts:247](https://github.com/benhatsor/KeyframeKit.js/blob/886792e1530f55d27efcd793747b20129341d83c/src/KeyframeKit.ts#L247)
 
 #### Parameters
 
@@ -131,7 +131,7 @@ Defined in: [KeyframeKit.ts:247](https://github.com/benhatsor/KeyframeKit.js/blo
 <tr>
 <td>
 
-`options`
+`obj`
 
 </td>
 <td>
@@ -143,7 +143,7 @@ Defined in: [KeyframeKit.ts:247](https://github.com/benhatsor/KeyframeKit.js/blo
 <tr>
 <td>
 
-`options.target`
+`obj.target`
 
 </td>
 <td>
@@ -155,7 +155,7 @@ Defined in: [KeyframeKit.ts:247](https://github.com/benhatsor/KeyframeKit.js/blo
 <tr>
 <td>
 
-`options.timeline?`
+`obj.timeline?`
 
 </td>
 <td>

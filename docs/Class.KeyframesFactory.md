@@ -1,6 +1,6 @@
 [KeyframeKit](../wiki/Reference) / KeyframesFactory
 
-Defined in: [KeyframeKit.ts:14](https://github.com/benhatsor/KeyframeKit.js/blob/bd3c190bbce7e40f265986d7d43fd0735867194d/src/KeyframeKit.ts#L14)
+Defined in: [KeyframeKit.ts:14](https://github.com/benhatsor/KeyframeKit.js/blob/886792e1530f55d27efcd793747b20129341d83c/src/KeyframeKit.ts#L14)
 
 ## Properties
 
@@ -44,12 +44,12 @@ Defined in: [KeyframeKit.ts:14](https://github.com/benhatsor/KeyframeKit.js/blob
 ### getAllStyleSheetKeyframesRules()
 
 ```ts
-getAllStyleSheetKeyframesRules(options?: {
+getAllStyleSheetKeyframesRules(obj?: {
   in?: KeyframesFactorySource;
 }): ParsedKeyframesRules;
 ```
 
-Defined in: [KeyframeKit.ts:102](https://github.com/benhatsor/KeyframeKit.js/blob/bd3c190bbce7e40f265986d7d43fd0735867194d/src/KeyframeKit.ts#L102)
+Defined in: [KeyframeKit.ts:102](https://github.com/benhatsor/KeyframeKit.js/blob/886792e1530f55d27efcd793747b20129341d83c/src/KeyframeKit.ts#L102)
 
 #### Parameters
 
@@ -64,7 +64,7 @@ Defined in: [KeyframeKit.ts:102](https://github.com/benhatsor/KeyframeKit.js/blo
 <tr>
 <td>
 
-`options`
+`obj`
 
 </td>
 <td>
@@ -76,7 +76,7 @@ Defined in: [KeyframeKit.ts:102](https://github.com/benhatsor/KeyframeKit.js/blo
 <tr>
 <td>
 
-`options.in?`
+`obj.in?`
 
 </td>
 <td>
@@ -97,13 +97,13 @@ Defined in: [KeyframeKit.ts:102](https://github.com/benhatsor/KeyframeKit.js/blo
 ### getStyleSheetKeyframes()
 
 ```ts
-getStyleSheetKeyframes(options: {
+getStyleSheetKeyframes(obj: {
   in?: KeyframesFactorySource;
   of: string;
 }): ParsedKeyframes | undefined;
 ```
 
-Defined in: [KeyframeKit.ts:25](https://github.com/benhatsor/KeyframeKit.js/blob/bd3c190bbce7e40f265986d7d43fd0735867194d/src/KeyframeKit.ts#L25)
+Defined in: [KeyframeKit.ts:25](https://github.com/benhatsor/KeyframeKit.js/blob/886792e1530f55d27efcd793747b20129341d83c/src/KeyframeKit.ts#L25)
 
 #### Parameters
 
@@ -118,7 +118,7 @@ Defined in: [KeyframeKit.ts:25](https://github.com/benhatsor/KeyframeKit.js/blob
 <tr>
 <td>
 
-`options`
+`obj`
 
 </td>
 <td>
@@ -130,7 +130,7 @@ Defined in: [KeyframeKit.ts:25](https://github.com/benhatsor/KeyframeKit.js/blob
 <tr>
 <td>
 
-`options.in?`
+`obj.in?`
 
 </td>
 <td>
@@ -142,7 +142,7 @@ Defined in: [KeyframeKit.ts:25](https://github.com/benhatsor/KeyframeKit.js/blob
 <tr>
 <td>
 
-`options.of`
+`obj.of`
 
 </td>
 <td>
@@ -163,12 +163,12 @@ Defined in: [KeyframeKit.ts:25](https://github.com/benhatsor/KeyframeKit.js/blob
 ### parseKeyframesRule()
 
 ```ts
-parseKeyframesRule(options: {
+parseKeyframesRule(obj: {
   rule: CSSKeyframesRule;
 }): ParsedKeyframes;
 ```
 
-Defined in: [KeyframeKit.ts:174](https://github.com/benhatsor/KeyframeKit.js/blob/bd3c190bbce7e40f265986d7d43fd0735867194d/src/KeyframeKit.ts#L174)
+Defined in: [KeyframeKit.ts:174](https://github.com/benhatsor/KeyframeKit.js/blob/886792e1530f55d27efcd793747b20129341d83c/src/KeyframeKit.ts#L174)
 
 #### Parameters
 
@@ -183,7 +183,7 @@ Defined in: [KeyframeKit.ts:174](https://github.com/benhatsor/KeyframeKit.js/blo
 <tr>
 <td>
 
-`options`
+`obj`
 
 </td>
 <td>
@@ -195,7 +195,7 @@ Defined in: [KeyframeKit.ts:174](https://github.com/benhatsor/KeyframeKit.js/blo
 <tr>
 <td>
 
-`options.rule`
+`obj.rule`
 
 </td>
 <td>
