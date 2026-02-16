@@ -15,7 +15,7 @@
 
   "sidebar": {
     //"autoConfiguration": false,
-    "heading": "[Reference](../wiki/Reference)"
+    "heading": "[Reference](../wiki)"
   },
 
   "remarkPlugins": [
