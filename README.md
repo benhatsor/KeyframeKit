@@ -16,30 +16,31 @@ Then, in JS:
 ```js
 import KeyframeKit from './KeyframeKit.js';
 
-// gets keyframes defined in document stylesheets
+// get keyframes from document stylesheet
 const rotateSmallAnimKeyframes = KeyframeKit.getStyleSheetKeyframes({
   of: 'rotate-small'
 });
 
+// then, define your animation
 const rotateSmallAnim = rotateSmallAnimKeyframes.toKeyframeEffect({
   duration: 700,
   easing: 'ease'
 });
 
-// then:
-const targetedAnim = rotateSmallAnim.toAnimation({
+// finally, attach it to an element:
+const attachedAnim = rotateSmallAnim.toAnimation({
   target: document.querySelector('.el')
 });
 
-targetedAnim.play();
+attachedAnim.play();
 ```
 
 The primary reason to play your animation with JS is because you get way more control over its playback:
 ```js
-targetedAnim.pause();
-targetedAnim.playbackRate = -1;
-const progress = targetedAnim.overallProgress; // 0 to 1 (Baseline newly available)
-await targetedAnim.finished;
+attachedAnim.pause();
+attachedAnim.playbackRate = -1;
+const progress = attachedAnim.overallProgress; // 0 to 1 (Baseline newly available)
+await attachedAnim.finished;
 ```
 [...and more.][2]
 
@@ -50,10 +51,13 @@ This is useful for when you want to have all your animation code in one place.
 ```js
 import { KeyframeEffectParameters } from './KeyframeKit.js';
 
+// define your animation
 const linkTextHoverAnim = new KeyframeEffectParameters({
 
   keyframes: {
+    // 0 to 1. equivalent to CSS keyframe percentage values:
     offset: [0, 0.499, 0.5, 1],
+    // property keyframes:
     clipPath: ['inset(0 0 0 0)', 'inset(100% 0 0 0)', 'inset(0 0 100% 0)', 'inset(0 0 0 0)'],
     top: ['0', '-20px', '20px', '0']
   },
@@ -65,17 +69,18 @@ const linkTextHoverAnim = new KeyframeEffectParameters({
   
 });
 
-// then:
-const targetedAnim = linkTextHoverAnim.toAnimation({
+// then, attach it to an element:
+const attachedAnim = linkTextHoverAnim.toAnimation({
   target: document.querySelector('.link')
 });
 
-targetedAnim.play();
+attachedAnim.play();
 ```
 
 ## Typing
 
-This library is completely usable in native JS, but it also has full spec-compliant type support.  
+This library is completely usable in native JS, but it also has full spec-compliant type support,  
+including declaration files and source maps.
 
 ## License
 
