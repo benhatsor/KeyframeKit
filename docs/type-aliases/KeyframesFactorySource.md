@@ -6,6 +6,6 @@
 
 # Type Alias: KeyframesFactorySource
 
-> **KeyframesFactorySource** = [`DocumentOrShadowRoot`](../-internal-/interfaces/DocumentOrShadowRoot.md) \| [`CSSStyleSheet`](../-internal-/interfaces/CSSStyleSheet.md)
+> **KeyframesFactorySource** = `DocumentOrShadowRoot` \| `CSSStyleSheet`
 
-Defined in: [src/KeyframeKit.ts:12](https://github.com/benhatsor/KeyframeKit.js/blob/9bbef71b1c2a8ef2d3cb4df1e0813b40c9f2eb47/src/KeyframeKit.ts#L12)
+Defined in: [KeyframeKit.ts:12](https://github.com/benhatsor/KeyframeKit.js/blob/bcfeab93836eb3e2686a40ca426a30b4314cd0cf/src/KeyframeKit.ts#L12)

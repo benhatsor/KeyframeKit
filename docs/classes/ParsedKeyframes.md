@@ -6,7 +6,7 @@
 
 # Class: ParsedKeyframes
 
-Defined in: [src/KeyframeKit.ts:272](https://github.com/benhatsor/KeyframeKit.js/blob/9bbef71b1c2a8ef2d3cb4df1e0813b40c9f2eb47/src/KeyframeKit.ts#L272)
+Defined in: [KeyframeKit.ts:272](https://github.com/benhatsor/KeyframeKit.js/blob/bcfeab93836eb3e2686a40ca426a30b4314cd0cf/src/KeyframeKit.ts#L272)
 
 ## Constructors
 
@@ -14,13 +14,13 @@ Defined in: [src/KeyframeKit.ts:272](https://github.com/benhatsor/KeyframeKit.js
 
 > **new ParsedKeyframes**(`keyframes`): `ParsedKeyframes`
 
-Defined in: [src/KeyframeKit.ts:276](https://github.com/benhatsor/KeyframeKit.js/blob/9bbef71b1c2a8ef2d3cb4df1e0813b40c9f2eb47/src/KeyframeKit.ts#L276)
+Defined in: [KeyframeKit.ts:276](https://github.com/benhatsor/KeyframeKit.js/blob/bcfeab93836eb3e2686a40ca426a30b4314cd0cf/src/KeyframeKit.ts#L276)
 
 #### Parameters
 
 ##### keyframes
 
-[`Keyframe`](../-internal-/interfaces/Keyframe.md)[]
+`Keyframe`[]
 
 #### Returns
 
@@ -30,9 +30,9 @@ Defined in: [src/KeyframeKit.ts:276](https://github.com/benhatsor/KeyframeKit.js
 
 ### keyframes
 
-> **keyframes**: [`Keyframe`](../-internal-/interfaces/Keyframe.md)[]
+> **keyframes**: `Keyframe`[]
 
-Defined in: [src/KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blob/9bbef71b1c2a8ef2d3cb4df1e0813b40c9f2eb47/src/KeyframeKit.ts#L274)
+Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blob/bcfeab93836eb3e2686a40ca426a30b4314cd0cf/src/KeyframeKit.ts#L274)
 
 ## Methods
 
@@ -40,13 +40,13 @@ Defined in: [src/KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js
 
 > **toKeyframeEffect**(`options`): [`KeyframeEffectParameters`](KeyframeEffectParameters.md)
 
-Defined in: [src/KeyframeKit.ts:280](https://github.com/benhatsor/KeyframeKit.js/blob/9bbef71b1c2a8ef2d3cb4df1e0813b40c9f2eb47/src/KeyframeKit.ts#L280)
+Defined in: [KeyframeKit.ts:280](https://github.com/benhatsor/KeyframeKit.js/blob/bcfeab93836eb3e2686a40ca426a30b4314cd0cf/src/KeyframeKit.ts#L280)
 
 #### Parameters
 
 ##### options
 
-`number` | [`KeyframeEffectOptions`](../-internal-/interfaces/KeyframeEffectOptions.md) | `null`
+`number` | `KeyframeEffectOptions` | `null`
 
 #### Returns
 
