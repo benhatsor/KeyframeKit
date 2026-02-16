@@ -1,19 +1,14 @@
 [KeyframeKit](../wiki/Reference) / ParsedKeyframes
 
-Defined in: [KeyframeKit.ts:270](https://github.com/benhatsor/KeyframeKit.js/blob/e79a1f92c19e8ab1421541708d9fc825935e122a/src/KeyframeKit.ts#L270)
+Defined in: [KeyframeKit.ts:270](https://github.com/benhatsor/KeyframeKit.js/blob/a6d28f4198d3ffb2e550881c84d816903df45295/src/KeyframeKit.ts#L270)
 
 ## Contents
 
 * [Constructors](#constructors)
-
   * [Constructor](#constructor)
-
 * [Properties](#properties)
-
   * [keyframes](#keyframes-1)
-
 * [Methods](#methods)
-
   * [toKeyframeEffect()](#tokeyframeeffect)
 
 ## Constructors
@@ -24,7 +19,7 @@ Defined in: [KeyframeKit.ts:270](https://github.com/benhatsor/KeyframeKit.js/blo
 new ParsedKeyframes(keyframes: Keyframe[]): ParsedKeyframes;
 ```
 
-Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blob/e79a1f92c19e8ab1421541708d9fc825935e122a/src/KeyframeKit.ts#L274)
+Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blob/a6d28f4198d3ffb2e550881c84d816903df45295/src/KeyframeKit.ts#L274)
 
 #### Parameters
 
@@ -44,7 +39,7 @@ Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blo
 keyframes: Keyframe[];
 ```
 
-Defined in: [KeyframeKit.ts:272](https://github.com/benhatsor/KeyframeKit.js/blob/e79a1f92c19e8ab1421541708d9fc825935e122a/src/KeyframeKit.ts#L272)
+Defined in: [KeyframeKit.ts:272](https://github.com/benhatsor/KeyframeKit.js/blob/a6d28f4198d3ffb2e550881c84d816903df45295/src/KeyframeKit.ts#L272)
 
 ## Methods
 
@@ -54,7 +49,7 @@ Defined in: [KeyframeKit.ts:272](https://github.com/benhatsor/KeyframeKit.js/blo
 toKeyframeEffect(options: number | KeyframeEffectOptions | null): KeyframeEffectParameters;
 ```
 
-Defined in: [KeyframeKit.ts:278](https://github.com/benhatsor/KeyframeKit.js/blob/e79a1f92c19e8ab1421541708d9fc825935e122a/src/KeyframeKit.ts#L278)
+Defined in: [KeyframeKit.ts:278](https://github.com/benhatsor/KeyframeKit.js/blob/a6d28f4198d3ffb2e550881c84d816903df45295/src/KeyframeKit.ts#L278)
 
 #### Parameters
 
