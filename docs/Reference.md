@@ -2,15 +2,21 @@
 
 ## Classes
 
-* [KeyframeEffectParameters](../wiki/Class.KeyframeEffectParameters)
-* [ParsedKeyframes](../wiki/Class.ParsedKeyframes)
+| Class | Description |
+| ------ | ------ |
+| [KeyframeEffectParameters](../wiki/Class.KeyframeEffectParameters) | - |
+| [ParsedKeyframes](../wiki/Class.ParsedKeyframes) | - |
 
 ## Type Aliases
 
-* [KeyframeArgument](../wiki/TypeAlias.KeyframeArgument)
-* [KeyframesFactorySource](../wiki/TypeAlias.KeyframesFactorySource)
-* [ParsedKeyframesRules](../wiki/TypeAlias.ParsedKeyframesRules)
+| Type Alias | Description |
+| ------ | ------ |
+| [KeyframeArgument](../wiki/TypeAlias.KeyframeArgument) | - |
+| [KeyframesFactorySource](../wiki/TypeAlias.KeyframesFactorySource) | - |
+| [ParsedKeyframesRules](../wiki/TypeAlias.ParsedKeyframesRules) | - |
 
 ## Variables
 
-* [default](../wiki/Variable.default)
+| Variable | Description |
+| ------ | ------ |
+| [default](../wiki/Variable.default) | - |

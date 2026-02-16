@@ -2,15 +2,15 @@
 
 # Class: KeyframeEffectParameters
 
-Defined in: [KeyframeKit.ts:232](https://github.com/benhatsor/KeyframeKit.js/blob/a60ab03ab1367590cbd9a23b8b88f7341f334fe4/src/KeyframeKit.ts#L232)
+Defined in: [KeyframeKit.ts:232](https://github.com/benhatsor/KeyframeKit.js/blob/eaf90f0732c429648c316172951626e9177e9e0d/src/KeyframeKit.ts#L232)
 
 ## Constructors
 
 ### Constructor
 
-> **new KeyframeEffectParameters**(`__namedParameters`: `object`): `KeyframeEffectParameters`
+> **new KeyframeEffectParameters**(`__namedParameters`): `KeyframeEffectParameters`
 
-Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blob/a60ab03ab1367590cbd9a23b8b88f7341f334fe4/src/KeyframeKit.ts#L237)
+Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blob/eaf90f0732c429648c316172951626e9177e9e0d/src/KeyframeKit.ts#L237)
 
 #### Parameters
 
@@ -34,7 +34,7 @@ Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blo
 
 > **keyframes**: [`KeyframeArgument`](../wiki/TypeAlias.KeyframeArgument)
 
-Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blob/a60ab03ab1367590cbd9a23b8b88f7341f334fe4/src/KeyframeKit.ts#L234)
+Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blob/eaf90f0732c429648c316172951626e9177e9e0d/src/KeyframeKit.ts#L234)
 
 ***
 
@@ -42,15 +42,15 @@ Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blo
 
 > `optional` **options**: `number` | `KeyframeEffectOptions`
 
-Defined in: [KeyframeKit.ts:235](https://github.com/benhatsor/KeyframeKit.js/blob/a60ab03ab1367590cbd9a23b8b88f7341f334fe4/src/KeyframeKit.ts#L235)
+Defined in: [KeyframeKit.ts:235](https://github.com/benhatsor/KeyframeKit.js/blob/eaf90f0732c429648c316172951626e9177e9e0d/src/KeyframeKit.ts#L235)
 
 ## Methods
 
 ### toAnimation()
 
-> **toAnimation**(`__namedParameters`: `object`): [`Animation`](https://developer.mozilla.org/docs/Web/API/Animation)
+> **toAnimation**(`__namedParameters`): [`Animation`](https://developer.mozilla.org/docs/Web/API/Animation)
 
-Defined in: [KeyframeKit.ts:247](https://github.com/benhatsor/KeyframeKit.js/blob/a60ab03ab1367590cbd9a23b8b88f7341f334fe4/src/KeyframeKit.ts#L247)
+Defined in: [KeyframeKit.ts:247](https://github.com/benhatsor/KeyframeKit.js/blob/eaf90f0732c429648c316172951626e9177e9e0d/src/KeyframeKit.ts#L247)
 
 #### Parameters
 
