@@ -19,7 +19,7 @@
   "remarkPlugins": [
     ["remark-insert-headings", { "text": "Contents" }],
     ["remark-toc", { "maxDepth": 3 }],
-    ["remark-collapse", {"test": "Contents"}]
+    //["remark-collapse", {"test": "Contents"}]
   ],
 
   "modulesFileName": "Reference",
