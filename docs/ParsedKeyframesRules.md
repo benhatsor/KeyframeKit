@@ -4,7 +4,7 @@
 
 > **ParsedKeyframesRules** = `object`
 
-Defined in: [KeyframeKit.ts:307](https://github.com/benhatsor/KeyframeKit.js/blob/03f97afd728c6389250122b9ea49ad180b421e66/src/KeyframeKit.ts#L307)
+Defined in: [KeyframeKit.ts:307](https://github.com/benhatsor/KeyframeKit.js/blob/e786a4e14ddd9a227b403d845b02b26daf3b444d/src/KeyframeKit.ts#L307)
 
 ## Index Signature
 
