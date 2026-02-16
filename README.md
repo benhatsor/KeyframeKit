@@ -7,27 +7,16 @@ Powered by the [Web Animations API][1].
 
 ### Playing CSS-defined animations with JS
 
-index.html
-```html
-<head>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="el"></div>
-  <script src="main.js" type="module"></script>
-</body>
-```
-
-styles.css
+In your CSS:
 ```css
 @keyframes rotate-small { ... }
 ```
 
-Then, in main.js:
+Then, in JS:
 ```js
 import KeyframeKit from './KeyframeKit.js';
 
-// get animation keyframes from stylesheet
+// get animation keyframes from document stylesheet
 const rotateSmallAnimKeyframes = KeyframeKit.getStyleSheetKeyframes({
   of: 'rotate-small'
 });
