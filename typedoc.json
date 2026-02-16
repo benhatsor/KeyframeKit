@@ -20,5 +20,7 @@
 
   "includeHierarchySummary": true,
 
-  "modulesFileName": "documentation"
+  "modulesFileName": "documentation",
+
+  "expandParameters": true
 }
