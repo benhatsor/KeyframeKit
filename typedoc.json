@@ -25,5 +25,7 @@
 
   //"expandParameters": true,
 
-  "indexFormat": "table"
+  "indexFormat": "table",
+
+  "useCodeBlocks": true
 }

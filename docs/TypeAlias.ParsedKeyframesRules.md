@@ -2,10 +2,14 @@
 
 # Type Alias: ParsedKeyframesRules
 
-> **ParsedKeyframesRules** = `object`
+```ts
+type ParsedKeyframesRules = object;
+```
 
-Defined in: [KeyframeKit.ts:307](https://github.com/benhatsor/KeyframeKit.js/blob/eaf90f0732c429648c316172951626e9177e9e0d/src/KeyframeKit.ts#L307)
+Defined in: [KeyframeKit.ts:307](https://github.com/benhatsor/KeyframeKit.js/blob/09e8dfdd17fae9bbbf394a79db38e0f582ad1639/src/KeyframeKit.ts#L307)
 
 ## Index Signature
 
-\[`ruleName`: `string`]: [`ParsedKeyframes`](../wiki/Class.ParsedKeyframes)
+```ts
+[ruleName: string]: ParsedKeyframes
+```

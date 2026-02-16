@@ -2,15 +2,17 @@
 
 # Class: KeyframeEffectParameters
 
-Defined in: [KeyframeKit.ts:232](https://github.com/benhatsor/KeyframeKit.js/blob/eaf90f0732c429648c316172951626e9177e9e0d/src/KeyframeKit.ts#L232)
+Defined in: [KeyframeKit.ts:232](https://github.com/benhatsor/KeyframeKit.js/blob/09e8dfdd17fae9bbbf394a79db38e0f582ad1639/src/KeyframeKit.ts#L232)
 
 ## Constructors
 
 ### Constructor
 
-> **new KeyframeEffectParameters**(`__namedParameters`): `KeyframeEffectParameters`
+```ts
+new KeyframeEffectParameters(__namedParameters): KeyframeEffectParameters;
+```
 
-Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blob/eaf90f0732c429648c316172951626e9177e9e0d/src/KeyframeKit.ts#L237)
+Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blob/09e8dfdd17fae9bbbf394a79db38e0f582ad1639/src/KeyframeKit.ts#L237)
 
 #### Parameters
 
@@ -32,25 +34,31 @@ Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blo
 
 ### keyframes
 
-> **keyframes**: [`KeyframeArgument`](../wiki/TypeAlias.KeyframeArgument)
+```ts
+keyframes: KeyframeArgument;
+```
 
-Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blob/eaf90f0732c429648c316172951626e9177e9e0d/src/KeyframeKit.ts#L234)
+Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blob/09e8dfdd17fae9bbbf394a79db38e0f582ad1639/src/KeyframeKit.ts#L234)
 
 ***
 
 ### options?
 
-> `optional` **options**: `number` | `KeyframeEffectOptions`
+```ts
+optional options: number | KeyframeEffectOptions;
+```
 
-Defined in: [KeyframeKit.ts:235](https://github.com/benhatsor/KeyframeKit.js/blob/eaf90f0732c429648c316172951626e9177e9e0d/src/KeyframeKit.ts#L235)
+Defined in: [KeyframeKit.ts:235](https://github.com/benhatsor/KeyframeKit.js/blob/09e8dfdd17fae9bbbf394a79db38e0f582ad1639/src/KeyframeKit.ts#L235)
 
 ## Methods
 
 ### toAnimation()
 
-> **toAnimation**(`__namedParameters`): [`Animation`](https://developer.mozilla.org/docs/Web/API/Animation)
+```ts
+toAnimation(__namedParameters): Animation;
+```
 
-Defined in: [KeyframeKit.ts:247](https://github.com/benhatsor/KeyframeKit.js/blob/eaf90f0732c429648c316172951626e9177e9e0d/src/KeyframeKit.ts#L247)
+Defined in: [KeyframeKit.ts:247](https://github.com/benhatsor/KeyframeKit.js/blob/09e8dfdd17fae9bbbf394a79db38e0f582ad1639/src/KeyframeKit.ts#L247)
 
 #### Parameters
 
