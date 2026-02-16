@@ -5,12 +5,12 @@ Powered by the [Web Animations API][1].
 
 ## Installation
 
-#### NPM
+### NPM
 ```bash
 npm install keyframekit
 ```
 
-#### ES modules
+### ES modules
 ```html
 <script src="KeyframeKit.js" type="module"></script>
 ```
