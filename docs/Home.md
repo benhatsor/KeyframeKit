@@ -3,6 +3,20 @@
 An intuitive, lightweight and performant set of tools for working with CSS animations in JavaScript.\
 Powered by the [Web Animations API][1].
 
+## Contents
+
+<details><summary>Open Contents</summary>
+
+* [Installation](#installation)
+  * [NPM](#npm)
+* [Usage](#usage)
+  * [Playing CSS-defined animations with JS](#playing-css-defined-animations-with-js)
+  * [Defining animations in JS](#defining-animations-in-js)
+* [Typing](#typing)
+* [License](#license)
+
+</details>
+
 ## Installation
 
 ### NPM

@@ -16,12 +16,11 @@
     "heading": "Reference"
   },
 
-  /*
   "remarkPlugins": [
     ["remark-insert-headings", { "text": "Contents" }],
-    ["remark-toc", { "maxDepth": 2 }]
+    ["remark-toc", { "tight": true }],
+    ["remark-collapse", {"test": "Contents"}]
   ],
-  */
 
   "modulesFileName": "Reference",
 

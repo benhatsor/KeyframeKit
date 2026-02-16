@@ -31,6 +31,7 @@
   },
   "homepage": "https://github.com/benhatsor/KeyframeKit.js#readme",
   "devDependencies": {
+    "remark-collapse": "^0.1.2",
     "remark-insert-headings": "^0.0.0",
     "remark-toc": "^9.0.0",
     "typedoc": "^0.28.17",

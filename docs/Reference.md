@@ -1,3 +1,13 @@
+## Contents
+
+<details><summary>Open Contents</summary>
+
+* [Classes](#classes)
+* [Type Aliases](#type-aliases)
+* [Variables](#variables)
+
+</details>
+
 ## Classes
 
 * [KeyframeEffectParameters](../wiki/Class.KeyframeEffectParameters)
