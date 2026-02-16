@@ -1,5 +1,5 @@
 {
-  "name": "KeyframeKit.js",
+  "name": "KeyframeKit",
 	"plugin": ["typedoc-plugin-mdn-links", "typedoc-plugin-inline-sources", "typedoc-plugin-markdown", "typedoc-plugin-remark", "typedoc-github-wiki-theme"/*, "typedoc-plugin-missing-exports"*/],
 
   //"excludeExternals": true,
@@ -11,6 +11,7 @@
 
   "sidebar": {
     //"autoConfiguration": false,
+    "heading": "Reference"
   },
 
   /*
