@@ -1,5 +1,5 @@
 {
-  "name": "KeyframeKit",
+  "name": "KeyframeKit.js",
 	"plugin": ["typedoc-plugin-param-names", "typedoc-plugin-mdn-links", "typedoc-plugin-inline-sources", "typedoc-plugin-markdown", "typedoc-plugin-remark", "typedoc-github-wiki-theme", "typedoc-plugin-missing-exports"],
 
   "entryPoints": ["src/KeyframeKit.ts"],
