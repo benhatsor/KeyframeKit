@@ -23,9 +23,10 @@
 
   "modulesFileName": "Reference",
 
-  //"expandParameters": true,
+  "expandParameters": true,
+  "expandObjects": true,
 
-  "indexFormat": "table",
+  "parametersFormat": "htmlTable",
 
   "useCodeBlocks": true
 }

@@ -2,23 +2,42 @@
 
 # Class: ParsedKeyframes
 
-Defined in: [KeyframeKit.ts:270](https://github.com/benhatsor/KeyframeKit.js/blob/09e8dfdd17fae9bbbf394a79db38e0f582ad1639/src/KeyframeKit.ts#L270)
+Defined in: [KeyframeKit.ts:270](https://github.com/benhatsor/KeyframeKit.js/blob/ae43c8a2cad42e60885f2d15af16bfd8bfa399a4/src/KeyframeKit.ts#L270)
 
 ## Constructors
 
 ### Constructor
 
 ```ts
-new ParsedKeyframes(keyframes): ParsedKeyframes;
+new ParsedKeyframes(keyframes: Keyframe[]): ParsedKeyframes;
 ```
 
-Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blob/09e8dfdd17fae9bbbf394a79db38e0f582ad1639/src/KeyframeKit.ts#L274)
+Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blob/ae43c8a2cad42e60885f2d15af16bfd8bfa399a4/src/KeyframeKit.ts#L274)
 
 #### Parameters
 
-##### keyframes
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`keyframes`
+
+</td>
+<td>
 
 `Keyframe`\[]
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -32,23 +51,42 @@ Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blo
 keyframes: Keyframe[];
 ```
 
-Defined in: [KeyframeKit.ts:272](https://github.com/benhatsor/KeyframeKit.js/blob/09e8dfdd17fae9bbbf394a79db38e0f582ad1639/src/KeyframeKit.ts#L272)
+Defined in: [KeyframeKit.ts:272](https://github.com/benhatsor/KeyframeKit.js/blob/ae43c8a2cad42e60885f2d15af16bfd8bfa399a4/src/KeyframeKit.ts#L272)
 
 ## Methods
 
 ### toKeyframeEffect()
 
 ```ts
-toKeyframeEffect(options): KeyframeEffectParameters;
+toKeyframeEffect(options: number | KeyframeEffectOptions | null): KeyframeEffectParameters;
 ```
 
-Defined in: [KeyframeKit.ts:278](https://github.com/benhatsor/KeyframeKit.js/blob/09e8dfdd17fae9bbbf394a79db38e0f582ad1639/src/KeyframeKit.ts#L278)
+Defined in: [KeyframeKit.ts:278](https://github.com/benhatsor/KeyframeKit.js/blob/ae43c8a2cad42e60885f2d15af16bfd8bfa399a4/src/KeyframeKit.ts#L278)
 
 #### Parameters
 
-##### options
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`options`
+
+</td>
+<td>
 
 `number` | `KeyframeEffectOptions` | `null`
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
