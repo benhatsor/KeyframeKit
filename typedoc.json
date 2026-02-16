@@ -7,5 +7,7 @@
   
   "flattenOutputFiles": false,
 
-  "router": "member"
+  "router": "member",
+
+  "sidebar.autoConfiguration": false
 }
