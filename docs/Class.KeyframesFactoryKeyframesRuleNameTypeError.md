@@ -1,28 +1,13 @@
 [KeyframeKit](../wiki/Reference) / KeyframesFactoryKeyframesRuleNameTypeError
 
-Defined in: [KeyframeKit.ts:16](https://github.com/benhatsor/KeyframeKit.js/blob/886792e1530f55d27efcd793747b20129341d83c/src/KeyframeKit.ts#L16)
+Defined in: [KeyframeKit.ts:16](https://github.com/benhatsor/KeyframeKit.js/blob/ba188f6e2a749768e6757429c51d95d3df658ca7/src/KeyframeKit.ts#L16)
 
 ## Properties
 
-<table>
-<thead>
-<tr>
-<th align="left">Property</th>
-<th align="left">Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
+### message
 
-<a id="property-message"></a> `message`
+```ts
+message: string;
+```
 
-</td>
-<td>
-
-`string`
-
-</td>
-</tr>
-</tbody>
-</table>
+Defined in: [KeyframeKit.ts:17](https://github.com/benhatsor/KeyframeKit.js/blob/ba188f6e2a749768e6757429c51d95d3df658ca7/src/KeyframeKit.ts#L17)

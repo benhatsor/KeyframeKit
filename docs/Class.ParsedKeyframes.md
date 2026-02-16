@@ -1,6 +1,6 @@
 [KeyframeKit](../wiki/Reference) / ParsedKeyframes
 
-Defined in: [KeyframeKit.ts:270](https://github.com/benhatsor/KeyframeKit.js/blob/886792e1530f55d27efcd793747b20129341d83c/src/KeyframeKit.ts#L270)
+Defined in: [KeyframeKit.ts:270](https://github.com/benhatsor/KeyframeKit.js/blob/ba188f6e2a749768e6757429c51d95d3df658ca7/src/KeyframeKit.ts#L270)
 
 ## Constructors
 
@@ -10,7 +10,7 @@ Defined in: [KeyframeKit.ts:270](https://github.com/benhatsor/KeyframeKit.js/blo
 new ParsedKeyframes(keyframes: Keyframe[]): ParsedKeyframes;
 ```
 
-Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blob/886792e1530f55d27efcd793747b20129341d83c/src/KeyframeKit.ts#L274)
+Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blob/ba188f6e2a749768e6757429c51d95d3df658ca7/src/KeyframeKit.ts#L274)
 
 #### Parameters
 
@@ -43,28 +43,13 @@ Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blo
 
 ## Properties
 
-<table>
-<thead>
-<tr>
-<th align="left">Property</th>
-<th align="left">Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
+### keyframes
 
-<a id="property-keyframes"></a> `keyframes`
+```ts
+keyframes: Keyframe[];
+```
 
-</td>
-<td>
-
-`Keyframe`\[]
-
-</td>
-</tr>
-</tbody>
-</table>
+Defined in: [KeyframeKit.ts:272](https://github.com/benhatsor/KeyframeKit.js/blob/ba188f6e2a749768e6757429c51d95d3df658ca7/src/KeyframeKit.ts#L272)
 
 ## Methods
 
@@ -74,7 +59,7 @@ Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blo
 toKeyframeEffect(options: number | KeyframeEffectOptions | null): KeyframeEffectParameters;
 ```
 
-Defined in: [KeyframeKit.ts:278](https://github.com/benhatsor/KeyframeKit.js/blob/886792e1530f55d27efcd793747b20129341d83c/src/KeyframeKit.ts#L278)
+Defined in: [KeyframeKit.ts:278](https://github.com/benhatsor/KeyframeKit.js/blob/ba188f6e2a749768e6757429c51d95d3df658ca7/src/KeyframeKit.ts#L278)
 
 #### Parameters
 

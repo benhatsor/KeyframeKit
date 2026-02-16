@@ -28,9 +28,9 @@
   "expandObjects": true,
 
   "parametersFormat": "htmlTable",
-  "interfacePropertiesFormat": "htmlTable",
+  //"interfacePropertiesFormat": "htmlTable",
   //"classPropertiesFormat": "htmlTable",
-  "typeAliasPropertiesFormat": "htmlTable",
+  //"typeAliasPropertiesFormat": "htmlTable",
   "propertyMembersFormat": "htmlTable",
   "typeDeclarationFormat": "htmlTable",
 
