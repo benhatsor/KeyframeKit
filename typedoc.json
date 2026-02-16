@@ -1,11 +1,24 @@
 {
   "name": "KeyframeKit",
-	"plugin": ["typedoc-plugin-param-names", "typedoc-plugin-mdn-links", "typedoc-plugin-inline-sources", "typedoc-plugin-markdown", "typedoc-plugin-remark", "typedoc-github-wiki-theme", "typedoc-plugin-missing-exports"],
+  
+	"plugin": [
+    "typedoc-plugin-param-names",
+    "typedoc-plugin-mdn-links",
+    "typedoc-plugin-inline-sources",
+    "typedoc-plugin-markdown",
+    "typedoc-plugin-remark",
+    "typedoc-github-wiki-theme"
+    /*, "typedoc-plugin-missing-exports"*/
+  ],
 
   "entryPoints": ["src/KeyframeKit.ts"],
 
-  "excludeExternals": true,
-  "placeInternalsInOwningModule": true,
+  //"excludeExternals": true,
+  //"placeInternalsInOwningModule": true,
+
+  "validation": {
+    "notExported": false,
+  },
   
   //"flattenOutputFiles": false,
 
@@ -15,7 +28,7 @@
 
   "sidebar": {
     //"autoConfiguration": false,
-    "heading": "[Reference](../wiki)"
+    "heading": "[KeyframeKit](../wiki)"
   },
 
   "remarkPlugins": [
@@ -24,7 +37,7 @@
     //["remark-collapse", {"test": "Contents"}]
   ],
 
-  "modulesFileName": "Reference",
+  "modulesFileName": "KeyframeKit",
 
   "expandParameters": true,
   "expandObjects": true,

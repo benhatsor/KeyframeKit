@@ -5,7 +5,7 @@
 // See README.md for usage.
 //
 const PERCENTAGE_CHAR = '%';
-export default new class KeyframesFactory {
+export class KeyframesFactory {
     KeyframesRuleNameTypeError = class KeyframesFactoryKeyframesRuleNameTypeError extends TypeError {
         message = `Keyframes rule name must be a string.`;
     };
@@ -123,7 +123,8 @@ export default new class KeyframesFactory {
         const parsedKeyframesInstance = new ParsedKeyframes(parsedKeyframes);
         return parsedKeyframesInstance;
     }
-};
+}
+export default new KeyframesFactory();
 /// https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface
 export class KeyframeEffectParameters {
     keyframes;
