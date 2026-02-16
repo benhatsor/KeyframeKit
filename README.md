@@ -86,7 +86,7 @@ attachedAnim.play();
 
 ## Typing
 
-While this library is completely usable in native JS, it also has full spec-compliant type support,  
+This library is completely usable in native JS, but it also has full spec-compliant type support,  
 including declaration files and source maps.
 
 ## License
