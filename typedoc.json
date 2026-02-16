@@ -44,5 +44,7 @@
     "leftAlignHeaders": true
   },
 
-  "useCodeBlocks": true
+  "useCodeBlocks": true,
+
+  "hidePageTitle": true
 }

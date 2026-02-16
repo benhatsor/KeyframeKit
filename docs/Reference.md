@@ -1,5 +1,3 @@
-# KeyframeKit
-
 ## Classes
 
 * [KeyframeEffectParameters](../wiki/Class.KeyframeEffectParameters)

@@ -1,8 +1,6 @@
 [KeyframeKit](../wiki/Reference) / KeyframesFactory
 
-# Class: KeyframesFactory
-
-Defined in: [KeyframeKit.ts:14](https://github.com/benhatsor/KeyframeKit.js/blob/82b901f03bffe3b4a95062761780597ea890dcde/src/KeyframeKit.ts#L14)
+Defined in: [KeyframeKit.ts:14](https://github.com/benhatsor/KeyframeKit.js/blob/1966e0ac7224d0c2d7294acb5806c377e037d0d6/src/KeyframeKit.ts#L14)
 
 ## Properties
 
@@ -51,7 +49,7 @@ getAllStyleSheetKeyframesRules(__namedParameters?: {
 }): ParsedKeyframesRules;
 ```
 
-Defined in: [KeyframeKit.ts:102](https://github.com/benhatsor/KeyframeKit.js/blob/82b901f03bffe3b4a95062761780597ea890dcde/src/KeyframeKit.ts#L102)
+Defined in: [KeyframeKit.ts:102](https://github.com/benhatsor/KeyframeKit.js/blob/1966e0ac7224d0c2d7294acb5806c377e037d0d6/src/KeyframeKit.ts#L102)
 
 #### Parameters
 
@@ -105,7 +103,7 @@ getStyleSheetKeyframes(__namedParameters: {
 }): ParsedKeyframes | undefined;
 ```
 
-Defined in: [KeyframeKit.ts:25](https://github.com/benhatsor/KeyframeKit.js/blob/82b901f03bffe3b4a95062761780597ea890dcde/src/KeyframeKit.ts#L25)
+Defined in: [KeyframeKit.ts:25](https://github.com/benhatsor/KeyframeKit.js/blob/1966e0ac7224d0c2d7294acb5806c377e037d0d6/src/KeyframeKit.ts#L25)
 
 #### Parameters
 
@@ -170,7 +168,7 @@ parseKeyframesRule(__namedParameters: {
 }): ParsedKeyframes;
 ```
 
-Defined in: [KeyframeKit.ts:174](https://github.com/benhatsor/KeyframeKit.js/blob/82b901f03bffe3b4a95062761780597ea890dcde/src/KeyframeKit.ts#L174)
+Defined in: [KeyframeKit.ts:174](https://github.com/benhatsor/KeyframeKit.js/blob/1966e0ac7224d0c2d7294acb5806c377e037d0d6/src/KeyframeKit.ts#L174)
 
 #### Parameters
 
