@@ -1,4 +1,4 @@
-# KeyframeKit.js
+# KeyframeKit
 
 ## Classes
 

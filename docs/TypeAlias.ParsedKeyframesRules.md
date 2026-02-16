@@ -1,4 +1,4 @@
-[KeyframeKit.js](../wiki/Reference) / ParsedKeyframesRules
+[KeyframeKit](../wiki/Reference) / ParsedKeyframesRules
 
 # Type Alias: ParsedKeyframesRules
 
@@ -8,7 +8,7 @@ type ParsedKeyframesRules = {
 };
 ```
 
-Defined in: [KeyframeKit.ts:307](https://github.com/benhatsor/KeyframeKit.js/blob/ae43c8a2cad42e60885f2d15af16bfd8bfa399a4/src/KeyframeKit.ts#L307)
+Defined in: [KeyframeKit.ts:307](https://github.com/benhatsor/KeyframeKit.js/blob/8592bb943735ad64c24f75549600434a76fd2ee2/src/KeyframeKit.ts#L307)
 
 ## Index Signature
 
