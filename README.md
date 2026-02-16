@@ -5,7 +5,6 @@ Powered by the [Web Animations API][1].
 
 ## Installation
 
-### NPM
 ```sh
 npm install keyframekit
 ```
