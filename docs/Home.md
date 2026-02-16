@@ -6,11 +6,16 @@ Powered by the [Web Animations API][1].
 ## Contents
 
 * [Installation](#installation)
+
   * [NPM](#npm)
+
 * [Usage](#usage)
+
   * [Playing CSS-defined animations with JS](#playing-css-defined-animations-with-js)
   * [Defining animations in JS](#defining-animations-in-js)
+
 * [Typing](#typing)
+
 * [License](#license)
 
 ## Installation

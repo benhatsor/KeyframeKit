@@ -17,8 +17,8 @@
   },
 
   "remarkPlugins": [
-    ["remark-insert-headings", { "text": "Contents" }],
-    ["remark-toc", { "maxDepth": 3 }],
+    ["remark-insert-headings", { "text": "Contents", "minHeadingCount": 1 }],
+    ["remark-toc", { "maxDepth": 3, "tight": false }],
     //["remark-collapse", {"test": "Contents"}]
   ],
 
