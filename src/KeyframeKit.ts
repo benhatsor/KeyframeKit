@@ -22,26 +22,26 @@ export default new class KeyframesFactory {
   }
 
   
-  getStyleSheetKeyframes({ name, in: source = document }: {
-    name: string,
+  getStyleSheetKeyframes({ of: ruleName, in: source = document }: {
+    of: string,
     in?: KeyframesFactorySource
   }): ParsedKeyframes | undefined {
 
-    if (typeof name !== 'string') {
+    if (typeof ruleName !== 'string') {
       throw new KeyframesFactory.KeyframesRuleNameTypeError();
     }
 
     if (source instanceof Document || source instanceof ShadowRoot) {
 
       return this.#getStyleSheetKeyframesInDocumentOrShadowRoot({
-        name: name,
+        of: ruleName,
         documentOrShadowRoot: source as DocumentOrShadowRoot
       });
 
     } else if (source instanceof CSSStyleSheet) {
 
       return this.#getStyleSheetKeyframesInStyleSheet({
-        name: name,
+        of: ruleName,
         styleSheet: source as CSSStyleSheet
       });
 
@@ -53,15 +53,15 @@ export default new class KeyframesFactory {
 
   }
 
-  #getStyleSheetKeyframesInDocumentOrShadowRoot({ name, documentOrShadowRoot }: {
-    name: string,
+  #getStyleSheetKeyframesInDocumentOrShadowRoot({ of: ruleName, documentOrShadowRoot }: {
+    of: string,
     documentOrShadowRoot: DocumentOrShadowRoot
   }): ParsedKeyframes | undefined {
 
     for (const styleSheet of documentOrShadowRoot.styleSheets) {
 
       const keyframesRule = this.#getStyleSheetKeyframesInStyleSheet({
-        name: name,
+        of: ruleName,
         styleSheet: styleSheet
       });
 
@@ -71,12 +71,10 @@ export default new class KeyframesFactory {
 
     }
 
-    return undefined;
-
   }
 
-  #getStyleSheetKeyframesInStyleSheet({ name, styleSheet }: {
-    name: string,
+  #getStyleSheetKeyframesInStyleSheet({ of: ruleName, styleSheet }: {
+    of: string,
     styleSheet: CSSStyleSheet
   }): ParsedKeyframes | undefined {
 
@@ -86,7 +84,7 @@ export default new class KeyframesFactory {
         continue;
       }
 
-      if (rule.name === name) {
+      if (rule.name === ruleName) {
 
         const keyframes = this.parseKeyframesRule({
           rule: rule
@@ -97,8 +95,6 @@ export default new class KeyframesFactory {
       }
 
     }
-
-    return undefined;
 
   }
 
@@ -283,13 +279,23 @@ export class ParsedKeyframes {
     options: number | KeyframeEffectOptions | null
   ): KeyframeEffectParameters {
 
+    let keyframeEffect: KeyframeEffectParameters;
+
     // convert (required) nullable to optional
-    const optionalOptions = options === null ? undefined : options;
+    if (options !== null) {
+      
+      keyframeEffect = new KeyframeEffectParameters({
+        keyframes: this.keyframes,
+        options: options
+      });
     
-    const keyframeEffect = new KeyframeEffectParameters({
-      keyframes: this.keyframes,
-      options: optionalOptions
-    });
+    } else {
+
+      keyframeEffect = new KeyframeEffectParameters({
+        keyframes: this.keyframes
+      });
+
+    }
 
     return keyframeEffect;
 
@@ -299,7 +305,7 @@ export class ParsedKeyframes {
 
 
 export type ParsedKeyframesRules = {
-  [name: string]: ParsedKeyframes
+  [ruleName: string]: ParsedKeyframes
 };
 
 

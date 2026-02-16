@@ -16,10 +16,12 @@ Then, in JS:
 ```js
 import KeyframeKit from './KeyframeKit.js';
 
-// get all keyframes defined in document stylesheets
-const keyframes = KeyframeKit.getStyleSheetKeyframes();
+// gets keyframes defined in document stylesheets
+const rotateSmallAnimKeyframes = KeyframeKit.getStyleSheetKeyframes({
+  of: 'rotate-small'
+});
 
-const rotateSmallAnim = keyframes['rotate-small'].toKeyframeEffect({
+const rotateSmallAnim = rotateSmallAnimKeyframes.toKeyframeEffect({
   duration: 700,
   easing: 'ease'
 });
@@ -74,7 +76,6 @@ targetedAnim.play();
 ## Typing
 
 This library is completely usable in native JS, but it also has full spec-compliant type support.  
-Simply import the `.ts` or use the `.d.ts`.
 
 ## License
 

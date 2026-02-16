@@ -6,31 +6,25 @@
 //
 const PERCENTAGE_CHAR = '%';
 export default new class KeyframesFactory {
-    static { this.KeyframesRuleNameTypeError = class KeyframesFactoryKeyframesRuleNameTypeError extends TypeError {
-        constructor() {
-            super(...arguments);
-            this.message = `Keyframes rule name must be a string.`;
-        }
-    }; }
-    static { this.SourceTypeError = class KeyframesFactorySourceTypeError extends TypeError {
-        constructor() {
-            super(...arguments);
-            this.message = `Source must be either a Document, a ShadowRoot or a CSSStyleSheet instance.`;
-        }
-    }; }
-    getStyleSheetKeyframes({ name, in: source = document }) {
-        if (typeof name !== 'string') {
+    static KeyframesRuleNameTypeError = class KeyframesFactoryKeyframesRuleNameTypeError extends TypeError {
+        message = `Keyframes rule name must be a string.`;
+    };
+    static SourceTypeError = class KeyframesFactorySourceTypeError extends TypeError {
+        message = `Source must be either a Document, a ShadowRoot or a CSSStyleSheet instance.`;
+    };
+    getStyleSheetKeyframes({ of: ruleName, in: source = document }) {
+        if (typeof ruleName !== 'string') {
             throw new KeyframesFactory.KeyframesRuleNameTypeError();
         }
         if (source instanceof Document || source instanceof ShadowRoot) {
             return this.#getStyleSheetKeyframesInDocumentOrShadowRoot({
-                name: name,
+                of: ruleName,
                 documentOrShadowRoot: source
             });
         }
         else if (source instanceof CSSStyleSheet) {
             return this.#getStyleSheetKeyframesInStyleSheet({
-                name: name,
+                of: ruleName,
                 styleSheet: source
             });
         }
@@ -38,31 +32,29 @@ export default new class KeyframesFactory {
             throw new KeyframesFactory.SourceTypeError();
         }
     }
-    #getStyleSheetKeyframesInDocumentOrShadowRoot({ name, documentOrShadowRoot }) {
+    #getStyleSheetKeyframesInDocumentOrShadowRoot({ of: ruleName, documentOrShadowRoot }) {
         for (const styleSheet of documentOrShadowRoot.styleSheets) {
             const keyframesRule = this.#getStyleSheetKeyframesInStyleSheet({
-                name: name,
+                of: ruleName,
                 styleSheet: styleSheet
             });
             if (keyframesRule !== undefined) {
                 return keyframesRule;
             }
         }
-        return undefined;
     }
-    #getStyleSheetKeyframesInStyleSheet({ name, styleSheet }) {
+    #getStyleSheetKeyframesInStyleSheet({ of: ruleName, styleSheet }) {
         for (const rule of styleSheet.cssRules) {
             if (!(rule instanceof CSSKeyframesRule)) {
                 continue;
             }
-            if (rule.name === name) {
+            if (rule.name === ruleName) {
                 const keyframes = this.parseKeyframesRule({
                     rule: rule
                 });
                 return keyframes;
             }
         }
-        return undefined;
     }
     getAllStyleSheetKeyframesRules({ in: source = document } = {}) {
         if (source instanceof Document || source instanceof ShadowRoot) {
@@ -134,6 +126,8 @@ export default new class KeyframesFactory {
 };
 /// https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface
 export class KeyframeEffectParameters {
+    keyframes;
+    options;
     constructor({ keyframes, options = {} }) {
         this.keyframes = keyframes;
         this.options = options;
@@ -147,16 +141,24 @@ export class KeyframeEffectParameters {
     }
 }
 export class ParsedKeyframes {
+    keyframes;
     constructor(keyframes) {
         this.keyframes = keyframes;
     }
     toKeyframeEffect(options) {
+        let keyframeEffect;
         // convert (required) nullable to optional
-        const optionalOptions = options === null ? undefined : options;
-        const keyframeEffect = new KeyframeEffectParameters({
-            keyframes: this.keyframes,
-            options: optionalOptions
-        });
+        if (options !== null) {
+            keyframeEffect = new KeyframeEffectParameters({
+                keyframes: this.keyframes,
+                options: options
+            });
+        }
+        else {
+            keyframeEffect = new KeyframeEffectParameters({
+                keyframes: this.keyframes
+            });
+        }
         return keyframeEffect;
     }
 }
@@ -164,3 +166,4 @@ export class ParsedKeyframes {
 function removeSuffix({ of: string, suffix }) {
     return string.slice(0, -suffix.length);
 }
+//# sourceMappingURL=KeyframeKit.js.map
