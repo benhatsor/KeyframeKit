@@ -1,6 +1,6 @@
-[KeyframeKit](../Reference.md) / KeyframeEffectParameters
+[KeyframeKit](../../Reference.md) / KeyframeEffectParameters
 
-Defined in: [KeyframeKit.ts:232](https://github.com/benhatsor/KeyframeKit.js/blob/398aae49f35972ba97a6d5b395863214c00b54eb/src/KeyframeKit.ts#L232)
+Defined in: [KeyframeKit.ts:232](https://github.com/benhatsor/KeyframeKit.js/blob/3e139b4eeafe886bf53ff9bc263407ae16f29201/src/KeyframeKit.ts#L232)
 
 ## Constructors
 
@@ -13,7 +13,7 @@ new KeyframeEffectParameters(obj: {
 }): KeyframeEffectParameters;
 ```
 
-Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blob/398aae49f35972ba97a6d5b395863214c00b54eb/src/KeyframeKit.ts#L237)
+Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blob/3e139b4eeafe886bf53ff9bc263407ae16f29201/src/KeyframeKit.ts#L237)
 
 #### Parameters
 
@@ -21,7 +21,7 @@ Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blo
 
 ###### keyframes
 
-[`KeyframeArgument`](../type-aliases/KeyframeArgument.md)
+[`KeyframeArgument`](../../types/KeyframeArgument/Home.md)
 
 ###### options?
 
@@ -39,7 +39,7 @@ Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blo
 keyframes: KeyframeArgument;
 ```
 
-Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blob/398aae49f35972ba97a6d5b395863214c00b54eb/src/KeyframeKit.ts#L234)
+Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blob/3e139b4eeafe886bf53ff9bc263407ae16f29201/src/KeyframeKit.ts#L234)
 
 ***
 
@@ -49,7 +49,7 @@ Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blo
 optional options: number | KeyframeEffectOptions;
 ```
 
-Defined in: [KeyframeKit.ts:235](https://github.com/benhatsor/KeyframeKit.js/blob/398aae49f35972ba97a6d5b395863214c00b54eb/src/KeyframeKit.ts#L235)
+Defined in: [KeyframeKit.ts:235](https://github.com/benhatsor/KeyframeKit.js/blob/3e139b4eeafe886bf53ff9bc263407ae16f29201/src/KeyframeKit.ts#L235)
 
 ## Methods
 
@@ -62,7 +62,7 @@ toAnimation(obj: {
 }): Animation;
 ```
 
-Defined in: [KeyframeKit.ts:247](https://github.com/benhatsor/KeyframeKit.js/blob/398aae49f35972ba97a6d5b395863214c00b54eb/src/KeyframeKit.ts#L247)
+Defined in: [KeyframeKit.ts:247](https://github.com/benhatsor/KeyframeKit.js/blob/3e139b4eeafe886bf53ff9bc263407ae16f29201/src/KeyframeKit.ts#L247)
 
 #### Parameters
 

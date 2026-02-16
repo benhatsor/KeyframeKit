@@ -9,7 +9,7 @@
   
   "flattenOutputFiles": false,
 
-  "router": "member", // "module"
+  "router": "kind-dir", // "module"
 
   "sidebar": {
     //"autoConfiguration": false,
