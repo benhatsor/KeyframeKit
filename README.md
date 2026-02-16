@@ -71,7 +71,7 @@ const targetedAnim = linkTextHoverAnim.toAnimation({
 targetedAnim.play();
 ```
 
-## Typing
+## TypeScript
 
 This library is completely usable in native JS, but it also has full spec-compliant type support.
 
