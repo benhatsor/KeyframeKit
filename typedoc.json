@@ -10,7 +10,7 @@
   "router": "member",
 
   "sidebar": {
-    "autoConfiguration": false,
+    //"autoConfiguration": false,
   },
 
   /*
@@ -19,9 +19,11 @@
     ["remark-toc", { "maxDepth": 2 }]
   ],*/
 
-  "includeHierarchySummary": true,
+  //"includeHierarchySummary": true,
 
   "modulesFileName": "Reference",
 
-  "expandParameters": true
+  //"expandParameters": true,
+
+  "indexFormat": "table"
 }
