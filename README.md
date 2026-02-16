@@ -11,8 +11,8 @@ npm install keyframekit
 ```
 
 ### ES modules
-```html
-<script src="KeyframeKit.js" type="module"></script>
+```js
+import KeyframeKit from './KeyframeKit.js';
 ```
 
 ## Usage
