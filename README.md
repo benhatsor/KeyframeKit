@@ -10,11 +10,6 @@ Powered by the [Web Animations API][1].
 npm install keyframekit
 ```
 
-### ES modules
-```js
-import KeyframeKit from './KeyframeKit.js';
-```
-
 ## Usage
 
 ### Playing CSS-defined animations with JS
