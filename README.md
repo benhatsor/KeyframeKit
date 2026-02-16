@@ -26,7 +26,7 @@ In your CSS:
 
 Then, in JS:
 ```js
-import KeyframeKit from 'KeyframeKit';
+import KeyframeKit from 'keyframekit';
 
 // get animation keyframes from document stylesheet
 const rotateSmallAnimKeyframes = KeyframeKit.getStyleSheetKeyframes({
