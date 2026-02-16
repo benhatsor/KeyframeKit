@@ -9,5 +9,7 @@
 
   "router": "member",
 
-  "sidebar.autoConfiguration": false
+  "sidebar": {
+    "autoConfiguration": false,
+  }
 }
