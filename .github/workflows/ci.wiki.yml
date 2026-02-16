@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Publish Markdown to GitHub Wiki
-        uses: benhatsor/github-wiki-publish-action@1.0.2
+        uses: benhatsor/github-wiki-publish-action@1.0.3
         with:
           path: "docs"
         env:
