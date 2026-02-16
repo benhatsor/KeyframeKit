@@ -3,9 +3,7 @@
 A lightweight and performant set of tools for working with CSS animations in JavaScript.  
 Powered by the [Web Animations API][1].
 
-
 ## Usage
-
 
 ### Playing CSS-defined animations with JS
 
@@ -41,8 +39,7 @@ targetedAnim.playbackRate = -1;
 const progress = targetedAnim.overallProgress; // 0 to 1 (Baseline newly available)
 await targetedAnim.finished;
 ```
-[...and more.](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API)
-
+[...and more.][2]
 
 ### Defining animations in JS
 
@@ -74,6 +71,9 @@ const targetedAnim = linkTextHoverAnim.toAnimation({
 targetedAnim.play();
 ```
 
+## Typing
+
+This library is completely usable in native JS, but it also has full spec-compliant type support.
 
 ## License
 
@@ -81,3 +81,4 @@ targetedAnim.play();
 
 
 [1]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API
+[2]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API
