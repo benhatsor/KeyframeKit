@@ -2,6 +2,8 @@
   "name": "KeyframeKit",
 	"plugin": ["typedoc-plugin-mdn-links", "typedoc-plugin-inline-sources", "typedoc-plugin-markdown", "typedoc-plugin-remark", "typedoc-github-wiki-theme", "typedoc-plugin-missing-exports"],
 
+  "entryPoints": ["src/KeyframeKit.ts"],
+
   "excludeExternals": true,
   "placeInternalsInOwningModule": true,
   
@@ -20,13 +22,12 @@
     ["remark-toc", { "maxDepth": 2 }]
   ],*/
 
-  "includeHierarchySummary": true,
-
   "modulesFileName": "Reference",
 
   "expandParameters": true,
   "expandObjects": true,
 
+  "parametersFormat": "htmlTable",
   "interfacePropertiesFormat": "htmlTable",
   "classPropertiesFormat": "htmlTable",
   "typeAliasPropertiesFormat": "htmlTable",
