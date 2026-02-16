@@ -6,49 +6,132 @@
 //
 const PERCENTAGE_CHAR = '%';
 export default new class KeyframesFactory {
-    getStyleSheetKeyframes({ in: documentOrShadowRoot = document } = {}) {
-        let keyframesDict = {};
+    static { this.KeyframesRuleNameTypeError = class KeyframesFactoryKeyframesRuleNameTypeError extends TypeError {
+        constructor() {
+            super(...arguments);
+            this.message = `Keyframes rule name must be a string.`;
+        }
+    }; }
+    static { this.SourceTypeError = class KeyframesFactorySourceTypeError extends TypeError {
+        constructor() {
+            super(...arguments);
+            this.message = `Source must be either a Document, a ShadowRoot or a CSSStyleSheet instance.`;
+        }
+    }; }
+    getStyleSheetKeyframes({ name, in: source = document }) {
+        if (typeof name !== 'string') {
+            throw new KeyframesFactory.KeyframesRuleNameTypeError();
+        }
+        if (source instanceof Document || source instanceof ShadowRoot) {
+            return this.#getStyleSheetKeyframesInDocumentOrShadowRoot({
+                name: name,
+                documentOrShadowRoot: source
+            });
+        }
+        else if (source instanceof CSSStyleSheet) {
+            return this.#getStyleSheetKeyframesInStyleSheet({
+                name: name,
+                styleSheet: source
+            });
+        }
+        else {
+            throw new KeyframesFactory.SourceTypeError();
+        }
+    }
+    #getStyleSheetKeyframesInDocumentOrShadowRoot({ name, documentOrShadowRoot }) {
         for (const styleSheet of documentOrShadowRoot.styleSheets) {
-            for (const rule of styleSheet.cssRules) {
-                if (!(rule instanceof CSSKeyframesRule)) {
-                    continue;
-                }
-                const [animationName, keyframes] = parseKeyframesRule({
-                    rule
-                });
-                keyframesDict[animationName] = keyframes;
+            const keyframesRule = this.#getStyleSheetKeyframesInStyleSheet({
+                name: name,
+                styleSheet: styleSheet
+            });
+            if (keyframesRule !== undefined) {
+                return keyframesRule;
             }
         }
-        return keyframesDict;
+        return undefined;
+    }
+    #getStyleSheetKeyframesInStyleSheet({ name, styleSheet }) {
+        for (const rule of styleSheet.cssRules) {
+            if (!(rule instanceof CSSKeyframesRule)) {
+                continue;
+            }
+            if (rule.name === name) {
+                const keyframes = this.parseKeyframesRule({
+                    rule: rule
+                });
+                return keyframes;
+            }
+        }
+        return undefined;
+    }
+    getAllStyleSheetKeyframesRules({ in: source = document } = {}) {
+        if (source instanceof Document || source instanceof ShadowRoot) {
+            return this.#getAllStyleSheetKeyframesRulesInDocumentOrShadowRoot({
+                documentOrShadowRoot: source
+            });
+        }
+        else if (source instanceof CSSStyleSheet) {
+            return this.#getAllStyleSheetKeyframesRulesInStyleSheet({
+                styleSheet: source
+            });
+        }
+        else {
+            throw new KeyframesFactory.SourceTypeError();
+        }
+    }
+    #getAllStyleSheetKeyframesRulesInDocumentOrShadowRoot({ documentOrShadowRoot }) {
+        let keyframesRules = {};
+        for (const styleSheet of documentOrShadowRoot.styleSheets) {
+            const styleSheetKeyframesRules = this.#getAllStyleSheetKeyframesRulesInStyleSheet({
+                styleSheet: styleSheet
+            });
+            keyframesRules = {
+                ...keyframesRules,
+                ...styleSheetKeyframesRules
+            };
+        }
+        return keyframesRules;
+    }
+    #getAllStyleSheetKeyframesRulesInStyleSheet({ styleSheet }) {
+        let keyframesRules = {};
+        for (const rule of styleSheet.cssRules) {
+            if (!(rule instanceof CSSKeyframesRule)) {
+                continue;
+            }
+            const keyframes = this.parseKeyframesRule({
+                rule: rule
+            });
+            keyframesRules[rule.name] = keyframes;
+        }
+        return keyframesRules;
+    }
+    parseKeyframesRule({ rule: keyframes }) {
+        let parsedKeyframes = [];
+        for (const keyframe of keyframes) {
+            // remove trailing '%'
+            /// https://drafts.csswg.org/css-animations/#dom-csskeyframerule-keytext
+            const percentString = removeSuffix({
+                of: keyframe.keyText,
+                suffix: PERCENTAGE_CHAR
+            });
+            const percent = Number(percentString);
+            const offset = percent / 100;
+            let parsedProperties = {};
+            for (const propertyName of keyframe.style) {
+                /// https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/getPropertyValue
+                const propertyValue = keyframe.style.getPropertyValue(propertyName);
+                parsedProperties[propertyName] = propertyValue;
+            }
+            const parsedKeyframe = {
+                ...parsedProperties,
+                offset: offset
+            };
+            parsedKeyframes.push(parsedKeyframe);
+        }
+        const parsedKeyframesInstance = new ParsedKeyframes(parsedKeyframes);
+        return parsedKeyframesInstance;
     }
 };
-function parseKeyframesRule({ rule: keyframes }) {
-    const animationName = keyframes.name;
-    let parsedKeyframes = [];
-    for (const keyframe of keyframes) {
-        // remove trailing '%'
-        /// https://drafts.csswg.org/css-animations/#dom-csskeyframerule-keytext
-        const percentString = removeSuffix({
-            of: keyframe.keyText,
-            suffix: PERCENTAGE_CHAR
-        });
-        const percent = Number(percentString);
-        const offset = percent / 100;
-        let parsedProperties = {};
-        for (const propertyName of keyframe.style) {
-            /// https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/getPropertyValue
-            const propertyValue = keyframe.style.getPropertyValue(propertyName);
-            parsedProperties[propertyName] = propertyValue;
-        }
-        const parsedKeyframe = {
-            ...parsedProperties,
-            offset: offset
-        };
-        parsedKeyframes.push(parsedKeyframe);
-    }
-    const parsedKeyframesInstance = new ParsedKeyframes(parsedKeyframes);
-    return [animationName, parsedKeyframesInstance];
-}
 /// https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface
 export class KeyframeEffectParameters {
     constructor({ keyframes, options = {} }) {
@@ -68,9 +151,11 @@ export class ParsedKeyframes {
         this.keyframes = keyframes;
     }
     toKeyframeEffect(options) {
+        // convert (required) nullable to optional
+        const optionalOptions = options === null ? undefined : options;
         const keyframeEffect = new KeyframeEffectParameters({
             keyframes: this.keyframes,
-            options: options ?? undefined
+            options: optionalOptions
         });
         return keyframeEffect;
     }
