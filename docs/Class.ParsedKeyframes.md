@@ -1,6 +1,6 @@
 [KeyframeKit](../wiki/Reference) / ParsedKeyframes
 
-Defined in: [KeyframeKit.ts:270](https://github.com/benhatsor/KeyframeKit.js/blob/a182a40a7e1698faf3914992863e5af0faa1134a/src/KeyframeKit.ts#L270)
+Defined in: [KeyframeKit.ts:270](https://github.com/benhatsor/KeyframeKit.js/blob/b97a82ce2ad76aadbdbd0ca38db35c8d05e8a932/src/KeyframeKit.ts#L270)
 
 ## Constructors
 
@@ -10,15 +10,15 @@ Defined in: [KeyframeKit.ts:270](https://github.com/benhatsor/KeyframeKit.js/blo
 new ParsedKeyframes(keyframes: Keyframe[]): ParsedKeyframes;
 ```
 
-Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blob/a182a40a7e1698faf3914992863e5af0faa1134a/src/KeyframeKit.ts#L274)
+Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blob/b97a82ce2ad76aadbdbd0ca38db35c8d05e8a932/src/KeyframeKit.ts#L274)
 
 #### Parameters
 
 <table>
 <thead>
 <tr>
-<th align="left">Parameter</th>
-<th align="left">Type</th>
+<th>Parameter</th>
+<th>Type</th>
 </tr>
 </thead>
 <tbody>
@@ -49,7 +49,7 @@ Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blo
 keyframes: Keyframe[];
 ```
 
-Defined in: [KeyframeKit.ts:272](https://github.com/benhatsor/KeyframeKit.js/blob/a182a40a7e1698faf3914992863e5af0faa1134a/src/KeyframeKit.ts#L272)
+Defined in: [KeyframeKit.ts:272](https://github.com/benhatsor/KeyframeKit.js/blob/b97a82ce2ad76aadbdbd0ca38db35c8d05e8a932/src/KeyframeKit.ts#L272)
 
 ## Methods
 
@@ -59,15 +59,15 @@ Defined in: [KeyframeKit.ts:272](https://github.com/benhatsor/KeyframeKit.js/blo
 toKeyframeEffect(options: number | KeyframeEffectOptions | null): KeyframeEffectParameters;
 ```
 
-Defined in: [KeyframeKit.ts:278](https://github.com/benhatsor/KeyframeKit.js/blob/a182a40a7e1698faf3914992863e5af0faa1134a/src/KeyframeKit.ts#L278)
+Defined in: [KeyframeKit.ts:278](https://github.com/benhatsor/KeyframeKit.js/blob/b97a82ce2ad76aadbdbd0ca38db35c8d05e8a932/src/KeyframeKit.ts#L278)
 
 #### Parameters
 
 <table>
 <thead>
 <tr>
-<th align="left">Parameter</th>
-<th align="left">Type</th>
+<th>Parameter</th>
+<th>Type</th>
 </tr>
 </thead>
 <tbody>

@@ -9,7 +9,7 @@
   
   //"flattenOutputFiles": false,
 
-  "router": "member",
+  "router": "member", // "module"
 
   "sidebar": {
     //"autoConfiguration": false,
@@ -28,15 +28,6 @@
   "expandObjects": true,
 
   "parametersFormat": "htmlTable",
-
-  "tableColumnSettings": {
-    //"hideInherited": true,
-    "hideModifiers": true,
-    "hideOverrides": true,
-    "hideSources": true,
-    "hideValues": true,
-    "leftAlignHeaders": true
-  },
 
   "useCodeBlocks": true,
 
