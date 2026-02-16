@@ -1,17 +1,17 @@
 ## Classes
 
-* [KeyframeEffectParameters](../wiki/classes/KeyframeEffectParameters/Home)
-* [KeyframesFactory](../wiki/classes/KeyframesFactory/Home)
-* [KeyframesFactoryKeyframesRuleNameTypeError](../wiki/classes/KeyframesFactoryKeyframesRuleNameTypeError/Home)
-* [KeyframesFactorySourceTypeError](../wiki/classes/KeyframesFactorySourceTypeError/Home)
-* [ParsedKeyframes](../wiki/classes/ParsedKeyframes/Home)
+* [KeyframeEffectParameters](../wiki/classes/KeyframeEffectParameters)
+* [KeyframesFactory](../wiki/classes/KeyframesFactory)
+* [KeyframesFactoryKeyframesRuleNameTypeError](../wiki/classes/KeyframesFactoryKeyframesRuleNameTypeError)
+* [KeyframesFactorySourceTypeError](../wiki/classes/KeyframesFactorySourceTypeError)
+* [ParsedKeyframes](../wiki/classes/ParsedKeyframes)
 
 ## Type Aliases
 
-* [KeyframeArgument](../wiki/types/KeyframeArgument/Home)
-* [KeyframesFactorySource](../wiki/types/KeyframesFactorySource/Home)
-* [ParsedKeyframesRules](../wiki/types/ParsedKeyframesRules/Home)
+* [KeyframeArgument](../wiki/type-aliases/KeyframeArgument)
+* [KeyframesFactorySource](../wiki/type-aliases/KeyframesFactorySource)
+* [ParsedKeyframesRules](../wiki/type-aliases/ParsedKeyframesRules)
 
 ## Variables
 
-* [default](../wiki/variables/default/Home)
+* [default](../wiki/variables/default)
