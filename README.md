@@ -10,6 +10,11 @@ npm
 npm install keyframekit
 ```
 
+JS modules
+```
+<script src="KeyframeKit.js" type="module"></script>
+```
+
 ## Usage
 
 ### Playing CSS-defined animations with JS
@@ -21,7 +26,7 @@ In your CSS:
 
 Then, in JS:
 ```js
-import KeyframeKit from './KeyframeKit.js';
+import KeyframeKit from 'KeyframeKit';
 
 // get animation keyframes from document stylesheet
 const rotateSmallAnimKeyframes = KeyframeKit.getStyleSheetKeyframes({
