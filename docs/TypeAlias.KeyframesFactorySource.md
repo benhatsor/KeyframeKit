@@ -4,4 +4,4 @@
 
 > **KeyframesFactorySource** = `DocumentOrShadowRoot` \| `CSSStyleSheet`
 
-Defined in: [KeyframeKit.ts:12](https://github.com/benhatsor/KeyframeKit.js/blob/0dd08a17b656f351c75804c7ba3da20ecad96c5a/src/KeyframeKit.ts#L12)
+Defined in: [KeyframeKit.ts:12](https://github.com/benhatsor/KeyframeKit.js/blob/ebcb0fa517edfce7695016fdfeec5a2c8cc12814/src/KeyframeKit.ts#L12)
