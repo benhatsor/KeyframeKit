@@ -7,11 +7,6 @@ Powered by the [Web Animations API][1].
 
 ### Playing CSS-defined animations with JS
 
-styles.css
-```css
-@keyframes rotate-small { ... }
-```
-
 index.html
 ```html
 <head>
@@ -21,6 +16,11 @@ index.html
   <div class="el"></div>
   <script src="main.js"></script>
 </body>
+```
+
+styles.css
+```css
+@keyframes rotate-small { ... }
 ```
 
 Then, in main.js:
