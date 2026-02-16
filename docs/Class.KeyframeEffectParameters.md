@@ -1,14 +1,14 @@
 [KeyframeKit](../wiki/Home) / KeyframeEffectParameters
 
-Defined in: [KeyframeKit.ts:232](https://github.com/benhatsor/KeyframeKit.js/blob/2e9df8554e5751c81bfee4fce75e8aebcc25a089/src/KeyframeKit.ts#L232)
+Defined in: [KeyframeKit.ts:232](https://github.com/benhatsor/KeyframeKit.js/blob/85cd685c31c0b74c0fdbe6e715332583b7a3ebce/src/KeyframeKit.ts#L232)
 
 ## Contents
 
 * [Constructors](#constructors)
   * [Constructor](#constructor)
 * [Properties](#properties)
-  * [keyframes](#keyframes-1)
-  * [options?](#options-1)
+  * [keyframes](#keyframes)
+  * [options?](#options)
 * [Methods](#methods)
   * [toAnimation()](#toanimation)
 
@@ -23,19 +23,56 @@ new KeyframeEffectParameters(obj: {
 }): KeyframeEffectParameters;
 ```
 
-Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blob/2e9df8554e5751c81bfee4fce75e8aebcc25a089/src/KeyframeKit.ts#L237)
+Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blob/85cd685c31c0b74c0fdbe6e715332583b7a3ebce/src/KeyframeKit.ts#L237)
 
 #### Parameters
 
-##### obj
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-###### keyframes
+`obj`
+
+</td>
+<td>
+
+{ `keyframes`: [`KeyframeArgument`](../wiki/TypeAlias.KeyframeArgument); `options?`: `number` | `KeyframeEffectOptions`; }
+
+</td>
+</tr>
+<tr>
+<td>
+
+`obj.keyframes`
+
+</td>
+<td>
 
 [`KeyframeArgument`](../wiki/TypeAlias.KeyframeArgument)
 
-###### options?
+</td>
+</tr>
+<tr>
+<td>
 
-`number` | `KeyframeEffectOptions` = `{}`
+`obj.options?`
+
+</td>
+<td>
+
+`number` | `KeyframeEffectOptions`
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 
@@ -49,7 +86,7 @@ Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blo
 keyframes: KeyframeArgument;
 ```
 
-Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blob/2e9df8554e5751c81bfee4fce75e8aebcc25a089/src/KeyframeKit.ts#L234)
+Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blob/85cd685c31c0b74c0fdbe6e715332583b7a3ebce/src/KeyframeKit.ts#L234)
 
 ***
 
@@ -59,7 +96,7 @@ Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blo
 optional options: number | KeyframeEffectOptions;
 ```
 
-Defined in: [KeyframeKit.ts:235](https://github.com/benhatsor/KeyframeKit.js/blob/2e9df8554e5751c81bfee4fce75e8aebcc25a089/src/KeyframeKit.ts#L235)
+Defined in: [KeyframeKit.ts:235](https://github.com/benhatsor/KeyframeKit.js/blob/85cd685c31c0b74c0fdbe6e715332583b7a3ebce/src/KeyframeKit.ts#L235)
 
 ## Methods
 
@@ -72,19 +109,56 @@ toAnimation(obj: {
 }): Animation;
 ```
 
-Defined in: [KeyframeKit.ts:247](https://github.com/benhatsor/KeyframeKit.js/blob/2e9df8554e5751c81bfee4fce75e8aebcc25a089/src/KeyframeKit.ts#L247)
+Defined in: [KeyframeKit.ts:247](https://github.com/benhatsor/KeyframeKit.js/blob/85cd685c31c0b74c0fdbe6e715332583b7a3ebce/src/KeyframeKit.ts#L247)
 
 #### Parameters
 
-##### obj
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-###### target
+`obj`
+
+</td>
+<td>
+
+{ `target`: [`Element`](https://developer.mozilla.org/docs/Web/API/Element) | `null`; `timeline?`: [`AnimationTimeline`](https://developer.mozilla.org/docs/Web/API/AnimationTimeline); }
+
+</td>
+</tr>
+<tr>
+<td>
+
+`obj.target`
+
+</td>
+<td>
 
 [`Element`](https://developer.mozilla.org/docs/Web/API/Element) | `null`
 
-###### timeline?
+</td>
+</tr>
+<tr>
+<td>
 
-[`AnimationTimeline`](https://developer.mozilla.org/docs/Web/API/AnimationTimeline) = `document.timeline`
+`obj.timeline?`
+
+</td>
+<td>
+
+[`AnimationTimeline`](https://developer.mozilla.org/docs/Web/API/AnimationTimeline)
+
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Returns
 

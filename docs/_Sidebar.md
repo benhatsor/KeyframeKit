@@ -1,4 +1,4 @@
-## [Reference](../wiki/Reference)
+## [Reference](../wiki)
 
 ### Classes
 
