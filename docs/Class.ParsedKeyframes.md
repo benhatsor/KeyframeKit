@@ -2,7 +2,7 @@
 
 # Class: ParsedKeyframes
 
-Defined in: [KeyframeKit.ts:270](https://github.com/benhatsor/KeyframeKit.js/blob/4c19e678b381c7369a742d8e670501fe25269bae/src/KeyframeKit.ts#L270)
+Defined in: [KeyframeKit.ts:270](https://github.com/benhatsor/KeyframeKit.js/blob/d453212ae1c25ce652a06b754932631af89eaa6c/src/KeyframeKit.ts#L270)
 
 ## Constructors
 
@@ -12,7 +12,7 @@ Defined in: [KeyframeKit.ts:270](https://github.com/benhatsor/KeyframeKit.js/blo
 new ParsedKeyframes(keyframes: Keyframe[]): ParsedKeyframes;
 ```
 
-Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blob/4c19e678b381c7369a742d8e670501fe25269bae/src/KeyframeKit.ts#L274)
+Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blob/d453212ae1c25ce652a06b754932631af89eaa6c/src/KeyframeKit.ts#L274)
 
 #### Parameters
 
@@ -26,13 +26,34 @@ Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blo
 
 ## Properties
 
-### keyframes
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Defined in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-```ts
-keyframes: Keyframe[];
-```
+<a id="property-keyframes"></a> `keyframes`
 
-Defined in: [KeyframeKit.ts:272](https://github.com/benhatsor/KeyframeKit.js/blob/4c19e678b381c7369a742d8e670501fe25269bae/src/KeyframeKit.ts#L272)
+</td>
+<td>
+
+`Keyframe`\[]
+
+</td>
+<td>
+
+[KeyframeKit.ts:272](https://github.com/benhatsor/KeyframeKit.js/blob/d453212ae1c25ce652a06b754932631af89eaa6c/src/KeyframeKit.ts#L272)
+
+</td>
+</tr>
+</tbody>
+</table>
 
 ## Methods
 
@@ -42,7 +63,7 @@ Defined in: [KeyframeKit.ts:272](https://github.com/benhatsor/KeyframeKit.js/blo
 toKeyframeEffect(options: number | KeyframeEffectOptions | null): KeyframeEffectParameters;
 ```
 
-Defined in: [KeyframeKit.ts:278](https://github.com/benhatsor/KeyframeKit.js/blob/4c19e678b381c7369a742d8e670501fe25269bae/src/KeyframeKit.ts#L278)
+Defined in: [KeyframeKit.ts:278](https://github.com/benhatsor/KeyframeKit.js/blob/d453212ae1c25ce652a06b754932631af89eaa6c/src/KeyframeKit.ts#L278)
 
 #### Parameters
 
