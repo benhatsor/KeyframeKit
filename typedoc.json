@@ -29,13 +29,13 @@
 
   "parametersFormat": "htmlTable",
   "interfacePropertiesFormat": "htmlTable",
-  "classPropertiesFormat": "htmlTable",
+  //"classPropertiesFormat": "htmlTable",
   "typeAliasPropertiesFormat": "htmlTable",
   "propertyMembersFormat": "htmlTable",
   "typeDeclarationFormat": "htmlTable",
 
   "tableColumnSettings": {
-    "hideDefaults": true,
+    //"hideDefaults": true,
     "hideInherited": true,
     "hideModifiers": true,
     "hideOverrides": true,
