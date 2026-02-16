@@ -5,8 +5,6 @@ Powered by the [Web Animations API][1].
 
 ## Contents
 
-<details><summary>Open Contents</summary>
-
 * [Installation](#installation)
   * [NPM](#npm)
 * [Usage](#usage)
@@ -14,8 +12,6 @@ Powered by the [Web Animations API][1].
   * [Defining animations in JS](#defining-animations-in-js)
 * [Typing](#typing)
 * [License](#license)
-
-</details>
 
 ## Installation
 

@@ -1,12 +1,8 @@
 ## Contents
 
-<details><summary>Open Contents</summary>
-
 * [Classes](#classes)
 * [Type Aliases](#type-aliases)
 * [Variables](#variables)
-
-</details>
 
 ## Classes
 
