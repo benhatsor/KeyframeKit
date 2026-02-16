@@ -1,16 +1,16 @@
-# KeyframeKit.js
+## API
 
-## Classes
+### Classes
 
 - [KeyframeEffectParameters](../wiki/KeyframeEffectParameters)
 - [ParsedKeyframes](../wiki/ParsedKeyframes)
 
-## Type Aliases
+### Type Aliases
 
 - [KeyframeArgument](../wiki/KeyframeArgument)
 - [KeyframesFactorySource](../wiki/KeyframesFactorySource)
 - [ParsedKeyframesRules](../wiki/ParsedKeyframesRules)
 
-## Variables
+### Variables
 
 - [default](../wiki/default)

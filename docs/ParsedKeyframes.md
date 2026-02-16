@@ -1,12 +1,8 @@
-[**KeyframeKit.js**](README.md)
-
-***
-
-[KeyframeKit.js](modules.md) / ParsedKeyframes
+[KeyframeKit.js](../wiki/modules) / ParsedKeyframes
 
 # Class: ParsedKeyframes
 
-Defined in: [KeyframeKit.ts:270](https://github.com/benhatsor/KeyframeKit.js/blob/a59022cc0b92e198fb01638f09141017e042215f/src/KeyframeKit.ts#L270)
+Defined in: [KeyframeKit.ts:270](https://github.com/benhatsor/KeyframeKit.js/blob/c6e00fb7426a2e762c9bec1afd9ef773ea16223e/src/KeyframeKit.ts#L270)
 
 ## Constructors
 
@@ -14,7 +10,7 @@ Defined in: [KeyframeKit.ts:270](https://github.com/benhatsor/KeyframeKit.js/blo
 
 > **new ParsedKeyframes**(`keyframes`): `ParsedKeyframes`
 
-Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blob/a59022cc0b92e198fb01638f09141017e042215f/src/KeyframeKit.ts#L274)
+Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blob/c6e00fb7426a2e762c9bec1afd9ef773ea16223e/src/KeyframeKit.ts#L274)
 
 #### Parameters
 
@@ -32,15 +28,15 @@ Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blo
 
 > **keyframes**: `Keyframe`[]
 
-Defined in: [KeyframeKit.ts:272](https://github.com/benhatsor/KeyframeKit.js/blob/a59022cc0b92e198fb01638f09141017e042215f/src/KeyframeKit.ts#L272)
+Defined in: [KeyframeKit.ts:272](https://github.com/benhatsor/KeyframeKit.js/blob/c6e00fb7426a2e762c9bec1afd9ef773ea16223e/src/KeyframeKit.ts#L272)
 
 ## Methods
 
 ### toKeyframeEffect()
 
-> **toKeyframeEffect**(`options`): [`KeyframeEffectParameters`](KeyframeEffectParameters.md)
+> **toKeyframeEffect**(`options`): [`KeyframeEffectParameters`](../wiki/KeyframeEffectParameters)
 
-Defined in: [KeyframeKit.ts:278](https://github.com/benhatsor/KeyframeKit.js/blob/a59022cc0b92e198fb01638f09141017e042215f/src/KeyframeKit.ts#L278)
+Defined in: [KeyframeKit.ts:278](https://github.com/benhatsor/KeyframeKit.js/blob/c6e00fb7426a2e762c9bec1afd9ef773ea16223e/src/KeyframeKit.ts#L278)
 
 #### Parameters
 
@@ -50,4 +46,4 @@ Defined in: [KeyframeKit.ts:278](https://github.com/benhatsor/KeyframeKit.js/blo
 
 #### Returns
 
-[`KeyframeEffectParameters`](KeyframeEffectParameters.md)
+[`KeyframeEffectParameters`](../wiki/KeyframeEffectParameters)

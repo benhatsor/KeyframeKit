@@ -1,7 +1,3 @@
-**KeyframeKit.js**
-
-***
-
 # KeyframeKit.js
 
 An intuitive, lightweight and performant set of tools for working with CSS animations in JavaScript.  
@@ -95,7 +91,7 @@ including declaration files and source maps.
 
 ## License
 
-[MIT](_media/LICENSE)
+[MIT](../wiki/_media/LICENSE)
 
 [1]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API
 [2]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API
