@@ -16,5 +16,9 @@
   "remarkPlugins": [
     ["remark-insert-headings", { "text": "Contents" }],
     ["remark-toc", { "maxDepth": 2 }]
-  ]
+  ],
+
+  "includeHierarchySummary": true,
+
+  "modulesFileName": "documentation"
 }
