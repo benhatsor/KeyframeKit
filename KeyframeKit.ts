@@ -11,82 +11,82 @@ const PERCENTAGE_CHAR = '%';
 
 export default new class KeyframesFactory {
 
-    getStyleSheetKeyframes({ in: documentOrShadowRoot = document }: {
-        in?: DocumentOrShadowRoot
-    } = {}): ParsedKeyframesDictionary {
+  getStyleSheetKeyframes({ in: documentOrShadowRoot = document }: {
+    in?: DocumentOrShadowRoot
+  } = {}): ParsedKeyframesDictionary {
 
-        let keyframesDict: ParsedKeyframesDictionary = {};
+    let keyframesDict: ParsedKeyframesDictionary = {};
 
-        for (const styleSheet of documentOrShadowRoot.styleSheets) {
+    for (const styleSheet of documentOrShadowRoot.styleSheets) {
 
-            for (const rule of styleSheet.cssRules) {
+      for (const rule of styleSheet.cssRules) {
 
-                if (!(rule instanceof CSSKeyframesRule)) {
-                    continue;
-                }
-
-                const [animationName, keyframes] = parseKeyframesRule({
-                    rule
-                });
-
-                keyframesDict[animationName] = keyframes;
-
-            }
-
+        if (!(rule instanceof CSSKeyframesRule)) {
+          continue;
         }
 
-        return keyframesDict;
+        const [animationName, keyframes] = parseKeyframesRule({
+          rule
+        });
+
+        keyframesDict[animationName] = keyframes;
+
+      }
 
     }
+
+    return keyframesDict;
+
+  }
 
 }
 
 function parseKeyframesRule({ rule: keyframes }: {
-    rule: CSSKeyframesRule
+  rule: CSSKeyframesRule
 }): ParsedKeyframesRule {
 
-    const animationName = keyframes.name;
+  const animationName = keyframes.name;
 
-    let parsedKeyframes: Keyframe[] = [];
+  let parsedKeyframes: Keyframe[] = [];
 
-    for (const keyframe of keyframes) {
+  for (const keyframe of keyframes) {
 
-        // remove trailing '%'
-        /// https://drafts.csswg.org/css-animations/#dom-csskeyframerule-keytext
-        const percentString = removeSuffix({
-            of: keyframe.keyText,
-            suffix: PERCENTAGE_CHAR
-        });
+    // remove trailing '%'
+    /// https://drafts.csswg.org/css-animations/#dom-csskeyframerule-keytext
+    const percentString = removeSuffix({
+      of: keyframe.keyText,
+      suffix: PERCENTAGE_CHAR
+    });
+    
+    const percent = Number(percentString);
 
-        const percent = Number(percentString);
-
-        const offset = percent / 100;
-
-
-        let parsedProperties: KeyframeProperties = {};
-
-        for (const propertyName of keyframe.style) {
-
-            /// https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/getPropertyValue
-            const propertyValue = keyframe.style.getPropertyValue(propertyName);
-
-            parsedProperties[propertyName] = propertyValue;
-
-        }
+    const offset = percent / 100;
 
 
-        const parsedKeyframe: Keyframe = {
-            ...parsedProperties,
-            offset: offset
-        };
+    let parsedProperties: KeyframeProperties = {};
 
-        parsedKeyframes.push(parsedKeyframe);
+    for (const propertyName of keyframe.style) {
+
+      /// https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/getPropertyValue
+      const propertyValue = keyframe.style.getPropertyValue(propertyName);
+      
+      parsedProperties[propertyName] = propertyValue;
 
     }
 
-    const parsedKeyframesInstance = new ParsedKeyframes(parsedKeyframes);
 
-    return [animationName, parsedKeyframesInstance];
+    const parsedKeyframe: Keyframe = {
+      ...parsedProperties,
+      offset: offset
+    };
+
+    parsedKeyframes.push(parsedKeyframe);
+    
+  }
+
+  const parsedKeyframesInstance = new ParsedKeyframes(parsedKeyframes);
+
+  return [animationName, parsedKeyframesInstance];
 
 }
 
@@ -101,83 +101,83 @@ export type KeyframeArgument = Keyframe[] | PropertyIndexedKeyframes;
 /// https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface
 export class KeyframeEffectParameters {
 
-    keyframes: KeyframeArgument;
-    options?: number | KeyframeEffectOptions;
+  keyframes: KeyframeArgument;
+  options?: number | KeyframeEffectOptions;
 
-    constructor({ keyframes, options = {} }: {
-        keyframes: KeyframeArgument,
-        options?: number | KeyframeEffectOptions
-    }) {
-        this.keyframes = keyframes;
-        this.options = options;
-    }
+  constructor({ keyframes, options = {} }: {
+    keyframes: KeyframeArgument,
+    options?: number | KeyframeEffectOptions
+  }) {
+    this.keyframes = keyframes;
+    this.options = options;
+  }
 
-    /// https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface
-    /// https://drafts.csswg.org/web-animations-1/#the-animation-interface
-    toAnimation({ target, timeline = document.timeline }: {
-        target: Element | null,
-        timeline?: AnimationTimeline
-    }): Animation {
+  /// https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface
+  /// https://drafts.csswg.org/web-animations-1/#the-animation-interface
+  toAnimation({ target, timeline = document.timeline }: {
+    target: Element | null,
+    timeline?: AnimationTimeline
+  }): Animation {
+    
+    const keyframeEffect = new KeyframeEffect(
+      target,
+      this.keyframes,
+      this.options
+    );
 
-        const keyframeEffect = new KeyframeEffect(
-            target,
-            this.keyframes,
-            this.options
-        );
+    const animation = new Animation(
+      keyframeEffect,
+      timeline
+    );
 
-        const animation = new Animation(
-            keyframeEffect,
-            timeline
-        );
+    return animation;
 
-        return animation;
-
-    }
-
+  }
+  
 }
 
 
 export class ParsedKeyframes {
 
-    keyframes: Keyframe[];
+  keyframes: Keyframe[];
 
-    constructor(keyframes: Keyframe[]) {
-        this.keyframes = keyframes;
-    }
+  constructor(keyframes: Keyframe[]) {
+    this.keyframes = keyframes;
+  }
 
-    toKeyframeEffect(
-        options: number | KeyframeEffectOptions | null
-    ): KeyframeEffectParameters {
+  toKeyframeEffect(
+    options: number | KeyframeEffectOptions | null
+  ): KeyframeEffectParameters {
+    
+    const keyframeEffect = new KeyframeEffectParameters({
+      keyframes: this.keyframes,
+      options: options ?? undefined
+    });
 
-        const keyframeEffect = new KeyframeEffectParameters({
-            keyframes: this.keyframes,
-            options: options ?? undefined
-        });
+    return keyframeEffect;
 
-        return keyframeEffect;
-
-    }
+  }
 
 }
 
 
 type ParsedKeyframesRule = [
-    animationName: string,
-    ParsedKeyframes
+  animationName: string,
+  ParsedKeyframes
 ];
 
 export type ParsedKeyframesDictionary = {
-    [animationName: string]: ParsedKeyframes
+  [animationName: string]: ParsedKeyframes
 };
 
 
 
 // MARK: - Util
 function removeSuffix({ of: string, suffix }: {
-    of: string,
-    suffix: string
+  of: string,
+  suffix: string
 }) {
 
-    return string.slice(0, -suffix.length);
+  return string.slice(0, -suffix.length);
 
 }
