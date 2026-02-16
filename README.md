@@ -73,7 +73,8 @@ targetedAnim.play();
 
 ## TypeScript
 
-This library is completely usable in native JS, but it also has full spec-compliant type support.
+This library is completely usable in native JS, but it also has full spec-compliant type support.  
+Just import the `.ts` or use the `.d.ts`.
 
 ## License
 
