@@ -2,7 +2,7 @@
 
 # Class: KeyframeEffectParameters
 
-Defined in: [KeyframeKit.ts:232](https://github.com/benhatsor/KeyframeKit.js/blob/8592bb943735ad64c24f75549600434a76fd2ee2/src/KeyframeKit.ts#L232)
+Defined in: [KeyframeKit.ts:232](https://github.com/benhatsor/KeyframeKit.js/blob/76494b76437296138a7e39a24dfc2e3c05a6b6f6/src/KeyframeKit.ts#L232)
 
 ## Constructors
 
@@ -15,56 +15,19 @@ new KeyframeEffectParameters(__namedParameters: {
 }): KeyframeEffectParameters;
 ```
 
-Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blob/8592bb943735ad64c24f75549600434a76fd2ee2/src/KeyframeKit.ts#L237)
+Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blob/76494b76437296138a7e39a24dfc2e3c05a6b6f6/src/KeyframeKit.ts#L237)
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
+##### \_\_namedParameters
 
-`__namedParameters`
-
-</td>
-<td>
-
-{ `keyframes`: [`KeyframeArgument`](../wiki/TypeAlias.KeyframeArgument); `options?`: `number` | `KeyframeEffectOptions`; }
-
-</td>
-</tr>
-<tr>
-<td>
-
-`__namedParameters.keyframes`
-
-</td>
-<td>
+###### keyframes
 
 [`KeyframeArgument`](../wiki/TypeAlias.KeyframeArgument)
 
-</td>
-</tr>
-<tr>
-<td>
+###### options?
 
-`__namedParameters.options?`
-
-</td>
-<td>
-
-`number` | `KeyframeEffectOptions`
-
-</td>
-</tr>
-</tbody>
-</table>
+`number` | `KeyframeEffectOptions` = `{}`
 
 #### Returns
 
@@ -78,7 +41,7 @@ Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blo
 keyframes: KeyframeArgument;
 ```
 
-Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blob/8592bb943735ad64c24f75549600434a76fd2ee2/src/KeyframeKit.ts#L234)
+Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blob/76494b76437296138a7e39a24dfc2e3c05a6b6f6/src/KeyframeKit.ts#L234)
 
 ***
 
@@ -88,7 +51,7 @@ Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blo
 optional options: number | KeyframeEffectOptions;
 ```
 
-Defined in: [KeyframeKit.ts:235](https://github.com/benhatsor/KeyframeKit.js/blob/8592bb943735ad64c24f75549600434a76fd2ee2/src/KeyframeKit.ts#L235)
+Defined in: [KeyframeKit.ts:235](https://github.com/benhatsor/KeyframeKit.js/blob/76494b76437296138a7e39a24dfc2e3c05a6b6f6/src/KeyframeKit.ts#L235)
 
 ## Methods
 
@@ -101,56 +64,19 @@ toAnimation(__namedParameters: {
 }): Animation;
 ```
 
-Defined in: [KeyframeKit.ts:247](https://github.com/benhatsor/KeyframeKit.js/blob/8592bb943735ad64c24f75549600434a76fd2ee2/src/KeyframeKit.ts#L247)
+Defined in: [KeyframeKit.ts:247](https://github.com/benhatsor/KeyframeKit.js/blob/76494b76437296138a7e39a24dfc2e3c05a6b6f6/src/KeyframeKit.ts#L247)
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
+##### \_\_namedParameters
 
-`__namedParameters`
-
-</td>
-<td>
-
-{ `target`: [`Element`](https://developer.mozilla.org/docs/Web/API/Element) | `null`; `timeline?`: [`AnimationTimeline`](https://developer.mozilla.org/docs/Web/API/AnimationTimeline); }
-
-</td>
-</tr>
-<tr>
-<td>
-
-`__namedParameters.target`
-
-</td>
-<td>
+###### target
 
 [`Element`](https://developer.mozilla.org/docs/Web/API/Element) | `null`
 
-</td>
-</tr>
-<tr>
-<td>
+###### timeline?
 
-`__namedParameters.timeline?`
-
-</td>
-<td>
-
-[`AnimationTimeline`](https://developer.mozilla.org/docs/Web/API/AnimationTimeline)
-
-</td>
-</tr>
-</tbody>
-</table>
+[`AnimationTimeline`](https://developer.mozilla.org/docs/Web/API/AnimationTimeline) = `document.timeline`
 
 #### Returns
 
