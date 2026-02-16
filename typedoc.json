@@ -13,12 +13,13 @@
     "autoConfiguration": false,
   },
 
+  /*
   "remarkPlugins": [
     ["remark-insert-headings", { "text": "Contents" }],
     ["remark-toc", { "maxDepth": 2 }]
-  ],
+  ],*/
 
-  //"includeHierarchySummary": true,
+  "includeHierarchySummary": true,
 
   //"modulesFileName": "documentation",
 
