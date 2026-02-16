@@ -4,6 +4,8 @@
 
 - [KeyframeEffectParameters](../wiki/Class.KeyframeEffectParameters)
 - [KeyframesFactory](../wiki/Class.KeyframesFactory)
+- [KeyframesFactoryKeyframesRuleNameTypeError](../wiki/Class.KeyframesFactoryKeyframesRuleNameTypeError)
+- [KeyframesFactorySourceTypeError](../wiki/Class.KeyframesFactorySourceTypeError)
 - [ParsedKeyframes](../wiki/Class.ParsedKeyframes)
 
 ## Type Aliases
