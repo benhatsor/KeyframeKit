@@ -2,13 +2,13 @@
   "name": "keyframekit",
   "version": "1.0.0",
   "description": "A lightweight and performant set of tools for working with CSS animations in JavaScript. Powered by the Web Animations API.",
-  "main": "dist/KeyframeKit.js",
+  "main": "./dist/KeyframeKit.js",
   "scripts": {
     "build": "npx tsc"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/benhatsor/KeyframeKit.js.git#main"
+    "url": "git+https://github.com/benhatsor/KeyframeKit.js.git"
   },
   "keywords": [
     "css",
@@ -28,5 +28,5 @@
   "bugs": {
     "url": "https://github.com/benhatsor/KeyframeKit.js/issues"
   },
-  "homepage": "https://github.com/benhatsor/KeyframeKit.js/tree/main#readme"
+  "homepage": "https://github.com/benhatsor/KeyframeKit.js#readme"
 }
