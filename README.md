@@ -11,7 +11,7 @@ npm install keyframekit
 ```
 
 JS modules
-```
+```html
 <script src="KeyframeKit.js" type="module"></script>
 ```
 
