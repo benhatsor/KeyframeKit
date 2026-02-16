@@ -1,17 +1,17 @@
 ## Classes
 
-* [KeyframeEffectParameters](../wiki/classes/KeyframeEffectParameters)
-* [KeyframesFactory](../wiki/classes/KeyframesFactory)
-* [KeyframesFactoryKeyframesRuleNameTypeError](../wiki/classes/KeyframesFactoryKeyframesRuleNameTypeError)
-* [KeyframesFactorySourceTypeError](../wiki/classes/KeyframesFactorySourceTypeError)
-* [ParsedKeyframes](../wiki/classes/ParsedKeyframes)
+* [KeyframeEffectParameters](../wiki/Class.KeyframeEffectParameters)
+* [KeyframesFactory](../wiki/Class.KeyframesFactory)
+* [KeyframesFactoryKeyframesRuleNameTypeError](../wiki/Class.KeyframesFactoryKeyframesRuleNameTypeError)
+* [KeyframesFactorySourceTypeError](../wiki/Class.KeyframesFactorySourceTypeError)
+* [ParsedKeyframes](../wiki/Class.ParsedKeyframes)
 
 ## Type Aliases
 
-* [KeyframeArgument](../wiki/type-aliases/KeyframeArgument)
-* [KeyframesFactorySource](../wiki/type-aliases/KeyframesFactorySource)
-* [ParsedKeyframesRules](../wiki/type-aliases/ParsedKeyframesRules)
+* [KeyframeArgument](../wiki/TypeAlias.KeyframeArgument)
+* [KeyframesFactorySource](../wiki/TypeAlias.KeyframesFactorySource)
+* [ParsedKeyframesRules](../wiki/TypeAlias.ParsedKeyframesRules)
 
 ## Variables
 
-* [default](../wiki/variables/default)
+* [default](../wiki/Variable.default)
