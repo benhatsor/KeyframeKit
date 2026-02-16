@@ -1,0 +1,14 @@
+name: Deploy Github Wiki
+on:
+  push:
+    paths:
+      - "docs/**"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Upload example to Wiki
+        uses: SwiftDocOrg/github-wiki-publish-action@v1
+        with:
+          path: "docs"
