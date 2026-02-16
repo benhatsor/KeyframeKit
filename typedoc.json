@@ -11,6 +11,8 @@
 
   "router": "member", // "module"
 
+  "readme": "none",
+
   "sidebar": {
     //"autoConfiguration": false,
     "heading": "[Reference](../wiki/Reference)"
