@@ -32,13 +32,13 @@ const rotateSmallAnimKeyframes = KeyframeKit.getStyleSheetKeyframes({
   of: 'rotate-small'
 });
 
-// then, define your animation
+// and define your animation
 const rotateSmallAnim = rotateSmallAnimKeyframes.toKeyframeEffect({
   duration: 700,
   easing: 'ease'
 });
 
-// finally, attach it to an element:
+// then, attach it to an element:
 const attachedAnim = rotateSmallAnim.toAnimation({
   target: document.querySelector('.el')
 });
