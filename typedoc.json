@@ -20,7 +20,7 @@
     ["remark-toc", { "maxDepth": 2 }]
   ],*/
 
-  //"includeHierarchySummary": true,
+  "includeHierarchySummary": true,
 
   "modulesFileName": "Reference",
 
@@ -28,6 +28,10 @@
   "expandObjects": true,
 
   "interfacePropertiesFormat": "htmlTable",
+  "classPropertiesFormat": "htmlTable",
+  "typeAliasPropertiesFormat": "htmlTable",
+  "propertyMembersFormat": "htmlTable",
+  "typeDeclarationFormat": "htmlTable",
 
   "useCodeBlocks": true
 }
