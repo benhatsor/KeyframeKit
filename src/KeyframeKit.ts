@@ -11,7 +11,7 @@ const PERCENTAGE_CHAR = '%';
 
 export type KeyframesFactorySource = DocumentOrShadowRoot | CSSStyleSheet;
 
-export const KeyframesFactory = new class KeyframesFactory {
+export class KeyframesFactory {
 
   readonly KeyframesRuleNameTypeError = class KeyframesFactoryKeyframesRuleNameTypeError extends TypeError {
     message = `Keyframes rule name must be a string.`;
@@ -220,7 +220,7 @@ export const KeyframesFactory = new class KeyframesFactory {
 
 }
 
-export default KeyframesFactory;
+export default new KeyframesFactory();
 
 
 /// https://drafts.csswg.org/web-animations-1/#processing-a-keyframes-argument

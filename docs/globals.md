@@ -7,6 +7,7 @@
 ## Classes
 
 - [KeyframeEffectParameters](classes/KeyframeEffectParameters.md)
+- [KeyframesFactory](classes/KeyframesFactory.md)
 - [ParsedKeyframes](classes/ParsedKeyframes.md)
 
 ## Type Aliases
@@ -17,10 +18,4 @@
 
 ## Variables
 
-- [KeyframesFactory](variables/KeyframesFactory.md)
-
-## References
-
-### default
-
-Renames and re-exports [KeyframesFactory](variables/KeyframesFactory.md)
+- [default](variables/default.md)
