@@ -36,6 +36,7 @@ function parseKeyframesRule({ rule: keyframes }) {
         const offset = percent / 100;
         let parsedProperties = {};
         for (const propertyName of keyframe.style) {
+            /// https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/getPropertyValue
             const propertyValue = keyframe.style.getPropertyValue(propertyName);
             parsedProperties[propertyName] = propertyValue;
         }
