@@ -2,7 +2,7 @@
 
 # Class: KeyframeEffectParameters
 
-Defined in: [KeyframeKit.ts:232](https://github.com/benhatsor/KeyframeKit.js/blob/c4b67bcaa597971169b8527ab3956df5ff8309e6/src/KeyframeKit.ts#L232)
+Defined in: [KeyframeKit.ts:232](https://github.com/benhatsor/KeyframeKit.js/blob/82b901f03bffe3b4a95062761780597ea890dcde/src/KeyframeKit.ts#L232)
 
 ## Constructors
 
@@ -15,15 +15,15 @@ new KeyframeEffectParameters(__namedParameters: {
 }): KeyframeEffectParameters;
 ```
 
-Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blob/c4b67bcaa597971169b8527ab3956df5ff8309e6/src/KeyframeKit.ts#L237)
+Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blob/82b901f03bffe3b4a95062761780597ea890dcde/src/KeyframeKit.ts#L237)
 
 #### Parameters
 
 <table>
 <thead>
 <tr>
-<th>Parameter</th>
-<th>Type</th>
+<th align="left">Parameter</th>
+<th align="left">Type</th>
 </tr>
 </thead>
 <tbody>
@@ -75,9 +75,8 @@ Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blo
 <table>
 <thead>
 <tr>
-<th>Property</th>
-<th>Type</th>
-<th>Defined in</th>
+<th align="left">Property</th>
+<th align="left">Type</th>
 </tr>
 </thead>
 <tbody>
@@ -92,11 +91,6 @@ Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blo
 [`KeyframeArgument`](../wiki/TypeAlias.KeyframeArgument)
 
 </td>
-<td>
-
-[KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blob/c4b67bcaa597971169b8527ab3956df5ff8309e6/src/KeyframeKit.ts#L234)
-
-</td>
 </tr>
 <tr>
 <td>
@@ -107,11 +101,6 @@ Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blo
 <td>
 
 `number` | `KeyframeEffectOptions`
-
-</td>
-<td>
-
-[KeyframeKit.ts:235](https://github.com/benhatsor/KeyframeKit.js/blob/c4b67bcaa597971169b8527ab3956df5ff8309e6/src/KeyframeKit.ts#L235)
 
 </td>
 </tr>
@@ -129,15 +118,15 @@ toAnimation(__namedParameters: {
 }): Animation;
 ```
 
-Defined in: [KeyframeKit.ts:247](https://github.com/benhatsor/KeyframeKit.js/blob/c4b67bcaa597971169b8527ab3956df5ff8309e6/src/KeyframeKit.ts#L247)
+Defined in: [KeyframeKit.ts:247](https://github.com/benhatsor/KeyframeKit.js/blob/82b901f03bffe3b4a95062761780597ea890dcde/src/KeyframeKit.ts#L247)
 
 #### Parameters
 
 <table>
 <thead>
 <tr>
-<th>Parameter</th>
-<th>Type</th>
+<th align="left">Parameter</th>
+<th align="left">Type</th>
 </tr>
 </thead>
 <tbody>

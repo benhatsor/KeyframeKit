@@ -2,16 +2,15 @@
 
 # Class: KeyframesFactorySourceTypeError
 
-Defined in: [KeyframeKit.ts:20](https://github.com/benhatsor/KeyframeKit.js/blob/c4b67bcaa597971169b8527ab3956df5ff8309e6/src/KeyframeKit.ts#L20)
+Defined in: [KeyframeKit.ts:20](https://github.com/benhatsor/KeyframeKit.js/blob/82b901f03bffe3b4a95062761780597ea890dcde/src/KeyframeKit.ts#L20)
 
 ## Properties
 
 <table>
 <thead>
 <tr>
-<th>Property</th>
-<th>Type</th>
-<th>Defined in</th>
+<th align="left">Property</th>
+<th align="left">Type</th>
 </tr>
 </thead>
 <tbody>
@@ -24,11 +23,6 @@ Defined in: [KeyframeKit.ts:20](https://github.com/benhatsor/KeyframeKit.js/blob
 <td>
 
 `string`
-
-</td>
-<td>
-
-[KeyframeKit.ts:21](https://github.com/benhatsor/KeyframeKit.js/blob/c4b67bcaa597971169b8527ab3956df5ff8309e6/src/KeyframeKit.ts#L21)
 
 </td>
 </tr>

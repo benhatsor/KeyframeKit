@@ -2,17 +2,15 @@
 
 # Class: KeyframesFactory
 
-Defined in: [KeyframeKit.ts:14](https://github.com/benhatsor/KeyframeKit.js/blob/c4b67bcaa597971169b8527ab3956df5ff8309e6/src/KeyframeKit.ts#L14)
+Defined in: [KeyframeKit.ts:14](https://github.com/benhatsor/KeyframeKit.js/blob/82b901f03bffe3b4a95062761780597ea890dcde/src/KeyframeKit.ts#L14)
 
 ## Properties
 
 <table>
 <thead>
 <tr>
-<th>Property</th>
-<th>Modifier</th>
-<th>Type</th>
-<th>Defined in</th>
+<th align="left">Property</th>
+<th align="left">Type</th>
 </tr>
 </thead>
 <tbody>
@@ -24,17 +22,7 @@ Defined in: [KeyframeKit.ts:14](https://github.com/benhatsor/KeyframeKit.js/blob
 </td>
 <td>
 
-`readonly`
-
-</td>
-<td>
-
 *typeof* [`KeyframesFactoryKeyframesRuleNameTypeError`](../wiki/Class.KeyframesFactoryKeyframesRuleNameTypeError)
-
-</td>
-<td>
-
-[KeyframeKit.ts:16](https://github.com/benhatsor/KeyframeKit.js/blob/c4b67bcaa597971169b8527ab3956df5ff8309e6/src/KeyframeKit.ts#L16)
 
 </td>
 </tr>
@@ -46,17 +34,7 @@ Defined in: [KeyframeKit.ts:14](https://github.com/benhatsor/KeyframeKit.js/blob
 </td>
 <td>
 
-`readonly`
-
-</td>
-<td>
-
 *typeof* [`KeyframesFactorySourceTypeError`](../wiki/Class.KeyframesFactorySourceTypeError)
-
-</td>
-<td>
-
-[KeyframeKit.ts:20](https://github.com/benhatsor/KeyframeKit.js/blob/c4b67bcaa597971169b8527ab3956df5ff8309e6/src/KeyframeKit.ts#L20)
 
 </td>
 </tr>
@@ -73,15 +51,15 @@ getAllStyleSheetKeyframesRules(__namedParameters?: {
 }): ParsedKeyframesRules;
 ```
 
-Defined in: [KeyframeKit.ts:102](https://github.com/benhatsor/KeyframeKit.js/blob/c4b67bcaa597971169b8527ab3956df5ff8309e6/src/KeyframeKit.ts#L102)
+Defined in: [KeyframeKit.ts:102](https://github.com/benhatsor/KeyframeKit.js/blob/82b901f03bffe3b4a95062761780597ea890dcde/src/KeyframeKit.ts#L102)
 
 #### Parameters
 
 <table>
 <thead>
 <tr>
-<th>Parameter</th>
-<th>Type</th>
+<th align="left">Parameter</th>
+<th align="left">Type</th>
 </tr>
 </thead>
 <tbody>
@@ -127,15 +105,15 @@ getStyleSheetKeyframes(__namedParameters: {
 }): ParsedKeyframes | undefined;
 ```
 
-Defined in: [KeyframeKit.ts:25](https://github.com/benhatsor/KeyframeKit.js/blob/c4b67bcaa597971169b8527ab3956df5ff8309e6/src/KeyframeKit.ts#L25)
+Defined in: [KeyframeKit.ts:25](https://github.com/benhatsor/KeyframeKit.js/blob/82b901f03bffe3b4a95062761780597ea890dcde/src/KeyframeKit.ts#L25)
 
 #### Parameters
 
 <table>
 <thead>
 <tr>
-<th>Parameter</th>
-<th>Type</th>
+<th align="left">Parameter</th>
+<th align="left">Type</th>
 </tr>
 </thead>
 <tbody>
@@ -192,15 +170,15 @@ parseKeyframesRule(__namedParameters: {
 }): ParsedKeyframes;
 ```
 
-Defined in: [KeyframeKit.ts:174](https://github.com/benhatsor/KeyframeKit.js/blob/c4b67bcaa597971169b8527ab3956df5ff8309e6/src/KeyframeKit.ts#L174)
+Defined in: [KeyframeKit.ts:174](https://github.com/benhatsor/KeyframeKit.js/blob/82b901f03bffe3b4a95062761780597ea890dcde/src/KeyframeKit.ts#L174)
 
 #### Parameters
 
 <table>
 <thead>
 <tr>
-<th>Parameter</th>
-<th>Type</th>
+<th align="left">Parameter</th>
+<th align="left">Type</th>
 </tr>
 </thead>
 <tbody>

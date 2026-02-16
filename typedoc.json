@@ -34,5 +34,15 @@
   "propertyMembersFormat": "htmlTable",
   "typeDeclarationFormat": "htmlTable",
 
+  "tableColumnSettings": {
+    "hideDefaults": true,
+    "hideInherited": true,
+    "hideModifiers": true,
+    "hideOverrides": true,
+    "hideSources": true,
+    "hideValues": true,
+    "leftAlignHeaders": true
+  },
+
   "useCodeBlocks": true
 }

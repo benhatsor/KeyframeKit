@@ -2,7 +2,7 @@
 
 # Class: ParsedKeyframes
 
-Defined in: [KeyframeKit.ts:270](https://github.com/benhatsor/KeyframeKit.js/blob/c4b67bcaa597971169b8527ab3956df5ff8309e6/src/KeyframeKit.ts#L270)
+Defined in: [KeyframeKit.ts:270](https://github.com/benhatsor/KeyframeKit.js/blob/82b901f03bffe3b4a95062761780597ea890dcde/src/KeyframeKit.ts#L270)
 
 ## Constructors
 
@@ -12,15 +12,15 @@ Defined in: [KeyframeKit.ts:270](https://github.com/benhatsor/KeyframeKit.js/blo
 new ParsedKeyframes(keyframes: Keyframe[]): ParsedKeyframes;
 ```
 
-Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blob/c4b67bcaa597971169b8527ab3956df5ff8309e6/src/KeyframeKit.ts#L274)
+Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blob/82b901f03bffe3b4a95062761780597ea890dcde/src/KeyframeKit.ts#L274)
 
 #### Parameters
 
 <table>
 <thead>
 <tr>
-<th>Parameter</th>
-<th>Type</th>
+<th align="left">Parameter</th>
+<th align="left">Type</th>
 </tr>
 </thead>
 <tbody>
@@ -48,9 +48,8 @@ Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blo
 <table>
 <thead>
 <tr>
-<th>Property</th>
-<th>Type</th>
-<th>Defined in</th>
+<th align="left">Property</th>
+<th align="left">Type</th>
 </tr>
 </thead>
 <tbody>
@@ -65,11 +64,6 @@ Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blo
 `Keyframe`\[]
 
 </td>
-<td>
-
-[KeyframeKit.ts:272](https://github.com/benhatsor/KeyframeKit.js/blob/c4b67bcaa597971169b8527ab3956df5ff8309e6/src/KeyframeKit.ts#L272)
-
-</td>
 </tr>
 </tbody>
 </table>
@@ -82,15 +76,15 @@ Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blo
 toKeyframeEffect(options: number | KeyframeEffectOptions | null): KeyframeEffectParameters;
 ```
 
-Defined in: [KeyframeKit.ts:278](https://github.com/benhatsor/KeyframeKit.js/blob/c4b67bcaa597971169b8527ab3956df5ff8309e6/src/KeyframeKit.ts#L278)
+Defined in: [KeyframeKit.ts:278](https://github.com/benhatsor/KeyframeKit.js/blob/82b901f03bffe3b4a95062761780597ea890dcde/src/KeyframeKit.ts#L278)
 
 #### Parameters
 
 <table>
 <thead>
 <tr>
-<th>Parameter</th>
-<th>Type</th>
+<th align="left">Parameter</th>
+<th align="left">Type</th>
 </tr>
 </thead>
 <tbody>
