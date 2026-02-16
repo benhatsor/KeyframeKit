@@ -1,30 +1,75 @@
 export type KeyframesFactorySource = DocumentOrShadowRoot | CSSStyleSheet;
-declare const _default: {
+export declare class KeyframesFactory {
+    readonly KeyframesRuleNameTypeError: {
+        new (message?: string): {
+            message: string;
+            name: string;
+            stack?: string;
+            cause?: unknown;
+        };
+        new (message?: string, options?: ErrorOptions): {
+            message: string;
+            name: string;
+            stack?: string;
+            cause?: unknown;
+        };
+        new (message?: string): {
+            message: string;
+            name: string;
+            stack?: string;
+            cause?: unknown;
+        };
+        new (message?: string, options?: ErrorOptions): {
+            message: string;
+            name: string;
+            stack?: string;
+            cause?: unknown;
+        };
+        isError(error: unknown): error is Error;
+    };
+    readonly SourceTypeError: {
+        new (message?: string): {
+            message: string;
+            name: string;
+            stack?: string;
+            cause?: unknown;
+        };
+        new (message?: string, options?: ErrorOptions): {
+            message: string;
+            name: string;
+            stack?: string;
+            cause?: unknown;
+        };
+        new (message?: string): {
+            message: string;
+            name: string;
+            stack?: string;
+            cause?: unknown;
+        };
+        new (message?: string, options?: ErrorOptions): {
+            message: string;
+            name: string;
+            stack?: string;
+            cause?: unknown;
+        };
+        isError(error: unknown): error is Error;
+    };
     getStyleSheetKeyframes({ of: ruleName, in: source }: {
         of: string;
         in?: KeyframesFactorySource;
     }): ParsedKeyframes | undefined;
-    "__#private@#getStyleSheetKeyframesInDocumentOrShadowRoot"({ of: ruleName, documentOrShadowRoot }: {
-        of: string;
-        documentOrShadowRoot: DocumentOrShadowRoot;
-    }): ParsedKeyframes | undefined;
-    "__#private@#getStyleSheetKeyframesInStyleSheet"({ of: ruleName, styleSheet }: {
-        of: string;
-        styleSheet: CSSStyleSheet;
-    }): ParsedKeyframes | undefined;
+    private getStyleSheetKeyframesInDocumentOrShadowRoot;
+    private getStyleSheetKeyframesInStyleSheet;
     getAllStyleSheetKeyframesRules({ in: source }?: {
         in?: KeyframesFactorySource;
     }): ParsedKeyframesRules;
-    "__#private@#getAllStyleSheetKeyframesRulesInDocumentOrShadowRoot"({ documentOrShadowRoot }: {
-        documentOrShadowRoot: DocumentOrShadowRoot;
-    }): ParsedKeyframesRules;
-    "__#private@#getAllStyleSheetKeyframesRulesInStyleSheet"({ styleSheet }: {
-        styleSheet: CSSStyleSheet;
-    }): ParsedKeyframesRules;
+    private getAllStyleSheetKeyframesRulesInDocumentOrShadowRoot;
+    private getAllStyleSheetKeyframesRulesInStyleSheet;
     parseKeyframesRule({ rule: keyframes }: {
         rule: CSSKeyframesRule;
     }): ParsedKeyframes;
-};
+}
+declare const _default: KeyframesFactory;
 export default _default;
 export type KeyframeArgument = Keyframe[] | PropertyIndexedKeyframes;
 export declare class KeyframeEffectParameters {

@@ -7,6 +7,7 @@
 ## Classes
 
 - [KeyframeEffectParameters](classes/KeyframeEffectParameters.md)
+- [KeyframesFactory](classes/KeyframesFactory.md)
 - [ParsedKeyframes](classes/ParsedKeyframes.md)
 
 ## Type Aliases

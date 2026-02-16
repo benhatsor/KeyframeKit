@@ -5,36 +5,36 @@
 // See README.md for usage.
 //
 const PERCENTAGE_CHAR = '%';
-export default new class KeyframesFactory {
-    static KeyframesRuleNameTypeError = class KeyframesFactoryKeyframesRuleNameTypeError extends TypeError {
+export class KeyframesFactory {
+    KeyframesRuleNameTypeError = class KeyframesFactoryKeyframesRuleNameTypeError extends TypeError {
         message = `Keyframes rule name must be a string.`;
     };
-    static SourceTypeError = class KeyframesFactorySourceTypeError extends TypeError {
+    SourceTypeError = class KeyframesFactorySourceTypeError extends TypeError {
         message = `Source must be either a Document, a ShadowRoot or a CSSStyleSheet instance.`;
     };
     getStyleSheetKeyframes({ of: ruleName, in: source = document }) {
         if (typeof ruleName !== 'string') {
-            throw new KeyframesFactory.KeyframesRuleNameTypeError();
+            throw new this.KeyframesRuleNameTypeError();
         }
         if (source instanceof Document || source instanceof ShadowRoot) {
-            return this.#getStyleSheetKeyframesInDocumentOrShadowRoot({
+            return this.getStyleSheetKeyframesInDocumentOrShadowRoot({
                 of: ruleName,
                 documentOrShadowRoot: source
             });
         }
         else if (source instanceof CSSStyleSheet) {
-            return this.#getStyleSheetKeyframesInStyleSheet({
+            return this.getStyleSheetKeyframesInStyleSheet({
                 of: ruleName,
                 styleSheet: source
             });
         }
         else {
-            throw new KeyframesFactory.SourceTypeError();
+            throw new this.SourceTypeError();
         }
     }
-    #getStyleSheetKeyframesInDocumentOrShadowRoot({ of: ruleName, documentOrShadowRoot }) {
+    getStyleSheetKeyframesInDocumentOrShadowRoot({ of: ruleName, documentOrShadowRoot }) {
         for (const styleSheet of documentOrShadowRoot.styleSheets) {
-            const keyframesRule = this.#getStyleSheetKeyframesInStyleSheet({
+            const keyframesRule = this.getStyleSheetKeyframesInStyleSheet({
                 of: ruleName,
                 styleSheet: styleSheet
             });
@@ -43,7 +43,7 @@ export default new class KeyframesFactory {
             }
         }
     }
-    #getStyleSheetKeyframesInStyleSheet({ of: ruleName, styleSheet }) {
+    getStyleSheetKeyframesInStyleSheet({ of: ruleName, styleSheet }) {
         for (const rule of styleSheet.cssRules) {
             if (!(rule instanceof CSSKeyframesRule)) {
                 continue;
@@ -58,23 +58,23 @@ export default new class KeyframesFactory {
     }
     getAllStyleSheetKeyframesRules({ in: source = document } = {}) {
         if (source instanceof Document || source instanceof ShadowRoot) {
-            return this.#getAllStyleSheetKeyframesRulesInDocumentOrShadowRoot({
+            return this.getAllStyleSheetKeyframesRulesInDocumentOrShadowRoot({
                 documentOrShadowRoot: source
             });
         }
         else if (source instanceof CSSStyleSheet) {
-            return this.#getAllStyleSheetKeyframesRulesInStyleSheet({
+            return this.getAllStyleSheetKeyframesRulesInStyleSheet({
                 styleSheet: source
             });
         }
         else {
-            throw new KeyframesFactory.SourceTypeError();
+            throw new this.SourceTypeError();
         }
     }
-    #getAllStyleSheetKeyframesRulesInDocumentOrShadowRoot({ documentOrShadowRoot }) {
+    getAllStyleSheetKeyframesRulesInDocumentOrShadowRoot({ documentOrShadowRoot }) {
         let keyframesRules = {};
         for (const styleSheet of documentOrShadowRoot.styleSheets) {
-            const styleSheetKeyframesRules = this.#getAllStyleSheetKeyframesRulesInStyleSheet({
+            const styleSheetKeyframesRules = this.getAllStyleSheetKeyframesRulesInStyleSheet({
                 styleSheet: styleSheet
             });
             keyframesRules = {
@@ -84,7 +84,7 @@ export default new class KeyframesFactory {
         }
         return keyframesRules;
     }
-    #getAllStyleSheetKeyframesRulesInStyleSheet({ styleSheet }) {
+    getAllStyleSheetKeyframesRulesInStyleSheet({ styleSheet }) {
         let keyframesRules = {};
         for (const rule of styleSheet.cssRules) {
             if (!(rule instanceof CSSKeyframesRule)) {
@@ -123,7 +123,8 @@ export default new class KeyframesFactory {
         const parsedKeyframesInstance = new ParsedKeyframes(parsedKeyframes);
         return parsedKeyframesInstance;
     }
-};
+}
+export default new KeyframesFactory();
 /// https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface
 export class KeyframeEffectParameters {
     keyframes;

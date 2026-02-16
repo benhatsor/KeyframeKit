@@ -6,6 +6,6 @@
 
 # Variable: default
 
-> **default**: `KeyframesFactory`
+> **default**: [`KeyframesFactory`](../classes/KeyframesFactory.md)
 
-Defined in: [KeyframeKit.ts:14](https://github.com/benhatsor/KeyframeKit.js/blob/736edd8b3c25af5309caff2913d1a7a75b39df32/src/KeyframeKit.ts#L14)
+Defined in: [KeyframeKit.ts:223](https://github.com/benhatsor/KeyframeKit.js/blob/2d3081b4ca9d5dcd7cac088049991c5927b11ddb/src/KeyframeKit.ts#L223)
