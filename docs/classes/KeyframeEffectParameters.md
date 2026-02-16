@@ -2,7 +2,7 @@
 
 # Class: KeyframeEffectParameters
 
-Defined in: [KeyframeKit.ts:232](https://github.com/benhatsor/KeyframeKit.js/blob/38eee6fb1da99bc1e26475192e066dcf78e22d8e/src/KeyframeKit.ts#L232)
+Defined in: [KeyframeKit.ts:232](https://github.com/benhatsor/KeyframeKit.js/blob/8e64ccd7185c2290dd1c41d4eed6711c8c51d3ef/src/KeyframeKit.ts#L232)
 
 ## Constructors
 
@@ -10,7 +10,7 @@ Defined in: [KeyframeKit.ts:232](https://github.com/benhatsor/KeyframeKit.js/blo
 
 > **new KeyframeEffectParameters**(`__namedParameters`): `KeyframeEffectParameters`
 
-Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blob/38eee6fb1da99bc1e26475192e066dcf78e22d8e/src/KeyframeKit.ts#L237)
+Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blob/8e64ccd7185c2290dd1c41d4eed6711c8c51d3ef/src/KeyframeKit.ts#L237)
 
 #### Parameters
 
@@ -34,7 +34,7 @@ Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blo
 
 > **keyframes**: [`KeyframeArgument`](../type-aliases/KeyframeArgument.md)
 
-Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blob/38eee6fb1da99bc1e26475192e066dcf78e22d8e/src/KeyframeKit.ts#L234)
+Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blob/8e64ccd7185c2290dd1c41d4eed6711c8c51d3ef/src/KeyframeKit.ts#L234)
 
 ***
 
@@ -42,7 +42,7 @@ Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blo
 
 > `optional` **options**: `number` \| `KeyframeEffectOptions`
 
-Defined in: [KeyframeKit.ts:235](https://github.com/benhatsor/KeyframeKit.js/blob/38eee6fb1da99bc1e26475192e066dcf78e22d8e/src/KeyframeKit.ts#L235)
+Defined in: [KeyframeKit.ts:235](https://github.com/benhatsor/KeyframeKit.js/blob/8e64ccd7185c2290dd1c41d4eed6711c8c51d3ef/src/KeyframeKit.ts#L235)
 
 ## Methods
 
@@ -50,7 +50,7 @@ Defined in: [KeyframeKit.ts:235](https://github.com/benhatsor/KeyframeKit.js/blo
 
 > **toAnimation**(`__namedParameters`): [`Animation`](https://developer.mozilla.org/docs/Web/API/Animation)
 
-Defined in: [KeyframeKit.ts:247](https://github.com/benhatsor/KeyframeKit.js/blob/38eee6fb1da99bc1e26475192e066dcf78e22d8e/src/KeyframeKit.ts#L247)
+Defined in: [KeyframeKit.ts:247](https://github.com/benhatsor/KeyframeKit.js/blob/8e64ccd7185c2290dd1c41d4eed6711c8c51d3ef/src/KeyframeKit.ts#L247)
 
 #### Parameters
 

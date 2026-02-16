@@ -1,6 +1,6 @@
 {
   "name": "KeyframeKit.js",
-	"plugin": ["typedoc-plugin-markdown", "typedoc-github-wiki-theme", "typedoc-plugin-mdn-links", "typedoc-plugin-inline-sources"/*, "typedoc-plugin-missing-exports"*/],
+	"plugin": ["typedoc-plugin-mdn-links", "typedoc-plugin-inline-sources", "typedoc-plugin-markdown", "typedoc-github-wiki-theme"/*, "typedoc-plugin-missing-exports"*/],
 
   //"excludeExternals": true,
   //"placeInternalsInOwningModule": true,
@@ -11,5 +11,10 @@
 
   "sidebar": {
     "autoConfiguration": false,
-  }
+  },
+
+  "remarkPlugins": [
+    ["remark-insert-headings", { "text": "Contents" }],
+    ["remark-toc", { "maxDepth": 2 }]
+  ]
 }
