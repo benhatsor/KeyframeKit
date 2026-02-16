@@ -31,8 +31,8 @@
   //"interfacePropertiesFormat": "htmlTable",
   //"classPropertiesFormat": "htmlTable",
   //"typeAliasPropertiesFormat": "htmlTable",
-  "propertyMembersFormat": "htmlTable",
-  "typeDeclarationFormat": "htmlTable",
+  //"propertyMembersFormat": "htmlTable",
+  //"typeDeclarationFormat": "htmlTable",
 
   "tableColumnSettings": {
     //"hideDefaults": true,
