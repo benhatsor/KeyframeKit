@@ -71,7 +71,7 @@ const linkTextHoverAnim = new KeyframeEffectParameters({
 
 // then, attach it to an element:
 const attachedAnim = linkTextHoverAnim.toAnimation({
-  target: document.querySelector('.el')
+  target: document.querySelector('.link')
 });
 
 attachedAnim.play();
