@@ -4,9 +4,6 @@
 
   //"excludeExternals": true,
   //"placeInternalsInOwningModule": true,
-
-  "flattenOutputFiles": false,
   
-  "router": "structure"
-
+  "router": "module"
 }
