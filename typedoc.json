@@ -28,15 +28,9 @@
   "expandObjects": true,
 
   "parametersFormat": "htmlTable",
-  //"interfacePropertiesFormat": "htmlTable",
-  //"classPropertiesFormat": "htmlTable",
-  //"typeAliasPropertiesFormat": "htmlTable",
-  //"propertyMembersFormat": "htmlTable",
-  //"typeDeclarationFormat": "htmlTable",
 
   "tableColumnSettings": {
-    //"hideDefaults": true,
-    "hideInherited": true,
+    //"hideInherited": true,
     "hideModifiers": true,
     "hideOverrides": true,
     "hideSources": true,
