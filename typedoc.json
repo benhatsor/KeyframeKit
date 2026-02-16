@@ -7,7 +7,7 @@
   "excludeExternals": true,
   "placeInternalsInOwningModule": true,
   
-  "flattenOutputFiles": false,
+  //"flattenOutputFiles": false,
 
   "router": "member", // "module"
 
