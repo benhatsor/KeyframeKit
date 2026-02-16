@@ -1,6 +1,6 @@
 {
   "name": "KeyframeKit.js",
-	"plugin": ["typedoc-plugin-markdown"/*, "typedoc-plugin-missing-exports"*/],
+	"plugin": ["typedoc-plugin-markdown", "typedoc-github-wiki-theme"/*, "typedoc-plugin-missing-exports"*/],
   //"excludeExternals": true,
   //"placeInternalsInOwningModule": true
 }
