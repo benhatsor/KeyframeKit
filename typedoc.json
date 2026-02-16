@@ -1,5 +1,6 @@
 {
   "name": "KeyframeKit.js",
 	"plugin": ["typedoc-plugin-markdown", "typedoc-plugin-missing-exports"],
-  "excludeExternals": true
+  "excludeExternals": true,
+  "placeInternalsInOwningModule": true
 }
