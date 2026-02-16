@@ -25,7 +25,7 @@ export default new class KeyframesFactory {
           continue
         }
 
-        const [animationName, keyframes] = parseKeyframesRule({
+        const [animationName, keyframes] = this.#parseKeyframesRule({
           rule
         });
 
@@ -39,53 +39,53 @@ export default new class KeyframesFactory {
 
   }
 
-}
+  #parseKeyframesRule({ rule: keyframes }: {
+    rule: CSSKeyframesRule
+  }): ParsedKeyframesRule {
 
-function parseKeyframesRule({ rule: keyframes }: {
-  rule: CSSKeyframesRule
-}): ParsedKeyframesRule {
+    const animationName = keyframes.name;
 
-  const animationName = keyframes.name;
+    let parsedKeyframes: Keyframe[] = [];
 
-  let parsedKeyframes: Keyframe[] = [];
+    for (const keyframe of keyframes) {
 
-  for (const keyframe of keyframes) {
-
-    // remove trailing '%'
-    /// https://drafts.csswg.org/css-animations/#dom-csskeyframerule-keytext
-    const percentString = removeSuffix({
-      of: keyframe.keyText,
-      suffix: PERCENTAGE_CHAR
-    });
-    
-    const percent = Number(percentString);
-
-    const offset = percent / 100;
-
-
-    let parsedProperties: KeyframeProperties = {};
-
-    for (const propertyName of keyframe.style) {
-
-      const propertyValue = keyframe.style.getPropertyValue(propertyName);
+      // remove trailing '%'
+      /// https://drafts.csswg.org/css-animations/#dom-csskeyframerule-keytext
+      const percentString = removeSuffix({
+        of: keyframe.keyText,
+        suffix: PERCENTAGE_CHAR
+      });
       
-      parsedProperties[propertyName] = propertyValue;
+      const percent = Number(percentString);
 
+      const offset = percent / 100;
+
+
+      let parsedProperties: KeyframeProperties = {};
+
+      for (const propertyName of keyframe.style) {
+
+        const propertyValue = keyframe.style.getPropertyValue(propertyName);
+        
+        parsedProperties[propertyName] = propertyValue;
+
+      }
+
+
+      const parsedKeyframe: Keyframe = {
+        ...parsedProperties,
+        offset: offset
+      };
+
+      parsedKeyframes.push(parsedKeyframe);
+      
     }
 
+    const parsedKeyframesInstance = new ParsedKeyframes(parsedKeyframes);
 
-    const parsedKeyframe: Keyframe = {
-      ...parsedProperties,
-      offset: offset
-    };
+    return [animationName, parsedKeyframesInstance];
 
-    parsedKeyframes.push(parsedKeyframe);
-    
   }
-
-  const parsedKeyframesInstance = new ParsedKeyframes(parsedKeyframes);
-
-  return [animationName, parsedKeyframesInstance];
 
 }
 
