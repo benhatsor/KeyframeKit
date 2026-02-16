@@ -7,9 +7,9 @@
   "excludeExternals": true,
   "placeInternalsInOwningModule": true,
   
-  //"flattenOutputFiles": false,
+  "flattenOutputFiles": false,
 
-  "router": "module",
+  "router": "member", // "module"
 
   "sidebar": {
     //"autoConfiguration": false,
