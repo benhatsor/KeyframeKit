@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Upload example to Wiki
-        uses: SwiftDocOrg/github-wiki-publish-action@v1
+      - name: Publish Markdown to GitHub Wiki
+        uses: benhatsor/github-wiki-publish-action@1.0.1
         with:
           path: "docs"
         env:
