@@ -1,6 +1,6 @@
 [KeyframeKit](../wiki/Reference) / ParsedKeyframes
 
-Defined in: [KeyframeKit.ts:270](https://github.com/benhatsor/KeyframeKit.js/blob/7e27c1211570dabbfa4e9248b453d66c7a0ce931/src/KeyframeKit.ts#L270)
+Defined in: [KeyframeKit.ts:270](https://github.com/benhatsor/KeyframeKit.js/blob/32d58ba96de603f86b7c802ee4bc0cedf42cdb08/src/KeyframeKit.ts#L270)
 
 ## Constructors
 
@@ -10,32 +10,13 @@ Defined in: [KeyframeKit.ts:270](https://github.com/benhatsor/KeyframeKit.js/blo
 new ParsedKeyframes(keyframes: Keyframe[]): ParsedKeyframes;
 ```
 
-Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blob/7e27c1211570dabbfa4e9248b453d66c7a0ce931/src/KeyframeKit.ts#L274)
+Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blob/32d58ba96de603f86b7c802ee4bc0cedf42cdb08/src/KeyframeKit.ts#L274)
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`keyframes`
-
-</td>
-<td>
+##### keyframes
 
 `Keyframe`\[]
-
-</td>
-</tr>
-</tbody>
-</table>
 
 #### Returns
 
@@ -49,7 +30,7 @@ Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blo
 keyframes: Keyframe[];
 ```
 
-Defined in: [KeyframeKit.ts:272](https://github.com/benhatsor/KeyframeKit.js/blob/7e27c1211570dabbfa4e9248b453d66c7a0ce931/src/KeyframeKit.ts#L272)
+Defined in: [KeyframeKit.ts:272](https://github.com/benhatsor/KeyframeKit.js/blob/32d58ba96de603f86b7c802ee4bc0cedf42cdb08/src/KeyframeKit.ts#L272)
 
 ## Methods
 
@@ -59,32 +40,13 @@ Defined in: [KeyframeKit.ts:272](https://github.com/benhatsor/KeyframeKit.js/blo
 toKeyframeEffect(options: number | KeyframeEffectOptions | null): KeyframeEffectParameters;
 ```
 
-Defined in: [KeyframeKit.ts:278](https://github.com/benhatsor/KeyframeKit.js/blob/7e27c1211570dabbfa4e9248b453d66c7a0ce931/src/KeyframeKit.ts#L278)
+Defined in: [KeyframeKit.ts:278](https://github.com/benhatsor/KeyframeKit.js/blob/32d58ba96de603f86b7c802ee4bc0cedf42cdb08/src/KeyframeKit.ts#L278)
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`options`
-
-</td>
-<td>
+##### options
 
 `number` | `KeyframeEffectOptions` | `null`
-
-</td>
-</tr>
-</tbody>
-</table>
 
 #### Returns
 

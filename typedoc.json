@@ -25,7 +25,7 @@
   "expandParameters": true,
   "expandObjects": true,
 
-  "parametersFormat": "htmlTable",
+  //"parametersFormat": "htmlTable",
 
   "useCodeBlocks": true,
 

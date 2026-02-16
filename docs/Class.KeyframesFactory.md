@@ -1,6 +1,6 @@
 [KeyframeKit](../wiki/Reference) / KeyframesFactory
 
-Defined in: [KeyframeKit.ts:14](https://github.com/benhatsor/KeyframeKit.js/blob/7e27c1211570dabbfa4e9248b453d66c7a0ce931/src/KeyframeKit.ts#L14)
+Defined in: [KeyframeKit.ts:14](https://github.com/benhatsor/KeyframeKit.js/blob/32d58ba96de603f86b7c802ee4bc0cedf42cdb08/src/KeyframeKit.ts#L14)
 
 ## Properties
 
@@ -10,7 +10,7 @@ Defined in: [KeyframeKit.ts:14](https://github.com/benhatsor/KeyframeKit.js/blob
 readonly KeyframesRuleNameTypeError: typeof KeyframesFactoryKeyframesRuleNameTypeError;
 ```
 
-Defined in: [KeyframeKit.ts:16](https://github.com/benhatsor/KeyframeKit.js/blob/7e27c1211570dabbfa4e9248b453d66c7a0ce931/src/KeyframeKit.ts#L16)
+Defined in: [KeyframeKit.ts:16](https://github.com/benhatsor/KeyframeKit.js/blob/32d58ba96de603f86b7c802ee4bc0cedf42cdb08/src/KeyframeKit.ts#L16)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: [KeyframeKit.ts:16](https://github.com/benhatsor/KeyframeKit.js/blob
 readonly SourceTypeError: typeof KeyframesFactorySourceTypeError;
 ```
 
-Defined in: [KeyframeKit.ts:20](https://github.com/benhatsor/KeyframeKit.js/blob/7e27c1211570dabbfa4e9248b453d66c7a0ce931/src/KeyframeKit.ts#L20)
+Defined in: [KeyframeKit.ts:20](https://github.com/benhatsor/KeyframeKit.js/blob/32d58ba96de603f86b7c802ee4bc0cedf42cdb08/src/KeyframeKit.ts#L20)
 
 ## Methods
 
@@ -32,44 +32,15 @@ getAllStyleSheetKeyframesRules(obj?: {
 }): ParsedKeyframesRules;
 ```
 
-Defined in: [KeyframeKit.ts:102](https://github.com/benhatsor/KeyframeKit.js/blob/7e27c1211570dabbfa4e9248b453d66c7a0ce931/src/KeyframeKit.ts#L102)
+Defined in: [KeyframeKit.ts:102](https://github.com/benhatsor/KeyframeKit.js/blob/32d58ba96de603f86b7c802ee4bc0cedf42cdb08/src/KeyframeKit.ts#L102)
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
+##### obj?
 
-`obj`
+###### in?
 
-</td>
-<td>
-
-{ `in?`: [`KeyframesFactorySource`](../wiki/TypeAlias.KeyframesFactorySource); }
-
-</td>
-</tr>
-<tr>
-<td>
-
-`obj.in?`
-
-</td>
-<td>
-
-[`KeyframesFactorySource`](../wiki/TypeAlias.KeyframesFactorySource)
-
-</td>
-</tr>
-</tbody>
-</table>
+[`KeyframesFactorySource`](../wiki/TypeAlias.KeyframesFactorySource) = `document`
 
 #### Returns
 
@@ -86,56 +57,19 @@ getStyleSheetKeyframes(obj: {
 }): ParsedKeyframes | undefined;
 ```
 
-Defined in: [KeyframeKit.ts:25](https://github.com/benhatsor/KeyframeKit.js/blob/7e27c1211570dabbfa4e9248b453d66c7a0ce931/src/KeyframeKit.ts#L25)
+Defined in: [KeyframeKit.ts:25](https://github.com/benhatsor/KeyframeKit.js/blob/32d58ba96de603f86b7c802ee4bc0cedf42cdb08/src/KeyframeKit.ts#L25)
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
+##### obj
 
-`obj`
+###### in?
 
-</td>
-<td>
+[`KeyframesFactorySource`](../wiki/TypeAlias.KeyframesFactorySource) = `document`
 
-{ `in?`: [`KeyframesFactorySource`](../wiki/TypeAlias.KeyframesFactorySource); `of`: `string`; }
-
-</td>
-</tr>
-<tr>
-<td>
-
-`obj.in?`
-
-</td>
-<td>
-
-[`KeyframesFactorySource`](../wiki/TypeAlias.KeyframesFactorySource)
-
-</td>
-</tr>
-<tr>
-<td>
-
-`obj.of`
-
-</td>
-<td>
+###### of
 
 `string`
-
-</td>
-</tr>
-</tbody>
-</table>
 
 #### Returns
 
@@ -151,44 +85,15 @@ parseKeyframesRule(obj: {
 }): ParsedKeyframes;
 ```
 
-Defined in: [KeyframeKit.ts:174](https://github.com/benhatsor/KeyframeKit.js/blob/7e27c1211570dabbfa4e9248b453d66c7a0ce931/src/KeyframeKit.ts#L174)
+Defined in: [KeyframeKit.ts:174](https://github.com/benhatsor/KeyframeKit.js/blob/32d58ba96de603f86b7c802ee4bc0cedf42cdb08/src/KeyframeKit.ts#L174)
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
+##### obj
 
-`obj`
-
-</td>
-<td>
-
-{ `rule`: [`CSSKeyframesRule`](https://developer.mozilla.org/docs/Web/API/CSSKeyframesRule); }
-
-</td>
-</tr>
-<tr>
-<td>
-
-`obj.rule`
-
-</td>
-<td>
+###### rule
 
 [`CSSKeyframesRule`](https://developer.mozilla.org/docs/Web/API/CSSKeyframesRule)
-
-</td>
-</tr>
-</tbody>
-</table>
 
 #### Returns
 
