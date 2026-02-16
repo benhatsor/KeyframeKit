@@ -5,7 +5,7 @@
 // See README.md for usage.
 //
 const PERCENTAGE_CHAR = '%';
-const KeyframesFactory = new class KeyframesFactory {
+export const KeyframesFactory = new class KeyframesFactory {
     KeyframesRuleNameTypeError = class KeyframesFactoryKeyframesRuleNameTypeError extends TypeError {
         message = `Keyframes rule name must be a string.`;
     };

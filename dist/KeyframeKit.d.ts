@@ -1,5 +1,5 @@
 export type KeyframesFactorySource = DocumentOrShadowRoot | CSSStyleSheet;
-declare const KeyframesFactory: {
+export declare const KeyframesFactory: {
     readonly KeyframesRuleNameTypeError: {
         new (message?: string): {
             message: string;

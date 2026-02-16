@@ -8,4 +8,4 @@
 
 > **KeyframeArgument** = `Keyframe`[] \| `PropertyIndexedKeyframes`
 
-Defined in: [KeyframeKit.ts:230](https://github.com/benhatsor/KeyframeKit.js/blob/962f778875bcf5d34d7445bb4b97d39dada560d3/src/KeyframeKit.ts#L230)
+Defined in: [KeyframeKit.ts:230](https://github.com/benhatsor/KeyframeKit.js/blob/dcc384be0b636e0835f8f905b2b76ba35499a5af/src/KeyframeKit.ts#L230)
