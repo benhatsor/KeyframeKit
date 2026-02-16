@@ -10,11 +10,6 @@ Powered by the [Web Animations API][1].
 npm install keyframekit
 ```
 
-### ES modules
-```js
-import KeyframeKit from './KeyframeKit.js';
-```
-
 ## Usage
 
 ### Playing CSS-defined animations with JS
@@ -61,7 +56,7 @@ await attachedAnim.finished;
 This is useful for when you want to have all your animation code in one place.
 
 ```js
-import { KeyframeEffectParameters } from './KeyframeKit.js';
+import { KeyframeEffectParameters } from 'keyframekit';
 
 // define your animation
 const linkTextHoverAnim = new KeyframeEffectParameters({
