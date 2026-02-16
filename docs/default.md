@@ -1,7 +1,11 @@
-[KeyframeKit.js](../wiki/modules) / default
+[**KeyframeKit.js**](README.md)
+
+***
+
+[KeyframeKit.js](modules.md) / default
 
 # Variable: default
 
-> **default**: [`KeyframesFactory`](../wiki/KeyframesFactory)
+> **default**: `KeyframesFactory`
 
-Defined in: [KeyframeKit.ts:14](https://github.com/benhatsor/KeyframeKit.js/blob/e786a4e14ddd9a227b403d845b02b26daf3b444d/src/KeyframeKit.ts#L14)
+Defined in: [KeyframeKit.ts:14](https://github.com/benhatsor/KeyframeKit.js/blob/a59022cc0b92e198fb01638f09141017e042215f/src/KeyframeKit.ts#L14)

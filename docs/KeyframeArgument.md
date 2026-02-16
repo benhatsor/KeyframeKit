@@ -1,7 +1,11 @@
-[KeyframeKit.js](../wiki/modules) / KeyframeArgument
+[**KeyframeKit.js**](README.md)
+
+***
+
+[KeyframeKit.js](modules.md) / KeyframeArgument
 
 # Type Alias: KeyframeArgument
 
 > **KeyframeArgument** = `Keyframe`[] \| `PropertyIndexedKeyframes`
 
-Defined in: [KeyframeKit.ts:228](https://github.com/benhatsor/KeyframeKit.js/blob/e786a4e14ddd9a227b403d845b02b26daf3b444d/src/KeyframeKit.ts#L228)
+Defined in: [KeyframeKit.ts:228](https://github.com/benhatsor/KeyframeKit.js/blob/a59022cc0b92e198fb01638f09141017e042215f/src/KeyframeKit.ts#L228)

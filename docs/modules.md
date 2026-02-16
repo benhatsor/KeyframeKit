@@ -1,19 +1,20 @@
+[**KeyframeKit.js**](README.md)
+
+***
+
 # KeyframeKit.js
 
 ## Classes
 
-- [KeyframeEffectParameters](../wiki/KeyframeEffectParameters)
-- [KeyframesFactory](../wiki/KeyframesFactory)
-- [KeyframesFactoryKeyframesRuleNameTypeError](../wiki/KeyframesFactoryKeyframesRuleNameTypeError)
-- [KeyframesFactorySourceTypeError](../wiki/KeyframesFactorySourceTypeError)
-- [ParsedKeyframes](../wiki/ParsedKeyframes)
+- [KeyframeEffectParameters](KeyframeEffectParameters.md)
+- [ParsedKeyframes](ParsedKeyframes.md)
 
 ## Type Aliases
 
-- [KeyframeArgument](../wiki/KeyframeArgument)
-- [KeyframesFactorySource](../wiki/KeyframesFactorySource)
-- [ParsedKeyframesRules](../wiki/ParsedKeyframesRules)
+- [KeyframeArgument](KeyframeArgument.md)
+- [KeyframesFactorySource](KeyframesFactorySource.md)
+- [ParsedKeyframesRules](ParsedKeyframesRules.md)
 
 ## Variables
 
-- [default](../wiki/default)
+- [default](default.md)
