@@ -6,7 +6,7 @@
 
 # Class: KeyframeEffectParameters
 
-Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blob/3111f6642216aae983686bc6a0a89748eb205057/src/KeyframeKit.ts#L234)
+Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blob/3df2575257b00a10155e467f59b0ac1ddf3f144a/src/KeyframeKit.ts#L234)
 
 ## Constructors
 
@@ -14,7 +14,7 @@ Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blo
 
 > **new KeyframeEffectParameters**(`__namedParameters`): `KeyframeEffectParameters`
 
-Defined in: [KeyframeKit.ts:239](https://github.com/benhatsor/KeyframeKit.js/blob/3111f6642216aae983686bc6a0a89748eb205057/src/KeyframeKit.ts#L239)
+Defined in: [KeyframeKit.ts:239](https://github.com/benhatsor/KeyframeKit.js/blob/3df2575257b00a10155e467f59b0ac1ddf3f144a/src/KeyframeKit.ts#L239)
 
 #### Parameters
 
@@ -38,7 +38,7 @@ Defined in: [KeyframeKit.ts:239](https://github.com/benhatsor/KeyframeKit.js/blo
 
 > **keyframes**: [`KeyframeArgument`](../type-aliases/KeyframeArgument.md)
 
-Defined in: [KeyframeKit.ts:236](https://github.com/benhatsor/KeyframeKit.js/blob/3111f6642216aae983686bc6a0a89748eb205057/src/KeyframeKit.ts#L236)
+Defined in: [KeyframeKit.ts:236](https://github.com/benhatsor/KeyframeKit.js/blob/3df2575257b00a10155e467f59b0ac1ddf3f144a/src/KeyframeKit.ts#L236)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: [KeyframeKit.ts:236](https://github.com/benhatsor/KeyframeKit.js/blo
 
 > `optional` **options**: `number` \| `KeyframeEffectOptions`
 
-Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blob/3111f6642216aae983686bc6a0a89748eb205057/src/KeyframeKit.ts#L237)
+Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blob/3df2575257b00a10155e467f59b0ac1ddf3f144a/src/KeyframeKit.ts#L237)
 
 ## Methods
 
@@ -54,7 +54,7 @@ Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blo
 
 > **toAnimation**(`__namedParameters`): `Animation`
 
-Defined in: [KeyframeKit.ts:249](https://github.com/benhatsor/KeyframeKit.js/blob/3111f6642216aae983686bc6a0a89748eb205057/src/KeyframeKit.ts#L249)
+Defined in: [KeyframeKit.ts:249](https://github.com/benhatsor/KeyframeKit.js/blob/3df2575257b00a10155e467f59b0ac1ddf3f144a/src/KeyframeKit.ts#L249)
 
 #### Parameters
 
