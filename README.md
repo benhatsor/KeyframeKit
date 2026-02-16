@@ -14,7 +14,7 @@ index.html
 </head>
 <body>
   <div class="el"></div>
-  <script src="main.js"></script>
+  <script src="main.js" type="module"></script>
 </body>
 ```
 
