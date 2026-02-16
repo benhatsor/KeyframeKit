@@ -5,5 +5,5 @@
   //"excludeExternals": true,
   //"placeInternalsInOwningModule": true,
   
-  "router": "module"
+  "router": "member"
 }
