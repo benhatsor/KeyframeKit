@@ -2,10 +2,6 @@
 
 # Type Alias: KeyframesFactorySource
 
-```ts
-type KeyframesFactorySource = 
-  | DocumentOrShadowRoot
-  | CSSStyleSheet;
-```
+> **KeyframesFactorySource** = `DocumentOrShadowRoot` | [`CSSStyleSheet`](https://developer.mozilla.org/docs/Web/API/CSSStyleSheet)
 
-Defined in: [KeyframeKit.ts:12](https://github.com/benhatsor/KeyframeKit.js/blob/76494b76437296138a7e39a24dfc2e3c05a6b6f6/src/KeyframeKit.ts#L12)
+Defined in: [KeyframeKit.ts:12](https://github.com/benhatsor/KeyframeKit.js/blob/4692e0f6a850250a460ef7c7fa0acddc925f4e11/src/KeyframeKit.ts#L12)
