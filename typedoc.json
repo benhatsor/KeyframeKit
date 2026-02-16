@@ -18,9 +18,9 @@
     ["remark-toc", { "maxDepth": 2 }]
   ],
 
-  "includeHierarchySummary": true,
+  //"includeHierarchySummary": true,
 
-  "modulesFileName": "documentation",
+  //"modulesFileName": "documentation",
 
   "expandParameters": true
 }

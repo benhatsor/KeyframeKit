@@ -1,9 +1,9 @@
-[KeyframeKit.js](../documentation.md) / KeyframesFactorySource
+[KeyframeKit.js](../globals.md) / KeyframesFactorySource
 
 # Type Alias: KeyframesFactorySource
 
 > **KeyframesFactorySource** = `DocumentOrShadowRoot` | [`CSSStyleSheet`](https://developer.mozilla.org/docs/Web/API/CSSStyleSheet)
 
-Defined in: [KeyframeKit.ts:12](https://github.com/benhatsor/KeyframeKit.js/blob/4289b5e92a9b8fd60763264becf9ff8027dd13bd/src/KeyframeKit.ts#L12)
+Defined in: [KeyframeKit.ts:12](https://github.com/benhatsor/KeyframeKit.js/blob/4520ee9aff8df830de9ec464aee315e70dd8b3fe/src/KeyframeKit.ts#L12)
 
 ## Contents
