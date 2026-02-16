@@ -1,11 +1,19 @@
 # KeyframeKit.js
 
-An intuitive, lightweight and performant set of tools for working with CSS animations in JavaScript.  
+An intuitive, lightweight and performant set of tools for working with CSS animations in JavaScript.\
 Powered by the [Web Animations API][1].
+
+## Contents
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [Typing](#typing)
+* [License](#license)
 
 ## Installation
 
 ### NPM
+
 ```sh
 npm install keyframekit
 ```
@@ -15,11 +23,13 @@ npm install keyframekit
 ### Playing CSS-defined animations with JS
 
 In your CSS:
+
 ```css
 @keyframes rotate-small { ... }
 ```
 
 Then, in JS:
+
 ```js
 import KeyframeKit from 'keyframekit';
 
@@ -43,12 +53,14 @@ attachedAnim.play();
 ```
 
 The primary reason to play your animation with JS is because you get way more control over its playback:
+
 ```js
 attachedAnim.pause();
 attachedAnim.playbackRate = -1;
 const progress = attachedAnim.overallProgress; // 0 to 1 (Baseline newly available)
 await attachedAnim.finished;
 ```
+
 [...and more.][2]
 
 ### Defining animations in JS
@@ -86,7 +98,7 @@ attachedAnim.play();
 
 ## Typing
 
-This library is fully compatable with native JS, but it also has full spec-compliant type support,  
+This library is fully compatable with native JS, but it also has full spec-compliant type support,\
 including declaration files and source maps.
 
 ## License
@@ -94,4 +106,5 @@ including declaration files and source maps.
 [MIT](../wiki/_media/LICENSE)
 
 [1]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API
+
 [2]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API

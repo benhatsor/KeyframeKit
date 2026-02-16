@@ -4,8 +4,12 @@
 
 > **ParsedKeyframesRules** = `object`
 
-Defined in: [KeyframeKit.ts:307](https://github.com/benhatsor/KeyframeKit.js/blob/8e64ccd7185c2290dd1c41d4eed6711c8c51d3ef/src/KeyframeKit.ts#L307)
+Defined in: [KeyframeKit.ts:307](https://github.com/benhatsor/KeyframeKit.js/blob/0194de341140235b5afb9331fe888e6e5724f494/src/KeyframeKit.ts#L307)
+
+## Contents
+
+* [Index Signature](#index-signature)
 
 ## Index Signature
 
-\[`ruleName`: `string`\]: [`ParsedKeyframes`](../classes/ParsedKeyframes.md)
+\[`ruleName`: `string`]: [`ParsedKeyframes`](../classes/ParsedKeyframes.md)

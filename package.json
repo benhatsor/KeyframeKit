@@ -39,6 +39,7 @@
     "typedoc-plugin-markdown": "^4.10.0",
     "typedoc-plugin-mdn-links": "^5.1.1",
     "typedoc-plugin-missing-exports": "^4.1.2",
+    "typedoc-plugin-remark": "^2.0.1",
     "typescript": "^5.9.3"
   }
 }
