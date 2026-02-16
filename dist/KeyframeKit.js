@@ -5,7 +5,7 @@
 // See README.md for usage.
 //
 const PERCENTAGE_CHAR = '%';
-export class KeyframesFactory {
+const KeyframesFactory = new class KeyframesFactory {
     KeyframesRuleNameTypeError = class KeyframesFactoryKeyframesRuleNameTypeError extends TypeError {
         message = `Keyframes rule name must be a string.`;
     };
@@ -17,13 +17,13 @@ export class KeyframesFactory {
             throw new this.KeyframesRuleNameTypeError();
         }
         if (source instanceof Document || source instanceof ShadowRoot) {
-            return this.getStyleSheetKeyframesInDocumentOrShadowRoot({
+            return this.#getStyleSheetKeyframesInDocumentOrShadowRoot({
                 of: ruleName,
                 documentOrShadowRoot: source
             });
         }
         else if (source instanceof CSSStyleSheet) {
-            return this.getStyleSheetKeyframesInStyleSheet({
+            return this.#getStyleSheetKeyframesInStyleSheet({
                 of: ruleName,
                 styleSheet: source
             });
@@ -32,9 +32,9 @@ export class KeyframesFactory {
             throw new this.SourceTypeError();
         }
     }
-    getStyleSheetKeyframesInDocumentOrShadowRoot({ of: ruleName, documentOrShadowRoot }) {
+    #getStyleSheetKeyframesInDocumentOrShadowRoot({ of: ruleName, documentOrShadowRoot }) {
         for (const styleSheet of documentOrShadowRoot.styleSheets) {
-            const keyframesRule = this.getStyleSheetKeyframesInStyleSheet({
+            const keyframesRule = this.#getStyleSheetKeyframesInStyleSheet({
                 of: ruleName,
                 styleSheet: styleSheet
             });
@@ -43,7 +43,7 @@ export class KeyframesFactory {
             }
         }
     }
-    getStyleSheetKeyframesInStyleSheet({ of: ruleName, styleSheet }) {
+    #getStyleSheetKeyframesInStyleSheet({ of: ruleName, styleSheet }) {
         for (const rule of styleSheet.cssRules) {
             if (!(rule instanceof CSSKeyframesRule)) {
                 continue;
@@ -58,12 +58,12 @@ export class KeyframesFactory {
     }
     getAllStyleSheetKeyframesRules({ in: source = document } = {}) {
         if (source instanceof Document || source instanceof ShadowRoot) {
-            return this.getAllStyleSheetKeyframesRulesInDocumentOrShadowRoot({
+            return this.#getAllStyleSheetKeyframesRulesInDocumentOrShadowRoot({
                 documentOrShadowRoot: source
             });
         }
         else if (source instanceof CSSStyleSheet) {
-            return this.getAllStyleSheetKeyframesRulesInStyleSheet({
+            return this.#getAllStyleSheetKeyframesRulesInStyleSheet({
                 styleSheet: source
             });
         }
@@ -71,10 +71,10 @@ export class KeyframesFactory {
             throw new this.SourceTypeError();
         }
     }
-    getAllStyleSheetKeyframesRulesInDocumentOrShadowRoot({ documentOrShadowRoot }) {
+    #getAllStyleSheetKeyframesRulesInDocumentOrShadowRoot({ documentOrShadowRoot }) {
         let keyframesRules = {};
         for (const styleSheet of documentOrShadowRoot.styleSheets) {
-            const styleSheetKeyframesRules = this.getAllStyleSheetKeyframesRulesInStyleSheet({
+            const styleSheetKeyframesRules = this.#getAllStyleSheetKeyframesRulesInStyleSheet({
                 styleSheet: styleSheet
             });
             keyframesRules = {
@@ -84,7 +84,7 @@ export class KeyframesFactory {
         }
         return keyframesRules;
     }
-    getAllStyleSheetKeyframesRulesInStyleSheet({ styleSheet }) {
+    #getAllStyleSheetKeyframesRulesInStyleSheet({ styleSheet }) {
         let keyframesRules = {};
         for (const rule of styleSheet.cssRules) {
             if (!(rule instanceof CSSKeyframesRule)) {
@@ -123,8 +123,8 @@ export class KeyframesFactory {
         const parsedKeyframesInstance = new ParsedKeyframes(parsedKeyframes);
         return parsedKeyframesInstance;
     }
-}
-export default new KeyframesFactory();
+};
+export default KeyframesFactory;
 /// https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface
 export class KeyframeEffectParameters {
     keyframes;

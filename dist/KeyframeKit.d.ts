@@ -1,5 +1,5 @@
 export type KeyframesFactorySource = DocumentOrShadowRoot | CSSStyleSheet;
-export declare class KeyframesFactory {
+declare const KeyframesFactory: {
     readonly KeyframesRuleNameTypeError: {
         new (message?: string): {
             message: string;
@@ -58,19 +58,28 @@ export declare class KeyframesFactory {
         of: string;
         in?: KeyframesFactorySource;
     }): ParsedKeyframes | undefined;
-    private getStyleSheetKeyframesInDocumentOrShadowRoot;
-    private getStyleSheetKeyframesInStyleSheet;
+    "__#private@#getStyleSheetKeyframesInDocumentOrShadowRoot"({ of: ruleName, documentOrShadowRoot }: {
+        of: string;
+        documentOrShadowRoot: DocumentOrShadowRoot;
+    }): ParsedKeyframes | undefined;
+    "__#private@#getStyleSheetKeyframesInStyleSheet"({ of: ruleName, styleSheet }: {
+        of: string;
+        styleSheet: CSSStyleSheet;
+    }): ParsedKeyframes | undefined;
     getAllStyleSheetKeyframesRules({ in: source }?: {
         in?: KeyframesFactorySource;
     }): ParsedKeyframesRules;
-    private getAllStyleSheetKeyframesRulesInDocumentOrShadowRoot;
-    private getAllStyleSheetKeyframesRulesInStyleSheet;
+    "__#private@#getAllStyleSheetKeyframesRulesInDocumentOrShadowRoot"({ documentOrShadowRoot }: {
+        documentOrShadowRoot: DocumentOrShadowRoot;
+    }): ParsedKeyframesRules;
+    "__#private@#getAllStyleSheetKeyframesRulesInStyleSheet"({ styleSheet }: {
+        styleSheet: CSSStyleSheet;
+    }): ParsedKeyframesRules;
     parseKeyframesRule({ rule: keyframes }: {
         rule: CSSKeyframesRule;
     }): ParsedKeyframes;
-}
-declare const _default: KeyframesFactory;
-export default _default;
+};
+export default KeyframesFactory;
 export type KeyframeArgument = Keyframe[] | PropertyIndexedKeyframes;
 export declare class KeyframeEffectParameters {
     keyframes: KeyframeArgument;
