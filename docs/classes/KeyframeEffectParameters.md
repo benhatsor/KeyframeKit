@@ -1,12 +1,12 @@
-[**keyframekit**](../README.md)
+[**KeyframeKit.js**](../README.md)
 
 ***
 
-[keyframekit](../globals.md) / KeyframeEffectParameters
+[KeyframeKit.js](../globals.md) / KeyframeEffectParameters
 
 # Class: KeyframeEffectParameters
 
-Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blob/4069fb98a5d95a545073dd048b6ca08d6b761e49/src/KeyframeKit.ts#L234)
+Defined in: [src/KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blob/9bbef71b1c2a8ef2d3cb4df1e0813b40c9f2eb47/src/KeyframeKit.ts#L234)
 
 ## Constructors
 
@@ -14,7 +14,7 @@ Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blo
 
 > **new KeyframeEffectParameters**(`__namedParameters`): `KeyframeEffectParameters`
 
-Defined in: [KeyframeKit.ts:239](https://github.com/benhatsor/KeyframeKit.js/blob/4069fb98a5d95a545073dd048b6ca08d6b761e49/src/KeyframeKit.ts#L239)
+Defined in: [src/KeyframeKit.ts:239](https://github.com/benhatsor/KeyframeKit.js/blob/9bbef71b1c2a8ef2d3cb4df1e0813b40c9f2eb47/src/KeyframeKit.ts#L239)
 
 #### Parameters
 
@@ -26,7 +26,7 @@ Defined in: [KeyframeKit.ts:239](https://github.com/benhatsor/KeyframeKit.js/blo
 
 ###### options?
 
-`number` \| `KeyframeEffectOptions` = `{}`
+`number` \| [`KeyframeEffectOptions`](../-internal-/interfaces/KeyframeEffectOptions.md) = `{}`
 
 #### Returns
 
@@ -38,23 +38,23 @@ Defined in: [KeyframeKit.ts:239](https://github.com/benhatsor/KeyframeKit.js/blo
 
 > **keyframes**: [`KeyframeArgument`](../type-aliases/KeyframeArgument.md)
 
-Defined in: [KeyframeKit.ts:236](https://github.com/benhatsor/KeyframeKit.js/blob/4069fb98a5d95a545073dd048b6ca08d6b761e49/src/KeyframeKit.ts#L236)
+Defined in: [src/KeyframeKit.ts:236](https://github.com/benhatsor/KeyframeKit.js/blob/9bbef71b1c2a8ef2d3cb4df1e0813b40c9f2eb47/src/KeyframeKit.ts#L236)
 
 ***
 
 ### options?
 
-> `optional` **options**: `number` \| `KeyframeEffectOptions`
+> `optional` **options**: `number` \| [`KeyframeEffectOptions`](../-internal-/interfaces/KeyframeEffectOptions.md)
 
-Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blob/4069fb98a5d95a545073dd048b6ca08d6b761e49/src/KeyframeKit.ts#L237)
+Defined in: [src/KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blob/9bbef71b1c2a8ef2d3cb4df1e0813b40c9f2eb47/src/KeyframeKit.ts#L237)
 
 ## Methods
 
 ### toAnimation()
 
-> **toAnimation**(`__namedParameters`): `Animation`
+> **toAnimation**(`__namedParameters`): [`Animation`](../-internal-/interfaces/Animation.md)
 
-Defined in: [KeyframeKit.ts:249](https://github.com/benhatsor/KeyframeKit.js/blob/4069fb98a5d95a545073dd048b6ca08d6b761e49/src/KeyframeKit.ts#L249)
+Defined in: [src/KeyframeKit.ts:249](https://github.com/benhatsor/KeyframeKit.js/blob/9bbef71b1c2a8ef2d3cb4df1e0813b40c9f2eb47/src/KeyframeKit.ts#L249)
 
 #### Parameters
 
@@ -62,12 +62,12 @@ Defined in: [KeyframeKit.ts:249](https://github.com/benhatsor/KeyframeKit.js/blo
 
 ###### target
 
-`Element` \| `null`
+[`Element`](../-internal-/interfaces/Element.md) \| `null`
 
 ###### timeline?
 
-`AnimationTimeline` = `document.timeline`
+[`AnimationTimeline`](../-internal-/interfaces/AnimationTimeline.md) = `document.timeline`
 
 #### Returns
 
-`Animation`
+[`Animation`](../-internal-/interfaces/Animation.md)

@@ -1,4 +1,4 @@
-**keyframekit**
+**KeyframeKit.js**
 
 ***
 

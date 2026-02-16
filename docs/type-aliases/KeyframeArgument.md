@@ -1,11 +1,11 @@
-[**keyframekit**](../README.md)
+[**KeyframeKit.js**](../README.md)
 
 ***
 
-[keyframekit](../globals.md) / KeyframeArgument
+[KeyframeKit.js](../globals.md) / KeyframeArgument
 
 # Type Alias: KeyframeArgument
 
-> **KeyframeArgument** = `Keyframe`[] \| `PropertyIndexedKeyframes`
+> **KeyframeArgument** = [`Keyframe`](../-internal-/interfaces/Keyframe.md)[] \| [`PropertyIndexedKeyframes`](../-internal-/interfaces/PropertyIndexedKeyframes.md)
 
-Defined in: [KeyframeKit.ts:230](https://github.com/benhatsor/KeyframeKit.js/blob/4069fb98a5d95a545073dd048b6ca08d6b761e49/src/KeyframeKit.ts#L230)
+Defined in: [src/KeyframeKit.ts:230](https://github.com/benhatsor/KeyframeKit.js/blob/9bbef71b1c2a8ef2d3cb4df1e0813b40c9f2eb47/src/KeyframeKit.ts#L230)

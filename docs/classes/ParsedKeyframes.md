@@ -1,12 +1,12 @@
-[**keyframekit**](../README.md)
+[**KeyframeKit.js**](../README.md)
 
 ***
 
-[keyframekit](../globals.md) / ParsedKeyframes
+[KeyframeKit.js](../globals.md) / ParsedKeyframes
 
 # Class: ParsedKeyframes
 
-Defined in: [KeyframeKit.ts:272](https://github.com/benhatsor/KeyframeKit.js/blob/4069fb98a5d95a545073dd048b6ca08d6b761e49/src/KeyframeKit.ts#L272)
+Defined in: [src/KeyframeKit.ts:272](https://github.com/benhatsor/KeyframeKit.js/blob/9bbef71b1c2a8ef2d3cb4df1e0813b40c9f2eb47/src/KeyframeKit.ts#L272)
 
 ## Constructors
 
@@ -14,13 +14,13 @@ Defined in: [KeyframeKit.ts:272](https://github.com/benhatsor/KeyframeKit.js/blo
 
 > **new ParsedKeyframes**(`keyframes`): `ParsedKeyframes`
 
-Defined in: [KeyframeKit.ts:276](https://github.com/benhatsor/KeyframeKit.js/blob/4069fb98a5d95a545073dd048b6ca08d6b761e49/src/KeyframeKit.ts#L276)
+Defined in: [src/KeyframeKit.ts:276](https://github.com/benhatsor/KeyframeKit.js/blob/9bbef71b1c2a8ef2d3cb4df1e0813b40c9f2eb47/src/KeyframeKit.ts#L276)
 
 #### Parameters
 
 ##### keyframes
 
-`Keyframe`[]
+[`Keyframe`](../-internal-/interfaces/Keyframe.md)[]
 
 #### Returns
 
@@ -30,9 +30,9 @@ Defined in: [KeyframeKit.ts:276](https://github.com/benhatsor/KeyframeKit.js/blo
 
 ### keyframes
 
-> **keyframes**: `Keyframe`[]
+> **keyframes**: [`Keyframe`](../-internal-/interfaces/Keyframe.md)[]
 
-Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blob/4069fb98a5d95a545073dd048b6ca08d6b761e49/src/KeyframeKit.ts#L274)
+Defined in: [src/KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blob/9bbef71b1c2a8ef2d3cb4df1e0813b40c9f2eb47/src/KeyframeKit.ts#L274)
 
 ## Methods
 
@@ -40,13 +40,13 @@ Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blo
 
 > **toKeyframeEffect**(`options`): [`KeyframeEffectParameters`](KeyframeEffectParameters.md)
 
-Defined in: [KeyframeKit.ts:280](https://github.com/benhatsor/KeyframeKit.js/blob/4069fb98a5d95a545073dd048b6ca08d6b761e49/src/KeyframeKit.ts#L280)
+Defined in: [src/KeyframeKit.ts:280](https://github.com/benhatsor/KeyframeKit.js/blob/9bbef71b1c2a8ef2d3cb4df1e0813b40c9f2eb47/src/KeyframeKit.ts#L280)
 
 #### Parameters
 
 ##### options
 
-`number` | `KeyframeEffectOptions` | `null`
+`number` | [`KeyframeEffectOptions`](../-internal-/interfaces/KeyframeEffectOptions.md) | `null`
 
 #### Returns
 

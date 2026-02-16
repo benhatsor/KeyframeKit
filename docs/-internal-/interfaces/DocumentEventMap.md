@@ -1,0 +1,1329 @@
+[**KeyframeKit.js**](../../README.md)
+
+***
+
+[KeyframeKit.js](../../globals.md) / [\<internal\>](../README.md) / DocumentEventMap
+
+# Interface: DocumentEventMap
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:9752
+
+## Extends
+
+- [`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md)
+
+## Properties
+
+### abort
+
+> **abort**: [`UIEvent`](UIEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12634
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`abort`](GlobalEventHandlersEventMap.md#abort)
+
+***
+
+### animationcancel
+
+> **animationcancel**: [`AnimationEvent`](AnimationEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12635
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`animationcancel`](GlobalEventHandlersEventMap.md#animationcancel)
+
+***
+
+### animationend
+
+> **animationend**: [`AnimationEvent`](AnimationEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12636
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`animationend`](GlobalEventHandlersEventMap.md#animationend)
+
+***
+
+### animationiteration
+
+> **animationiteration**: [`AnimationEvent`](AnimationEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12637
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`animationiteration`](GlobalEventHandlersEventMap.md#animationiteration)
+
+***
+
+### animationstart
+
+> **animationstart**: [`AnimationEvent`](AnimationEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12638
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`animationstart`](GlobalEventHandlersEventMap.md#animationstart)
+
+***
+
+### auxclick
+
+> **auxclick**: [`PointerEvent`](PointerEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12639
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`auxclick`](GlobalEventHandlersEventMap.md#auxclick)
+
+***
+
+### beforeinput
+
+> **beforeinput**: [`InputEvent`](InputEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12640
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`beforeinput`](GlobalEventHandlersEventMap.md#beforeinput)
+
+***
+
+### beforematch
+
+> **beforematch**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12641
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`beforematch`](GlobalEventHandlersEventMap.md#beforematch)
+
+***
+
+### beforetoggle
+
+> **beforetoggle**: [`ToggleEvent`](ToggleEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12642
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`beforetoggle`](GlobalEventHandlersEventMap.md#beforetoggle)
+
+***
+
+### blur
+
+> **blur**: [`FocusEvent`](FocusEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12643
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`blur`](GlobalEventHandlersEventMap.md#blur)
+
+***
+
+### cancel
+
+> **cancel**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12644
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`cancel`](GlobalEventHandlersEventMap.md#cancel)
+
+***
+
+### canplay
+
+> **canplay**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12645
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`canplay`](GlobalEventHandlersEventMap.md#canplay)
+
+***
+
+### canplaythrough
+
+> **canplaythrough**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12646
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`canplaythrough`](GlobalEventHandlersEventMap.md#canplaythrough)
+
+***
+
+### change
+
+> **change**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12647
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`change`](GlobalEventHandlersEventMap.md#change)
+
+***
+
+### click
+
+> **click**: [`PointerEvent`](PointerEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12648
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`click`](GlobalEventHandlersEventMap.md#click)
+
+***
+
+### close
+
+> **close**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12649
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`close`](GlobalEventHandlersEventMap.md#close)
+
+***
+
+### compositionend
+
+> **compositionend**: [`CompositionEvent`](CompositionEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12650
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`compositionend`](GlobalEventHandlersEventMap.md#compositionend)
+
+***
+
+### compositionstart
+
+> **compositionstart**: [`CompositionEvent`](CompositionEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12651
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`compositionstart`](GlobalEventHandlersEventMap.md#compositionstart)
+
+***
+
+### compositionupdate
+
+> **compositionupdate**: [`CompositionEvent`](CompositionEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12652
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`compositionupdate`](GlobalEventHandlersEventMap.md#compositionupdate)
+
+***
+
+### contextlost
+
+> **contextlost**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12653
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`contextlost`](GlobalEventHandlersEventMap.md#contextlost)
+
+***
+
+### contextmenu
+
+> **contextmenu**: [`PointerEvent`](PointerEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12654
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`contextmenu`](GlobalEventHandlersEventMap.md#contextmenu)
+
+***
+
+### contextrestored
+
+> **contextrestored**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12655
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`contextrestored`](GlobalEventHandlersEventMap.md#contextrestored)
+
+***
+
+### copy
+
+> **copy**: [`ClipboardEvent`](ClipboardEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12656
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`copy`](GlobalEventHandlersEventMap.md#copy)
+
+***
+
+### cuechange
+
+> **cuechange**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12657
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`cuechange`](GlobalEventHandlersEventMap.md#cuechange)
+
+***
+
+### cut
+
+> **cut**: [`ClipboardEvent`](ClipboardEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12658
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`cut`](GlobalEventHandlersEventMap.md#cut)
+
+***
+
+### dblclick
+
+> **dblclick**: [`MouseEvent`](MouseEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12659
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`dblclick`](GlobalEventHandlersEventMap.md#dblclick)
+
+***
+
+### DOMContentLoaded
+
+> **DOMContentLoaded**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:9753
+
+***
+
+### drag
+
+> **drag**: [`DragEvent`](DragEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12660
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`drag`](GlobalEventHandlersEventMap.md#drag)
+
+***
+
+### dragend
+
+> **dragend**: [`DragEvent`](DragEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12661
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`dragend`](GlobalEventHandlersEventMap.md#dragend)
+
+***
+
+### dragenter
+
+> **dragenter**: [`DragEvent`](DragEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12662
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`dragenter`](GlobalEventHandlersEventMap.md#dragenter)
+
+***
+
+### dragleave
+
+> **dragleave**: [`DragEvent`](DragEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12663
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`dragleave`](GlobalEventHandlersEventMap.md#dragleave)
+
+***
+
+### dragover
+
+> **dragover**: [`DragEvent`](DragEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12664
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`dragover`](GlobalEventHandlersEventMap.md#dragover)
+
+***
+
+### dragstart
+
+> **dragstart**: [`DragEvent`](DragEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12665
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`dragstart`](GlobalEventHandlersEventMap.md#dragstart)
+
+***
+
+### drop
+
+> **drop**: [`DragEvent`](DragEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12666
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`drop`](GlobalEventHandlersEventMap.md#drop)
+
+***
+
+### durationchange
+
+> **durationchange**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12667
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`durationchange`](GlobalEventHandlersEventMap.md#durationchange)
+
+***
+
+### emptied
+
+> **emptied**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12668
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`emptied`](GlobalEventHandlersEventMap.md#emptied)
+
+***
+
+### ended
+
+> **ended**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12669
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`ended`](GlobalEventHandlersEventMap.md#ended)
+
+***
+
+### error
+
+> **error**: [`ErrorEvent`](ErrorEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12670
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`error`](GlobalEventHandlersEventMap.md#error)
+
+***
+
+### focus
+
+> **focus**: [`FocusEvent`](FocusEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12671
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`focus`](GlobalEventHandlersEventMap.md#focus)
+
+***
+
+### focusin
+
+> **focusin**: [`FocusEvent`](FocusEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12672
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`focusin`](GlobalEventHandlersEventMap.md#focusin)
+
+***
+
+### focusout
+
+> **focusout**: [`FocusEvent`](FocusEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12673
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`focusout`](GlobalEventHandlersEventMap.md#focusout)
+
+***
+
+### formdata
+
+> **formdata**: [`FormDataEvent`](FormDataEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12674
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`formdata`](GlobalEventHandlersEventMap.md#formdata)
+
+***
+
+### fullscreenchange
+
+> **fullscreenchange**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:9754
+
+***
+
+### fullscreenerror
+
+> **fullscreenerror**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:9755
+
+***
+
+### gotpointercapture
+
+> **gotpointercapture**: [`PointerEvent`](PointerEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12675
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`gotpointercapture`](GlobalEventHandlersEventMap.md#gotpointercapture)
+
+***
+
+### input
+
+> **input**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12676
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`input`](GlobalEventHandlersEventMap.md#input)
+
+***
+
+### invalid
+
+> **invalid**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12677
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`invalid`](GlobalEventHandlersEventMap.md#invalid)
+
+***
+
+### keydown
+
+> **keydown**: [`KeyboardEvent`](KeyboardEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12678
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`keydown`](GlobalEventHandlersEventMap.md#keydown)
+
+***
+
+### keypress
+
+> **keypress**: [`KeyboardEvent`](KeyboardEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12679
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`keypress`](GlobalEventHandlersEventMap.md#keypress)
+
+***
+
+### keyup
+
+> **keyup**: [`KeyboardEvent`](KeyboardEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12680
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`keyup`](GlobalEventHandlersEventMap.md#keyup)
+
+***
+
+### load
+
+> **load**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12681
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`load`](GlobalEventHandlersEventMap.md#load)
+
+***
+
+### loadeddata
+
+> **loadeddata**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12682
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`loadeddata`](GlobalEventHandlersEventMap.md#loadeddata)
+
+***
+
+### loadedmetadata
+
+> **loadedmetadata**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12683
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`loadedmetadata`](GlobalEventHandlersEventMap.md#loadedmetadata)
+
+***
+
+### loadstart
+
+> **loadstart**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12684
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`loadstart`](GlobalEventHandlersEventMap.md#loadstart)
+
+***
+
+### lostpointercapture
+
+> **lostpointercapture**: [`PointerEvent`](PointerEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12685
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`lostpointercapture`](GlobalEventHandlersEventMap.md#lostpointercapture)
+
+***
+
+### mousedown
+
+> **mousedown**: [`MouseEvent`](MouseEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12686
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`mousedown`](GlobalEventHandlersEventMap.md#mousedown)
+
+***
+
+### mouseenter
+
+> **mouseenter**: [`MouseEvent`](MouseEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12687
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`mouseenter`](GlobalEventHandlersEventMap.md#mouseenter)
+
+***
+
+### mouseleave
+
+> **mouseleave**: [`MouseEvent`](MouseEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12688
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`mouseleave`](GlobalEventHandlersEventMap.md#mouseleave)
+
+***
+
+### mousemove
+
+> **mousemove**: [`MouseEvent`](MouseEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12689
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`mousemove`](GlobalEventHandlersEventMap.md#mousemove)
+
+***
+
+### mouseout
+
+> **mouseout**: [`MouseEvent`](MouseEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12690
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`mouseout`](GlobalEventHandlersEventMap.md#mouseout)
+
+***
+
+### mouseover
+
+> **mouseover**: [`MouseEvent`](MouseEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12691
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`mouseover`](GlobalEventHandlersEventMap.md#mouseover)
+
+***
+
+### mouseup
+
+> **mouseup**: [`MouseEvent`](MouseEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12692
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`mouseup`](GlobalEventHandlersEventMap.md#mouseup)
+
+***
+
+### paste
+
+> **paste**: [`ClipboardEvent`](ClipboardEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12693
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`paste`](GlobalEventHandlersEventMap.md#paste)
+
+***
+
+### pause
+
+> **pause**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12694
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`pause`](GlobalEventHandlersEventMap.md#pause)
+
+***
+
+### play
+
+> **play**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12695
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`play`](GlobalEventHandlersEventMap.md#play)
+
+***
+
+### playing
+
+> **playing**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12696
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`playing`](GlobalEventHandlersEventMap.md#playing)
+
+***
+
+### pointercancel
+
+> **pointercancel**: [`PointerEvent`](PointerEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12697
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`pointercancel`](GlobalEventHandlersEventMap.md#pointercancel)
+
+***
+
+### pointerdown
+
+> **pointerdown**: [`PointerEvent`](PointerEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12698
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`pointerdown`](GlobalEventHandlersEventMap.md#pointerdown)
+
+***
+
+### pointerenter
+
+> **pointerenter**: [`PointerEvent`](PointerEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12699
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`pointerenter`](GlobalEventHandlersEventMap.md#pointerenter)
+
+***
+
+### pointerleave
+
+> **pointerleave**: [`PointerEvent`](PointerEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12700
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`pointerleave`](GlobalEventHandlersEventMap.md#pointerleave)
+
+***
+
+### pointerlockchange
+
+> **pointerlockchange**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:9756
+
+***
+
+### pointerlockerror
+
+> **pointerlockerror**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:9757
+
+***
+
+### pointermove
+
+> **pointermove**: [`PointerEvent`](PointerEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12701
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`pointermove`](GlobalEventHandlersEventMap.md#pointermove)
+
+***
+
+### pointerout
+
+> **pointerout**: [`PointerEvent`](PointerEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12702
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`pointerout`](GlobalEventHandlersEventMap.md#pointerout)
+
+***
+
+### pointerover
+
+> **pointerover**: [`PointerEvent`](PointerEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12703
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`pointerover`](GlobalEventHandlersEventMap.md#pointerover)
+
+***
+
+### pointerrawupdate
+
+> **pointerrawupdate**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12704
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`pointerrawupdate`](GlobalEventHandlersEventMap.md#pointerrawupdate)
+
+***
+
+### pointerup
+
+> **pointerup**: [`PointerEvent`](PointerEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12705
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`pointerup`](GlobalEventHandlersEventMap.md#pointerup)
+
+***
+
+### progress
+
+> **progress**: [`ProgressEvent`](ProgressEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12706
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`progress`](GlobalEventHandlersEventMap.md#progress)
+
+***
+
+### ratechange
+
+> **ratechange**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12707
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`ratechange`](GlobalEventHandlersEventMap.md#ratechange)
+
+***
+
+### readystatechange
+
+> **readystatechange**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:9758
+
+***
+
+### reset
+
+> **reset**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12708
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`reset`](GlobalEventHandlersEventMap.md#reset)
+
+***
+
+### resize
+
+> **resize**: [`UIEvent`](UIEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12709
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`resize`](GlobalEventHandlersEventMap.md#resize)
+
+***
+
+### scroll
+
+> **scroll**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12710
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`scroll`](GlobalEventHandlersEventMap.md#scroll)
+
+***
+
+### scrollend
+
+> **scrollend**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12711
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`scrollend`](GlobalEventHandlersEventMap.md#scrollend)
+
+***
+
+### securitypolicyviolation
+
+> **securitypolicyviolation**: [`SecurityPolicyViolationEvent`](SecurityPolicyViolationEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12712
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`securitypolicyviolation`](GlobalEventHandlersEventMap.md#securitypolicyviolation)
+
+***
+
+### seeked
+
+> **seeked**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12713
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`seeked`](GlobalEventHandlersEventMap.md#seeked)
+
+***
+
+### seeking
+
+> **seeking**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12714
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`seeking`](GlobalEventHandlersEventMap.md#seeking)
+
+***
+
+### select
+
+> **select**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12715
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`select`](GlobalEventHandlersEventMap.md#select)
+
+***
+
+### selectionchange
+
+> **selectionchange**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12716
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`selectionchange`](GlobalEventHandlersEventMap.md#selectionchange)
+
+***
+
+### selectstart
+
+> **selectstart**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12717
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`selectstart`](GlobalEventHandlersEventMap.md#selectstart)
+
+***
+
+### slotchange
+
+> **slotchange**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12718
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`slotchange`](GlobalEventHandlersEventMap.md#slotchange)
+
+***
+
+### stalled
+
+> **stalled**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12719
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`stalled`](GlobalEventHandlersEventMap.md#stalled)
+
+***
+
+### submit
+
+> **submit**: [`SubmitEvent`](SubmitEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12720
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`submit`](GlobalEventHandlersEventMap.md#submit)
+
+***
+
+### suspend
+
+> **suspend**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12721
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`suspend`](GlobalEventHandlersEventMap.md#suspend)
+
+***
+
+### timeupdate
+
+> **timeupdate**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12722
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`timeupdate`](GlobalEventHandlersEventMap.md#timeupdate)
+
+***
+
+### toggle
+
+> **toggle**: [`ToggleEvent`](ToggleEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12723
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`toggle`](GlobalEventHandlersEventMap.md#toggle)
+
+***
+
+### touchcancel
+
+> **touchcancel**: [`TouchEvent`](TouchEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12724
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`touchcancel`](GlobalEventHandlersEventMap.md#touchcancel)
+
+***
+
+### touchend
+
+> **touchend**: [`TouchEvent`](TouchEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12725
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`touchend`](GlobalEventHandlersEventMap.md#touchend)
+
+***
+
+### touchmove
+
+> **touchmove**: [`TouchEvent`](TouchEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12726
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`touchmove`](GlobalEventHandlersEventMap.md#touchmove)
+
+***
+
+### touchstart
+
+> **touchstart**: [`TouchEvent`](TouchEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12727
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`touchstart`](GlobalEventHandlersEventMap.md#touchstart)
+
+***
+
+### transitioncancel
+
+> **transitioncancel**: [`TransitionEvent`](TransitionEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12728
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`transitioncancel`](GlobalEventHandlersEventMap.md#transitioncancel)
+
+***
+
+### transitionend
+
+> **transitionend**: [`TransitionEvent`](TransitionEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12729
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`transitionend`](GlobalEventHandlersEventMap.md#transitionend)
+
+***
+
+### transitionrun
+
+> **transitionrun**: [`TransitionEvent`](TransitionEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12730
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`transitionrun`](GlobalEventHandlersEventMap.md#transitionrun)
+
+***
+
+### transitionstart
+
+> **transitionstart**: [`TransitionEvent`](TransitionEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12731
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`transitionstart`](GlobalEventHandlersEventMap.md#transitionstart)
+
+***
+
+### visibilitychange
+
+> **visibilitychange**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:9759
+
+***
+
+### volumechange
+
+> **volumechange**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12732
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`volumechange`](GlobalEventHandlersEventMap.md#volumechange)
+
+***
+
+### waiting
+
+> **waiting**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12733
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`waiting`](GlobalEventHandlersEventMap.md#waiting)
+
+***
+
+### webkitanimationend
+
+> **webkitanimationend**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12734
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`webkitanimationend`](GlobalEventHandlersEventMap.md#webkitanimationend)
+
+***
+
+### webkitanimationiteration
+
+> **webkitanimationiteration**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12735
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`webkitanimationiteration`](GlobalEventHandlersEventMap.md#webkitanimationiteration)
+
+***
+
+### webkitanimationstart
+
+> **webkitanimationstart**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12736
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`webkitanimationstart`](GlobalEventHandlersEventMap.md#webkitanimationstart)
+
+***
+
+### webkittransitionend
+
+> **webkittransitionend**: [`Event`](Event.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12737
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`webkittransitionend`](GlobalEventHandlersEventMap.md#webkittransitionend)
+
+***
+
+### wheel
+
+> **wheel**: [`WheelEvent`](WheelEvent.md)
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:12738
+
+#### Inherited from
+
+[`GlobalEventHandlersEventMap`](GlobalEventHandlersEventMap.md).[`wheel`](GlobalEventHandlersEventMap.md#wheel)

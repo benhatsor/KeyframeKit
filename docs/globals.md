@@ -1,8 +1,12 @@
-[**keyframekit**](README.md)
+[**KeyframeKit.js**](README.md)
 
 ***
 
-# keyframekit
+# KeyframeKit.js
+
+## Modules
+
+- [\<internal\>](-internal-/README.md)
 
 ## Classes
 
