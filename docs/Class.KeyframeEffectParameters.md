@@ -1,28 +1,14 @@
 [KeyframeKit](../wiki/Reference) / KeyframeEffectParameters
 
-Defined in: [KeyframeKit.ts:232](https://github.com/benhatsor/KeyframeKit.js/blob/b329d23518c12defe9876b16dc59422de069b1fe/src/KeyframeKit.ts#L232)
+Defined in: [KeyframeKit.ts:232](https://github.com/benhatsor/KeyframeKit.js/blob/34a1286ede305cedfac581dea1395fcf49dd3bc4/src/KeyframeKit.ts#L232)
 
 ## Contents
 
 <details><summary>Open Contents</summary>
 
 * [Constructors](#constructors)
-  * [Constructor](#constructor)
-    * [Parameters](#parameters)
-      * [obj](#obj)
-        * [keyframes](#keyframes)
-        * [options?](#options)
-    * [Returns](#returns)
 * [Properties](#properties)
-  * [keyframes](#keyframes-1)
-  * [options?](#options-1)
 * [Methods](#methods)
-  * [toAnimation()](#toanimation)
-    * [Parameters](#parameters-1)
-      * [obj](#obj-1)
-        * [target](#target)
-        * [timeline?](#timeline)
-    * [Returns](#returns-1)
 
 </details>
 
@@ -37,7 +23,7 @@ new KeyframeEffectParameters(obj: {
 }): KeyframeEffectParameters;
 ```
 
-Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blob/b329d23518c12defe9876b16dc59422de069b1fe/src/KeyframeKit.ts#L237)
+Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blob/34a1286ede305cedfac581dea1395fcf49dd3bc4/src/KeyframeKit.ts#L237)
 
 #### Parameters
 
@@ -63,7 +49,7 @@ Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blo
 keyframes: KeyframeArgument;
 ```
 
-Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blob/b329d23518c12defe9876b16dc59422de069b1fe/src/KeyframeKit.ts#L234)
+Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blob/34a1286ede305cedfac581dea1395fcf49dd3bc4/src/KeyframeKit.ts#L234)
 
 ***
 
@@ -73,7 +59,7 @@ Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blo
 optional options: number | KeyframeEffectOptions;
 ```
 
-Defined in: [KeyframeKit.ts:235](https://github.com/benhatsor/KeyframeKit.js/blob/b329d23518c12defe9876b16dc59422de069b1fe/src/KeyframeKit.ts#L235)
+Defined in: [KeyframeKit.ts:235](https://github.com/benhatsor/KeyframeKit.js/blob/34a1286ede305cedfac581dea1395fcf49dd3bc4/src/KeyframeKit.ts#L235)
 
 ## Methods
 
@@ -86,7 +72,7 @@ toAnimation(obj: {
 }): Animation;
 ```
 
-Defined in: [KeyframeKit.ts:247](https://github.com/benhatsor/KeyframeKit.js/blob/b329d23518c12defe9876b16dc59422de069b1fe/src/KeyframeKit.ts#L247)
+Defined in: [KeyframeKit.ts:247](https://github.com/benhatsor/KeyframeKit.js/blob/34a1286ede305cedfac581dea1395fcf49dd3bc4/src/KeyframeKit.ts#L247)
 
 #### Parameters
 

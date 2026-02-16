@@ -6,7 +6,7 @@ type ParsedKeyframesRules = {
 };
 ```
 
-Defined in: [KeyframeKit.ts:307](https://github.com/benhatsor/KeyframeKit.js/blob/b329d23518c12defe9876b16dc59422de069b1fe/src/KeyframeKit.ts#L307)
+Defined in: [KeyframeKit.ts:307](https://github.com/benhatsor/KeyframeKit.js/blob/34a1286ede305cedfac581dea1395fcf49dd3bc4/src/KeyframeKit.ts#L307)
 
 ## Contents
 
