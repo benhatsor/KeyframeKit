@@ -57,7 +57,7 @@ const linkTextHoverAnim = new KeyframeEffectParameters({
   keyframes: {
     // 0 to 1. equivalent to CSS keyframe percentage values:
     offset: [0, 0.499, 0.5, 1],
-    // property keyframes:
+    // equivalent property keyframes:
     clipPath: ['inset(0 0 0 0)', 'inset(100% 0 0 0)', 'inset(0 0 100% 0)', 'inset(0 0 0 0)'],
     top: ['0', '-20px', '20px', '0']
   },
