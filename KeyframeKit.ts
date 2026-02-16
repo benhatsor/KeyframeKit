@@ -22,7 +22,7 @@ export default new class KeyframesFactory {
       for (const rule of styleSheet.cssRules) {
 
         if (!(rule instanceof CSSKeyframesRule)) {
-          continue
+          continue;
         }
 
         const [animationName, keyframes] = parseKeyframesRule({
