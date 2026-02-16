@@ -28,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/benhatsor/KeyframeKit.js/issues"
   },
-  "homepage": "https://github.com/benhatsor/KeyframeKit.js#readme"
+  "homepage": "https://github.com/benhatsor/KeyframeKit.js#readme",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
 }
