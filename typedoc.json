@@ -16,11 +16,9 @@
     "heading": "Reference"
   },
 
-  /*
   "remarkPlugins": [
-    ["remark-insert-headings", { "text": "Contents" }],
     ["remark-toc", { "maxDepth": 2 }]
-  ],*/
+  ],
 
   "modulesFileName": "Reference",
 
