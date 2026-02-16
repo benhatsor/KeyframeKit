@@ -5,7 +5,7 @@
   "main": "./dist/KeyframeKit.js",
   "scripts": {
     "build": "npx tsc",
-    "docs": "typedoc --plugin typedoc-plugin-markdown"
+    "docs": "typedoc --plugin typedoc-plugin-markdown --validation.notExported false"
   },
   "repository": {
     "type": "git",
