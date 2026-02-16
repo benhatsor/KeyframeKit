@@ -1,3 +1,9 @@
+## Contents
+
+* [Classes](#classes)
+* [Type Aliases](#type-aliases)
+* [Variables](#variables)
+
 ## Classes
 
 * [KeyframeEffectParameters](../wiki/Class.KeyframeEffectParameters)

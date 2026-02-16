@@ -1,4 +1,4 @@
-[KeyframeKit.js](../wiki/Reference) / KeyframesFactorySource
+[KeyframeKit](../wiki/Reference) / KeyframesFactorySource
 
 ```ts
 type KeyframesFactorySource = 
@@ -6,4 +6,6 @@ type KeyframesFactorySource =
   | CSSStyleSheet;
 ```
 
-Defined in: [KeyframeKit.ts:12](https://github.com/benhatsor/KeyframeKit.js/blob/a7897fe8a292ffb53061aa8b42c7b9a10158526c/src/KeyframeKit.ts#L12)
+Defined in: [KeyframeKit.ts:12](https://github.com/benhatsor/KeyframeKit.js/blob/a9bb457fe5dae107d77b538f3734131412f98e58/src/KeyframeKit.ts#L12)
+
+## Contents
