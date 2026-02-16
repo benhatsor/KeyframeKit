@@ -9,17 +9,19 @@
   
   //"flattenOutputFiles": false,
 
-  "router": "member", // "module"
+  "router": "module",
 
   "sidebar": {
     //"autoConfiguration": false,
     "heading": "Reference"
   },
 
+  /*
   "remarkPlugins": [
     ["remark-insert-headings", { "text": "Contents" }],
     ["remark-toc", { "maxDepth": 2 }]
   ],
+  */
 
   "modulesFileName": "Reference",
 
