@@ -124,7 +124,7 @@ export default new class KeyframesFactory {
         return parsedKeyframesInstance;
     }
 };
-/** https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface */
+/// https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface
 export class KeyframeEffectParameters {
     keyframes;
     options;
@@ -132,10 +132,8 @@ export class KeyframeEffectParameters {
         this.keyframes = keyframes;
         this.options = options;
     }
-    /**
-     * https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface
-     * https://drafts.csswg.org/web-animations-1/#the-animation-interface
-     */
+    /// https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface
+    /// https://drafts.csswg.org/web-animations-1/#the-animation-interface
     toAnimation({ target, timeline = document.timeline }) {
         const keyframeEffect = new KeyframeEffect(target, this.keyframes, this.options);
         const animation = new Animation(keyframeEffect, timeline);

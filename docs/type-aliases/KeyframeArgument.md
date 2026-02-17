@@ -6,4 +6,4 @@
 type KeyframeArgument = Keyframe[] | PropertyIndexedKeyframes;
 ```
 
-Defined in: [KeyframeKit.ts:228](https://github.com/benhatsor/KeyframeKit.js/blob/1a84c68e520d82190bc5dbadd87fda7d2caf366f/src/KeyframeKit.ts#L228)
+Defined in: [KeyframeKit.ts:228](https://github.com/benhatsor/KeyframeKit.js/blob/653d9ef412ecb65a5b9cb8628d6f8eac5b526c3b/src/KeyframeKit.ts#L228)

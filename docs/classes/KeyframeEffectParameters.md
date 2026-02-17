@@ -2,9 +2,7 @@
 
 # Class: KeyframeEffectParameters
 
-Defined in: [KeyframeKit.ts:232](https://github.com/benhatsor/KeyframeKit.js/blob/1a84c68e520d82190bc5dbadd87fda7d2caf366f/src/KeyframeKit.ts#L232)
-
-https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface
+Defined in: [KeyframeKit.ts:232](https://github.com/benhatsor/KeyframeKit.js/blob/653d9ef412ecb65a5b9cb8628d6f8eac5b526c3b/src/KeyframeKit.ts#L232)
 
 ## Contents
 
@@ -21,17 +19,17 @@ https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface
 ### Constructor
 
 ```ts
-new KeyframeEffectParameters(__namedParameters: {
+new KeyframeEffectParameters(obj: {
   keyframes: KeyframeArgument;
   options?: number | KeyframeEffectOptions;
 }): KeyframeEffectParameters;
 ```
 
-Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blob/1a84c68e520d82190bc5dbadd87fda7d2caf366f/src/KeyframeKit.ts#L237)
+Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blob/653d9ef412ecb65a5b9cb8628d6f8eac5b526c3b/src/KeyframeKit.ts#L237)
 
 #### Parameters
 
-##### \_\_namedParameters
+##### obj
 
 ###### keyframes
 
@@ -53,7 +51,7 @@ Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blo
 keyframes: KeyframeArgument;
 ```
 
-Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blob/1a84c68e520d82190bc5dbadd87fda7d2caf366f/src/KeyframeKit.ts#L234)
+Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blob/653d9ef412ecb65a5b9cb8628d6f8eac5b526c3b/src/KeyframeKit.ts#L234)
 
 ***
 
@@ -63,27 +61,24 @@ Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blo
 optional options: number | KeyframeEffectOptions;
 ```
 
-Defined in: [KeyframeKit.ts:235](https://github.com/benhatsor/KeyframeKit.js/blob/1a84c68e520d82190bc5dbadd87fda7d2caf366f/src/KeyframeKit.ts#L235)
+Defined in: [KeyframeKit.ts:235](https://github.com/benhatsor/KeyframeKit.js/blob/653d9ef412ecb65a5b9cb8628d6f8eac5b526c3b/src/KeyframeKit.ts#L235)
 
 ## Methods
 
 ### toAnimation()
 
 ```ts
-toAnimation(__namedParameters: {
+toAnimation(obj: {
   target: Element | null;
   timeline?: AnimationTimeline;
 }): Animation;
 ```
 
-Defined in: [KeyframeKit.ts:249](https://github.com/benhatsor/KeyframeKit.js/blob/1a84c68e520d82190bc5dbadd87fda7d2caf366f/src/KeyframeKit.ts#L249)
-
-https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface
-https://drafts.csswg.org/web-animations-1/#the-animation-interface
+Defined in: [KeyframeKit.ts:247](https://github.com/benhatsor/KeyframeKit.js/blob/653d9ef412ecb65a5b9cb8628d6f8eac5b526c3b/src/KeyframeKit.ts#L247)
 
 #### Parameters
 
-##### \_\_namedParameters
+##### obj
 
 ###### target
 
