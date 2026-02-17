@@ -1,4 +1,4 @@
-[KeyframeKit](../README.md) / KeyframeArgument
+[Reference](../README.md) / KeyframeArgument
 
 # Type Alias: KeyframeArgument
 
@@ -6,4 +6,4 @@
 type KeyframeArgument = Keyframe[] | PropertyIndexedKeyframes;
 ```
 
-Defined in: [KeyframeKit.ts:228](https://github.com/benhatsor/KeyframeKit.js/blob/b1d0ece32ee055cb7bf145376723568cc818a4a6/src/KeyframeKit.ts#L228)
+Defined in: [KeyframeKit.ts:228](https://github.com/benhatsor/KeyframeKit.js/blob/5f0b1e410478015a579116e802b907d5327b3ddc/src/KeyframeKit.ts#L228)

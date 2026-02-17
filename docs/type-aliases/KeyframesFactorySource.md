@@ -1,4 +1,4 @@
-[KeyframeKit](../README.md) / KeyframesFactorySource
+[Reference](../README.md) / KeyframesFactorySource
 
 # Type Alias: KeyframesFactorySource
 
@@ -8,4 +8,4 @@ type KeyframesFactorySource =
   | CSSStyleSheet;
 ```
 
-Defined in: [KeyframeKit.ts:12](https://github.com/benhatsor/KeyframeKit.js/blob/b1d0ece32ee055cb7bf145376723568cc818a4a6/src/KeyframeKit.ts#L12)
+Defined in: [KeyframeKit.ts:12](https://github.com/benhatsor/KeyframeKit.js/blob/5f0b1e410478015a579116e802b907d5327b3ddc/src/KeyframeKit.ts#L12)

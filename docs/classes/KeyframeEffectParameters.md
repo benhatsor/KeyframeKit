@@ -1,8 +1,8 @@
-[KeyframeKit](../README.md) / KeyframeEffectParameters
+[Reference](../README.md) / KeyframeEffectParameters
 
 # Class: KeyframeEffectParameters
 
-Defined in: [KeyframeKit.ts:232](https://github.com/benhatsor/KeyframeKit.js/blob/b1d0ece32ee055cb7bf145376723568cc818a4a6/src/KeyframeKit.ts#L232)
+Defined in: [KeyframeKit.ts:232](https://github.com/benhatsor/KeyframeKit.js/blob/5f0b1e410478015a579116e802b907d5327b3ddc/src/KeyframeKit.ts#L232)
 
 ## Contents
 
@@ -25,7 +25,7 @@ new KeyframeEffectParameters(obj: {
 }): KeyframeEffectParameters;
 ```
 
-Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blob/b1d0ece32ee055cb7bf145376723568cc818a4a6/src/KeyframeKit.ts#L237)
+Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blob/5f0b1e410478015a579116e802b907d5327b3ddc/src/KeyframeKit.ts#L237)
 
 #### Parameters
 
@@ -51,7 +51,7 @@ Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blo
 keyframes: KeyframeArgument;
 ```
 
-Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blob/b1d0ece32ee055cb7bf145376723568cc818a4a6/src/KeyframeKit.ts#L234)
+Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blob/5f0b1e410478015a579116e802b907d5327b3ddc/src/KeyframeKit.ts#L234)
 
 ***
 
@@ -61,7 +61,7 @@ Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blo
 optional options: number | KeyframeEffectOptions;
 ```
 
-Defined in: [KeyframeKit.ts:235](https://github.com/benhatsor/KeyframeKit.js/blob/b1d0ece32ee055cb7bf145376723568cc818a4a6/src/KeyframeKit.ts#L235)
+Defined in: [KeyframeKit.ts:235](https://github.com/benhatsor/KeyframeKit.js/blob/5f0b1e410478015a579116e802b907d5327b3ddc/src/KeyframeKit.ts#L235)
 
 ## Methods
 
@@ -74,7 +74,7 @@ toAnimation(obj: {
 }): Animation;
 ```
 
-Defined in: [KeyframeKit.ts:247](https://github.com/benhatsor/KeyframeKit.js/blob/b1d0ece32ee055cb7bf145376723568cc818a4a6/src/KeyframeKit.ts#L247)
+Defined in: [KeyframeKit.ts:247](https://github.com/benhatsor/KeyframeKit.js/blob/5f0b1e410478015a579116e802b907d5327b3ddc/src/KeyframeKit.ts#L247)
 
 #### Parameters
 

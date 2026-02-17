@@ -1,5 +1,5 @@
 {
-  "name": "KeyframeKit",
+  "name": "Reference",
   
 	"plugin": [
     "typedoc-plugin-param-names",
@@ -33,7 +33,7 @@
     //["remark-collapse", {"test": "Contents"}]
   ],
   
-  "modulesFileName": "KeyframeKit",
+  //"modulesFileName": "KeyframeKit",
 
   "expandParameters": true,
   "expandObjects": true,
