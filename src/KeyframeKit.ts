@@ -221,14 +221,14 @@ export default new class KeyframesFactory {
 }
 
 
-/// https://drafts.csswg.org/web-animations-1/#processing-a-keyframes-argument
-
+/** https://drafts.csswg.org/web-animations-1/#processing-a-keyframes-argument */
 type KeyframeProperties = { [propertyName: string]: string };
 
+/** https://drafts.csswg.org/web-animations-1/#processing-a-keyframes-argument */
 export type KeyframeArgument = Keyframe[] | PropertyIndexedKeyframes;
 
 
-/// https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface
+/** https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface */
 export class KeyframeEffectParameters {
 
   keyframes: KeyframeArgument;
@@ -242,8 +242,8 @@ export class KeyframeEffectParameters {
     this.options = options;
   }
 
-  /// https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface
-  /// https://drafts.csswg.org/web-animations-1/#the-animation-interface
+  /** https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface */
+  /** https://drafts.csswg.org/web-animations-1/#the-animation-interface */
   toAnimation({ target, timeline = document.timeline }: {
     target: Element | null,
     timeline?: AnimationTimeline

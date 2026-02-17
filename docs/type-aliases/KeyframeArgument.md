@@ -6,4 +6,6 @@
 type KeyframeArgument = Keyframe[] | PropertyIndexedKeyframes;
 ```
 
-Defined in: [KeyframeKit.ts:228](https://github.com/benhatsor/KeyframeKit.js/blob/653d9ef412ecb65a5b9cb8628d6f8eac5b526c3b/src/KeyframeKit.ts#L228)
+Defined in: [KeyframeKit.ts:228](https://github.com/benhatsor/KeyframeKit.js/blob/37ee01c31104dcaa48b1da6cf202580d9c8de696/src/KeyframeKit.ts#L228)
+
+https://drafts.csswg.org/web-animations-1/#processing-a-keyframes-argument
