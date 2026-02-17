@@ -1,9 +1,9 @@
-//
-// KeyframeKit.js
-// Ben Hatsor
-// 
-// See README.md for usage.
-//
+/**
+ * KeyframeKit.js
+ * @author Ben Hatsor
+ * 
+ * See @link {/README.md} for usage.
+ */
 
 
 const PERCENTAGE_CHAR = '%';
