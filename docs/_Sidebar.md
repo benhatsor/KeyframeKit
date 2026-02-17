@@ -2,7 +2,7 @@
 
 ### Modules
 
-- [KeyframesFactory](../wiki/KeyframesFactory)
+- [<internal>](../wiki/<internal>)
 
 ### Classes
 

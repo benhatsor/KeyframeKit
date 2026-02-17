@@ -7,7 +7,7 @@
 
 ## Modules
 
-* [KeyframesFactory](../wiki/KeyframesFactory)
+* [\<internal>](../wiki/%3Cinternal%3E)
 
 ## Classes
 

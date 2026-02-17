@@ -4,4 +4,4 @@
 default: KeyframesFactory;
 ```
 
-Defined in: [KeyframeKit.ts:14](https://github.com/benhatsor/KeyframeKit.js/blob/0422a441354b220acb1d3e61503dd4fffcb1d179/src/KeyframeKit.ts#L14)
+Defined in: [KeyframeKit.ts:14](https://github.com/benhatsor/KeyframeKit.js/blob/dba76bcf59626866e96d407682764bcd7ee6e8fb/src/KeyframeKit.ts#L14)
