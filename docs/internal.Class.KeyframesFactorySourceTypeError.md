@@ -1,6 +1,6 @@
 [KeyframeKit](../wiki/Home) / [internal](../wiki/internal) / KeyframesFactorySourceTypeError
 
-Defined in: [KeyframeKit.ts:20](https://github.com/benhatsor/KeyframeKit.js/blob/eccd359ce76be60805ac2d74095a5e161a7bb1d5/src/KeyframeKit.ts#L20)
+Defined in: [KeyframeKit.ts:20](https://github.com/benhatsor/KeyframeKit.js/blob/b229e76a41992883e671d3f5638cd6cb2c8790d8/src/KeyframeKit.ts#L20)
 
 ## Properties
 
@@ -10,4 +10,4 @@ Defined in: [KeyframeKit.ts:20](https://github.com/benhatsor/KeyframeKit.js/blob
 message: string;
 ```
 
-Defined in: [KeyframeKit.ts:21](https://github.com/benhatsor/KeyframeKit.js/blob/eccd359ce76be60805ac2d74095a5e161a7bb1d5/src/KeyframeKit.ts#L21)
+Defined in: [KeyframeKit.ts:21](https://github.com/benhatsor/KeyframeKit.js/blob/b229e76a41992883e671d3f5638cd6cb2c8790d8/src/KeyframeKit.ts#L21)
