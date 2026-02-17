@@ -7,7 +7,7 @@
 
 ## Modules
 
-* [Internal](../wiki/Internal)
+* [internal](../wiki/internal)
 
 ## Classes
 
