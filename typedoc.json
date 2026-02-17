@@ -32,7 +32,7 @@
     ["remark-toc", { "maxDepth": 3, "tight": true }],
     //["remark-collapse", {"test": "Contents"}]
   ],
-
+  
   "modulesFileName": "KeyframeKit",
 
   "expandParameters": true,
