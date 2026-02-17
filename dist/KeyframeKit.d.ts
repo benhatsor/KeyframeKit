@@ -80,7 +80,9 @@ declare const _default: {
     }): ParsedKeyframes;
 };
 export default _default;
+/** https://drafts.csswg.org/web-animations-1/#processing-a-keyframes-argument */
 export type KeyframeArgument = Keyframe[] | PropertyIndexedKeyframes;
+/** https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface */
 export declare class KeyframeEffectParameters {
     keyframes: KeyframeArgument;
     options?: number | KeyframeEffectOptions;
@@ -88,6 +90,8 @@ export declare class KeyframeEffectParameters {
         keyframes: KeyframeArgument;
         options?: number | KeyframeEffectOptions;
     });
+    /** - https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface
+     *  - https://drafts.csswg.org/web-animations-1/#the-animation-interface */
     toAnimation({ target, timeline }: {
         target: Element | null;
         timeline?: AnimationTimeline;
