@@ -18,7 +18,7 @@
   
   //"flattenOutputFiles": false,
 
-  "router": "member", // "module"
+  "router":/* "member",*/ "module",
 
   "readme": "none",
 
@@ -43,7 +43,7 @@
   "useCodeBlocks": true,
 
   //"hidePageTitle": true,
-  //"hidePageHeader": true,
+  "hidePageHeader": true,
 
   "namedParamName": "obj"
 }
