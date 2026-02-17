@@ -7,7 +7,7 @@
     "typedoc-plugin-inline-sources",
     "typedoc-plugin-markdown",
     "typedoc-plugin-remark",
-    "typedoc-github-wiki-theme",
+    //"typedoc-github-wiki-theme",
     "typedoc-plugin-missing-exports"
   ],
 
@@ -22,10 +22,10 @@
 
   "readme": "none",
 
-  "sidebar": {
+  //"sidebar": {
     //"autoConfiguration": false,
-    "heading": "[KeyframeKit](../wiki)"
-  },
+    //"heading": "[KeyframeKit](../wiki)"
+  //},
 
   "remarkPlugins": [
     ["remark-insert-headings", { "text": "Contents", "minHeadingCount": 1 }],
