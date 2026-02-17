@@ -274,6 +274,7 @@ export class ParsedKeyframes {
     this.keyframes = keyframes;
   }
 
+  /** @param options https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#options */
   toKeyframeEffect(
     options: number | KeyframeEffectOptions | null
   ): KeyframeEffectParameters {

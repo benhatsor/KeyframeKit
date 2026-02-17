@@ -2,7 +2,7 @@
 
 # Class: KeyframesFactoryKeyframesRuleNameTypeError
 
-Defined in: [KeyframeKit.ts:16](https://github.com/benhatsor/KeyframeKit.js/blob/23587b0a29702105ecacc5df4be2eeca7929de6a/src/KeyframeKit.ts#L16)
+Defined in: [KeyframeKit.ts:16](https://github.com/benhatsor/KeyframeKit.js/blob/7824231db913ca6c3fef365b318e18d1603ab7b9/src/KeyframeKit.ts#L16)
 
 ## Contents
 
@@ -17,4 +17,4 @@ Defined in: [KeyframeKit.ts:16](https://github.com/benhatsor/KeyframeKit.js/blob
 message: string;
 ```
 
-Defined in: [KeyframeKit.ts:17](https://github.com/benhatsor/KeyframeKit.js/blob/23587b0a29702105ecacc5df4be2eeca7929de6a/src/KeyframeKit.ts#L17)
+Defined in: [KeyframeKit.ts:17](https://github.com/benhatsor/KeyframeKit.js/blob/7824231db913ca6c3fef365b318e18d1603ab7b9/src/KeyframeKit.ts#L17)

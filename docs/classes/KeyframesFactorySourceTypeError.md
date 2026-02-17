@@ -2,7 +2,7 @@
 
 # Class: KeyframesFactorySourceTypeError
 
-Defined in: [KeyframeKit.ts:20](https://github.com/benhatsor/KeyframeKit.js/blob/23587b0a29702105ecacc5df4be2eeca7929de6a/src/KeyframeKit.ts#L20)
+Defined in: [KeyframeKit.ts:20](https://github.com/benhatsor/KeyframeKit.js/blob/7824231db913ca6c3fef365b318e18d1603ab7b9/src/KeyframeKit.ts#L20)
 
 ## Contents
 
@@ -17,4 +17,4 @@ Defined in: [KeyframeKit.ts:20](https://github.com/benhatsor/KeyframeKit.js/blob
 message: string;
 ```
 
-Defined in: [KeyframeKit.ts:21](https://github.com/benhatsor/KeyframeKit.js/blob/23587b0a29702105ecacc5df4be2eeca7929de6a/src/KeyframeKit.ts#L21)
+Defined in: [KeyframeKit.ts:21](https://github.com/benhatsor/KeyframeKit.js/blob/7824231db913ca6c3fef365b318e18d1603ab7b9/src/KeyframeKit.ts#L21)
