@@ -1,17 +1,15 @@
 ## Contents
 
-* [Modules](#modules)
 * [Classes](#classes)
 * [Type Aliases](#type-aliases)
 * [Variables](#variables)
 
-## Modules
-
-* [default](../wiki/default)
-
 ## Classes
 
 * [KeyframeEffectParameters](../wiki/Class.KeyframeEffectParameters)
+* [KeyframesFactory](../wiki/Class.KeyframesFactory)
+* [KeyframesFactoryKeyframesRuleNameTypeError](../wiki/Class.KeyframesFactoryKeyframesRuleNameTypeError)
+* [KeyframesFactorySourceTypeError](../wiki/Class.KeyframesFactorySourceTypeError)
 * [ParsedKeyframes](../wiki/Class.ParsedKeyframes)
 
 ## Type Aliases
