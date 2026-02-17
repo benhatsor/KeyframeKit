@@ -221,9 +221,8 @@ class KeyframesFactory {
 
 }
 
-export type { KeyframesFactory };
-
 export default new KeyframesFactory();
+export type { KeyframesFactory };
 
 /** https://drafts.csswg.org/web-animations-1/#processing-a-keyframes-argument */
 type KeyframeProperties = { [propertyName: string]: string };

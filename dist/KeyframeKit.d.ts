@@ -66,9 +66,9 @@ declare class KeyframesFactory {
         rule: CSSKeyframesRule;
     }): ParsedKeyframes;
 }
-export type { KeyframesFactory };
 declare const _default: KeyframesFactory;
 export default _default;
+export type { KeyframesFactory };
 /** https://drafts.csswg.org/web-animations-1/#processing-a-keyframes-argument */
 export type KeyframeArgument = Keyframe[] | PropertyIndexedKeyframes;
 /** https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface */
