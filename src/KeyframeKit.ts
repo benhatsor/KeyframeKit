@@ -11,7 +11,7 @@ const PERCENTAGE_CHAR = '%';
 
 export type KeyframesFactorySource = DocumentOrShadowRoot | CSSStyleSheet;
 
-export class KeyframesFactory {
+class KeyframesFactory {
 
   readonly KeyframesRuleNameTypeError = class KeyframesFactoryKeyframesRuleNameTypeError extends TypeError {
     message = `Keyframes rule name must be a string.`;
@@ -220,6 +220,8 @@ export class KeyframesFactory {
   }
 
 }
+
+export type { KeyframesFactory };
 
 export default new KeyframesFactory();
 

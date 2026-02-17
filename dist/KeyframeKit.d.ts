@@ -1,5 +1,6 @@
 export type KeyframesFactorySource = DocumentOrShadowRoot | CSSStyleSheet;
-declare const _default: {
+declare class KeyframesFactory {
+    #private;
     readonly KeyframesRuleNameTypeError: {
         new (message?: string): {
             message: string;
@@ -58,27 +59,15 @@ declare const _default: {
         of: string;
         in?: KeyframesFactorySource;
     }): ParsedKeyframes | undefined;
-    "__#private@#getStyleSheetKeyframesInDocumentOrShadowRoot"({ of: ruleName, documentOrShadowRoot }: {
-        of: string;
-        documentOrShadowRoot: DocumentOrShadowRoot;
-    }): ParsedKeyframes | undefined;
-    "__#private@#getStyleSheetKeyframesInStyleSheet"({ of: ruleName, styleSheet }: {
-        of: string;
-        styleSheet: CSSStyleSheet;
-    }): ParsedKeyframes | undefined;
     getAllStyleSheetKeyframesRules({ in: source }?: {
         in?: KeyframesFactorySource;
-    }): ParsedKeyframesRules;
-    "__#private@#getAllStyleSheetKeyframesRulesInDocumentOrShadowRoot"({ documentOrShadowRoot }: {
-        documentOrShadowRoot: DocumentOrShadowRoot;
-    }): ParsedKeyframesRules;
-    "__#private@#getAllStyleSheetKeyframesRulesInStyleSheet"({ styleSheet }: {
-        styleSheet: CSSStyleSheet;
     }): ParsedKeyframesRules;
     parseKeyframesRule({ rule: keyframes }: {
         rule: CSSKeyframesRule;
     }): ParsedKeyframes;
-};
+}
+export type { KeyframesFactory };
+declare const _default: KeyframesFactory;
 export default _default;
 /** https://drafts.csswg.org/web-animations-1/#processing-a-keyframes-argument */
 export type KeyframeArgument = Keyframe[] | PropertyIndexedKeyframes;

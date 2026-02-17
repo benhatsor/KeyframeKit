@@ -3,14 +3,18 @@
 ## Contents
 
 * [Classes](#classes)
+* [Interfaces](#interfaces)
 * [Type Aliases](#type-aliases)
 * [Variables](#variables)
 
 ## Classes
 
 * [KeyframeEffectParameters](classes/KeyframeEffectParameters.md)
-* [KeyframesFactory](classes/KeyframesFactory.md)
 * [ParsedKeyframes](classes/ParsedKeyframes.md)
+
+## Interfaces
+
+* [KeyframesFactory](interfaces/KeyframesFactory.md)
 
 ## Type Aliases
 

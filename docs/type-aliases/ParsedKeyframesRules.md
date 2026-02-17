@@ -8,7 +8,7 @@ type ParsedKeyframesRules = {
 };
 ```
 
-Defined in: [KeyframeKit.ts:313](https://github.com/benhatsor/KeyframeKit.js/blob/45b3a115872178190784e427ff82cf28b32edf60/src/KeyframeKit.ts#L313)
+Defined in: [KeyframeKit.ts:315](https://github.com/benhatsor/KeyframeKit.js/blob/3b0eec5e8fd500c32386417aa5a75a5b38197e76/src/KeyframeKit.ts#L315)
 
 ## Contents
 
