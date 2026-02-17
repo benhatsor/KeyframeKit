@@ -1,8 +1,6 @@
-[**KeyframeKit**](../README.md)
-
-***
-
 [KeyframeKit](../README.md) / ParsedKeyframesRules
+
+# Type Alias: ParsedKeyframesRules
 
 ```ts
 type ParsedKeyframesRules = {
@@ -10,7 +8,7 @@ type ParsedKeyframesRules = {
 };
 ```
 
-Defined in: [KeyframeKit.ts:307](https://github.com/benhatsor/KeyframeKit.js/blob/2fba434a4c8b70c52eac7e7047f1fb0b601baa3f/src/KeyframeKit.ts#L307)
+Defined in: [KeyframeKit.ts:307](https://github.com/benhatsor/KeyframeKit.js/blob/b1d0ece32ee055cb7bf145376723568cc818a4a6/src/KeyframeKit.ts#L307)
 
 ## Contents
 

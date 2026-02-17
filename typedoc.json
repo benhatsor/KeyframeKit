@@ -42,7 +42,8 @@
 
   "useCodeBlocks": true,
 
-  "hidePageTitle": true,
+  //"hidePageTitle": true,
+  "hidePageHeader": true,
 
   "namedParamName": "obj"
 }
