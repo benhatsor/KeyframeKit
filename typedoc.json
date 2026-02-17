@@ -28,8 +28,8 @@
   },
 
   "remarkPlugins": [
-    ["remark-insert-headings", { "text": "Contents", "minHeadingCount": 2 }],
-    ["remark-toc", { "maxDepth": 3, "tight": false }],
+    //["remark-insert-headings", { "text": "Contents", "minHeadingCount": 2 }],
+    //["remark-toc", { "maxDepth": 3, "tight": false }],
     //["remark-collapse", {"test": "Contents"}]
   ],
 
