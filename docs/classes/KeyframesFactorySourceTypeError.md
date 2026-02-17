@@ -1,8 +1,12 @@
+[**KeyframeKit**](../README.md)
+
+***
+
 [KeyframeKit](../README.md) / KeyframesFactorySourceTypeError
 
 # Class: KeyframesFactorySourceTypeError
 
-Defined in: [KeyframeKit.ts:20](https://github.com/benhatsor/KeyframeKit.js/blob/d63a163a29078c74a78f98eb00c05d404a48dc1b/src/KeyframeKit.ts#L20)
+Defined in: [KeyframeKit.ts:20](https://github.com/benhatsor/KeyframeKit.js/blob/f86383176b82c8d68bbc5e45e94e84014c94b8f8/src/KeyframeKit.ts#L20)
 
 ## Contents
 
@@ -17,4 +21,4 @@ Defined in: [KeyframeKit.ts:20](https://github.com/benhatsor/KeyframeKit.js/blob
 message: string;
 ```
 
-Defined in: [KeyframeKit.ts:21](https://github.com/benhatsor/KeyframeKit.js/blob/d63a163a29078c74a78f98eb00c05d404a48dc1b/src/KeyframeKit.ts#L21)
+Defined in: [KeyframeKit.ts:21](https://github.com/benhatsor/KeyframeKit.js/blob/f86383176b82c8d68bbc5e45e94e84014c94b8f8/src/KeyframeKit.ts#L21)

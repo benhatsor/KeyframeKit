@@ -1,8 +1,12 @@
+[**KeyframeKit**](../README.md)
+
+***
+
 [KeyframeKit](../README.md) / KeyframeEffectParameters
 
 # Class: KeyframeEffectParameters
 
-Defined in: [KeyframeKit.ts:232](https://github.com/benhatsor/KeyframeKit.js/blob/d63a163a29078c74a78f98eb00c05d404a48dc1b/src/KeyframeKit.ts#L232)
+Defined in: [KeyframeKit.ts:232](https://github.com/benhatsor/KeyframeKit.js/blob/f86383176b82c8d68bbc5e45e94e84014c94b8f8/src/KeyframeKit.ts#L232)
 
 ## Contents
 
@@ -25,7 +29,7 @@ new KeyframeEffectParameters(obj: {
 }): KeyframeEffectParameters;
 ```
 
-Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blob/d63a163a29078c74a78f98eb00c05d404a48dc1b/src/KeyframeKit.ts#L237)
+Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blob/f86383176b82c8d68bbc5e45e94e84014c94b8f8/src/KeyframeKit.ts#L237)
 
 #### Parameters
 
@@ -51,7 +55,7 @@ Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blo
 keyframes: KeyframeArgument;
 ```
 
-Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blob/d63a163a29078c74a78f98eb00c05d404a48dc1b/src/KeyframeKit.ts#L234)
+Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blob/f86383176b82c8d68bbc5e45e94e84014c94b8f8/src/KeyframeKit.ts#L234)
 
 ***
 
@@ -61,7 +65,7 @@ Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blo
 optional options: number | KeyframeEffectOptions;
 ```
 
-Defined in: [KeyframeKit.ts:235](https://github.com/benhatsor/KeyframeKit.js/blob/d63a163a29078c74a78f98eb00c05d404a48dc1b/src/KeyframeKit.ts#L235)
+Defined in: [KeyframeKit.ts:235](https://github.com/benhatsor/KeyframeKit.js/blob/f86383176b82c8d68bbc5e45e94e84014c94b8f8/src/KeyframeKit.ts#L235)
 
 ## Methods
 
@@ -74,7 +78,7 @@ toAnimation(obj: {
 }): Animation;
 ```
 
-Defined in: [KeyframeKit.ts:247](https://github.com/benhatsor/KeyframeKit.js/blob/d63a163a29078c74a78f98eb00c05d404a48dc1b/src/KeyframeKit.ts#L247)
+Defined in: [KeyframeKit.ts:247](https://github.com/benhatsor/KeyframeKit.js/blob/f86383176b82c8d68bbc5e45e94e84014c94b8f8/src/KeyframeKit.ts#L247)
 
 #### Parameters
 
