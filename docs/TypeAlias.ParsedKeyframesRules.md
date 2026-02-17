@@ -6,7 +6,7 @@ type ParsedKeyframesRules = {
 };
 ```
 
-Defined in: [KeyframeKit.ts:307](https://github.com/benhatsor/KeyframeKit.js/blob/b229e76a41992883e671d3f5638cd6cb2c8790d8/src/KeyframeKit.ts#L307)
+Defined in: [KeyframeKit.ts:307](https://github.com/benhatsor/KeyframeKit.js/blob/89efbdabcc300d85b8207dbdc51de0849da5de69/src/KeyframeKit.ts#L307)
 
 ## Index Signature
 
