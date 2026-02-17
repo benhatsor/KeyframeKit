@@ -2,7 +2,7 @@
 
 ### Modules
 
-- [<internal>](../wiki/<internal>)
+- [&lt;internal&gt;](../wiki/&lt;internal&gt;)
 
 ### Classes
 

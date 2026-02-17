@@ -14,7 +14,7 @@
   "entryPoints": ["src/KeyframeKit.ts"],
 
   "excludeExternals": true,
-  "internalModule": "<internal>",
+  "internalModule": "&lt;internal&gt;",
   //"placeInternalsInOwningModule": true,
   
   //"flattenOutputFiles": false,

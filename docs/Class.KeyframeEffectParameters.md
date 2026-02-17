@@ -1,6 +1,6 @@
 [KeyframeKit](../wiki/Home) / KeyframeEffectParameters
 
-Defined in: [KeyframeKit.ts:232](https://github.com/benhatsor/KeyframeKit.js/blob/dba76bcf59626866e96d407682764bcd7ee6e8fb/src/KeyframeKit.ts#L232)
+Defined in: [KeyframeKit.ts:232](https://github.com/benhatsor/KeyframeKit.js/blob/e9271a35606069837df40cbf1c37976ceef3b5eb/src/KeyframeKit.ts#L232)
 
 ## Contents
 
@@ -28,7 +28,7 @@ new KeyframeEffectParameters(obj: {
 }): KeyframeEffectParameters;
 ```
 
-Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blob/dba76bcf59626866e96d407682764bcd7ee6e8fb/src/KeyframeKit.ts#L237)
+Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blob/e9271a35606069837df40cbf1c37976ceef3b5eb/src/KeyframeKit.ts#L237)
 
 #### Parameters
 
@@ -54,7 +54,7 @@ Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blo
 keyframes: KeyframeArgument;
 ```
 
-Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blob/dba76bcf59626866e96d407682764bcd7ee6e8fb/src/KeyframeKit.ts#L234)
+Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blob/e9271a35606069837df40cbf1c37976ceef3b5eb/src/KeyframeKit.ts#L234)
 
 ***
 
@@ -64,7 +64,7 @@ Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blo
 optional options: number | KeyframeEffectOptions;
 ```
 
-Defined in: [KeyframeKit.ts:235](https://github.com/benhatsor/KeyframeKit.js/blob/dba76bcf59626866e96d407682764bcd7ee6e8fb/src/KeyframeKit.ts#L235)
+Defined in: [KeyframeKit.ts:235](https://github.com/benhatsor/KeyframeKit.js/blob/e9271a35606069837df40cbf1c37976ceef3b5eb/src/KeyframeKit.ts#L235)
 
 ## Methods
 
@@ -77,7 +77,7 @@ toAnimation(obj: {
 }): Animation;
 ```
 
-Defined in: [KeyframeKit.ts:247](https://github.com/benhatsor/KeyframeKit.js/blob/dba76bcf59626866e96d407682764bcd7ee6e8fb/src/KeyframeKit.ts#L247)
+Defined in: [KeyframeKit.ts:247](https://github.com/benhatsor/KeyframeKit.js/blob/e9271a35606069837df40cbf1c37976ceef3b5eb/src/KeyframeKit.ts#L247)
 
 #### Parameters
 
