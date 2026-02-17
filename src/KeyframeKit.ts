@@ -242,8 +242,8 @@ export class KeyframeEffectParameters {
     this.options = options;
   }
 
-  /** https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface  
-      https://drafts.csswg.org/web-animations-1/#the-animation-interface */
+  /** https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface
+   *  https://drafts.csswg.org/web-animations-1/#the-animation-interface */
   toAnimation({ target, timeline = document.timeline }: {
     target: Element | null,
     timeline?: AnimationTimeline
