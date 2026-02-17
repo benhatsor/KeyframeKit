@@ -58,6 +58,7 @@ export default new class KeyframesFactory {
     documentOrShadowRoot: DocumentOrShadowRoot
   }): ParsedKeyframes | undefined {
 
+    /// https://drafts.csswg.org/cssom/#dom-documentorshadowroot-stylesheets
     for (const styleSheet of documentOrShadowRoot.styleSheets) {
 
       const keyframesRule = this.#getStyleSheetKeyframesInStyleSheet({
@@ -241,7 +242,7 @@ export class KeyframeEffectParameters {
     this.options = options;
   }
 
-  /** - https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface
+  /** - https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface  
    *  - https://drafts.csswg.org/web-animations-1/#the-animation-interface */
   toAnimation({ target, timeline = document.timeline }: {
     target: Element | null,
@@ -274,7 +275,8 @@ export class ParsedKeyframes {
     this.keyframes = keyframes;
   }
 
-  /** @param options https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#options */
+  /** @param options {@link https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#options MDN Reference}
+   */
   toKeyframeEffect(
     options: number | KeyframeEffectOptions | null
   ): KeyframeEffectParameters {

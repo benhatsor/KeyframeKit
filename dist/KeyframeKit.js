@@ -33,6 +33,7 @@ export default new class KeyframesFactory {
         }
     }
     #getStyleSheetKeyframesInDocumentOrShadowRoot({ of: ruleName, documentOrShadowRoot }) {
+        /// https://drafts.csswg.org/cssom/#dom-documentorshadowroot-stylesheets
         for (const styleSheet of documentOrShadowRoot.styleSheets) {
             const keyframesRule = this.#getStyleSheetKeyframesInStyleSheet({
                 of: ruleName,
@@ -145,6 +146,8 @@ export class ParsedKeyframes {
     constructor(keyframes) {
         this.keyframes = keyframes;
     }
+    /** @param options {@link https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#options MDN Reference}
+     */
     toKeyframeEffect(options) {
         let keyframeEffect;
         // convert (required) nullable to optional
