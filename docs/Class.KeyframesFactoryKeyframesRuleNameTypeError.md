@@ -1,6 +1,11 @@
 [KeyframeKit](../wiki/Home) / KeyframesFactoryKeyframesRuleNameTypeError
 
-Defined in: [KeyframeKit.ts:16](https://github.com/benhatsor/KeyframeKit.js/blob/7bd5ce33e88f56c7cdffd2a4b5cce3b497206fcd/src/KeyframeKit.ts#L16)
+Defined in: [KeyframeKit.ts:16](https://github.com/benhatsor/KeyframeKit.js/blob/1fb0cb2fe44184bc648b9f0ad7df5a9ef4d35b1d/src/KeyframeKit.ts#L16)
+
+## Contents
+
+* [Properties](#properties)
+  * [message](#message)
 
 ## Properties
 
@@ -10,4 +15,4 @@ Defined in: [KeyframeKit.ts:16](https://github.com/benhatsor/KeyframeKit.js/blob
 message: string;
 ```
 
-Defined in: [KeyframeKit.ts:17](https://github.com/benhatsor/KeyframeKit.js/blob/7bd5ce33e88f56c7cdffd2a4b5cce3b497206fcd/src/KeyframeKit.ts#L17)
+Defined in: [KeyframeKit.ts:17](https://github.com/benhatsor/KeyframeKit.js/blob/1fb0cb2fe44184bc648b9f0ad7df5a9ef4d35b1d/src/KeyframeKit.ts#L17)
