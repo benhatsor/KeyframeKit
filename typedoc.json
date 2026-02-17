@@ -2,7 +2,7 @@
   "name": "KeyframeKit",
   
 	"plugin": [
-    "typedoc-plugin-param-names",
+    //"typedoc-plugin-param-names",
     "typedoc-plugin-mdn-links",
     "typedoc-plugin-inline-sources",
     "typedoc-plugin-markdown",
@@ -45,5 +45,5 @@
   //"hidePageTitle": true,
   "hidePageHeader": true,
 
-  "namedParamName": "obj"
+  //"namedParamName": "obj"
 }
