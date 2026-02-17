@@ -15,10 +15,6 @@
 
   //"excludeExternals": true,
   //"placeInternalsInOwningModule": true,
-
-  "validation": {
-    "notExported": false,
-  },
   
   //"flattenOutputFiles": false,
 

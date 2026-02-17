@@ -7,7 +7,6 @@
 ## Classes
 
 * [KeyframeEffectParameters](../wiki/Class.KeyframeEffectParameters)
-* [KeyframesFactory](../wiki/Class.KeyframesFactory)
 * [ParsedKeyframes](../wiki/Class.ParsedKeyframes)
 
 ## Type Aliases
