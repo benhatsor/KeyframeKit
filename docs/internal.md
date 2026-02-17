@@ -1,7 +1,7 @@
-[KeyframeKit](../wiki/Home) / internal
+[KeyframeKit](../wiki/Home) / Internal
 
 ## Classes
 
-* [KeyframesFactory](../wiki/internal.Class.KeyframesFactory)
-* [KeyframesFactoryKeyframesRuleNameTypeError](../wiki/internal.Class.KeyframesFactoryKeyframesRuleNameTypeError)
-* [KeyframesFactorySourceTypeError](../wiki/internal.Class.KeyframesFactorySourceTypeError)
+* [KeyframesFactory](../wiki/Internal.Class.KeyframesFactory)
+* [KeyframesFactoryKeyframesRuleNameTypeError](../wiki/Internal.Class.KeyframesFactoryKeyframesRuleNameTypeError)
+* [KeyframesFactorySourceTypeError](../wiki/Internal.Class.KeyframesFactorySourceTypeError)
