@@ -31,6 +31,8 @@
   },
   "homepage": "https://github.com/benhatsor/KeyframeKit.js#readme",
   "devDependencies": {
+    "typescript": "^5.9.3",
+    
     "remark-collapse": "^0.1.2",
     "remark-insert-headings": "^0.0.0",
     "remark-toc": "^9.0.0",
@@ -41,7 +43,6 @@
     "typedoc-plugin-mdn-links": "^5.1.1",
     "typedoc-plugin-missing-exports": "^4.1.2",
     "typedoc-plugin-param-names": "^3.1.0",
-    "typedoc-plugin-remark": "^2.0.1",
-    "typescript": "^5.9.3"
+    "typedoc-plugin-remark": "^2.0.1"
   }
 }
