@@ -2,7 +2,7 @@
 
 # Class: KeyframeEffectParameters
 
-Defined in: [KeyframeKit.ts:232](https://github.com/benhatsor/KeyframeKit.js/blob/53462693c3cb99f20b8a576b2092c20b9a95262e/src/KeyframeKit.ts#L232)
+Defined in: [KeyframeKit.ts:232](https://github.com/benhatsor/KeyframeKit.js/blob/fc2251076b0e03befcc6f0c7d522ce733501661a/src/KeyframeKit.ts#L232)
 
 ## Contents
 
@@ -25,7 +25,7 @@ new KeyframeEffectParameters(obj: {
 }): KeyframeEffectParameters;
 ```
 
-Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blob/53462693c3cb99f20b8a576b2092c20b9a95262e/src/KeyframeKit.ts#L237)
+Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blob/fc2251076b0e03befcc6f0c7d522ce733501661a/src/KeyframeKit.ts#L237)
 
 #### Parameters
 
@@ -51,7 +51,7 @@ Defined in: [KeyframeKit.ts:237](https://github.com/benhatsor/KeyframeKit.js/blo
 keyframes: KeyframeArgument;
 ```
 
-Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blob/53462693c3cb99f20b8a576b2092c20b9a95262e/src/KeyframeKit.ts#L234)
+Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blob/fc2251076b0e03befcc6f0c7d522ce733501661a/src/KeyframeKit.ts#L234)
 
 ***
 
@@ -61,7 +61,7 @@ Defined in: [KeyframeKit.ts:234](https://github.com/benhatsor/KeyframeKit.js/blo
 optional options: number | KeyframeEffectOptions;
 ```
 
-Defined in: [KeyframeKit.ts:235](https://github.com/benhatsor/KeyframeKit.js/blob/53462693c3cb99f20b8a576b2092c20b9a95262e/src/KeyframeKit.ts#L235)
+Defined in: [KeyframeKit.ts:235](https://github.com/benhatsor/KeyframeKit.js/blob/fc2251076b0e03befcc6f0c7d522ce733501661a/src/KeyframeKit.ts#L235)
 
 ## Methods
 
@@ -74,7 +74,7 @@ toAnimation(obj: {
 }): Animation;
 ```
 
-Defined in: [KeyframeKit.ts:247](https://github.com/benhatsor/KeyframeKit.js/blob/53462693c3cb99f20b8a576b2092c20b9a95262e/src/KeyframeKit.ts#L247)
+Defined in: [KeyframeKit.ts:247](https://github.com/benhatsor/KeyframeKit.js/blob/fc2251076b0e03befcc6f0c7d522ce733501661a/src/KeyframeKit.ts#L247)
 
 #### Parameters
 
