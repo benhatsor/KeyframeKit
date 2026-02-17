@@ -10,8 +10,6 @@
 
 * [KeyframeEffectParameters](classes/KeyframeEffectParameters.md)
 * [KeyframesFactory](classes/KeyframesFactory.md)
-* [KeyframesFactoryKeyframesRuleNameTypeError](classes/KeyframesFactoryKeyframesRuleNameTypeError.md)
-* [KeyframesFactorySourceTypeError](classes/KeyframesFactorySourceTypeError.md)
 * [ParsedKeyframes](classes/ParsedKeyframes.md)
 
 ## Type Aliases
