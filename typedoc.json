@@ -18,7 +18,7 @@
   
   //"flattenOutputFiles": false,
 
-  "router": "module", // "module"
+  "router": "member", // "module"
 
   "readme": "none",
 
