@@ -1,8 +1,13 @@
 ## Contents
 
+* [Modules](#modules)
 * [Classes](#classes)
 * [Type Aliases](#type-aliases)
 * [Variables](#variables)
+
+## Modules
+
+* [\<internal>](../wiki/%3Cinternal%3E)
 
 ## Classes
 

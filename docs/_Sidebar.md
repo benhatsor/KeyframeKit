@@ -1,5 +1,9 @@
 ## [KeyframeKit](../wiki)
 
+### Modules
+
+- [<internal>](../wiki/<internal>)
+
 ### Classes
 
 - [KeyframeEffectParameters](../wiki/Class.KeyframeEffectParameters)

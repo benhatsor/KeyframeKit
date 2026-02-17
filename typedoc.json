@@ -7,13 +7,13 @@
     "typedoc-plugin-inline-sources",
     "typedoc-plugin-markdown",
     "typedoc-plugin-remark",
-    "typedoc-github-wiki-theme"
-    /*, "typedoc-plugin-missing-exports"*/
+    "typedoc-github-wiki-theme",
+    "typedoc-plugin-missing-exports"
   ],
 
   "entryPoints": ["src/KeyframeKit.ts"],
 
-  //"excludeExternals": true,
+  "excludeExternals": true,
   //"placeInternalsInOwningModule": true,
   
   //"flattenOutputFiles": false,
