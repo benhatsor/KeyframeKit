@@ -6,4 +6,4 @@ type KeyframesFactorySource =
   | CSSStyleSheet;
 ```
 
-Defined in: [KeyframeKit.ts:12](https://github.com/benhatsor/KeyframeKit.js/blob/807b6f9d491f0a1e23e8e7bd953f1c54b930a64b/src/KeyframeKit.ts#L12)
+Defined in: [KeyframeKit.ts:12](https://github.com/benhatsor/KeyframeKit.js/blob/3d8a1225d78612a230ade8da1838e0829dd1b9dc/src/KeyframeKit.ts#L12)

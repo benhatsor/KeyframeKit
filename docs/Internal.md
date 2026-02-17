@@ -1,9 +1,5 @@
 [KeyframeKit](../wiki/Home) / Internal
 
-## Contents
-
-* [Classes](#classes)
-
 ## Classes
 
 * [KeyframesFactory](../wiki/Internal.Class.KeyframesFactory)
