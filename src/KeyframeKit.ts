@@ -220,13 +220,12 @@ export default new class KeyframesFactory {
 
 }
 
-
 /** https://drafts.csswg.org/web-animations-1/#processing-a-keyframes-argument */
 type KeyframeProperties = { [propertyName: string]: string };
 
+
 /** https://drafts.csswg.org/web-animations-1/#processing-a-keyframes-argument */
 export type KeyframeArgument = Keyframe[] | PropertyIndexedKeyframes;
-
 
 /** https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface */
 export class KeyframeEffectParameters {
