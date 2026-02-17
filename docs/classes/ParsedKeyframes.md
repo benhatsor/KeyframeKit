@@ -2,7 +2,7 @@
 
 # Class: ParsedKeyframes
 
-Defined in: [KeyframeKit.ts:270](https://github.com/benhatsor/KeyframeKit.js/blob/7708f3df007395080f367da5850afe7028a4de12/src/KeyframeKit.ts#L270)
+Defined in: [KeyframeKit.ts:270](https://github.com/benhatsor/KeyframeKit.js/blob/8c01f92b58e823481bb3abd542476033f50b4f71/src/KeyframeKit.ts#L270)
 
 ## Contents
 
@@ -21,7 +21,7 @@ Defined in: [KeyframeKit.ts:270](https://github.com/benhatsor/KeyframeKit.js/blo
 new ParsedKeyframes(keyframes: Keyframe[]): ParsedKeyframes;
 ```
 
-Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blob/7708f3df007395080f367da5850afe7028a4de12/src/KeyframeKit.ts#L274)
+Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blob/8c01f92b58e823481bb3abd542476033f50b4f71/src/KeyframeKit.ts#L274)
 
 #### Parameters
 
@@ -41,7 +41,7 @@ Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blo
 keyframes: Keyframe[];
 ```
 
-Defined in: [KeyframeKit.ts:272](https://github.com/benhatsor/KeyframeKit.js/blob/7708f3df007395080f367da5850afe7028a4de12/src/KeyframeKit.ts#L272)
+Defined in: [KeyframeKit.ts:272](https://github.com/benhatsor/KeyframeKit.js/blob/8c01f92b58e823481bb3abd542476033f50b4f71/src/KeyframeKit.ts#L272)
 
 ## Methods
 
@@ -51,14 +51,13 @@ Defined in: [KeyframeKit.ts:272](https://github.com/benhatsor/KeyframeKit.js/blo
 toKeyframeEffect(options: number | KeyframeEffectOptions | null): KeyframeEffectParameters;
 ```
 
-Defined in: [KeyframeKit.ts:283](https://github.com/benhatsor/KeyframeKit.js/blob/7708f3df007395080f367da5850afe7028a4de12/src/KeyframeKit.ts#L283)
+Defined in: [KeyframeKit.ts:282](https://github.com/benhatsor/KeyframeKit.js/blob/8c01f92b58e823481bb3abd542476033f50b4f71/src/KeyframeKit.ts#L282)
 
 #### Parameters
 
 ##### options
 
-[MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#options) |
-[Specification](https://drafts.csswg.org/web-animations-1/#dom-keyframeeffect-keyframeeffect-target-keyframes-options-options)
+[MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#options)
 
 `number` | `KeyframeEffectOptions` | `null`
 

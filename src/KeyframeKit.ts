@@ -277,8 +277,7 @@ export class ParsedKeyframes {
 
   /** 
    * @param options
-   * {@link https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#options MDN Reference} | 
-   * {@link https://drafts.csswg.org/web-animations-1/#dom-keyframeeffect-keyframeeffect-target-keyframes-options-options Specification}
+   * {@link https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#options MDN Reference}
    */
   toKeyframeEffect(
     options: number | KeyframeEffectOptions | null
