@@ -2,7 +2,7 @@
 
 # Class: ParsedKeyframes
 
-Defined in: [KeyframeKit.ts:270](https://github.com/benhatsor/KeyframeKit.js/blob/edd10a6f53547d42912a4e1ca1ee47b041096633/src/KeyframeKit.ts#L270)
+Defined in: [KeyframeKit.ts:270](https://github.com/benhatsor/KeyframeKit.js/blob/2920bb9f4c9f2bf3938a99d3ce08fe5e8d314a54/src/KeyframeKit.ts#L270)
 
 ## Contents
 
@@ -21,7 +21,7 @@ Defined in: [KeyframeKit.ts:270](https://github.com/benhatsor/KeyframeKit.js/blo
 new ParsedKeyframes(keyframes: Keyframe[]): ParsedKeyframes;
 ```
 
-Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blob/edd10a6f53547d42912a4e1ca1ee47b041096633/src/KeyframeKit.ts#L274)
+Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blob/2920bb9f4c9f2bf3938a99d3ce08fe5e8d314a54/src/KeyframeKit.ts#L274)
 
 #### Parameters
 
@@ -41,7 +41,7 @@ Defined in: [KeyframeKit.ts:274](https://github.com/benhatsor/KeyframeKit.js/blo
 keyframes: Keyframe[];
 ```
 
-Defined in: [KeyframeKit.ts:272](https://github.com/benhatsor/KeyframeKit.js/blob/edd10a6f53547d42912a4e1ca1ee47b041096633/src/KeyframeKit.ts#L272)
+Defined in: [KeyframeKit.ts:272](https://github.com/benhatsor/KeyframeKit.js/blob/2920bb9f4c9f2bf3938a99d3ce08fe5e8d314a54/src/KeyframeKit.ts#L272)
 
 ## Methods
 
@@ -51,7 +51,7 @@ Defined in: [KeyframeKit.ts:272](https://github.com/benhatsor/KeyframeKit.js/blo
 toKeyframeEffect(options: number | KeyframeEffectOptions | null): KeyframeEffectParameters;
 ```
 
-Defined in: [KeyframeKit.ts:280](https://github.com/benhatsor/KeyframeKit.js/blob/edd10a6f53547d42912a4e1ca1ee47b041096633/src/KeyframeKit.ts#L280)
+Defined in: [KeyframeKit.ts:282](https://github.com/benhatsor/KeyframeKit.js/blob/2920bb9f4c9f2bf3938a99d3ce08fe5e8d314a54/src/KeyframeKit.ts#L282)
 
 #### Parameters
 
