@@ -6,15 +6,17 @@
 //
 const PERCENTAGE_CHAR = '%';
 class KeyframesFactory {
-    KeyframesRuleNameTypeError = class KeyframesFactoryKeyframesRuleNameTypeError extends TypeError {
-        message = `Keyframes rule name must be a string.`;
-    };
-    SourceTypeError = class KeyframesFactorySourceTypeError extends TypeError {
-        message = `Source must be either a Document, a ShadowRoot or a CSSStyleSheet instance.`;
+    Error = {
+        KeyframesRuleNameTypeError: class extends TypeError {
+            message = `Keyframes rule name must be a string.`;
+        },
+        SourceTypeError: class extends TypeError {
+            message = `Source must be either a Document, a ShadowRoot or a CSSStyleSheet instance.`;
+        }
     };
     getStyleSheetKeyframes({ of: ruleName, in: source = document }) {
         if (typeof ruleName !== 'string') {
-            throw new this.KeyframesRuleNameTypeError();
+            throw new this.Error.KeyframesRuleNameTypeError();
         }
         if (source instanceof Document || source instanceof ShadowRoot) {
             return this.#getStyleSheetKeyframesInDocumentOrShadowRoot({
@@ -29,7 +31,7 @@ class KeyframesFactory {
             });
         }
         else {
-            throw new this.SourceTypeError();
+            throw new this.Error.SourceTypeError();
         }
     }
     #getStyleSheetKeyframesInDocumentOrShadowRoot({ of: ruleName, documentOrShadowRoot }) {
@@ -69,7 +71,7 @@ class KeyframesFactory {
             });
         }
         else {
-            throw new this.SourceTypeError();
+            throw new this.Error.SourceTypeError();
         }
     }
     #getAllStyleSheetKeyframesRulesInDocumentOrShadowRoot({ documentOrShadowRoot }) {

@@ -13,14 +13,15 @@ export type KeyframesFactorySource = DocumentOrShadowRoot | CSSStyleSheet;
 
 class KeyframesFactory {
 
-  readonly KeyframesRuleNameTypeError = class KeyframesFactoryKeyframesRuleNameTypeError extends TypeError {
-    message = `Keyframes rule name must be a string.`;
-  }
-
-  readonly SourceTypeError = class KeyframesFactorySourceTypeError extends TypeError {
-    message = `Source must be either a Document, a ShadowRoot or a CSSStyleSheet instance.`;
-  }
-
+  readonly Error = {
+    KeyframesRuleNameTypeError: class extends TypeError {
+      message = `Keyframes rule name must be a string.`;
+    },
+    SourceTypeError: class extends TypeError {
+      message = `Source must be either a Document, a ShadowRoot or a CSSStyleSheet instance.`;
+    }
+  } as const;
+  
   
   getStyleSheetKeyframes({ of: ruleName, in: source = document }: {
     of: string,
@@ -28,7 +29,7 @@ class KeyframesFactory {
   }): ParsedKeyframes | undefined {
 
     if (typeof ruleName !== 'string') {
-      throw new this.KeyframesRuleNameTypeError();
+      throw new this.Error.KeyframesRuleNameTypeError();
     }
 
     if (source instanceof Document || source instanceof ShadowRoot) {
@@ -47,7 +48,7 @@ class KeyframesFactory {
 
     } else {
 
-      throw new this.SourceTypeError();
+      throw new this.Error.SourceTypeError();
 
     }
 
@@ -118,7 +119,7 @@ class KeyframesFactory {
 
     } else {
 
-      throw new this.SourceTypeError();
+      throw new this.Error.SourceTypeError();
 
     }
 

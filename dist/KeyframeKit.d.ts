@@ -1,59 +1,61 @@
 export type KeyframesFactorySource = DocumentOrShadowRoot | CSSStyleSheet;
 declare class KeyframesFactory {
     #private;
-    readonly KeyframesRuleNameTypeError: {
-        new (message?: string): {
-            message: string;
-            name: string;
-            stack?: string;
-            cause?: unknown;
+    readonly Error: {
+        readonly KeyframesRuleNameTypeError: {
+            new (message?: string): {
+                message: string;
+                name: string;
+                stack?: string;
+                cause?: unknown;
+            };
+            new (message?: string, options?: ErrorOptions): {
+                message: string;
+                name: string;
+                stack?: string;
+                cause?: unknown;
+            };
+            new (message?: string): {
+                message: string;
+                name: string;
+                stack?: string;
+                cause?: unknown;
+            };
+            new (message?: string, options?: ErrorOptions): {
+                message: string;
+                name: string;
+                stack?: string;
+                cause?: unknown;
+            };
+            isError(error: unknown): error is Error;
         };
-        new (message?: string, options?: ErrorOptions): {
-            message: string;
-            name: string;
-            stack?: string;
-            cause?: unknown;
+        readonly SourceTypeError: {
+            new (message?: string): {
+                message: string;
+                name: string;
+                stack?: string;
+                cause?: unknown;
+            };
+            new (message?: string, options?: ErrorOptions): {
+                message: string;
+                name: string;
+                stack?: string;
+                cause?: unknown;
+            };
+            new (message?: string): {
+                message: string;
+                name: string;
+                stack?: string;
+                cause?: unknown;
+            };
+            new (message?: string, options?: ErrorOptions): {
+                message: string;
+                name: string;
+                stack?: string;
+                cause?: unknown;
+            };
+            isError(error: unknown): error is Error;
         };
-        new (message?: string): {
-            message: string;
-            name: string;
-            stack?: string;
-            cause?: unknown;
-        };
-        new (message?: string, options?: ErrorOptions): {
-            message: string;
-            name: string;
-            stack?: string;
-            cause?: unknown;
-        };
-        isError(error: unknown): error is Error;
-    };
-    readonly SourceTypeError: {
-        new (message?: string): {
-            message: string;
-            name: string;
-            stack?: string;
-            cause?: unknown;
-        };
-        new (message?: string, options?: ErrorOptions): {
-            message: string;
-            name: string;
-            stack?: string;
-            cause?: unknown;
-        };
-        new (message?: string): {
-            message: string;
-            name: string;
-            stack?: string;
-            cause?: unknown;
-        };
-        new (message?: string, options?: ErrorOptions): {
-            message: string;
-            name: string;
-            stack?: string;
-            cause?: unknown;
-        };
-        isError(error: unknown): error is Error;
     };
     getStyleSheetKeyframes({ of: ruleName, in: source }: {
         of: string;
