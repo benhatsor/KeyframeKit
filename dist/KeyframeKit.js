@@ -12,16 +12,41 @@ class KeyframesFactory {
         },
         SourceTypeError: class extends TypeError {
             message = `Source must be either a Document, a ShadowRoot or a CSSStyleSheet instance.`;
+        },
+        StyleSheetImportError: class extends Error {
+            message = `The stylesheet could not be imported.`;
         }
     };
-    getStyleSheetKeyframes({ of: ruleName, in: source = document }) {
+    async getDocumentStyleSheetsOnLoad({ document = window.document } = {}) {
+        await waitForDocumentLoad({
+            document: document
+        });
+        return document.styleSheets;
+    }
+    /** - Note: `@import` rules won't be resolved in imported stylesheets.
+     *    See https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-588352418. */
+    async importStyleSheet(url) {
+        const resp = await fetch(url);
+        if (!resp.ok) {
+            throw new this.Error.StyleSheetImportError();
+        }
+        const respText = await resp.text();
+        // remove file name from URL to get base URL
+        const baseURL = url.split('/').slice(0, -1).join('/');
+        const styleSheet = new CSSStyleSheet({
+            baseURL: baseURL
+        });
+        await styleSheet.replace(respText);
+        return styleSheet;
+    }
+    getStyleSheetKeyframes({ of: ruleName, in: source }) {
         if (typeof ruleName !== 'string') {
             throw new this.Error.KeyframesRuleNameTypeError();
         }
-        if (source instanceof Document || source instanceof ShadowRoot) {
-            return this.#getStyleSheetKeyframesInDocumentOrShadowRoot({
+        if (source instanceof StyleSheetList) {
+            return this.#getStyleSheetKeyframesInStyleSheetList({
                 of: ruleName,
-                documentOrShadowRoot: source
+                styleSheetList: source
             });
         }
         else if (source instanceof CSSStyleSheet) {
@@ -34,9 +59,8 @@ class KeyframesFactory {
             throw new this.Error.SourceTypeError();
         }
     }
-    #getStyleSheetKeyframesInDocumentOrShadowRoot({ of: ruleName, documentOrShadowRoot }) {
-        /// https://drafts.csswg.org/cssom/#dom-documentorshadowroot-stylesheets
-        for (const styleSheet of documentOrShadowRoot.styleSheets) {
+    #getStyleSheetKeyframesInStyleSheetList({ of: ruleName, styleSheetList }) {
+        for (const styleSheet of styleSheetList) {
             const keyframesRule = this.#getStyleSheetKeyframesInStyleSheet({
                 of: ruleName,
                 styleSheet: styleSheet
@@ -59,10 +83,10 @@ class KeyframesFactory {
             }
         }
     }
-    getAllStyleSheetKeyframesRules({ in: source = document } = {}) {
-        if (source instanceof Document || source instanceof ShadowRoot) {
-            return this.#getAllStyleSheetKeyframesRulesInDocumentOrShadowRoot({
-                documentOrShadowRoot: source
+    getAllStyleSheetKeyframesRules({ in: source }) {
+        if (source instanceof StyleSheetList) {
+            return this.#getAllStyleSheetKeyframesRulesInStyleSheetList({
+                styleSheetList: source
             });
         }
         else if (source instanceof CSSStyleSheet) {
@@ -74,9 +98,9 @@ class KeyframesFactory {
             throw new this.Error.SourceTypeError();
         }
     }
-    #getAllStyleSheetKeyframesRulesInDocumentOrShadowRoot({ documentOrShadowRoot }) {
+    #getAllStyleSheetKeyframesRulesInStyleSheetList({ styleSheetList }) {
         let keyframesRules = {};
-        for (const styleSheet of documentOrShadowRoot.styleSheets) {
+        for (const styleSheet of styleSheetList) {
             const styleSheetKeyframesRules = this.#getAllStyleSheetKeyframesRulesInStyleSheet({
                 styleSheet: styleSheet
             });
@@ -173,5 +197,18 @@ export class ParsedKeyframes {
 // MARK: - Util
 function removeSuffix({ of: string, suffix }) {
     return string.slice(0, -suffix.length);
+}
+async function waitForDocumentLoad({ document }) {
+    if (document.readyState === 'complete')
+        return;
+    const { promise, resolve } = Promise.withResolvers();
+    function onReadyStateChange() {
+        if (document.readyState === 'complete') {
+            resolve(null);
+        }
+    }
+    document.addEventListener('readystatechange', onReadyStateChange);
+    await promise;
+    document.removeEventListener('readystatechange', onReadyStateChange);
 }
 //# sourceMappingURL=KeyframeKit.js.map

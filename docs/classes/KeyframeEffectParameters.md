@@ -2,7 +2,7 @@
 
 # Class: KeyframeEffectParameters
 
-Defined in: [KeyframeKit.ts:236](https://github.com/benhatsor/KeyframeKit.js/blob/3d26ce02df4be3ce2ffa73c31d2b67adeb847037/src/KeyframeKit.ts#L236)
+Defined in: [KeyframeKit.ts:277](https://github.com/benhatsor/KeyframeKit.js/blob/4d4b43f56ee762a544471b854a9b8084549478cb/src/KeyframeKit.ts#L277)
 
 https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface
 
@@ -27,7 +27,7 @@ new KeyframeEffectParameters(__namedParameters: {
 }): KeyframeEffectParameters;
 ```
 
-Defined in: [KeyframeKit.ts:241](https://github.com/benhatsor/KeyframeKit.js/blob/3d26ce02df4be3ce2ffa73c31d2b67adeb847037/src/KeyframeKit.ts#L241)
+Defined in: [KeyframeKit.ts:282](https://github.com/benhatsor/KeyframeKit.js/blob/4d4b43f56ee762a544471b854a9b8084549478cb/src/KeyframeKit.ts#L282)
 
 #### Parameters
 
@@ -53,7 +53,7 @@ Defined in: [KeyframeKit.ts:241](https://github.com/benhatsor/KeyframeKit.js/blo
 keyframes: KeyframeArgument;
 ```
 
-Defined in: [KeyframeKit.ts:238](https://github.com/benhatsor/KeyframeKit.js/blob/3d26ce02df4be3ce2ffa73c31d2b67adeb847037/src/KeyframeKit.ts#L238)
+Defined in: [KeyframeKit.ts:279](https://github.com/benhatsor/KeyframeKit.js/blob/4d4b43f56ee762a544471b854a9b8084549478cb/src/KeyframeKit.ts#L279)
 
 ***
 
@@ -63,7 +63,7 @@ Defined in: [KeyframeKit.ts:238](https://github.com/benhatsor/KeyframeKit.js/blo
 optional options: number | KeyframeEffectOptions;
 ```
 
-Defined in: [KeyframeKit.ts:239](https://github.com/benhatsor/KeyframeKit.js/blob/3d26ce02df4be3ce2ffa73c31d2b67adeb847037/src/KeyframeKit.ts#L239)
+Defined in: [KeyframeKit.ts:280](https://github.com/benhatsor/KeyframeKit.js/blob/4d4b43f56ee762a544471b854a9b8084549478cb/src/KeyframeKit.ts#L280)
 
 ## Methods
 
@@ -76,7 +76,7 @@ toAnimation(__namedParameters: {
 }): Animation;
 ```
 
-Defined in: [KeyframeKit.ts:251](https://github.com/benhatsor/KeyframeKit.js/blob/3d26ce02df4be3ce2ffa73c31d2b67adeb847037/src/KeyframeKit.ts#L251)
+Defined in: [KeyframeKit.ts:292](https://github.com/benhatsor/KeyframeKit.js/blob/4d4b43f56ee762a544471b854a9b8084549478cb/src/KeyframeKit.ts#L292)
 
 * https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface
 * https://drafts.csswg.org/web-animations-1/#the-animation-interface

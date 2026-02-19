@@ -1,4 +1,4 @@
-export type KeyframesFactorySource = DocumentOrShadowRoot | CSSStyleSheet;
+export type KeyframesFactorySource = StyleSheetList | CSSStyleSheet;
 declare class KeyframesFactory {
     #private;
     readonly Error: {
@@ -56,13 +56,34 @@ declare class KeyframesFactory {
             };
             isError(error: unknown): error is Error;
         };
+        readonly StyleSheetImportError: {
+            new (message?: string): {
+                message: string;
+                name: string;
+                stack?: string;
+                cause?: unknown;
+            };
+            new (message?: string, options?: ErrorOptions): {
+                message: string;
+                name: string;
+                stack?: string;
+                cause?: unknown;
+            };
+            isError(error: unknown): error is Error;
+        };
     };
+    getDocumentStyleSheetsOnLoad({ document }?: {
+        document?: Document;
+    }): Promise<StyleSheetList>;
+    /** - Note: `@import` rules won't be resolved in imported stylesheets.
+     *    See https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-588352418. */
+    importStyleSheet(url: string): Promise<CSSStyleSheet>;
     getStyleSheetKeyframes({ of: ruleName, in: source }: {
         of: string;
-        in?: KeyframesFactorySource;
+        in: KeyframesFactorySource;
     }): ParsedKeyframes | undefined;
-    getAllStyleSheetKeyframesRules({ in: source }?: {
-        in?: KeyframesFactorySource;
+    getAllStyleSheetKeyframesRules({ in: source }: {
+        in: KeyframesFactorySource;
     }): ParsedKeyframesRules;
     parseKeyframesRule({ rule: keyframes }: {
         rule: CSSKeyframesRule;

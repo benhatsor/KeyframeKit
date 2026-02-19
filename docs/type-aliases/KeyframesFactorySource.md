@@ -4,8 +4,8 @@
 
 ```ts
 type KeyframesFactorySource = 
-  | DocumentOrShadowRoot
+  | StyleSheetList
   | CSSStyleSheet;
 ```
 
-Defined in: [KeyframeKit.ts:12](https://github.com/benhatsor/KeyframeKit.js/blob/3d26ce02df4be3ce2ffa73c31d2b67adeb847037/src/KeyframeKit.ts#L12)
+Defined in: [KeyframeKit.ts:12](https://github.com/benhatsor/KeyframeKit.js/blob/4d4b43f56ee762a544471b854a9b8084549478cb/src/KeyframeKit.ts#L12)

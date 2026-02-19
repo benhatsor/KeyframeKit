@@ -23,9 +23,12 @@ Then, in JS:
 ```js
 import KeyframeKit from 'keyframekit';
 
-// get animation keyframes from document stylesheet
+const documentStyleSheets = await KeyframeKit.getDocumentStyleSheetsOnLoad();
+
+// get animation keyframes from document stylesheets
 const rotateSmallAnimKeyframes = KeyframeKit.getStyleSheetKeyframes({
-  of: 'rotate-small'
+  of: 'rotate-small',
+  in: documentStyleSheets
 });
 
 // then, define your animation

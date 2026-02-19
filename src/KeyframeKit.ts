@@ -9,7 +9,7 @@
 const PERCENTAGE_CHAR = '%';
 
 
-export type KeyframesFactorySource = DocumentOrShadowRoot | CSSStyleSheet;
+export type KeyframesFactorySource = StyleSheetList | CSSStyleSheet;
 
 class KeyframesFactory {
 
@@ -19,31 +19,73 @@ class KeyframesFactory {
     },
     SourceTypeError: class extends TypeError {
       message = `Source must be either a Document, a ShadowRoot or a CSSStyleSheet instance.`;
+    },
+    StyleSheetImportError: class extends Error {
+      message = `The stylesheet could not be imported.`;
     }
   } as const;
+
+
+  async getDocumentStyleSheetsOnLoad({ document = window.document }: {
+    document?: Document
+  } = {}) {
+
+    await waitForDocumentLoad({
+      document: document
+    });
+
+    return document.styleSheets;
+
+  }
+
+  
+  /** - Note: `@import` rules won't be resolved in imported stylesheets.  
+   *    See https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-588352418. */
+  async importStyleSheet(url: string) {
+
+    const resp = await fetch(url);
+
+    if (!resp.ok) {
+      throw new this.Error.StyleSheetImportError();
+    }
+
+    const respText = await resp.text();
+
+    // remove file name from URL to get base URL
+    const baseURL = url.split('/').slice(0, -1).join('/');
+
+    const styleSheet = new CSSStyleSheet({
+      baseURL: baseURL
+    });
+
+    await styleSheet.replace(respText);
+
+    return styleSheet;
+
+  }
   
   
-  getStyleSheetKeyframes({ of: ruleName, in: source = document }: {
+  getStyleSheetKeyframes({ of: ruleName, in: source }: {
     of: string,
-    in?: KeyframesFactorySource
+    in: KeyframesFactorySource
   }): ParsedKeyframes | undefined {
 
     if (typeof ruleName !== 'string') {
       throw new this.Error.KeyframesRuleNameTypeError();
     }
 
-    if (source instanceof Document || source instanceof ShadowRoot) {
+    if (source instanceof StyleSheetList) {
 
-      return this.#getStyleSheetKeyframesInDocumentOrShadowRoot({
+      return this.#getStyleSheetKeyframesInStyleSheetList({
         of: ruleName,
-        documentOrShadowRoot: source as DocumentOrShadowRoot
+        styleSheetList: source
       });
 
     } else if (source instanceof CSSStyleSheet) {
 
       return this.#getStyleSheetKeyframesInStyleSheet({
         of: ruleName,
-        styleSheet: source as CSSStyleSheet
+        styleSheet: source
       });
 
     } else {
@@ -54,13 +96,12 @@ class KeyframesFactory {
 
   }
 
-  #getStyleSheetKeyframesInDocumentOrShadowRoot({ of: ruleName, documentOrShadowRoot }: {
+  #getStyleSheetKeyframesInStyleSheetList({ of: ruleName, styleSheetList }: {
     of: string,
-    documentOrShadowRoot: DocumentOrShadowRoot
+    styleSheetList: StyleSheetList
   }): ParsedKeyframes | undefined {
 
-    /// https://drafts.csswg.org/cssom/#dom-documentorshadowroot-stylesheets
-    for (const styleSheet of documentOrShadowRoot.styleSheets) {
+    for (const styleSheet of styleSheetList) {
 
       const keyframesRule = this.#getStyleSheetKeyframesInStyleSheet({
         of: ruleName,
@@ -101,14 +142,14 @@ class KeyframesFactory {
   }
 
 
-  getAllStyleSheetKeyframesRules({ in: source = document }: {
-    in?: KeyframesFactorySource
-  } = {}): ParsedKeyframesRules {
+  getAllStyleSheetKeyframesRules({ in: source }: {
+    in: KeyframesFactorySource
+  }): ParsedKeyframesRules {
 
-    if (source instanceof Document || source instanceof ShadowRoot) {
+    if (source instanceof StyleSheetList) {
 
-      return this.#getAllStyleSheetKeyframesRulesInDocumentOrShadowRoot({
-        documentOrShadowRoot: source
+      return this.#getAllStyleSheetKeyframesRulesInStyleSheetList({
+        styleSheetList: source
       });
 
     } else if (source instanceof CSSStyleSheet) {
@@ -125,13 +166,13 @@ class KeyframesFactory {
 
   }
 
-  #getAllStyleSheetKeyframesRulesInDocumentOrShadowRoot({ documentOrShadowRoot }: {
-    documentOrShadowRoot: DocumentOrShadowRoot
+  #getAllStyleSheetKeyframesRulesInStyleSheetList({ styleSheetList }: {
+    styleSheetList: StyleSheetList
   }): ParsedKeyframesRules {
 
     let keyframesRules: ParsedKeyframesRules = {};
 
-    for (const styleSheet of documentOrShadowRoot.styleSheets) {
+    for (const styleSheet of styleSheetList) {
 
       const styleSheetKeyframesRules = this.#getAllStyleSheetKeyframesRulesInStyleSheet({
         styleSheet: styleSheet
@@ -319,11 +360,40 @@ export type ParsedKeyframesRules = {
 
 
 // MARK: - Util
+
 function removeSuffix({ of: string, suffix }: {
   of: string,
   suffix: string
 }) {
 
   return string.slice(0, -suffix.length);
+
+}
+
+async function waitForDocumentLoad({ document }: {
+  document: Document
+}) {
+
+  if (document.readyState === 'complete') return;
+
+  const { promise, resolve } = Promise.withResolvers();
+
+  function onReadyStateChange() {
+    if (document.readyState === 'complete') {
+      resolve(null);
+    }
+  }
+
+  document.addEventListener(
+    'readystatechange',
+    onReadyStateChange
+  );
+
+  await promise;
+
+  document.removeEventListener(
+    'readystatechange',
+    onReadyStateChange
+  );
 
 }
