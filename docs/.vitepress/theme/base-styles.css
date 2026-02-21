@@ -1,0 +1,91 @@
+
+.monaco-editor .iPadShowKeyboard {
+  display: none;
+}
+
+
+/* override vitepress theme style for '.vp-doc a' in monaco editor
+   (it messes up the autocomplete styles) */
+.vp-doc .monaco-editor a {
+  transition: unset;
+  text-decoration: unset;
+  text-underline-offset: unset;
+  font-weight: unset;
+}
+
+.vp-doc .monaco-editor :not(pre, h1, h2, h3, h4, h5, h6) > code {
+  font-size: unset;
+  color: inherit;
+}
+
+
+.vp-doc h5, .vp-doc h6 {
+  margin: 16px 0;
+}
+
+
+.VPLocalSearchBox {
+
+  --vp-local-search-result-selected-border: var(--vp-c-brand-2);
+
+  .search-bar {
+    background: var(--vp-c-divider);
+  }
+
+  .search-bar:focus-within {
+    border-color: var(--vp-c-brand-2) !important;
+    box-shadow: 0 0 0 1px var(--vp-c-brand-2);
+    /* background: transparent; */
+    background: var(--vp-c-bg-alt);
+  }
+
+  .search-bar .search-input {
+    font-family: inherit;
+  }
+
+  .search-bar .search-actions .clear-button {
+    /* order: -1; */
+
+    &:disabled {
+      display: none;
+    }
+  }
+
+  .search-bar:has(+ .results:empty) .search-actions .toggle-layout-button,
+  .search-bar .search-actions:has(.clear-button:disabled) .toggle-layout-button {
+    display: none;
+  }
+
+  .results:empty,
+  &:has(.search-bar .search-actions .clear-button:disabled) .results {
+    display: none;
+  }
+
+  .search-keyboard-shortcuts {
+    display: none !important;
+  }
+
+}
+
+
+@media (min-width: 768px) {
+
+  .VPNavBarSearchButton {
+
+    height: 38px !important;
+    /* width: 127px; */
+    width: 140px;
+    /* justify-content: center; */
+
+    .keys {
+      display: none;
+    }
+
+  }
+
+}
+
+
+:root {
+  -webkit-tap-highlight-color: transparent;
+}

@@ -1,29 +1,36 @@
 //
-// KeyframeKit.js
+// KeyframeKit
 // Ben Hatsor
 // 
 // See README.md for usage.
 //
 
 
-const PERCENTAGE_CHAR = '%';
+const CHARS = {
+  PERCENT_SIGN: '%',
+  HYPHEN_MINUS: '-',
+  DOUBLE_HYPHEN_MINUS: '--',
+  WEBKIT_PREFIX: '-webkit-'
+} as const;
 
 
 export type KeyframesFactorySource = StyleSheetList | CSSStyleSheet;
 
+namespace KeyframesFactoryError {
+  export class KeyframesRuleNameTypeError extends TypeError {
+    message = `Keyframes rule name must be a string.`;
+  }
+  export class SourceTypeError extends TypeError {
+    message = `Source must be either a Document, a ShadowRoot or a CSSStyleSheet instance.`;
+  }
+  export class StyleSheetImportError extends Error {
+    message = `The stylesheet could not be imported.`;
+  }
+}
+
 class KeyframesFactory {
 
-  readonly Error = {
-    KeyframesRuleNameTypeError: class extends TypeError {
-      message = `Keyframes rule name must be a string.`;
-    },
-    SourceTypeError: class extends TypeError {
-      message = `Source must be either a Document, a ShadowRoot or a CSSStyleSheet instance.`;
-    },
-    StyleSheetImportError: class extends Error {
-      message = `The stylesheet could not be imported.`;
-    }
-  } as const;
+  readonly Error = KeyframesFactoryError;
 
 
   async getDocumentStyleSheetsOnLoad({ document = window.document }: {
@@ -39,8 +46,9 @@ class KeyframesFactory {
   }
 
   
-  /** - Note: `@import` rules won't be resolved in imported stylesheets.  
-   *    See https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-588352418. */
+  /** @remarks
+   *  Note: `@import` rules won't be resolved in imported stylesheets.  
+   *  See https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-588352418. */
   async importStyleSheet(url: string) {
 
     const resp = await fetch(url);
@@ -226,7 +234,7 @@ class KeyframesFactory {
       /// https://drafts.csswg.org/css-animations/#dom-csskeyframerule-keytext
       const percentString = removeSuffix({
         of: keyframe.keyText,
-        suffix: PERCENTAGE_CHAR
+        suffix: CHARS.PERCENT_SIGN
       });
       
       const percent = Number(percentString);
@@ -241,7 +249,12 @@ class KeyframesFactory {
         /// https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/getPropertyValue
         const propertyValue = keyframe.style.getPropertyValue(propertyName);
         
-        parsedProperties[propertyName] = propertyValue;
+        /// https://drafts.csswg.org/web-animations-1/#ref-for-animation-property-name-to-idl-attribute-name%E2%91%A0
+        const attributeName = this.#animationPropertyNameToIDLAttributeName(
+          propertyName
+        );
+
+        parsedProperties[attributeName] = propertyValue;
 
       }
 
@@ -260,11 +273,74 @@ class KeyframesFactory {
     return parsedKeyframesInstance;
 
   }
+  
+
+  /** https://drafts.csswg.org/web-animations-1/#animation-property-name-to-idl-attribute-name */
+  #animationPropertyNameToIDLAttributeName(property: string) {
+
+    if (this.#isCustomPropertyName(property)) return property;
+
+    if (property === 'float') return 'cssFloat';
+
+    if (property === 'offset') return 'cssOffset';
+
+    // https://drafts.csswg.org/cssom/#ref-for-supported-css-property%E2%91%A2
+    const lowercaseFirst = this.#isWebkitCasedAttribute(property);
+
+    return this.#cssPropertyToIDLAttribute(property, lowercaseFirst);
+
+  }
+
+  /** https://drafts.csswg.org/cssom/#css-property-to-idl-attribute */
+  #cssPropertyToIDLAttribute(property: string, lowercaseFirst: boolean = false) {
+
+    let output = '';
+
+    let uppercaseNext = false;
+
+    if (lowercaseFirst) {
+      property = property.slice(1);
+    }
+
+    for (const c of property) {
+
+      if (c === CHARS.HYPHEN_MINUS) {
+
+        uppercaseNext = true;
+
+      } else if (uppercaseNext) {
+
+        uppercaseNext = false;
+
+        output += c.toUpperCase();
+
+      } else {
+
+        output += c;
+
+      }
+
+    }
+
+    return output;
+
+  }
+
+  /** https://drafts.csswg.org/css-variables-2/#typedef-custom-property-name */
+  #isCustomPropertyName(property: string) {
+    return property.startsWith(CHARS.DOUBLE_HYPHEN_MINUS) &&
+           property !== CHARS.DOUBLE_HYPHEN_MINUS;
+  }
+
+  /** https://drafts.csswg.org/cssom/#ref-for-supported-css-property%E2%91%A2 */
+  #isWebkitCasedAttribute(property: string) {
+    return property.startsWith(CHARS.WEBKIT_PREFIX);
+  }
 
 }
 
 export default new KeyframesFactory();
-export type { KeyframesFactory };
+export type { KeyframesFactory, KeyframesFactoryError };
 
 /** https://drafts.csswg.org/web-animations-1/#processing-a-keyframes-argument */
 type KeyframeProperties = { [propertyName: string]: string };
@@ -277,27 +353,42 @@ export type KeyframeArgument = Keyframe[] | PropertyIndexedKeyframes;
 export class KeyframeEffectParameters {
 
   keyframes: KeyframeArgument;
-  options?: number | KeyframeEffectOptions;
+  options: KeyframeEffectOptions;
 
   constructor({ keyframes, options = {} }: {
     keyframes: KeyframeArgument,
     options?: number | KeyframeEffectOptions
   }) {
     this.keyframes = keyframes;
-    this.options = options;
+    this.options = this.#parseOptionsArg(options);
   }
 
-  /** - https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface  
-   *  - https://drafts.csswg.org/web-animations-1/#the-animation-interface */
-  toAnimation({ target, timeline = document.timeline }: {
+  /** 
+   * @param obj.options
+   * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#options)
+   * 
+   * @see
+   *  - https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface  
+   *  - https://drafts.csswg.org/web-animations-1/#the-animation-interface
+   */
+  toAnimation({ target, options: additionalOptions = {}, timeline = document.timeline }: {
     target: Element | null,
+    options?: number | KeyframeEffectOptions,
     timeline?: AnimationTimeline
   }): Animation {
-    
+
+    additionalOptions = this.#parseOptionsArg(additionalOptions);
+
+    // override options with additional options
+    const options: KeyframeEffectOptions = {
+      ...this.options, ...additionalOptions
+    };
+
+
     const keyframeEffect = new KeyframeEffect(
       target,
       this.keyframes,
-      this.options
+      options
     );
 
     const animation = new Animation(
@@ -306,6 +397,18 @@ export class KeyframeEffectParameters {
     );
 
     return animation;
+
+  }
+
+  /** https://drafts.csswg.org/web-animations-1/#dom-keyframeeffect-keyframeeffect-target-keyframes-options-options
+      https://drafts.csswg.org/web-animations-1/#dom-effecttiming-duration */
+  #parseOptionsArg(options: number | KeyframeEffectOptions) {
+
+    if (typeof options === 'number') {
+      return { duration: options };
+    }
+
+    return options;
 
   }
   
@@ -322,7 +425,7 @@ export class ParsedKeyframes {
 
   /** 
    * @param options
-   * {@link https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#options MDN Reference}
+   * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#options)
    */
   toKeyframeEffect(
     options: number | KeyframeEffectOptions | null
@@ -370,11 +473,14 @@ function removeSuffix({ of: string, suffix }: {
 
 }
 
+
 async function waitForDocumentLoad({ document }: {
   document: Document
 }) {
 
-  if (document.readyState === 'complete') return;
+  if (document.readyState === 'complete') {
+    return;
+  }
 
   const { promise, resolve } = Promise.withResolvers();
 
@@ -384,16 +490,15 @@ async function waitForDocumentLoad({ document }: {
     }
   }
 
-  document.addEventListener(
+  const listener = [
     'readystatechange',
     onReadyStateChange
-  );
+  ] as const;
+
+  document.addEventListener(...listener);
 
   await promise;
 
-  document.removeEventListener(
-    'readystatechange',
-    onReadyStateChange
-  );
+  document.removeEventListener(...listener);
 
 }

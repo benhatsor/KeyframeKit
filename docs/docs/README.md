@@ -5,10 +5,11 @@ Powered by the [Web Animations API][1].
 
 ## Installation
 
-### NPM
-```sh
+::: code-group
+```sh [NPM]
 npm install keyframekit
 ```
+:::
 
 ## Usage
 
@@ -94,7 +95,7 @@ including declaration files and source maps.
 
 ## License
 
-[MIT](LICENSE)
+[MIT](https://github.com/benhatsor/KeyframeKit.js/blob/main/LICENSE)
 
 
 [1]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API

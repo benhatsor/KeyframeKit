@@ -1,0 +1,100 @@
+[
+  {
+    "title": "Namespaces",
+    "children": [
+      {
+        "title": "KeyframesFactoryError",
+        "kind": 4,
+        "path": "KeyframeKit/namespaces/KeyframesFactoryError/README.md",
+        "isDeprecated": false,
+        "children": [
+          {
+            "title": "Classes",
+            "children": [
+              {
+                "title": "KeyframesRuleNameTypeError",
+                "kind": 128,
+                "path": "KeyframeKit/namespaces/KeyframesFactoryError/classes/KeyframesRuleNameTypeError.md",
+                "isDeprecated": false
+              },
+              {
+                "title": "SourceTypeError",
+                "kind": 128,
+                "path": "KeyframeKit/namespaces/KeyframesFactoryError/classes/SourceTypeError.md",
+                "isDeprecated": false
+              },
+              {
+                "title": "StyleSheetImportError",
+                "kind": 128,
+                "path": "KeyframeKit/namespaces/KeyframesFactoryError/classes/StyleSheetImportError.md",
+                "isDeprecated": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Classes",
+    "children": [
+      {
+        "title": "KeyframeEffectParameters",
+        "kind": 128,
+        "path": "classes/KeyframeEffectParameters.md",
+        "isDeprecated": false
+      },
+      {
+        "title": "ParsedKeyframes",
+        "kind": 128,
+        "path": "classes/ParsedKeyframes.md",
+        "isDeprecated": false
+      }
+    ]
+  },
+  {
+    "title": "Interfaces",
+    "children": [
+      {
+        "title": "KeyframesFactory",
+        "kind": 256,
+        "path": "interfaces/KeyframesFactory.md",
+        "isDeprecated": false
+      }
+    ]
+  },
+  {
+    "title": "Type Aliases",
+    "children": [
+      {
+        "title": "KeyframeArgument",
+        "kind": 2097152,
+        "path": "type-aliases/KeyframeArgument.md",
+        "isDeprecated": false
+      },
+      {
+        "title": "KeyframesFactorySource",
+        "kind": 2097152,
+        "path": "type-aliases/KeyframesFactorySource.md",
+        "isDeprecated": false
+      },
+      {
+        "title": "ParsedKeyframesRules",
+        "kind": 2097152,
+        "path": "type-aliases/ParsedKeyframesRules.md",
+        "isDeprecated": false
+      }
+    ]
+  },
+  {
+    "title": "Variables",
+    "children": [
+      {
+        "title": "default",
+        "kind": 32,
+        "path": "variables/default.md",
+        "isDeprecated": false
+      }
+    ]
+  }
+]

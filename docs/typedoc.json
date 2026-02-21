@@ -1,0 +1,59 @@
+{
+  "name": "KeyframeKit",
+  
+	"plugin": [
+    "./typedoc/plugin-param-names.js",
+    "typedoc-plugin-mdn-links",
+    "typedoc-plugin-inline-sources",
+    "typedoc-plugin-markdown",
+    "typedoc-plugin-remark",
+    //"typedoc-github-wiki-theme",
+    //"typedoc-plugin-missing-exports"
+  ],
+
+  "entryPoints": ["../src/KeyframeKit.ts"],
+  "out": "docs/reference",
+
+  //"excludeExternals": true,
+  //"placeInternalsInOwningModule": true,
+
+  //"disableSources": true,
+  
+  //"flattenOutputFiles": false,
+
+  "router": "member", // "module"
+
+  //"readme": "none",
+
+  //"sidebar": {
+    //"autoConfiguration": false,
+    //"heading": "[KeyframeKit](../wiki)"
+  //},
+
+  "remarkPlugins": [
+    ["remark-insert-headings", { "text": "Contents", "minHeadingCount": 1 }],
+    ["remark-toc", { "maxDepth": 3, "tight": true }],
+    //["remark-collapse", {"test": "Contents"}]
+  ],
+  
+  "modulesFileName": "index", // KeyframeKit
+
+  "expandParameters": true,
+  "expandObjects": true,
+
+  //"parametersFormat": "htmlTable",
+
+  "useCodeBlocks": true,
+
+  //"hidePageTitle": true,
+  "hidePageHeader": true,
+
+  //"namedParamName": "obj"
+
+  "navigationJson": "docs/reference/navigation.json",
+  "navigation": {
+    "includeCategories": true,
+    "includeGroups": true,
+    "includeFolders": true,
+  }
+}
