@@ -2,7 +2,7 @@
 
 # Class: KeyframeEffectParameters
 
-Defined in: [src/KeyframeKit.ts:353](https://github.com/benhatsor/KeyframeKit.js/blob/bcee9f4f13a98aa8f2cd08c5503f1b3da83077c1/src/KeyframeKit.ts#L353)
+Defined in: [KeyframeKit.ts:351](https://github.com/benhatsor/KeyframeKit.js/blob/6eb91e80bdc11ce3dba295a38e10c62fc9ad9528/src/KeyframeKit.ts#L351)
 
 https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface
 
@@ -17,7 +17,7 @@ new KeyframeEffectParameters(obj: {
 }): KeyframeEffectParameters;
 ```
 
-Defined in: [src/KeyframeKit.ts:358](https://github.com/benhatsor/KeyframeKit.js/blob/bcee9f4f13a98aa8f2cd08c5503f1b3da83077c1/src/KeyframeKit.ts#L358)
+Defined in: [KeyframeKit.ts:356](https://github.com/benhatsor/KeyframeKit.js/blob/6eb91e80bdc11ce3dba295a38e10c62fc9ad9528/src/KeyframeKit.ts#L356)
 
 #### Parameters
 
@@ -43,7 +43,7 @@ Defined in: [src/KeyframeKit.ts:358](https://github.com/benhatsor/KeyframeKit.js
 keyframes: KeyframeArgument;
 ```
 
-Defined in: [src/KeyframeKit.ts:355](https://github.com/benhatsor/KeyframeKit.js/blob/bcee9f4f13a98aa8f2cd08c5503f1b3da83077c1/src/KeyframeKit.ts#L355)
+Defined in: [KeyframeKit.ts:353](https://github.com/benhatsor/KeyframeKit.js/blob/6eb91e80bdc11ce3dba295a38e10c62fc9ad9528/src/KeyframeKit.ts#L353)
 
 ***
 
@@ -53,7 +53,7 @@ Defined in: [src/KeyframeKit.ts:355](https://github.com/benhatsor/KeyframeKit.js
 options: KeyframeEffectOptions;
 ```
 
-Defined in: [src/KeyframeKit.ts:356](https://github.com/benhatsor/KeyframeKit.js/blob/bcee9f4f13a98aa8f2cd08c5503f1b3da83077c1/src/KeyframeKit.ts#L356)
+Defined in: [KeyframeKit.ts:354](https://github.com/benhatsor/KeyframeKit.js/blob/6eb91e80bdc11ce3dba295a38e10c62fc9ad9528/src/KeyframeKit.ts#L354)
 
 ## Methods
 
@@ -67,7 +67,7 @@ toAnimation(obj: {
 }): Animation;
 ```
 
-Defined in: [src/KeyframeKit.ts:374](https://github.com/benhatsor/KeyframeKit.js/blob/bcee9f4f13a98aa8f2cd08c5503f1b3da83077c1/src/KeyframeKit.ts#L374)
+Defined in: [KeyframeKit.ts:372](https://github.com/benhatsor/KeyframeKit.js/blob/6eb91e80bdc11ce3dba295a38e10c62fc9ad9528/src/KeyframeKit.ts#L372)
 
 #### Parameters
 
@@ -93,5 +93,6 @@ Defined in: [src/KeyframeKit.ts:374](https://github.com/benhatsor/KeyframeKit.js
 
 #### See
 
-- https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface  
-  - https://drafts.csswg.org/web-animations-1/#the-animation-interface
+Specifications:
+- https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface
+- https://drafts.csswg.org/web-animations-1/#the-animation-interface

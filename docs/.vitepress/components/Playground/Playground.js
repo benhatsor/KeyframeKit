@@ -36,6 +36,9 @@ export function playground(props, previewFrame) {
   <head>
     <base href="${window.location.href}">
     <style>${code.value.CSS}</style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
   </head>
   <body>
     ${code.value.HTML}

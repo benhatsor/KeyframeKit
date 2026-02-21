@@ -1,9 +1,5 @@
 # KeyframeKit
 
-## Namespaces
-
-- [KeyframesFactoryError](KeyframeKit/namespaces/KeyframesFactoryError/README.md)
-
 ## Classes
 
 - [KeyframeEffectParameters](classes/KeyframeEffectParameters.md)

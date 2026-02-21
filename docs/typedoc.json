@@ -14,6 +14,10 @@
   "entryPoints": ["../src/KeyframeKit.ts"],
   "out": "docs/reference",
 
+  "validation": {
+    "notExported": false
+  },
+
   //"excludeExternals": true,
   //"placeInternalsInOwningModule": true,
 

@@ -19,7 +19,6 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Get Started', link: '/README' },
       { text: 'Reference', link: '/reference' }
     ],
 
@@ -39,7 +38,11 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/benhatsor/KeyframeKit.js' }
-    ]
+    ],
+
+    footer: {
+      message: 'Created by <a href="https://berryscript.com">Ben Hatsor</a>. MIT License.'
+    }
   },
 
   vite: {

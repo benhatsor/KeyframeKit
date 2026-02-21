@@ -1,41 +1,5 @@
 [
   {
-    "title": "Namespaces",
-    "children": [
-      {
-        "title": "KeyframesFactoryError",
-        "kind": 4,
-        "path": "KeyframeKit/namespaces/KeyframesFactoryError/README.md",
-        "isDeprecated": false,
-        "children": [
-          {
-            "title": "Classes",
-            "children": [
-              {
-                "title": "KeyframesRuleNameTypeError",
-                "kind": 128,
-                "path": "KeyframeKit/namespaces/KeyframesFactoryError/classes/KeyframesRuleNameTypeError.md",
-                "isDeprecated": false
-              },
-              {
-                "title": "SourceTypeError",
-                "kind": 128,
-                "path": "KeyframeKit/namespaces/KeyframesFactoryError/classes/SourceTypeError.md",
-                "isDeprecated": false
-              },
-              {
-                "title": "StyleSheetImportError",
-                "kind": 128,
-                "path": "KeyframeKit/namespaces/KeyframesFactoryError/classes/StyleSheetImportError.md",
-                "isDeprecated": false
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
     "title": "Classes",
     "children": [
       {

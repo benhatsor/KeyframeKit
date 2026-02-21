@@ -16,21 +16,19 @@ const CHARS = {
 
 export type KeyframesFactorySource = StyleSheetList | CSSStyleSheet;
 
-namespace KeyframesFactoryError {
-  export class KeyframesRuleNameTypeError extends TypeError {
-    message = `Keyframes rule name must be a string.`;
-  }
-  export class SourceTypeError extends TypeError {
-    message = `Source must be either a Document, a ShadowRoot or a CSSStyleSheet instance.`;
-  }
-  export class StyleSheetImportError extends Error {
-    message = `The stylesheet could not be imported.`;
-  }
-}
-
 class KeyframesFactory {
 
-  readonly Error = KeyframesFactoryError;
+  readonly Error = {
+    KeyframesRuleNameTypeError: class KeyframesRuleNameTypeError extends TypeError {
+      message = `Keyframes rule name must be a string.`;
+    },
+    SourceTypeError: class SourceTypeError extends TypeError {
+      message = `Source must be either a Document, a ShadowRoot or a CSSStyleSheet instance.`;
+    },
+    StyleSheetImportError: class StyleSheetImportError extends Error {
+      message = `The stylesheet could not be imported.`;
+    }
+  } as const;
 
 
   async getDocumentStyleSheetsOnLoad({ document = window.document }: {
@@ -340,7 +338,7 @@ class KeyframesFactory {
 }
 
 export default new KeyframesFactory();
-export type { KeyframesFactory, KeyframesFactoryError };
+export type { KeyframesFactory };
 
 /** https://drafts.csswg.org/web-animations-1/#processing-a-keyframes-argument */
 type KeyframeProperties = { [propertyName: string]: string };
@@ -367,9 +365,9 @@ export class KeyframeEffectParameters {
    * @param obj.options
    * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#options)
    * 
-   * @see
-   *  - https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface  
-   *  - https://drafts.csswg.org/web-animations-1/#the-animation-interface
+   * @see Specifications:
+   * - https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface
+   * - https://drafts.csswg.org/web-animations-1/#the-animation-interface
    */
   toAnimation({ target, options: additionalOptions = {}, timeline = document.timeline }: {
     target: Element | null,

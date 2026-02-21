@@ -1,16 +1,15 @@
 {
   "name": "keyframekit",
   "version": "1.0.0",
-  "description": "An intuitive, lightweight and performant set of tools for working with CSS animations in JavaScript. Powered by the Web Animations API.",
+  "description": "Intuitive, powerful and performant tools for working with CSS animations in JavaScript.",
   "main": "./dist/KeyframeKit.js",
   "scripts": {
     "build": "npx tsc",
-    "docs:bump": "(cd docs && npm run bump)",
-    "test": "vitest"
+    "docs:bump": "(cd docs && npm run bump)"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/benhatsor/KeyframeKit.js.git"
+    "url": "git+https://github.com/benhatsor/KeyframeKit.git"
   },
   "keywords": [
     "css",
@@ -28,11 +27,10 @@
   "license": "MIT",
   "types": "./dist/KeyframeKit.d.ts",
   "bugs": {
-    "url": "https://github.com/benhatsor/KeyframeKit.js/issues"
+    "url": "https://github.com/benhatsor/KeyframeKit/issues"
   },
-  "homepage": "https://github.com/benhatsor/KeyframeKit.js#readme",
+  "homepage": "https://berryscript.com/keyframekit",
   "devDependencies": {
-    "@vitest/browser-playwright": "^4.0.18",
     "typescript": "^5.9.3"
   }
 }

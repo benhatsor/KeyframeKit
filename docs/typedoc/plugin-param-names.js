@@ -35,8 +35,9 @@ const load = (app) => {
             app.logger.warn(`${changeParamTagOption} is ignored when ${detectFromCommentsOption} is true`);
         }
     });
-    app.converter.on(typedoc_1.Converter.EVENT_CREATE_SIGNATURE, (_, sig) => {
+    app.converter.on(typedoc_1.Converter.EVENT_CREATE_SIGNATURE, (context, sig) => {
         var _a, _b;
+
         if (!sig.parameters)
             return;
         for (const [i, param] of sig.parameters.entries()) {
