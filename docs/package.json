@@ -4,7 +4,7 @@
     "build": "vitepress build",
     "preview": "vitepress preview",
     "bump": "npm run reference && npm run playground:bumplib",
-    "reference": "typedoc",
+    "reference": "typedoc && rm ./docs/reference/README.md",
     "playground:bumplib": "mkdir -p ./docs/public/playground/KeyframeKit && cp -r ../dist ./docs/public/playground/KeyframeKit/"
   },
   "devDependencies": {

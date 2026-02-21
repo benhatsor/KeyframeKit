@@ -2,7 +2,7 @@
 
 # Interface: KeyframesFactory
 
-Defined in: [KeyframeKit.ts:19](https://github.com/benhatsor/KeyframeKit.js/blob/6eb91e80bdc11ce3dba295a38e10c62fc9ad9528/src/KeyframeKit.ts#L19)
+Defined in: [KeyframeKit.ts:19](https://github.com/benhatsor/KeyframeKit.js/blob/f7f65a49c4ae03d4b23ba218a90f767884862ace/src/KeyframeKit.ts#L19)
 
 ## Properties
 
@@ -16,7 +16,7 @@ readonly Error: {
 };
 ```
 
-Defined in: [KeyframeKit.ts:21](https://github.com/benhatsor/KeyframeKit.js/blob/6eb91e80bdc11ce3dba295a38e10c62fc9ad9528/src/KeyframeKit.ts#L21)
+Defined in: [KeyframeKit.ts:21](https://github.com/benhatsor/KeyframeKit.js/blob/f7f65a49c4ae03d4b23ba218a90f767884862ace/src/KeyframeKit.ts#L21)
 
 #### KeyframesRuleNameTypeError
 
@@ -46,7 +46,7 @@ getAllStyleSheetKeyframesRules(obj: {
 }): ParsedKeyframesRules;
 ```
 
-Defined in: [KeyframeKit.ts:151](https://github.com/benhatsor/KeyframeKit.js/blob/6eb91e80bdc11ce3dba295a38e10c62fc9ad9528/src/KeyframeKit.ts#L151)
+Defined in: [KeyframeKit.ts:151](https://github.com/benhatsor/KeyframeKit.js/blob/f7f65a49c4ae03d4b23ba218a90f767884862ace/src/KeyframeKit.ts#L151)
 
 #### Parameters
 
@@ -70,7 +70,7 @@ getDocumentStyleSheetsOnLoad(obj?: {
 }): Promise<StyleSheetList>;
 ```
 
-Defined in: [KeyframeKit.ts:34](https://github.com/benhatsor/KeyframeKit.js/blob/6eb91e80bdc11ce3dba295a38e10c62fc9ad9528/src/KeyframeKit.ts#L34)
+Defined in: [KeyframeKit.ts:34](https://github.com/benhatsor/KeyframeKit.js/blob/f7f65a49c4ae03d4b23ba218a90f767884862ace/src/KeyframeKit.ts#L34)
 
 #### Parameters
 
@@ -95,7 +95,7 @@ getStyleSheetKeyframes(obj: {
 }): ParsedKeyframes | undefined;
 ```
 
-Defined in: [KeyframeKit.ts:74](https://github.com/benhatsor/KeyframeKit.js/blob/6eb91e80bdc11ce3dba295a38e10c62fc9ad9528/src/KeyframeKit.ts#L74)
+Defined in: [KeyframeKit.ts:74](https://github.com/benhatsor/KeyframeKit.js/blob/f7f65a49c4ae03d4b23ba218a90f767884862ace/src/KeyframeKit.ts#L74)
 
 #### Parameters
 
@@ -121,7 +121,7 @@ Defined in: [KeyframeKit.ts:74](https://github.com/benhatsor/KeyframeKit.js/blob
 importStyleSheet(url: string): Promise<CSSStyleSheet>;
 ```
 
-Defined in: [KeyframeKit.ts:50](https://github.com/benhatsor/KeyframeKit.js/blob/6eb91e80bdc11ce3dba295a38e10c62fc9ad9528/src/KeyframeKit.ts#L50)
+Defined in: [KeyframeKit.ts:50](https://github.com/benhatsor/KeyframeKit.js/blob/f7f65a49c4ae03d4b23ba218a90f767884862ace/src/KeyframeKit.ts#L50)
 
 #### Parameters
 
@@ -148,7 +148,7 @@ parseKeyframesRule(obj: {
 }): ParsedKeyframes;
 ```
 
-Defined in: [KeyframeKit.ts:223](https://github.com/benhatsor/KeyframeKit.js/blob/6eb91e80bdc11ce3dba295a38e10c62fc9ad9528/src/KeyframeKit.ts#L223)
+Defined in: [KeyframeKit.ts:223](https://github.com/benhatsor/KeyframeKit.js/blob/f7f65a49c4ae03d4b23ba218a90f767884862ace/src/KeyframeKit.ts#L223)
 
 #### Parameters
 
