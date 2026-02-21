@@ -103,6 +103,27 @@ const attachedAnim = linkTextHoverAnim.toAnimation({
 attachedAnim.play();
 ```
 
+### Importing a stylesheet directly
+
+Instead of getting an animation from the document's stylesheets, you can also import it directly from a CSS file.
+
+```js
+import KeyframeKit from 'keyframekit';
+
+const styleSheet = await KeyframeKit.importStyleSheet('./styles.css');
+
+// get animation keyframes from stylesheet
+const rotateSmallAnimKeyframes = KeyframeKit.getStyleSheetKeyframes({
+  of: 'rotate-small',
+  in: styleSheet
+});
+```
+
+> Note: `@import` rules won't be resolved in stylesheets imported in this way. [More info.][3]
+
+### Full reference
+[See here.](/reference)
+
 ## Typing
 
 This library is fully compatable with native JS, but it also has full spec-compliant type support, including declaration files and source maps.
@@ -114,3 +135,4 @@ This library is fully compatable with native JS, but it also has full spec-compl
 
 [1]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API
 [2]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API
+[3]: https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-588352418
