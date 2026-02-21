@@ -60,7 +60,7 @@ const { tabs, activeTab, isLoaded, setEditorRef } = playground(props, previewFra
   --border-radius: 8px;
   border-radius: var(--border-radius);
   overflow: hidden;
-  margin-bottom: 48px;
+  /* margin-bottom: 48px; */
 }
 
 @media (max-width: 1000px) {
@@ -86,11 +86,13 @@ const { tabs, activeTab, isLoaded, setEditorRef } = playground(props, previewFra
   }
 }
 
+/*
 @media (min-width: 640px) {
   .playground {
     margin-bottom: 64px;
   }
 }
+*/
 
 .editor-pane {
   display: flex;

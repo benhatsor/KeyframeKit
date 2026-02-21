@@ -1,12 +1,12 @@
 # KeyframeKit
 
-An intuitive, lightweight and performant set of tools for working with CSS animations in JavaScript.  
+Intuitive, powerful and performant tools for working with CSS animations in JavaScript.  
 Powered by the [Web Animations API][1].
 
 ## Installation
 
 ::: code-group
-```sh [NPM]
+```sh [npm]
 npm install keyframekit
 ```
 :::
@@ -90,8 +90,7 @@ attachedAnim.play();
 
 ## Typing
 
-This library is fully compatable with native JS, but it also has full spec-compliant type support,  
-including declaration files and source maps.
+This library is fully compatable with native JS, but it also has full spec-compliant type support, including declaration files and source maps.
 
 ## License
 

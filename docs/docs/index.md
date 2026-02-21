@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /#installation
+      link: /README
     - theme: alt
       text: Reference
       link: /reference
