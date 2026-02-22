@@ -165,6 +165,7 @@ export function playground(props, previewFrame, getDefaultExample, interFontDec)
       inertialScroll: isTouchDevice,
       mouseWheelScrollSensitivity: isTouchDevice ? 5 : 1,
       scrollPredominantAxis: !isTouchDevice,
+      smoothScrolling: isTouchDevice,
 
       tabSize: 2,
       lineNumbers: "off",
