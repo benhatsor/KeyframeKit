@@ -30,7 +30,7 @@
   "bugs": {
     "url": "https://github.com/benhatsor/KeyframeKit/issues"
   },
-  "homepage": "https://berryscript.com/keyframekit",
+  "homepage": "https://keyframekit.berryscript.com",
   "devDependencies": {
     "typescript": "^5.9.3"
   }
