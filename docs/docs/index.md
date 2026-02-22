@@ -26,7 +26,7 @@ While working with the [Web Animations API][1], I was surprised there wasn't an 
 ```sh [npm]
 npm install keyframekit
 ```
-```js [ES module]
+```js [CDN]
 import KeyframeKit from 'https://unpkg.com/keyframekit';
 ```
 :::

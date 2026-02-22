@@ -13,7 +13,7 @@ While working with the [Web Animations API][1], I was surprised there wasn't an 
 npm install keyframekit
 ```
 
-### ES module
+### CDN
 ```js
 import KeyframeKit from 'https://unpkg.com/keyframekit';
 ```
