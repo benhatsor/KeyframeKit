@@ -2,8 +2,6 @@
 
 # Interface: KeyframesFactory
 
-Defined in: [KeyframeKit.ts:19](https://github.com/benhatsor/KeyframeKit.js/blob/f7f65a49c4ae03d4b23ba218a90f767884862ace/src/KeyframeKit.ts#L19)
-
 ## Properties
 
 ### Error
@@ -15,8 +13,6 @@ readonly Error: {
   StyleSheetImportError: typeof StyleSheetImportError;
 };
 ```
-
-Defined in: [KeyframeKit.ts:21](https://github.com/benhatsor/KeyframeKit.js/blob/f7f65a49c4ae03d4b23ba218a90f767884862ace/src/KeyframeKit.ts#L21)
 
 #### KeyframesRuleNameTypeError
 
@@ -46,8 +42,6 @@ getAllStyleSheetKeyframesRules(obj: {
 }): ParsedKeyframesRules;
 ```
 
-Defined in: [KeyframeKit.ts:151](https://github.com/benhatsor/KeyframeKit.js/blob/f7f65a49c4ae03d4b23ba218a90f767884862ace/src/KeyframeKit.ts#L151)
-
 #### Parameters
 
 ##### obj
@@ -69,8 +63,6 @@ getDocumentStyleSheetsOnLoad(obj?: {
   document?: Document;
 }): Promise<StyleSheetList>;
 ```
-
-Defined in: [KeyframeKit.ts:34](https://github.com/benhatsor/KeyframeKit.js/blob/f7f65a49c4ae03d4b23ba218a90f767884862ace/src/KeyframeKit.ts#L34)
 
 #### Parameters
 
@@ -94,8 +86,6 @@ getStyleSheetKeyframes(obj: {
   of: string;
 }): ParsedKeyframes | undefined;
 ```
-
-Defined in: [KeyframeKit.ts:74](https://github.com/benhatsor/KeyframeKit.js/blob/f7f65a49c4ae03d4b23ba218a90f767884862ace/src/KeyframeKit.ts#L74)
 
 #### Parameters
 
@@ -121,8 +111,6 @@ Defined in: [KeyframeKit.ts:74](https://github.com/benhatsor/KeyframeKit.js/blob
 importStyleSheet(url: string): Promise<CSSStyleSheet>;
 ```
 
-Defined in: [KeyframeKit.ts:50](https://github.com/benhatsor/KeyframeKit.js/blob/f7f65a49c4ae03d4b23ba218a90f767884862ace/src/KeyframeKit.ts#L50)
-
 #### Parameters
 
 ##### url
@@ -147,8 +135,6 @@ parseKeyframesRule(obj: {
   rule: CSSKeyframesRule;
 }): ParsedKeyframes;
 ```
-
-Defined in: [KeyframeKit.ts:223](https://github.com/benhatsor/KeyframeKit.js/blob/f7f65a49c4ae03d4b23ba218a90f767884862ace/src/KeyframeKit.ts#L223)
 
 #### Parameters
 

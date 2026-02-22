@@ -1,4 +1,61 @@
 
+const isTouchDevice = window.matchMedia('(hover: none)').matches;
+
+
+const jsDesktop = `// the primary reason to play your animation with JS
+// is because you get way more control over its playback:
+
+const textAnimEl = document.querySelector('.text-anim');
+
+textAnimEl.addEventListener('mouseenter', () => {
+  attachedAnims.forEach(anim => {
+    anim.playbackRate = 1;
+    anim.play();
+  });  
+  updateProgressBar();
+});
+
+textAnimEl.addEventListener('mouseleave', () => {
+  const isPlaying = attachedAnims.some(anim =>
+    anim.playState === 'running'
+  );
+  // if animation is playing, reverse it:
+  if (isPlaying) {
+    attachedAnims.forEach(anim => {
+      anim.playbackRate = -1;
+      anim.play();
+    });
+    updateProgressBar();
+  }
+});`;
+
+const jsMobile = `// the primary reason to play your animation with JS
+// is because you get way more control over its playback:
+
+const textAnimEl = document.querySelector('.text-anim');
+
+textAnimEl.addEventListener('touchstart', () => {
+  attachedAnims.forEach(anim => {
+    anim.playbackRate = 1;
+    anim.play();
+  });  
+  updateProgressBar();
+});
+
+textAnimEl.addEventListener('touchend', () => {
+  const isPlaying = attachedAnims.some(anim =>
+    anim.playState === 'running'
+  );
+  // if animation is playing, reverse it:
+  if (isPlaying) {
+    attachedAnims.forEach(anim => {
+      anim.playbackRate = -1;
+      anim.play();
+    });
+    updateProgressBar();
+  }
+});`;
+
 export const js = `import KeyframeKit from 'keyframekit';
 
 const documentStyleSheets = await KeyframeKit.getDocumentStyleSheetsOnLoad();
@@ -26,7 +83,10 @@ for (const span of spans) {
 
   const attachedAnim = rotateAnim.toAnimation({
     target: span,
-    options: { delay: animDelay * 1000 }
+    options: {
+      delay: animDelay * 1000,
+      endDelay: -animDelay * 1000
+    }
   });
 
   attachedAnims.push(attachedAnim);
@@ -38,28 +98,27 @@ for (const span of spans) {
 attachedAnims.forEach(anim => anim.play());
 
 
-// the primary reason to play your animation with JS
-// is because you get way more control over its playback:
+${isTouchDevice ? jsMobile : jsDesktop}
 
-const textAnimEl = document.querySelector('.text-anim');
 
-textAnimEl.addEventListener('mouseenter', () => {
-  attachedAnims.forEach(anim => {
-    anim.playbackRate = 1;
-    anim.play();
-  });  
-});
+const progressBar = document.querySelector('.progress-bar');
 
-textAnimEl.addEventListener('mouseleave', () => {
+function updateProgressBar() {
+  let progress = 0;
+  for (const anim of attachedAnims) {
+    progress += anim.overallProgress;
+  }
+  progress = progress / attachedAnims.length * 100;
+  progressBar.style.setProperty(
+    '--progress', progress + '%'
+  );
+
   const isPlaying = attachedAnims.some(anim =>
     anim.playState === 'running'
   );
-  // if animation is playing, reverse it:
-  if (isPlaying) attachedAnims.forEach(anim => {
-    anim.playbackRate = -1;
-    anim.play();
-  });
-});`;
+  if (!isPlaying) return;
+  requestAnimationFrame(updateProgressBar);
+}`;
 
 
 export const css = `@keyframes rotate {
@@ -90,6 +149,23 @@ export const css = `@keyframes rotate {
   cursor: pointer;
 }
 
+.progress-bar {
+  width: ${isTouchDevice ? '180px' : '232px'};
+  height: 3px;
+  border-radius: 3px;
+  background: #82868942;
+  position: relative;
+}
+
+.progress-bar::before {
+  content: '';
+  height: 100%;
+  width: var(--progress, 0%);
+  border-radius: inherit;
+  position: absolute;
+  background: #7ab6ff;
+}
+
 body {
   font-family: 'Inter', system-ui;
   background: #f0f7ff;
@@ -98,13 +174,27 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-flow: column;
 }`;
 
 
-export const html = `<div class="text-anim">
+const htmlDesktop = `<div class="text-anim">
   <span>H</span>
   <span>o</span>
   <span>v</span>
   <span>e</span>
   <span>r</span>
-</div>`;
+</div>
+
+<div class="progress-bar"></div>`;
+
+const htmlMobile = `<div class="text-anim">
+  <span>H</span>
+  <span>o</span>
+  <span>l</span>
+  <span>d</span>
+</div>
+
+<div class="progress-bar"></div>`;
+
+export const html = isTouchDevice ? htmlMobile : htmlDesktop;

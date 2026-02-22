@@ -100,12 +100,16 @@ export declare class KeyframeEffectParameters {
     #private;
     keyframes: KeyframeArgument;
     options: KeyframeEffectOptions;
+    /**
+     * @param obj.keyframes [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats)
+     * @param obj.options [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#options)
+     */
     constructor({ keyframes, options }: {
         keyframes: KeyframeArgument;
         options?: number | KeyframeEffectOptions;
     });
     /**
-     * @param obj.options
+     * @param obj.options Additional keyframe effect options. Can override existing keys.
      * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#options)
      *
      * @see Specifications:

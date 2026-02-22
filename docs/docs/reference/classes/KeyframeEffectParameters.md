@@ -2,8 +2,6 @@
 
 # Class: KeyframeEffectParameters
 
-Defined in: [KeyframeKit.ts:351](https://github.com/benhatsor/KeyframeKit.js/blob/f7f65a49c4ae03d4b23ba218a90f767884862ace/src/KeyframeKit.ts#L351)
-
 https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface
 
 ## Constructors
@@ -17,8 +15,6 @@ new KeyframeEffectParameters(obj: {
 }): KeyframeEffectParameters;
 ```
 
-Defined in: [KeyframeKit.ts:356](https://github.com/benhatsor/KeyframeKit.js/blob/f7f65a49c4ae03d4b23ba218a90f767884862ace/src/KeyframeKit.ts#L356)
-
 #### Parameters
 
 ##### obj
@@ -27,9 +23,13 @@ Defined in: [KeyframeKit.ts:356](https://github.com/benhatsor/KeyframeKit.js/blo
 
 [`KeyframeArgument`](../type-aliases/KeyframeArgument.md)
 
+[MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats)
+
 ###### options?
 
 `number` \| `KeyframeEffectOptions` = `{}`
+
+[MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#options)
 
 #### Returns
 
@@ -43,8 +43,6 @@ Defined in: [KeyframeKit.ts:356](https://github.com/benhatsor/KeyframeKit.js/blo
 keyframes: KeyframeArgument;
 ```
 
-Defined in: [KeyframeKit.ts:353](https://github.com/benhatsor/KeyframeKit.js/blob/f7f65a49c4ae03d4b23ba218a90f767884862ace/src/KeyframeKit.ts#L353)
-
 ***
 
 ### options
@@ -52,8 +50,6 @@ Defined in: [KeyframeKit.ts:353](https://github.com/benhatsor/KeyframeKit.js/blo
 ```ts
 options: KeyframeEffectOptions;
 ```
-
-Defined in: [KeyframeKit.ts:354](https://github.com/benhatsor/KeyframeKit.js/blob/f7f65a49c4ae03d4b23ba218a90f767884862ace/src/KeyframeKit.ts#L354)
 
 ## Methods
 
@@ -67,8 +63,6 @@ toAnimation(obj: {
 }): Animation;
 ```
 
-Defined in: [KeyframeKit.ts:372](https://github.com/benhatsor/KeyframeKit.js/blob/f7f65a49c4ae03d4b23ba218a90f767884862ace/src/KeyframeKit.ts#L372)
-
 #### Parameters
 
 ##### obj
@@ -77,6 +71,7 @@ Defined in: [KeyframeKit.ts:372](https://github.com/benhatsor/KeyframeKit.js/blo
 
 `number` \| `KeyframeEffectOptions` = `{}`
 
+Additional keyframe effect options. Can override existing keys.
 [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#options)
 
 ###### target

@@ -21,7 +21,7 @@
   //"excludeExternals": true,
   //"placeInternalsInOwningModule": true,
 
-  //"disableSources": true,
+  "disableSources": true,
   
   //"flattenOutputFiles": false,
 

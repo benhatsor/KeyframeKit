@@ -353,6 +353,10 @@ export class KeyframeEffectParameters {
   keyframes: KeyframeArgument;
   options: KeyframeEffectOptions;
 
+  /**
+   * @param obj.keyframes [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats)
+   * @param obj.options [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#options)
+   */
   constructor({ keyframes, options = {} }: {
     keyframes: KeyframeArgument,
     options?: number | KeyframeEffectOptions
@@ -362,7 +366,7 @@ export class KeyframeEffectParameters {
   }
 
   /** 
-   * @param obj.options
+   * @param obj.options Additional keyframe effect options. Can override existing keys.
    * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#options)
    * 
    * @see Specifications:
@@ -377,7 +381,7 @@ export class KeyframeEffectParameters {
 
     additionalOptions = this.#parseOptionsArg(additionalOptions);
 
-    // override options with additional options
+    // override existing option keys with additional options
     const options: KeyframeEffectOptions = {
       ...this.options, ...additionalOptions
     };
