@@ -153,7 +153,7 @@ export function playground(props, previewFrame, getDefaultExample, interFontDec)
 
 
     const config = {
-      fontSize: !isTouchDevice ? 16 : 14,
+      fontSize: 16,
       fontFamily: 'var(--vp-font-family-mono)',
       minimap: { enabled: false },
       scrollBeyondLastLine: false,
@@ -163,7 +163,7 @@ export function playground(props, previewFrame, getDefaultExample, interFontDec)
       renderLineHighlightOnlyWhenFocus: true,
 
       inertialScroll: isTouchDevice,
-      mouseWheelScrollSensitivity: isTouchDevice ? 10 : 1,
+      mouseWheelScrollSensitivity: isTouchDevice ? 15 : 1,
       scrollPredominantAxis: !isTouchDevice,
       smoothScrolling: isTouchDevice,
 
