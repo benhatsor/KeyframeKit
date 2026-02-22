@@ -122,7 +122,7 @@ const rotateSmallAnimKeyframes = KeyframeKit.getStyleSheetKeyframes({
 > Note: `@import` rules won't be resolved in stylesheets imported in this way. [More info.][3]
 
 ### Full reference
-[See here.](/reference)
+[See here.](/reference/index.md)
 
 ## Typing
 
