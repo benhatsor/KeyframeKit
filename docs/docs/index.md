@@ -88,7 +88,7 @@ const rotateSmallAnimKeyframes = KeyframeKit.getStyleSheetKeyframes({
 });
 ```
 
-> Note: This won't resolve stylesheet `@import` rules. [More info.][3]
+> Note: This won't resolve any `@import` rules in the stylesheet. [See here.][3]
 
 ### Defining animations in JS
 
