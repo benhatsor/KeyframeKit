@@ -161,6 +161,7 @@ export function playground(props, previewFrame, getDefaultExample, interFontDec)
       automaticLayout: true,
       fixedOverflowWidgets: true,
       renderLineHighlightOnlyWhenFocus: true,
+      inertialScroll: isTouchDevice,
       tabSize: 2,
       lineNumbers: "off",
       scrollbar: {
