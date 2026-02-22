@@ -41,7 +41,7 @@ export default defineConfig({
     ],
 
     footer: {
-      message: 'Created by <a href="https://berryscript.com">Ben Hatsor</a>. MIT License.'
+      message: 'Created by <a href="https://berryscript.com" target="_blank">Ben Hatsor</a>. MIT License.'
     }
   },
 
