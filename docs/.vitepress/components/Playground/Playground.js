@@ -153,7 +153,7 @@ export function playground(props, previewFrame, getDefaultExample, interFontDec)
 
 
     const config = {
-      fontSize: 16,
+      fontSize: !isTouchDevice ? 16 : 14,
       fontFamily: 'var(--vp-font-family-mono)',
       minimap: { enabled: false },
       scrollBeyondLastLine: false,
