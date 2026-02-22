@@ -28,7 +28,7 @@ import KeyframeKit from 'keyframekit';
 
 const documentStyleSheets = await KeyframeKit.getDocumentStyleSheetsOnLoad();
 
-// get animation keyframes from stylesheet
+// get animation keyframes from the document's stylesheets
 const rotateSmallAnimKeyframes = KeyframeKit.getStyleSheetKeyframes({
   of: 'rotate-small',
   in: documentStyleSheets
@@ -57,7 +57,7 @@ await attachedAnim.finished;
 ```
 [...and more.][2]
 
-### Importing a stylesheet directly
+### Importing animations directly from a CSS file
 
 Instead of getting an animation from the document's stylesheets, you can also import it directly from a CSS file.
 
@@ -73,7 +73,7 @@ const rotateSmallAnimKeyframes = KeyframeKit.getStyleSheetKeyframes({
 });
 ```
 
-> Note: `@import` rules won't be resolved in stylesheets imported in this way. [More info.][3]
+> Note: This won't resolve stylesheet `@import` rules. [More info.][3]
 
 ### Defining animations in JS
 
