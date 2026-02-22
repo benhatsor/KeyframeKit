@@ -14,7 +14,8 @@ export default defineConfig({
   head: [['link', { rel: 'icon', href: '/icon.png' }]],
     
   title: "KeyframeKit",
-  description: "Test",
+  description: "Intuitive, powerful and performant tools for working with CSS animations in JavaScript.",
+  
   themeConfig: {
     outline: [2, 3],
 
