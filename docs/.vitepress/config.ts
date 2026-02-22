@@ -10,6 +10,8 @@ export default defineConfig({
   rewrites: {
     //'reference/:slug*': ':slug*'
   },
+
+  head: [['link', { rel: 'icon', href: '/icon.png' }]],
     
   title: "KeyframeKit",
   description: "Test",
