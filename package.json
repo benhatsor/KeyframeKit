@@ -5,7 +5,8 @@
   "main": "./dist/KeyframeKit.js",
   "scripts": {
     "build": "npx tsc",
-    "docs:bump": "(cd docs && npm run bump)"
+    "docs:bump": "(cd docs && npm run bump)",
+    "docs:build": "(cd docs && npm run build)"
   },
   "repository": {
     "type": "git",

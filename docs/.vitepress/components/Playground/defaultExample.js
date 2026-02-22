@@ -1,52 +1,11 @@
 
-const isTouchDevice = window.matchMedia('(hover: none)').matches;
+// const isTouchDevice = window.matchMedia('(hover: none)').matches;
+export function getDefaultExample({ isTouchDevice }) {
 
+const jsAnimActivateEvent = isTouchDevice ? 'touchstart' : 'mouseenter';
+const jsAnimDeactivateEvent = isTouchDevice ? 'touchend' : 'mouseleave';
 
-const jsDesktop = `// the primary reason to play your animation with JS
-// is because you get way more control over its playback:
-
-const textAnimEl = document.querySelector('.text-anim');
-
-textAnimEl.addEventListener('mouseenter', () => {
-  attachedAnims.forEach(anim => {
-    anim.playbackRate = 1;
-    anim.play();
-  });  
-  updateProgressBar();
-});
-
-textAnimEl.addEventListener('mouseleave', () => {
-  // reverse the animation
-  attachedAnims.forEach(anim => {
-    anim.playbackRate = -1;
-    anim.play();
-  });
-  updateProgressBar();
-});`;
-
-const jsMobile = `// the primary reason to play your animation with JS
-// is because you get way more control over its playback:
-
-const textAnimEl = document.querySelector('.text-anim');
-
-textAnimEl.addEventListener('touchstart', () => {
-  attachedAnims.forEach(anim => {
-    anim.playbackRate = 1;
-    anim.play();
-  });  
-  updateProgressBar();
-});
-
-textAnimEl.addEventListener('touchend', () => {
-  // reverse the animation
-  attachedAnims.forEach(anim => {
-    anim.playbackRate = -1;
-    anim.play();
-  });
-  updateProgressBar();
-});`;
-
-export const js = `import KeyframeKit from 'keyframekit';
+const js = `import KeyframeKit from 'keyframekit';
 
 const documentStyleSheets = await KeyframeKit.getDocumentStyleSheetsOnLoad();
 
@@ -88,7 +47,26 @@ for (const span of spans) {
 attachedAnims.forEach(anim => anim.play());
 
 
-${isTouchDevice ? jsMobile : jsDesktop}
+// the primary reason to play your animation with JS
+// is because you get way more control over its playback:
+
+const textAnimEl = document.querySelector('.text-anim');
+
+textAnimEl.addEventListener('${jsAnimActivateEvent}', () => {
+  attachedAnims.forEach(anim => {
+    anim.playbackRate = 1;
+    anim.play();
+  });  
+  updateProgressBar();
+});
+
+textAnimEl.addEventListener('${jsAnimDeactivateEvent}', () => {
+  // reverse the animation
+  attachedAnims.forEach(anim => {
+    anim.playbackRate = -1;
+  });
+  updateProgressBar();
+});
 
 
 const progressBar = document.querySelector('.progress-bar');
@@ -111,7 +89,7 @@ function updateProgressBar() {
 }`;
 
 
-export const css = `@keyframes rotate {
+const css = `@keyframes rotate {
   from {
     clip-path: inset(0 0 0 0);
     translate: 0 0;
@@ -189,4 +167,9 @@ const htmlMobile = `<div class="text-anim">
 
 <div class="progress-bar"></div>`;
 
-export const html = isTouchDevice ? htmlMobile : htmlDesktop;
+const html = isTouchDevice ? htmlMobile : htmlDesktop;
+
+
+return { JS: js, CSS: css, HTML: html };
+
+}

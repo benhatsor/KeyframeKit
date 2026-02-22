@@ -14,9 +14,7 @@ hero:
       link: /reference
 ---
 
-<ClientOnly>
-  <Playground/>
-</ClientOnly>
+<Playground/>
 
 ## Installation
 

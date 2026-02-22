@@ -37,20 +37,22 @@
 import { ref } from 'vue'
 import { playground } from './Playground.js'
 
-import * as defaultExample from './defaultExample.js';
-import * as libCode from './libCode.js';
+import { getDefaultExample } from './defaultExample.js';
+//import * as libCode from './libCode.js';
+
+import { interFontDec } from './interFont.js';
 
 const props = defineProps({
-  initialHtml: { type: String, default: defaultExample.html },
-  initialCss:  { type: String, default: defaultExample.css },
-  initialJs:   { type: String, default: defaultExample.js },
+  //initialHtml: { type: String, default: defaultExample.html },
+  //initialCss:  { type: String, default: defaultExample.css },
+  //initialJs:   { type: String, default: defaultExample.js },
 
-  decLibSrc:   { type: String, default: libCode.decLibSrc },
-  libImportMap:   { type: String, default: libCode.libImportMap }
+  //decLibSrc:   { type: String, default: libCode.decLibSrc },
+  //libImportMap:   { type: String, default: libCode.libImportMap }
 })
 
 const previewFrame = ref(null)
-const { tabs, activeTab, isLoaded, setEditorRef } = playground(props, previewFrame)
+const { tabs, activeTab, isLoaded, setEditorRef } = playground(props, previewFrame, getDefaultExample, interFontDec)
 </script>
 
 <style scoped>
@@ -193,7 +195,7 @@ const { tabs, activeTab, isLoaded, setEditorRef } = playground(props, previewFra
   display: flex;
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
   overflow: hidden;
-  background: #fff;
+  background: #f0f7ff;
 }
 
 .preview-frame {

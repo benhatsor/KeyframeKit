@@ -1,15 +1,24 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue'
+
 import { themes } from './themes.js'
-import { editor } from 'monaco-editor'
+//import * as monaco from 'monaco-editor'
+
+
+import loader from '@monaco-editor/loader'
+
 
 const langMap = { HTML: 'html', CSS: 'css', JS: 'javascript' }
 
-export function playground(props, previewFrame) {
+export function playground(props, previewFrame, getDefaultExample, interFontDec) {
   const tabs = ['JS', 'CSS', 'HTML']
   const activeTab = ref('JS')
-  const code = ref({ HTML: props.initialHtml, CSS: props.initialCss, JS: props.initialJs })
-  const libCode = ref({ decLibSrc: props.decLibSrc, libImportMap: props.libImportMap });
+  const code = ref({ HTML: '', CSS: '', JS: '' })
   const isLoaded = ref(false);
+
+  const libCode = {
+    decLibSrc: '',
+    libImportMap: ''
+  };
 
   const editorRefs = {}
   const editorInstances = {}
@@ -36,13 +45,11 @@ export function playground(props, previewFrame) {
   <head>
     <base href="${window.location.href}">
     <style>${code.value.CSS}</style>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="${interFontDec}">
   </head>
   <body>
     ${code.value.HTML}
-    ${libCode.value.libImportMap}
+    ${libCode.libImportMap}
     <script type="module">${code.value.JS}<\/script>
   </body>
 </html>`
@@ -53,15 +60,15 @@ export function playground(props, previewFrame) {
   function addLibrary(monaco) {
 
     // validation settings
-    monaco.typescript.typescriptDefaults.setDiagnosticsOptions({
+    monaco.languages.typescript.typescriptDefaults.setDiagnosticsOptions({
       noSemanticValidation: false,
       noSyntaxValidation: false
     });
 
     // compiler options
-    monaco.typescript.typescriptDefaults.setCompilerOptions({
-      target: monaco.typescript.ScriptTarget.ESNext,
-      module: monaco.typescript.ModuleKind.ESNext,
+    monaco.languages.typescript.typescriptDefaults.setCompilerOptions({
+      target: 'esnext',
+      module: 'esnext',
       allowNonTsExtensions: true,
       allowImportingTsExtensions: true,
       paths: {
@@ -71,7 +78,7 @@ export function playground(props, previewFrame) {
     });
 
     const decLibModel = createModel(
-      libCode.value.decLibSrc,
+      libCode.decLibSrc,
       'typescript',
       'file:///KeyframeKit.d.ts',
       monaco
@@ -108,10 +115,42 @@ export function playground(props, previewFrame) {
 
   onMounted(async () => {
 
+    const isTouchDevice = window.matchMedia('(hover: none)').matches;
+
+    code.value = getDefaultExample({ isTouchDevice });
+
+
+    // note: the absolute URLs here are important, because if they were relative,
+    // they would return an invalid response when navigating from another page due to a vue bug.
+
+    libCode.decLibSrc = await (await fetch('/playground/KeyframeKit/dist/KeyframeKit.d.ts')).text();
+
+    const jsLibSrc = await (await fetch('/playground/KeyframeKit/dist/KeyframeKit.js')).text();
+
+    libCode.libImportMap = `
+    <script type="importmap">
+    {
+      "imports": {
+        "keyframekit": "data:text/javascript;base64,${btoa(jsLibSrc)}"
+      }
+    }
+    </script>
+    `;
+
+
     updatePreview()
 
 
-    const monaco = await import('monaco-editor')
+    //const monaco = await import('monaco-editor')
+
+    loader.config({
+      paths: {
+        vs: 'https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs'
+      }
+    })
+
+    const monaco = await loader.init()
+
 
     const config = {
       fontSize: 16,
@@ -128,7 +167,7 @@ export function playground(props, previewFrame) {
         ignoreHorizontalScrollbarInContentHeight: true
       },
       lightbulb: {
-        enabled: monaco.editor.ShowLightbulbIconMode.Off
+        enabled: 'off'
       }
     };
 
