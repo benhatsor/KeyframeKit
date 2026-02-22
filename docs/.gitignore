@@ -4,5 +4,3 @@ package-lock.json
 
 .vitepress/dist
 .vitepress/cache
-
-docs/public/playground/KeyframeKit
