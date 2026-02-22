@@ -1,7 +1,10 @@
 # [KeyframeKit](https://keyframekit.berryscript.com)
 
 Intuitive, powerful and performant tools for working with CSS animations in JavaScript.  
-Powered by the [Web Animations API][1].
+
+## About
+
+While working with the [Web Animations API][1], I was surprised there wasn't an easy way to import animation keyframes directly from your CSS. You had to re-define them in JS, using a completely different format. So, I wrote a typed, spec-compliant library to convert. Along the way, I also added some other useful utilities for working with the API.
 
 ## Installation
 
@@ -54,9 +57,28 @@ await attachedAnim.finished;
 ```
 [...and more.][2]
 
+### Importing a stylesheet directly
+
+Instead of getting an animation from the document's stylesheets, you can also import it directly from a CSS file.
+
+```js
+import KeyframeKit from 'keyframekit';
+
+const styleSheet = await KeyframeKit.importStyleSheet('./styles.css');
+
+// get animation keyframes from stylesheet
+const rotateSmallAnimKeyframes = KeyframeKit.getStyleSheetKeyframes({
+  of: 'rotate-small',
+  in: styleSheet
+});
+```
+
+> Note: `@import` rules won't be resolved in stylesheets imported in this way. [More info.][3]
+
 ### Defining animations in JS
 
-This is useful for when you want to have all your animation code in one place.
+The `KeyframeEffectParameters` class provides a more convenient way to define your animations in JS than is offered natively.  
+It's useful for when you want to have all your animation code in one place.
 
 ```js
 import { KeyframeEffectParameters } from 'keyframekit';
@@ -86,24 +108,6 @@ const attachedAnim = linkTextHoverAnim.toAnimation({
 
 attachedAnim.play();
 ```
-
-### Importing a stylesheet directly
-
-Instead of getting an animation from the document's stylesheets, you can also import it directly from a CSS file.
-
-```js
-import KeyframeKit from 'keyframekit';
-
-const styleSheet = await KeyframeKit.importStyleSheet('./styles.css');
-
-// get animation keyframes from stylesheet
-const rotateSmallAnimKeyframes = KeyframeKit.getStyleSheetKeyframes({
-  of: 'rotate-small',
-  in: styleSheet
-});
-```
-
-> Note: `@import` rules won't be resolved in stylesheets imported in this way. [More info.][3]
 
 ### Full reference
 [See here.](/reference)
