@@ -167,6 +167,7 @@ export function playground(props, previewFrame, getDefaultExample, interFontDec)
       scrollPredominantAxis: !isTouchDevice,
       smoothScrolling: isTouchDevice,
       contextmenu: !isTouchDevice,
+      folding: !isTouchDevice,
 
       tabSize: 2,
       lineNumbers: "off",
