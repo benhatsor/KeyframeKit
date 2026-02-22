@@ -37,7 +37,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/benhatsor/KeyframeKit.js' }
+      { icon: 'github', link: 'https://github.com/benhatsor/KeyframeKit' }
     ],
 
     footer: {
