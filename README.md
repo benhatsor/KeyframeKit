@@ -4,7 +4,7 @@ Intuitive, powerful and performant tools for working with CSS animations in Java
 
 ## About
 
-While working with the [Web Animations API][1], I was surprised there wasn't an easy way to import animation keyframes directly from your CSS. You had to re-define them in JS, using a completely different format. So, I wrote a typed, spec-compliant library to convert. Along the way, I also added some other useful utilities for working with the API.
+While working with the [Web Animations API][1], I was surprised there wasn't an easy way to import animation keyframes directly from your CSS. You had to re-define them in JS, using a completely different format. So I wrote a typed, spec-compliant library to convert from one to the other, letting you play your CSS-defined animations right in JS. Along the way, I also added some other useful utilities for working with the API.
 
 ## Installation
 
