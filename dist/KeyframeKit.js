@@ -45,6 +45,7 @@ class KeyframesFactory {
         await styleSheet.replace(respText);
         return styleSheet;
     }
+    /** @param obj.of The name of the `@keyframes` rule to get keyframes from. */
     getStyleSheetKeyframes({ of: ruleName, in: source }) {
         if (typeof ruleName !== 'string') {
             throw new this.Error.KeyframesRuleNameTypeError();
@@ -215,6 +216,7 @@ export class KeyframeEffectParameters {
         this.options = this.#parseOptionsArg(options);
     }
     /**
+     * @param obj.target An element to attach the animation to.
      * @param obj.options Additional keyframe effect options. Can override existing keys.
      * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#options)
      *

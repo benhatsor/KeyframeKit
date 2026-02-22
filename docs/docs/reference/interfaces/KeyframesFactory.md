@@ -99,6 +99,8 @@ getStyleSheetKeyframes(obj: {
 
 `string`
 
+The name of the `@keyframes` rule to get keyframes from.
+
 #### Returns
 
 [`ParsedKeyframes`](../classes/ParsedKeyframes.md) \| `undefined`

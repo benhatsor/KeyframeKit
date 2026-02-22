@@ -16,17 +16,12 @@ textAnimEl.addEventListener('mouseenter', () => {
 });
 
 textAnimEl.addEventListener('mouseleave', () => {
-  const isPlaying = attachedAnims.some(anim =>
-    anim.playState === 'running'
-  );
-  // if animation is playing, reverse it:
-  if (isPlaying) {
-    attachedAnims.forEach(anim => {
-      anim.playbackRate = -1;
-      anim.play();
-    });
-    updateProgressBar();
-  }
+  // reverse the animation
+  attachedAnims.forEach(anim => {
+    anim.playbackRate = -1;
+    anim.play();
+  });
+  updateProgressBar();
 });`;
 
 const jsMobile = `// the primary reason to play your animation with JS
@@ -43,17 +38,12 @@ textAnimEl.addEventListener('touchstart', () => {
 });
 
 textAnimEl.addEventListener('touchend', () => {
-  const isPlaying = attachedAnims.some(anim =>
-    anim.playState === 'running'
-  );
-  // if animation is playing, reverse it:
-  if (isPlaying) {
-    attachedAnims.forEach(anim => {
-      anim.playbackRate = -1;
-      anim.play();
-    });
-    updateProgressBar();
-  }
+  // reverse the animation
+  attachedAnims.forEach(anim => {
+    anim.playbackRate = -1;
+    anim.play();
+  });
+  updateProgressBar();
 });`;
 
 export const js = `import KeyframeKit from 'keyframekit';
@@ -175,6 +165,8 @@ body {
   align-items: center;
   justify-content: center;
   flex-flow: column;
+  user-select: none;
+  -webkit-user-select: none;
 }`;
 
 

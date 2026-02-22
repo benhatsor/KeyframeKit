@@ -78,6 +78,8 @@ Additional keyframe effect options. Can override existing keys.
 
 [`Element`](https://developer.mozilla.org/docs/Web/API/Element) \| `null`
 
+An element to attach the animation to.
+
 ###### timeline?
 
 [`AnimationTimeline`](https://developer.mozilla.org/docs/Web/API/AnimationTimeline) = `document.timeline`

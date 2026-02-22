@@ -71,6 +71,7 @@ class KeyframesFactory {
   }
   
   
+  /** @param obj.of The name of the `@keyframes` rule to get keyframes from. */
   getStyleSheetKeyframes({ of: ruleName, in: source }: {
     of: string,
     in: KeyframesFactorySource
@@ -366,6 +367,7 @@ export class KeyframeEffectParameters {
   }
 
   /** 
+   * @param obj.target An element to attach the animation to.
    * @param obj.options Additional keyframe effect options. Can override existing keys.
    * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#options)
    * 
