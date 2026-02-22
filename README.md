@@ -1,4 +1,4 @@
-# <img src="/docs/docs/public/icon.png" width="30px" height="40px"> [KeyframeKit](https://keyframekit.berryscript.com)
+# [KeyframeKit](https://keyframekit.berryscript.com)
 
 Intuitive, powerful and performant tools for working with CSS animations in JavaScript.  
 
