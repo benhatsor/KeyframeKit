@@ -2,7 +2,7 @@ node_modules/
 package-lock.json
 .DS_Store
 
-docs/.vitepress/dist
-docs/.vitepress/cache
+.vitepress/dist
+.vitepress/cache
 
 docs/public/playground/KeyframeKit
