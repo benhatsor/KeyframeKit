@@ -163,7 +163,7 @@ export function playground(props, previewFrame, getDefaultExample, interFontDec)
       renderLineHighlightOnlyWhenFocus: true,
 
       inertialScroll: isTouchDevice,
-      mouseWheelScrollSensitivity: isTouchDevice ? 15 : 1,
+      mouseWheelScrollSensitivity: isTouchDevice ? 10 : 1,
       scrollPredominantAxis: !isTouchDevice,
       smoothScrolling: isTouchDevice,
       contextmenu: !isTouchDevice,
