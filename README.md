@@ -13,11 +13,6 @@ While working with the [Web Animations API][1], I was surprised there wasn't an 
 npm install keyframekit
 ```
 
-### CDN
-```js
-import KeyframeKit from 'https://unpkg.com/keyframekit';
-```
-
 ## Usage
 
 ### Playing CSS-defined animations with JS
