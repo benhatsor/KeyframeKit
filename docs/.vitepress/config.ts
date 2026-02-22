@@ -11,11 +11,15 @@ export default defineConfig({
     //'reference/:slug*': ':slug*'
   },
 
-  head: [['link', { rel: 'icon', href: '/icon.png' }]],
+  head: [
+    ['link', { rel: 'icon', href: '/icon.png' }],
+    ['meta', { property: 'og:image', content: '/og-image.png' }],
+    ['meta', { name: 'keywords', content: 'css,js,javascript,animation,keyframe,stylesheet,framework,tools,performance,typescript' }]
+  ],
     
   title: "KeyframeKit",
   description: "Intuitive, powerful and performant tools for working with CSS animations in JavaScript.",
-  
+
   themeConfig: {
     outline: [2, 3],
 
