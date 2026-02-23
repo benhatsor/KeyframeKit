@@ -14,7 +14,22 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', href: '/icon.png' }],
     ['meta', { property: 'og:image', content: '/og-image.png' }],
-    ['meta', { name: 'keywords', content: 'css,js,javascript,animation,keyframe,stylesheet,framework,tools,performance,typescript' }]
+    ['meta', { name: 'keywords', content: 'css,js,javascript,animation,keyframe,stylesheet,framework,tools,performance,typescript' }],
+
+    [
+      'script',
+      { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-NY6W3XTT8W' }
+    ],
+    [
+      'script',
+      {},
+      `window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+
+       gtag('config', 'G-NY6W3XTT8W');`
+    ]
+
   ],
     
   title: "KeyframeKit",
