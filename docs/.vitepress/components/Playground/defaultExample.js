@@ -24,7 +24,7 @@ const rotateAnim = rotateAnimKeyframes.toKeyframeEffect({
 // finally, attach it to your elements:
 
 let attachedAnims = [];
-let currAnimDelay = 0;
+let animDelay = 0;
 
 const spans = document.querySelectorAll('.text-anim span');
 
@@ -33,14 +33,14 @@ for (const span of spans) {
   const attachedAnim = rotateAnim.toAnimation({
     target: span,
     options: {
-      delay: currAnimDelay * 1000,
-      endDelay: -currAnimDelay * 1000
+      delay: animDelay * 1000,
+      endDelay: -animDelay * 1000
     }
   });
 
   attachedAnims.push(attachedAnim);
 
-  currAnimDelay += .02;
+  animDelay += .02;
 
 }
 
