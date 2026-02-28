@@ -1,10 +1,10 @@
-# <img src="/docs/docs/public/icon.png" width="30px" height="40px"> [KeyframeKit](https://keyframekit.berryscript.com)
+# <img src="/docs/docs/public/icon.png" width="30px" height="40px"> [KeyframeKit][1]
 
 Intuitive, powerful and performant tools for working with CSS animations in JavaScript.  
 
 ## About
 
-While working with the [Web Animations API][1], I was surprised there wasn't an easy way to import animation keyframes directly from your CSS. You had to re-define them in JS, using a completely different format. So I wrote a typed, spec-compliant library to convert from one to the other, letting you play your CSS-defined animations right in JS. Along the way, I also added some other useful utilities for working with the API. [Read more.](https://benhatsor.medium.com/99573ef4738b)
+While working with the [Web Animations API][2], I was surprised there wasn't an easy way to import animation keyframes directly from your CSS. You had to re-define them in JS, using a completely different format. So I wrote a typed, spec-compliant library to convert from one to the other, letting you play your CSS-defined animations right in JS. Along the way, I also added some other useful utilities for working with the API. [Read more.][3]
 
 ## Installation
 
@@ -55,7 +55,7 @@ attachedAnim.playbackRate = -1;
 const progress = attachedAnim.overallProgress; // 0 to 1 (Baseline newly available)
 await attachedAnim.finished;
 ```
-[...and more.][2]
+[...and more.][4]
 
 ### Importing animations directly from a CSS file
 
@@ -73,7 +73,7 @@ const rotateSmallAnimKeyframes = KeyframeKit.getStyleSheetKeyframes({
 });
 ```
 
-> Note: This won't resolve any `@import` rules in the stylesheet. [See here.][3]
+> Note: This won't resolve any `@import` rules in the stylesheet. [See more.][5]
 
 ### Defining animations in JS
 
@@ -110,7 +110,7 @@ attachedAnim.play();
 ```
 
 ### Full reference
-[See here.](/reference)
+[See here.][6]
 
 ## Typing
 
@@ -121,6 +121,9 @@ This library is fully compatable with native JS, but it also has full spec-compl
 [MIT](LICENSE)
 
 
-[1]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API
-[2]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API
-[3]: https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-588352418
+[1]: https://keyframekit.berryscript.com
+[2]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API
+[3]: https://benhatsor.medium.com/99573ef4738b
+[4]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API
+[5]: https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-588352418
+[6]: https://keyframekit.berryscript.com/reference
