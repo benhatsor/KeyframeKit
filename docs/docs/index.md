@@ -18,7 +18,7 @@ hero:
 
 ## About
 
-While working with the [Web Animations API][1], I was surprised there wasn't an easy way to import animation keyframes directly from your CSS. You had to re-define them in JS, using a completely different format. So I wrote a typed, spec-compliant library to convert from one to the other, letting you play your CSS-defined animations right in JS. Along the way, I also added some other useful utilities for working with the API. [Read more.](https://benhatsor.medium.com/99573ef4738b)
+While working with the [Web Animations API][1], I was surprised there wasn't an easy way to import animation keyframes directly from your CSS. You had to re-define them in JS, using a completely different format. So I wrote a typed, spec-compliant library to convert from one to the other, letting you play your CSS-defined animations right in JS. Along the way, I also added some other useful utilities for working with the API. [Read more.][2]
 
 ## Installation
 
@@ -70,7 +70,7 @@ attachedAnim.playbackRate = -1;
 const progress = attachedAnim.overallProgress; // 0 to 1 (Baseline newly available)
 await attachedAnim.finished;
 ```
-[...and more.][2]
+[...and more.][3]
 
 ### Importing animations directly from a CSS file
 
@@ -88,7 +88,7 @@ const rotateSmallAnimKeyframes = KeyframeKit.getStyleSheetKeyframes({
 });
 ```
 
-> Note: This won't resolve any `@import` rules in the stylesheet. [See here.][3]
+> Note: This won't resolve any `@import` rules in the stylesheet. [See more.][4]
 
 ### Defining animations in JS
 
@@ -137,5 +137,6 @@ This library is fully compatable with native JS, but it also has full spec-compl
 
 
 [1]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API
-[2]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API
-[3]: https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-588352418
+[2]: https://benhatsor.medium.com/99573ef4738b
+[3]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API
+[4]: https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-588352418
