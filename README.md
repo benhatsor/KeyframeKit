@@ -1,6 +1,6 @@
 # <img src="/docs/docs/public/icon.png" width="30px" height="40px"> [KeyframeKit][1]
 
-Intuitive, powerful and performant tools for working with CSS animations in JavaScript.  
+Intuitive, powerful and lightweight tools for working with CSS animations in JavaScript.  
 
 ## About
 
