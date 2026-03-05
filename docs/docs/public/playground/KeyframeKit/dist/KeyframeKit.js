@@ -1,9 +1,9 @@
-//
-// KeyframeKit
-// Ben Hatsor
-// 
-// See README.md for usage.
-//
+/*
+ * KeyframeKit
+ * MIT License
+ *
+ * See README.md for usage.
+ */
 const CHARS = {
     PERCENT_SIGN: '%',
     HYPHEN_MINUS: '-',
