@@ -1,7 +1,7 @@
 {
   "name": "keyframekit",
   "version": "1.0.8",
-  "description": "Intuitive, powerful and performant tools for working with CSS animations in JavaScript.",
+  "description": "Intuitive, powerful and lightweight tools for working with CSS animations in JavaScript.",
   "main": "./dist/KeyframeKit.js",
   "scripts": {
     "build": "npx tsc",
