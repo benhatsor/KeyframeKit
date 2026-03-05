@@ -11,6 +11,7 @@
   text-decoration: unset;
   text-underline-offset: unset;
   font-weight: unset;
+  color: inherit;
 }
 
 .vp-doc .monaco-editor :not(pre, h1, h2, h3, h4, h5, h6) > code {
