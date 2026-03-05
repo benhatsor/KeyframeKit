@@ -18,6 +18,10 @@
   color: inherit;
 }
 
+.vp-doc .monaco-editor li+li {
+  margin-top: 0;
+}
+
 
 .vp-doc h5, .vp-doc h6 {
   margin: 16px 0;
