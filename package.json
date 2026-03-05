@@ -1,6 +1,6 @@
 {
   "name": "keyframekit",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Intuitive, powerful and lightweight tools for working with CSS animations in JavaScript.",
   "main": "./dist/KeyframeKit.js",
   "scripts": {
