@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: KeyframeKit
-  tagline: Intuitive, powerful and performant tools for working with CSS animations in JavaScript.
+  tagline: Intuitive, powerful and lightweight tools for working with CSS animations in JavaScript.
   actions:
     - theme: brand
       text: Get Started
