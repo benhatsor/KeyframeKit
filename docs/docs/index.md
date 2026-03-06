@@ -18,7 +18,7 @@ hero:
 
 ## About
 
-While working with the [Web Animations API][1], I was surprised there wasn't an easy way to import animation keyframes directly from your CSS. You had to re-define them in JS, using a completely different format. So I wrote a typed, spec-compliant library to convert from one to the other, letting you play your CSS-defined animations right in JS. [Read more.][2]
+The [Web Animations API][2] opens the browser's animation engine to developers and provides unprecedented control and performance when animating on the web. But confusingly, it provides no easy way to use your existing CSS animations with the API. So I wrote a typed, spec-compliant library to convert stylesheet keyframes to Web Animations API-compatible animations, letting you play your CSS-defined animations right in JS. [Read more.][3]
 
 ## Installation
 
