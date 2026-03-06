@@ -11,6 +11,8 @@ export default defineConfig({
     //'reference/:slug*': ':slug*'
   },
 
+  cleanUrls: true,
+
   head: [
     ['link', { rel: 'icon', href: '/icon.png' }],
     ['meta', { property: 'og:image', content: '/og-image.png' }],
