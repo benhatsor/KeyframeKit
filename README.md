@@ -79,7 +79,7 @@ const rotateSmallAnimKeyframes = KeyframeKit.getStyleSheetKeyframes({
 
 ### Defining animations in JS
 
-The `KeyframeEffectParameters` class provides a more convenient way to define your animations in JS than is offered natively.  
+The [`KeyframeEffectParameters`][6] class provides a more convenient way to define your animations in JS than is offered natively.  
 It's useful for when you want to have all your animation code in one place.
 
 ```js
@@ -112,7 +112,7 @@ attachedAnim.play();
 ```
 
 ### Full reference
-[See here.][6]
+[See here.][7]
 
 ## Typing
 
@@ -128,4 +128,5 @@ This library is fully compatable with native JS, but it also has full spec-compl
 [3]: https://benhatsor.medium.com/99573ef4738b
 [4]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API
 [5]: https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-588352418
-[6]: https://keyframekit.berryscript.com/reference
+[6]: https://keyframekit.berryscript.com/reference/classes/KeyframeEffectParameters
+[7]: https://keyframekit.berryscript.com/reference
