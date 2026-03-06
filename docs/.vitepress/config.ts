@@ -33,7 +33,7 @@ export default defineConfig({
   ],
     
   title: "KeyframeKit",
-  description: "Intuitive, powerful and lightweight tools for working with CSS animations in JavaScript.",
+  description: "Unlock fine-grained control over your CSS animations with JavaScript.",
 
   themeConfig: {
     outline: [2, 3],

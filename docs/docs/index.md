@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: KeyframeKit
-  tagline: Intuitive, powerful and lightweight tools for working with CSS animations in JavaScript.
+  tagline: Unlock fine-grained control over your CSS animations with JavaScript.
   actions:
     - theme: brand
       text: Get Started
@@ -18,7 +18,7 @@ hero:
 
 ## About
 
-While working with the [Web Animations API][1], I was surprised there wasn't an easy way to import animation keyframes directly from your CSS. You had to re-define them in JS, using a completely different format. So I wrote a typed, spec-compliant library to convert from one to the other, letting you play your CSS-defined animations right in JS. Along the way, I also added some other useful utilities for working with the API. [Read more.][2]
+While working with the [Web Animations API][1], I was surprised there wasn't an easy way to import animation keyframes directly from your CSS. You had to re-define them in JS, using a completely different format. So I wrote a typed, spec-compliant library to convert from one to the other, letting you play your CSS-defined animations right in JS. [Read more.][2]
 
 ## Installation
 
