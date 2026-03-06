@@ -41,6 +41,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
+      { text: 'Get Started', link: '/get-started' },
       { text: 'Reference', link: '/reference' }
     ],
 
