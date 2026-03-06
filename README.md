@@ -1,4 +1,4 @@
-# <img src="/docs/docs/public/icon.png" width="30px" height="40px"> [KeyframeKit][1]
+# [<img src="/docs/docs/public/icon.png" width="30px" height="40px"> KeyframeKit][1]
 
 Unlock fine-grained control over your CSS animations with JavaScript.
 
