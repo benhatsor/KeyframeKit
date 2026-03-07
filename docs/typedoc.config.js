@@ -5,11 +5,11 @@ export default {
   "name": "KeyframeKit",
   
 	"plugin": [
-    "typedoc-plugin-mdn-links",
     "typedoc-plugin-markdown",
+    "typedoc-plugin-mdn-links",
     "typedoc-plugin-no-inherit",
     "./typedoc/plugin-param-names.js",
-    "./typedoc/plugin-markdown-union-type-fix.js",
+    "./typedoc/plugin-markdown-mdn-links-fix.js",
     //"typedoc-plugin-inline-sources",
     //"typedoc-plugin-remark",
     //"typedoc-github-wiki-theme",
