@@ -11,6 +11,12 @@ The [Web Animations API][1] opens the browser's animation engine to developers a
 ```sh [npm]
 npm install keyframekit
 ```
+```sh [yarn]
+yarn add keyframekit
+```
+```sh [pnpm]
+pnpm add keyframekit
+```
 :::
 
 ## Usage
