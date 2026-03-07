@@ -20,11 +20,15 @@ readonly Error: {
 readonly KeyframesRuleNameTypeError: typeof KeyframesRuleNameTypeError;
 ```
 
+Keyframes rule name must be a string.
+
 #### SourceTypeError
 
 ```ts
 readonly SourceTypeError: typeof SourceTypeError;
 ```
+
+Source must be either a `CSSStyleSheet` or a `StyleSheetList`.
 
 #### StyleSheetImportError
 
@@ -32,15 +36,20 @@ readonly SourceTypeError: typeof SourceTypeError;
 readonly StyleSheetImportError: typeof StyleSheetImportError;
 ```
 
+The stylesheet could not be imported.
+
 ## Methods
 
 ### getAllStyleSheetKeyframesRules()
 
 ```ts
 getAllStyleSheetKeyframesRules(obj: {
-  in: KeyframesFactorySource;
+  in: CSSStyleSheetSource;
 }): ParsedKeyframesRules;
 ```
+
+Gets all the CSS keyframes rules in a stylesheet or stylesheet list,
+then converts them to Web Animations API keyframes.
 
 #### Parameters
 
@@ -48,7 +57,9 @@ getAllStyleSheetKeyframesRules(obj: {
 
 ###### in
 
-[`KeyframesFactorySource`](../type-aliases/KeyframesFactorySource.md)
+[`CSSStyleSheetSource`](../type-aliases/CSSStyleSheetSource.md)
+
+The style sheet or style sheet list to get keyframes from.
 
 #### Returns
 
@@ -64,6 +75,9 @@ getDocumentStyleSheetsOnLoad(obj?: {
 }): Promise<StyleSheetList>;
 ```
 
+Gets a document's stylesheets when it loads,
+or immediately returns them if it's already loaded.
+
 #### Parameters
 
 ##### obj?
@@ -71,6 +85,8 @@ getDocumentStyleSheetsOnLoad(obj?: {
 ###### document?
 
 [`Document`](https://developer.mozilla.org/docs/Web/API/Document) = `window.document`
+
+The document to get stylesheets from.
 
 #### Returns
 
@@ -82,10 +98,13 @@ getDocumentStyleSheetsOnLoad(obj?: {
 
 ```ts
 getStyleSheetKeyframes(obj: {
-  in: KeyframesFactorySource;
+  in: CSSStyleSheetSource;
   of: string;
 }): ParsedKeyframes | undefined;
 ```
+
+Gets a CSS keyframes rule from a stylesheet or stylesheet list,
+then converts it to Web Animations API keyframes.
 
 #### Parameters
 
@@ -93,7 +112,9 @@ getStyleSheetKeyframes(obj: {
 
 ###### in
 
-[`KeyframesFactorySource`](../type-aliases/KeyframesFactorySource.md)
+[`CSSStyleSheetSource`](../type-aliases/CSSStyleSheetSource.md)
+
+The stylesheet or stylesheet list where the rule resides.
 
 ###### of
 
@@ -113,11 +134,15 @@ The name of the `@keyframes` rule to get keyframes from.
 importStyleSheet(url: string): Promise<CSSStyleSheet>;
 ```
 
+Imports a stylesheet from a URL.
+
 #### Parameters
 
 ##### url
 
 `string`
+
+The URL of the stylesheet to import.
 
 #### Returns
 
@@ -138,6 +163,8 @@ parseKeyframesRule(obj: {
 }): ParsedKeyframes;
 ```
 
+Converts a CSS keyframes rule to Web Animations API keyframes.
+
 #### Parameters
 
 ##### obj
@@ -145,6 +172,8 @@ parseKeyframesRule(obj: {
 ###### rule
 
 [`CSSKeyframesRule`](https://developer.mozilla.org/docs/Web/API/CSSKeyframesRule)
+
+The rule to convert.
 
 #### Returns
 

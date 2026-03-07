@@ -32,6 +32,10 @@
   margin: 16px 0;
 }
 
+.vp-doc h6 {
+  color: var(--vp-c-text-2);
+}
+
 
 .VPLocalSearchBox {
 

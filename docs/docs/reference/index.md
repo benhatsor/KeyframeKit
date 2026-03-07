@@ -11,8 +11,8 @@
 
 ## Type Aliases
 
+- [CSSStyleSheetSource](type-aliases/CSSStyleSheetSource.md)
 - [KeyframeArgument](type-aliases/KeyframeArgument.md)
-- [KeyframesFactorySource](type-aliases/KeyframesFactorySource.md)
 - [ParsedKeyframesRules](type-aliases/ParsedKeyframesRules.md)
 
 ## Variables

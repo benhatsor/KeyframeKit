@@ -12,25 +12,38 @@ const CHARS = {
 };
 class KeyframesFactory {
     Error = {
+        /** Keyframes rule name must be a string. */
         KeyframesRuleNameTypeError: class KeyframesRuleNameTypeError extends TypeError {
             message = `Keyframes rule name must be a string.`;
         },
+        /** Source must be either a `CSSStyleSheet` or a `StyleSheetList`. */
         SourceTypeError: class SourceTypeError extends TypeError {
-            message = `Source must be either a Document, a ShadowRoot or a CSSStyleSheet instance.`;
+            message = `Source must be either a CSSStyleSheet or a StyleSheetList.`;
         },
+        /** The stylesheet could not be imported. */
         StyleSheetImportError: class StyleSheetImportError extends Error {
             message = `The stylesheet could not be imported.`;
         }
     };
+    /**
+     * Gets a document's stylesheets when it loads,
+     * or immediately returns them if it's already loaded.
+     * @param obj
+     * @param obj.document The document to get stylesheets from.
+     */
     async getDocumentStyleSheetsOnLoad({ document = window.document } = {}) {
         await waitForDocumentLoad({
             document: document
         });
         return document.styleSheets;
     }
-    /** @remarks
+    /**
+     * Imports a stylesheet from a URL.
+     * @param url The URL of the stylesheet to import.
+     * @remarks
      *  Note: `@import` rules won't be resolved in imported stylesheets.
-     *  See https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-588352418. */
+     *  See https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-588352418.
+     */
     async importStyleSheet(url) {
         const resp = await fetch(url);
         if (!resp.ok) {
@@ -45,7 +58,13 @@ class KeyframesFactory {
         await styleSheet.replace(respText);
         return styleSheet;
     }
-    /** @param obj.of The name of the `@keyframes` rule to get keyframes from. */
+    /**
+     * Gets a CSS keyframes rule from a stylesheet or stylesheet list,
+     * then converts it to Web Animations API keyframes.
+     * @param obj
+     * @param obj.of The name of the `@keyframes` rule to get keyframes from.
+     * @param obj.in The stylesheet or stylesheet list where the rule resides.
+     */
     getStyleSheetKeyframes({ of: ruleName, in: source }) {
         if (typeof ruleName !== 'string') {
             throw new this.Error.KeyframesRuleNameTypeError();
@@ -90,6 +109,12 @@ class KeyframesFactory {
             }
         }
     }
+    /**
+     * Gets all the CSS keyframes rules in a stylesheet or stylesheet list,
+     * then converts them to Web Animations API keyframes.
+     * @param obj
+     * @param obj.in The style sheet or style sheet list to get keyframes from.
+     */
     getAllStyleSheetKeyframesRules({ in: source }) {
         if (source instanceof StyleSheetList) {
             return this.#getAllStyleSheetKeyframesRulesInStyleSheetList({
@@ -131,6 +156,11 @@ class KeyframesFactory {
         }
         return keyframesRules;
     }
+    /**
+     * Converts a CSS keyframes rule to Web Animations API keyframes.
+     * @param obj
+     * @param obj.rule The rule to convert.
+     */
     parseKeyframesRule({ rule: keyframes }) {
         let parsedKeyframes = [];
         for (const keyframe of keyframes) {
@@ -208,6 +238,7 @@ export class KeyframeEffectParameters {
     keyframes;
     options;
     /**
+     * @param obj
      * @param obj.keyframes [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats)
      * @param obj.options [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#options)
      */
@@ -216,9 +247,11 @@ export class KeyframeEffectParameters {
         this.options = this.#parseOptionsArg(options);
     }
     /**
+     * @param obj
      * @param obj.target An element to attach the animation to.
      * @param obj.options Additional keyframe effect options. Can override existing keys.
-     * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#options)
+     *  [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#options)
+     * @param obj.timeline [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/Animation/Animation#timeline)
      *
      * @see Specifications:
      * - https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface

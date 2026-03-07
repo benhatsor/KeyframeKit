@@ -44,14 +44,14 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Get Started', link: '/get-started' },
-      { text: 'Reference', link: '/reference' }
+      { text: 'Reference', link: '/reference/' }
     ],
 
     sidebar: {
       '/reference/': [
         {
           text: 'Reference',
-          link: '/reference',
+          link: '/reference/',
           items: referenceNavigationItems
         }
       ]

@@ -59,7 +59,7 @@ options: KeyframeEffectOptions;
 toAnimation(obj: {
   options?: number | KeyframeEffectOptions;
   target: Element | null;
-  timeline?: AnimationTimeline;
+  timeline?: AnimationTimeline | null;
 }): Animation;
 ```
 
@@ -72,7 +72,7 @@ toAnimation(obj: {
 `number` \| `KeyframeEffectOptions` = `{}`
 
 Additional keyframe effect options. Can override existing keys.
-[MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#options)
+ [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#options)
 
 ###### target
 
@@ -82,7 +82,9 @@ An element to attach the animation to.
 
 ###### timeline?
 
-[`AnimationTimeline`](https://developer.mozilla.org/docs/Web/API/AnimationTimeline) = `document.timeline`
+[`AnimationTimeline`](https://developer.mozilla.org/docs/Web/API/AnimationTimeline) \| `null` = `document.timeline`
+
+[MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/Animation/Animation#timeline)
 
 #### Returns
 

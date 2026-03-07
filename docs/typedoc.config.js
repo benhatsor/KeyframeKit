@@ -1,12 +1,17 @@
-{
+// @ts-check
+
+/** @type {import('typedoc').TypeDocOptions & import('typedoc-plugin-markdown').PluginOptions & { inheritNone?: boolean }} */
+export default {
   "name": "KeyframeKit",
   
 	"plugin": [
-    "./typedoc/plugin-param-names.js",
     "typedoc-plugin-mdn-links",
-    "typedoc-plugin-inline-sources",
     "typedoc-plugin-markdown",
-    "typedoc-plugin-remark",
+    "typedoc-plugin-no-inherit",
+    "./typedoc/plugin-param-names.js",
+    "./typedoc/plugin-markdown-fix.js",
+    //"typedoc-plugin-inline-sources",
+    //"typedoc-plugin-remark",
     //"typedoc-github-wiki-theme",
     //"typedoc-plugin-missing-exports"
   ],
@@ -27,20 +32,22 @@
 
   "router": "member", // "module"
 
-  //"readme": "none",
+  "readme": "none",
 
   //"sidebar": {
     //"autoConfiguration": false,
     //"heading": "[KeyframeKit](../wiki)"
   //},
 
-  "remarkPlugins": [
+  /* "remarkPlugins": [
     ["remark-insert-headings", { "text": "Contents", "minHeadingCount": 1 }],
     ["remark-toc", { "maxDepth": 3, "tight": true }],
     //["remark-collapse", {"test": "Contents"}]
-  ],
+  ], */
   
-  "modulesFileName": "index", // KeyframeKit
+  //"modulesFileName": "index", // KeyframeKit
+
+  "entryFileName": "index",
 
   "expandParameters": true,
   "expandObjects": true,
@@ -59,5 +66,13 @@
     "includeCategories": true,
     "includeGroups": true,
     "includeFolders": true,
-  }
-}
+  },
+
+  "inheritNone": true,
+
+  //"pageTitleTemplates": {
+    //"index": "Reference"
+  //},
+
+  //"hideBreadcrumbs": true
+};

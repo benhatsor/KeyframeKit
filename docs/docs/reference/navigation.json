@@ -31,15 +31,15 @@
     "title": "Type Aliases",
     "children": [
       {
-        "title": "KeyframeArgument",
+        "title": "CSSStyleSheetSource",
         "kind": 2097152,
-        "path": "type-aliases/KeyframeArgument.md",
+        "path": "type-aliases/CSSStyleSheetSource.md",
         "isDeprecated": false
       },
       {
-        "title": "KeyframesFactorySource",
+        "title": "KeyframeArgument",
         "kind": 2097152,
-        "path": "type-aliases/KeyframesFactorySource.md",
+        "path": "type-aliases/KeyframeArgument.md",
         "isDeprecated": false
       },
       {
