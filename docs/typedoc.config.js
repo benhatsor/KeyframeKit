@@ -9,7 +9,7 @@ export default {
     "typedoc-plugin-markdown",
     "typedoc-plugin-no-inherit",
     "./typedoc/plugin-param-names.js",
-    "./typedoc/plugin-markdown-fix.js",
+    "./typedoc/plugin-markdown-union-type-fix.js",
     //"typedoc-plugin-inline-sources",
     //"typedoc-plugin-remark",
     //"typedoc-github-wiki-theme",
