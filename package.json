@@ -4,7 +4,7 @@
   "description": "Unlock fine-grained control over your CSS animations with JavaScript.",
   "main": "./dist/KeyframeKit.js",
   "scripts": {
-    "build": "npx tsc",
+    "build": "tsc && rollup -c rollup.config.js",
     "docs:bump": "(cd docs && npm run bump)",
     "docs:build": "(cd docs && npm run build)"
   },
@@ -19,7 +19,6 @@
     "animation",
     "keyframe",
     "stylesheet",
-    "framework",
     "tools",
     "performance",
     "typescript"
@@ -31,7 +30,13 @@
     "url": "https://github.com/benhatsor/KeyframeKit/issues"
   },
   "homepage": "https://keyframekit.berryscript.com",
+  "type": "module",
   "devDependencies": {
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "rollup": "^4.59.0",
+    "@rollup/plugin-terser": "^1.0.0",
+    "@rollup/plugin-typescript": "^12.3.0",
+    "tslib": "^2.8.1",
+    "magic-string": "^0.30.21"
   }
 }
