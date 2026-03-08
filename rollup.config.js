@@ -36,8 +36,7 @@ export default {
   },
   output: {
     dir: 'dist',
-    entryFileNames: '[name]',
-    sourcemap: true
+    entryFileNames: '[name]'
   },
-  plugins: [typescript(), terser(), header()]
+  plugins: [typescript({ sourceMap: false }), terser(), header()]
 };
