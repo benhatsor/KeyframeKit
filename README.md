@@ -2,7 +2,7 @@
 
 Unlock fine-grained control over your CSS animations with JavaScript.
 
-[![License](https://img.shields.io/github/license/benhatsor/KeyframeKit)](/LICENSE) [![Minified size](https://img.shields.io/github/size/benhatsor/KeyframeKit/dist/KeyframeKit.min.js)](/dist/KeyframeKit.min.js) [![NPM version](https://img.shields.io/npm/v/keyframekit)](https://www.npmjs.com/package/keyframekit)
+[![Minified size](https://img.shields.io/github/size/benhatsor/KeyframeKit/dist/KeyframeKit.min.js)](/dist/KeyframeKit.min.js) [![NPM version](https://img.shields.io/npm/v/keyframekit.svg)](https://www.npmjs.com/package/keyframekit) [![License](https://img.shields.io/github/license/benhatsor/KeyframeKit.svg)](/LICENSE) 
 
 ## About
 
@@ -10,8 +10,15 @@ The [Web Animations API][2] opens the browser's animation engine to developers a
 
 ## Installation
 
+### NPM
 ```sh
 npm install keyframekit
+```
+
+### CDN
+Import the module directly:
+```js
+import KeyframeKit from 'https://unpkg.com/keyframekit'
 ```
 
 ## Usage
