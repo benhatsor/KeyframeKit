@@ -95,3 +95,10 @@ An element to attach the animation to.
 Specifications:
 - https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface
 - https://drafts.csswg.org/web-animations-1/#the-animation-interface
+
+## See Also
+
+### Referenced Here
+- [KeyframeArgument](../type-aliases/KeyframeArgument.md)
+### References This
+- [ParsedKeyframes.toKeyframeEffect](ParsedKeyframes.md#tokeyframeeffect)

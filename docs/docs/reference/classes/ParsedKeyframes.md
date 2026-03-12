@@ -47,3 +47,12 @@ toKeyframeEffect(options: number | KeyframeEffectOptions | null): KeyframeEffect
 #### Returns
 
 [`KeyframeEffectParameters`](KeyframeEffectParameters.md)
+
+## See Also
+
+### Referenced Here
+- [KeyframeEffectParameters](KeyframeEffectParameters.md)
+### References This
+- [KeyframesFactory.getStyleSheetKeyframes](../interfaces/KeyframesFactory.md#getstylesheetkeyframes)
+- [KeyframesFactory.parseKeyframesRule](../interfaces/KeyframesFactory.md#parsekeyframesrule)
+- [ParsedKeyframesRules](../type-aliases/ParsedKeyframesRules.md)

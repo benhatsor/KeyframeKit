@@ -3,6 +3,20 @@ import terser from '@rollup/plugin-terser';
 
 import MagicString from 'magic-string';
 
+/**
+ * @type {import('rollup').RollupOptions}
+ */
+export default {
+  input: {
+    'KeyframeKit.min.js': 'src/KeyframeKit.ts'
+  },
+  output: {
+    dir: 'dist',
+    entryFileNames: '[name]'
+  },
+  plugins: [typescript({ sourceMap: false }), terser(), header()]
+};
+
 function header() {
 
 	return {
@@ -26,17 +40,3 @@ function header() {
 	};
 
 }
-
-/**
- * @type {import('rollup').RollupOptions}
- */
-export default {
-  input: {
-    'KeyframeKit.min.js': 'src/KeyframeKit.ts'
-  },
-  output: {
-    dir: 'dist',
-    entryFileNames: '[name]'
-  },
-  plugins: [typescript({ sourceMap: false }), terser(), header()]
-};

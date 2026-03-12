@@ -39,39 +39,82 @@
 
 .VPLocalSearchBox {
 
-  --vp-local-search-result-selected-border: var(--vp-c-brand-2);
-
-  .search-bar {
-    background: var(--vp-c-divider);
+  .shell {
+    padding: 0 !important;
+    gap: 12px !important;
   }
 
-  .search-bar:focus-within {
-    border-color: var(--vp-c-brand-2) !important;
-    box-shadow: 0 0 0 1px var(--vp-c-brand-2);
-    /* background: transparent; */
-    background: var(--vp-c-bg-alt);
+  .search-bar {
+    padding: 7px 12px !important;
+    font-size: 25px;
+    border: none !important;
+    border-bottom: 1px solid var(--vp-c-divider) !important;
+    border-radius: 0 !important;
+  }
+
+  .search-bar .local-search-icon {
+    font-size: 23px;
+    background-color: var(--vp-c-text-2);
   }
 
   .search-bar .search-input {
     font-family: inherit;
+    padding-left: 3px;
+
+    &::placeholder {
+      color: var(--vp-c-text-3);
+    }
   }
 
-  .search-bar .search-actions .clear-button {
-    /* order: -1; */
+  .search-bar .search-actions .clear-button:disabled {
+    display: none;
+  }
 
-    &:disabled {
+  /* .search-bar:has(+ .results:empty) .search-actions .toggle-layout-button,
+  .search-bar .search-actions:has(.clear-button:disabled) .toggle-layout-button { */
+  /* .search-bar .search-actions .toggle-layout-button {
+    display: none;
+  } */
+
+  .results {
+    padding: 12px;
+    padding-top: 0;
+    scroll-padding-bottom: 12px;
+  }
+
+  .results .result {
+    border: solid 2px transparent !important;
+
+    &.selected {
+      background-color: var(--vp-c-brand-soft);
+    }
+  }
+
+  .results .result .excerpt-wrapper {
+    mask-image: linear-gradient(transparent 0%, #000 8px, #000 calc(100% - 8px), transparent 100%);
+
+    .excerpt-gradient-bottom, .excerpt-gradient-top {
       display: none;
     }
   }
 
-  .search-bar:has(+ .results:empty) .search-actions .toggle-layout-button,
-  .search-bar .search-actions:has(.clear-button:disabled) .toggle-layout-button {
-    display: none;
+  .results .result .excerpt {
+    .vp-doc div[class*='language-'], .vp-block {
+      border-radius: 8px;
+      margin: 16px 0;
+    }
   }
 
-  .results:empty,
-  &:has(.search-bar .search-actions .clear-button:disabled) .results {
-    display: none;
+  &:has(
+    .results:empty,
+    .search-bar .search-actions .clear-button:disabled
+  ) {
+    .results {
+      display: none;
+    }
+    .search-bar {
+      border-bottom: none !important;
+    }
   }
 
   .search-keyboard-shortcuts {

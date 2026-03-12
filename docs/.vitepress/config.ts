@@ -58,7 +58,23 @@ export default defineConfig({
     },
 
     search: {
-      provider: 'local'
+      provider: 'local',
+      options: {
+        detailedView: false,
+        async _render(src, env, md) {
+          if (
+            // !env.relativePath.startsWith('reference') ||
+            env.relativePath === 'reference/index.md'
+          ) return ''
+
+          src = src.split('## See Also')[0];
+
+          const html = await md.renderAsync(src, env)
+          //if (env.frontmatter?.search === false) return ''
+          
+          return html
+        }
+      }
     },
 
     socialLinks: [
@@ -67,6 +83,39 @@ export default defineConfig({
 
     footer: {
       message: 'Created by <a href="https://berryscript.com" target="_blank">Ben Hatsor</a>. MIT License.'
+    },
+
+    docFooter: {
+      prev: false,
+      next: false
+    },
+
+    sidebarMenuLabel: 'Reference'
+  },
+
+  transformPageData(pageData) {
+    pageData.frontmatter.head ??= []
+    pageData.frontmatter.head.push([
+      'meta',
+      {
+        name: 'og:title',
+        content:
+          pageData.frontmatter.layout === 'home'
+            ? `KeyframeKit`
+            : `${pageData.title} | KeyframeKit`
+      }
+    ])
+  },
+
+  // fix vue parsing errors in code blocks
+  // https://github.com/vuejs/vitepress/discussions/3724#discussioncomment-8963669
+  markdown: {
+    config(md) {
+      const defaultCodeInline = md.renderer.rules.code_inline!
+      md.renderer.rules.code_inline = (tokens, idx, options, env, self) => {
+        tokens[idx].attrSet('v-pre', '')
+        return defaultCodeInline(tokens, idx, options, env, self)
+      }
     }
   },
 

@@ -1,6 +1,8 @@
 // @ts-check
 
-/** @type {import('typedoc').TypeDocOptions & import('typedoc-plugin-markdown').PluginOptions & { inheritNone?: boolean }} */
+/**
+ * @type {import('typedoc').TypeDocOptions & import('typedoc-plugin-markdown').PluginOptions & { inheritNone?: boolean }}
+ */
 export default {
   "name": "KeyframeKit",
   
@@ -10,6 +12,7 @@ export default {
     "typedoc-plugin-no-inherit",
     "./typedoc/plugin-param-names.js",
     "./typedoc/plugin-markdown-mdn-links-fix.js",
+    "./typedoc/plugin-markdown-see-also.js",
     //"typedoc-plugin-inline-sources",
     //"typedoc-plugin-remark",
     //"typedoc-github-wiki-theme",

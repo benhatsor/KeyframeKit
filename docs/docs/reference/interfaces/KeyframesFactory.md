@@ -20,7 +20,7 @@ readonly Error: {
 readonly KeyframesRuleNameTypeError: typeof KeyframesRuleNameTypeError;
 ```
 
-Keyframes rule name must be a string.
+Thrown if keyframes rule name is not a string.
 
 #### SourceTypeError
 
@@ -28,7 +28,7 @@ Keyframes rule name must be a string.
 readonly SourceTypeError: typeof SourceTypeError;
 ```
 
-Source must be either a `CSSStyleSheet` or a `StyleSheetList`.
+Thrown if source is not a `CSSStyleSheet` or a `StyleSheetList`.
 
 #### StyleSheetImportError
 
@@ -36,7 +36,7 @@ Source must be either a `CSSStyleSheet` or a `StyleSheetList`.
 readonly StyleSheetImportError: typeof StyleSheetImportError;
 ```
 
-The stylesheet could not be imported.
+Thrown if the stylesheet could not be imported.
 
 ## Methods
 
@@ -178,3 +178,12 @@ The rule to convert.
 #### Returns
 
 [`ParsedKeyframes`](../classes/ParsedKeyframes.md)
+
+## See Also
+
+### Referenced Here
+- [CSSStyleSheetSource](../type-aliases/CSSStyleSheetSource.md)
+- [ParsedKeyframes](../classes/ParsedKeyframes.md)
+- [ParsedKeyframesRules](../type-aliases/ParsedKeyframesRules.md)
+### References This
+- [default](../variables/default.md)

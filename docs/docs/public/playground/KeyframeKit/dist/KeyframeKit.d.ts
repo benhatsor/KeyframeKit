@@ -2,7 +2,7 @@ export type CSSStyleSheetSource = CSSStyleSheet | StyleSheetList;
 declare class KeyframesFactory {
     #private;
     readonly Error: {
-        /** Keyframes rule name must be a string. */
+        /** Thrown if keyframes rule name is not a string. */
         readonly KeyframesRuleNameTypeError: {
             new (message?: string): {
                 message: string;
@@ -30,7 +30,7 @@ declare class KeyframesFactory {
             };
             isError(error: unknown): error is Error;
         };
-        /** Source must be either a `CSSStyleSheet` or a `StyleSheetList`. */
+        /** Thrown if source is not a `CSSStyleSheet` or a `StyleSheetList`. */
         readonly SourceTypeError: {
             new (message?: string): {
                 message: string;
@@ -58,7 +58,7 @@ declare class KeyframesFactory {
             };
             isError(error: unknown): error is Error;
         };
-        /** The stylesheet could not be imported. */
+        /** Thrown if the stylesheet could not be imported. */
         readonly StyleSheetImportError: {
             new (message?: string): {
                 message: string;

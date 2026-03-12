@@ -4,7 +4,7 @@
   "description": "Unlock fine-grained control over your CSS animations with JavaScript.",
   "main": "./dist/KeyframeKit.js",
   "scripts": {
-    "build": "tsc && rollup -c rollup.config.js",
+    "build": "tsc && rollup -c",
     "docs:bump": "(cd docs && npm run bump)",
     "docs:build": "(cd docs && npm run build)"
   },
