@@ -97,8 +97,8 @@
   }
 
   @media (max-width: 767px) {
-    .results .result {
-      min-height: 42px;
+    .results .result > div {
+      margin: 12px !important;
     }
   }
 
