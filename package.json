@@ -1,6 +1,6 @@
 {
   "name": "keyframekit",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Unlock fine-grained control over your CSS animations with JavaScript.",
   "main": "./dist/KeyframeKit.js",
   "scripts": {
