@@ -1,10 +1,10 @@
 {
   "extends": "./tsconfig.default.json",
-  "module": "esnext",
   
   "files": ["src/KeyframeKit.ts"],
   "compilerOptions": {
     "rootDir": "src",
     "outDir": "dist",
+    "module": "esnext"
   }
 }

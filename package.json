@@ -5,9 +5,12 @@
   "main": "./dist/KeyframeKit.js",
   "scripts": {
     "build": "tsc && rollup -c",
-    "docs:bump": "(cd docs && npm run bump)",
-    "docs:build": "(cd docs && npm run build)"
+    "docs:bump": "(cd docs && npm run bump)"
   },
+  "files": [
+    "src",
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/benhatsor/KeyframeKit.git"

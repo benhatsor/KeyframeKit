@@ -12,9 +12,10 @@ export default {
   },
   output: {
     dir: 'dist',
-    entryFileNames: '[name]'
+    entryFileNames: '[name]',
+	sourcemap: true
   },
-  plugins: [typescript({ sourceMap: false }), terser(), header()]
+  plugins: [typescript(), terser(), header()]
 };
 
 function header() {
