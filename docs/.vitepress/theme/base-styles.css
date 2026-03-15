@@ -41,7 +41,7 @@
 
   .shell {
     padding: 0 !important;
-    gap: 12px !important;
+    gap: 0 !important;
   }
 
   .search-bar {
@@ -78,15 +78,21 @@
 
   .results {
     padding: 12px;
-    padding-top: 0;
-    scroll-padding-bottom: 12px;
+    scroll-padding: 12px;
   }
 
   .results .result {
     border: solid 2px transparent !important;
+    min-height: 50px;
 
     &.selected {
       background-color: var(--vp-c-brand-soft);
+    }
+  }
+
+  @media (max-width: 767px) {
+    .results .result {
+      min-height: 42px;
     }
   }
 
