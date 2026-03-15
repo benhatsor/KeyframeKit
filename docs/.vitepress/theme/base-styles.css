@@ -44,6 +44,12 @@
     gap: 0 !important;
   }
 
+  @media (max-width: 767px) {
+    .shell {
+      height: 100% !important;
+    }
+  }
+
   .search-bar {
     padding: 7px 12px !important;
     font-size: 25px;
