@@ -111,15 +111,17 @@
     }
   }
 
-  &:has(
-    .results:empty,
-    .search-bar .search-actions .clear-button:disabled
-  ) {
-    .results {
-      display: none;
-    }
-    .search-bar {
-      border-bottom: none !important;
+  @media (width > 767px) {
+    &:has(
+      .results:empty,
+      .search-bar .search-actions .clear-button:disabled
+    ) {
+      .results {
+        display: none;
+      }
+      .search-bar {
+        border-bottom: none !important;
+      }
     }
   }
 
