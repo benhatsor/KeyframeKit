@@ -5,7 +5,7 @@ import referenceNavigationItems from './referenceNavigation.ts';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  srcDir: "docs",
+  srcDir: 'docs',
 
   rewrites: {
     //'reference/:slug*': ':slug*'
@@ -34,8 +34,10 @@ export default defineConfig({
 
   ],
     
-  title: "KeyframeKit",
-  description: "Unlock fine-grained control over your CSS animations with JavaScript.",
+  title: 'KeyframeKit',
+  description: 'Unlock fine-grained control over your CSS animations with JavaScript.',
+
+  titleTemplate: false,
 
   themeConfig: {
     outline: [2, 3],
@@ -93,16 +95,36 @@ export default defineConfig({
     sidebarMenuLabel: 'Reference'
   },
 
-  transformPageData(pageData) {
+  transformPageData(pageData, ctx) {
+
+    const siteTitle = ctx.siteConfig.site.title;
+
+    let title;
+
+    if (pageData.frontmatter.layout === 'home') {
+
+      title = `${pageData.frontmatter.hero.name} | ${pageData.frontmatter.hero.tagline}`;
+
+    } else if (pageData.relativePath.startsWith('reference')) {
+
+      title = `${pageData.title} - Reference | ${siteTitle}`;
+
+    } else {
+
+      title = `${pageData.title} | ${siteTitle}`;
+
+    }
+
+    pageData.title = title;
+
+
     pageData.frontmatter.head ??= []
+
     pageData.frontmatter.head.push([
       'meta',
       {
         name: 'og:title',
-        content:
-          pageData.frontmatter.layout === 'home'
-            ? `KeyframeKit`
-            : `${pageData.title} | KeyframeKit`
+        content: pageData.title
       }
     ])
   },
