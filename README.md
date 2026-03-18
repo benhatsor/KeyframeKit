@@ -2,7 +2,7 @@
 
 Unlock fine-grained control over your CSS animations with JavaScript.
 
-[![NPM version](https://img.shields.io/npm/v/keyframekit.svg)](https://www.npmjs.com/package/keyframekit) [![Minified size](https://img.shields.io/github/size/benhatsor/KeyframeKit/dist/KeyframeKit.min.js)](/dist/KeyframeKit.min.js) [![License](https://img.shields.io/github/license/benhatsor/KeyframeKit.svg)](/LICENSE) 
+[![NPM version](https://img.shields.io/npm/v/keyframekit.svg)](https://www.npmjs.com/package/keyframekit) [![Minified size](https://img.shields.io/github/size/benhatsor/KeyframeKit/dist/KeyframeKit.min.js)](/dist/KeyframeKit.min.js) [![License](https://img.shields.io/github/license/benhatsor/KeyframeKit)](/LICENSE) 
 
 ## About
 
