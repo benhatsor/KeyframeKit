@@ -19,7 +19,7 @@ export default {
     //"typedoc-plugin-missing-exports"
   ],
 
-  "entryPoints": ["../src/KeyframeKit.ts"],
+  "entryPoints": ["../src/index.ts"],
   "out": "docs/reference",
 
   "validation": {

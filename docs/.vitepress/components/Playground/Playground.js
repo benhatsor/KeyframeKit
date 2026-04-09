@@ -123,9 +123,9 @@ export function playground(props, previewFrame, getDefaultExample, interFontDec)
     // note: the absolute URLs here are important, because if they were relative,
     // they would return an invalid response when navigating from another page due to a vue bug.
 
-    libCode.decLibSrc = await (await fetch('/playground/KeyframeKit/dist/KeyframeKit.d.ts')).text();
+    libCode.decLibSrc = await (await fetch('/playground/KeyframeKit/dist/index.d.ts')).text();
 
-    const jsLibSrc = await (await fetch('/playground/KeyframeKit/dist/KeyframeKit.js')).text();
+    const jsLibSrc = await (await fetch('/playground/KeyframeKit/dist/index.js')).text();
 
     libCode.libImportMap = `
     <script type="importmap">

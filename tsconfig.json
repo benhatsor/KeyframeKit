@@ -1,10 +1,18 @@
 {
-  "extends": "./tsconfig.default.json",
-  
-  "files": ["src/KeyframeKit.ts"],
   "compilerOptions": {
-    "rootDir": "src",
-    "outDir": "dist",
-    "module": "esnext"
-  }
+    "target": "esnext",
+    "module": "esnext",
+    "moduleDetection": "force",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "noUnusedLocals": true,
+    "declaration": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true
+  },
+  "include": ["src"]
 }

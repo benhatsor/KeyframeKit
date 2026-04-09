@@ -2,9 +2,11 @@
   "name": "keyframekit",
   "version": "1.2.1",
   "description": "Unlock fine-grained control over your CSS animations with JavaScript.",
-  "main": "./dist/KeyframeKit.js",
   "scripts": {
-    "build": "tsc && rollup -c",
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build",
     "docs:bump": "(cd docs && npm run bump)"
   },
   "files": [
@@ -28,18 +30,18 @@
   ],
   "author": "Ben Hatsor",
   "license": "MIT",
-  "types": "./dist/KeyframeKit.d.ts",
+  "types": "./dist/index.d.ts",
   "bugs": {
     "url": "https://github.com/benhatsor/KeyframeKit/issues"
   },
   "homepage": "https://keyframekit.berryscript.com",
   "type": "module",
   "devDependencies": {
-    "typescript": "^5.9.3",
-    "rollup": "^4.59.0",
-    "@rollup/plugin-terser": "^1.0.0",
-    "@rollup/plugin-typescript": "^12.3.0",
-    "tslib": "^2.8.1",
-    "magic-string": "^0.30.21"
+    "tsdown": "^0.21.7",
+    "typescript": "^5.9.3"
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
   }
 }
