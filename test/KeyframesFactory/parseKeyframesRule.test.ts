@@ -1,0 +1,118 @@
+import { describe, it, expect, assert } from 'vitest';
+import Keyframes from '../../src/index';
+import { createStyleSheet } from '../helpers';
+
+
+describe('parseKeyframesRule - property name conversion', () => {
+
+  it('converts kebab-case to camelCase', async () => {
+    const sheet = await createStyleSheet(`
+      @keyframes test {
+        0% { background-color: red; }
+        100% { background-color: blue; }
+      }
+    `);
+
+    const result = Keyframes.getStyleSheetKeyframes({ of: 'test', in: sheet });
+    assert(result);
+    expect(result.keyframes[0]).toHaveProperty('backgroundColor');
+  });
+
+  it('converts float to cssFloat', async () => {
+    const sheet = await createStyleSheet(`
+      @keyframes test {
+        0% { float: left; }
+        100% { float: right; }
+      }
+    `);
+
+    const result = Keyframes.getStyleSheetKeyframes({ of: 'test', in: sheet });
+    assert(result);
+    expect(result.keyframes[0]).toHaveProperty('cssFloat');
+  });
+
+  it('preserves custom properties (--*)', async () => {
+    const sheet = await createStyleSheet(`
+      @keyframes test {
+        0% { --my-color: red; }
+        100% { --my-color: blue; }
+      }
+    `);
+
+    const result = Keyframes.getStyleSheetKeyframes({ of: 'test', in: sheet });
+    assert(result);
+    expect(result.keyframes[0]).toHaveProperty('--my-color');
+  });
+
+  it('handles -webkit- prefixed properties', async () => {
+    const sheet = await createStyleSheet(`
+      @keyframes test {
+        0% { -webkit-text-stroke-width: 0px; }
+        100% { -webkit-text-stroke-width: 2px; }
+      }
+    `);
+
+    const result = Keyframes.getStyleSheetKeyframes({ of: 'test', in: sheet });
+    assert(result);
+    // Browser may normalize -webkit- properties; check that the result is valid camelCase
+    const keys = Object.keys(result.keyframes[0]).filter(k => k !== 'offset');
+    expect(keys.length).toBeGreaterThan(0);
+    for (const key of keys) {
+      // Should not contain hyphens (converted to camelCase)
+      expect(key).not.toContain('-');
+    }
+  });
+
+  it('handles multi-word kebab-case properties', async () => {
+    const sheet = await createStyleSheet(`
+      @keyframes test {
+        0% { border-top-left-radius: 0px; }
+        100% { border-top-left-radius: 10px; }
+      }
+    `);
+
+    const result = Keyframes.getStyleSheetKeyframes({ of: 'test', in: sheet });
+    assert(result);
+    expect(result.keyframes[0]).toHaveProperty('borderTopLeftRadius');
+  });
+
+});
+
+
+describe('parseKeyframesRule - offset conversion', () => {
+
+  it('converts percentage to offset (0-1 range)', async () => {
+    const sheet = await createStyleSheet(`
+      @keyframes test {
+        0% { opacity: 0; }
+        25% { opacity: 0.25; }
+        50% { opacity: 0.5; }
+        75% { opacity: 0.75; }
+        100% { opacity: 1; }
+      }
+    `);
+
+    const result = Keyframes.getStyleSheetKeyframes({ of: 'test', in: sheet });
+    assert(result);
+    const offsets = result.keyframes.map(k => k.offset);
+    expect(offsets).toEqual([0, 0.25, 0.5, 0.75, 1]);
+  });
+
+  it('handles multiple properties per keyframe', async () => {
+    const sheet = await createStyleSheet(`
+      @keyframes test {
+        0% { opacity: 0; transform: scale(0); }
+        100% { opacity: 1; transform: scale(1); }
+      }
+    `);
+
+    const result = Keyframes.getStyleSheetKeyframes({ of: 'test', in: sheet });
+    assert(result);
+    expect(result.keyframes[0]).toMatchObject({
+      offset: 0,
+      opacity: '0',
+      transform: 'scale(0)'
+    });
+  });
+
+});

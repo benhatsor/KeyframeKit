@@ -5,6 +5,8 @@
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch",
+    "test": "vitest run",
+    "test:dev": "vitest",
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "npm run build",
     "docs:bump": "(cd docs && npm run bump)"
@@ -37,8 +39,10 @@
   "homepage": "https://keyframekit.berryscript.com",
   "type": "module",
   "devDependencies": {
+    "@vitest/browser-playwright": "^4.1.4",
     "tsdown": "^0.21.7",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.4"
   },
   "exports": {
     ".": "./dist/index.js",
