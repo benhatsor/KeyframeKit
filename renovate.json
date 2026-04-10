@@ -1,9 +1,11 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
+    "config:recommended",
+    "schedule:weekly"
   ],
   "automerge": true,
+  "rangeStrategy": "bump",
   "includePaths": [
     "package.json"
   ],
