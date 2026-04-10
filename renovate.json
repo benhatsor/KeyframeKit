@@ -6,7 +6,8 @@
   "automerge": true,
   "rangeStrategy": "bump",
   "includePaths": [
-    "package.json"
+    "package.json",
+    ".github/workflows"
   ],
   "dependencyDashboard": false
 }
