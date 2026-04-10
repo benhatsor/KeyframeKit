@@ -1,8 +1,12 @@
 [KeyframeKit](../index.md) / KeyframeEffectParameters
 
-# Class: KeyframeEffectParameters
+# <div class="subheader"> Class</div>KeyframeEffectParameters
 
-https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface
+Provides a more convenient way to define animations than is offered natively.
+
+## See
+
+[Web Animations Module Level 1 - The KeyframeEffect interface](https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface)
 
 ## Constructors
 
@@ -23,33 +27,19 @@ new KeyframeEffectParameters(obj: {
 
 [`KeyframeArgument`](../type-aliases/KeyframeArgument.md)
 
-[MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats)
+A keyframes object.
+  [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats)
 
 ###### options?
 
 `number` \| `KeyframeEffectOptions` = `{}`
 
-[MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#options)
+Keyframe effect options.
+  [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#options)
 
 #### Returns
 
 `KeyframeEffectParameters`
-
-## Properties
-
-### keyframes
-
-```ts
-keyframes: KeyframeArgument;
-```
-
-***
-
-### options
-
-```ts
-options: KeyframeEffectOptions;
-```
 
 ## Methods
 
@@ -72,7 +62,7 @@ toAnimation(obj: {
 `number` \| `KeyframeEffectOptions` = `{}`
 
 Additional keyframe effect options. Can override existing keys.
- [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#options)
+  [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#options)
 
 ###### target
 
@@ -84,7 +74,8 @@ An element to attach the animation to.
 
 [`AnimationTimeline`](https://developer.mozilla.org/docs/Web/API/AnimationTimeline) \| `null` = `document.timeline`
 
-[MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/Animation/Animation#timeline)
+The timeline with which to associate the animation.
+  [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/Animation/Animation#timeline)
 
 #### Returns
 
@@ -92,13 +83,28 @@ An element to attach the animation to.
 
 #### See
 
-Specifications:
-- https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface
-- https://drafts.csswg.org/web-animations-1/#the-animation-interface
+- [Web Animations Module Level 1 - The KeyframeEffect interface](https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface)
+ - [Web Animations Module Level 1 - The Animation interface](https://drafts.csswg.org/web-animations-1/#the-animation-interface)
+
+## Properties
+
+### keyframes
+
+```ts
+keyframes: KeyframeArgument;
+```
+
+***
+
+### options
+
+```ts
+options: KeyframeEffectOptions;
+```
 
 ## See Also
 
 ### Referenced Here
 - [KeyframeArgument](../type-aliases/KeyframeArgument.md)
 ### References This
-- [ParsedKeyframes.toKeyframeEffect](ParsedKeyframes.md#tokeyframeeffect)
+- [KeyframesFactory.ParsedKeyframes.toKeyframeEffect](../KeyframeKit/namespaces/KeyframesFactory/classes/ParsedKeyframes.md#tokeyframeeffect)

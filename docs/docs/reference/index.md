@@ -1,20 +1,10 @@
 # KeyframeKit
 
-## Classes
+## Default Export
+
+- [KeyframesFactory](KeyframeKit/namespaces/KeyframesFactory/index.md)
+
+## Defining Animations
 
 - [KeyframeEffectParameters](classes/KeyframeEffectParameters.md)
-- [ParsedKeyframes](classes/ParsedKeyframes.md)
-
-## Interfaces
-
-- [KeyframesFactory](interfaces/KeyframesFactory.md)
-
-## Type Aliases
-
-- [CSSStyleSheetSource](type-aliases/CSSStyleSheetSource.md)
 - [KeyframeArgument](type-aliases/KeyframeArgument.md)
-- [ParsedKeyframesRules](type-aliases/ParsedKeyframesRules.md)
-
-## Variables
-
-- [default](variables/default.md)

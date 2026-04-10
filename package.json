@@ -2,22 +2,15 @@
   "name": "keyframekit",
   "version": "1.2.3",
   "description": "Unlock fine-grained control over your CSS animations with JavaScript.",
-  "scripts": {
-    "build": "tsdown",
-    "dev": "tsdown --watch",
-    "test": "vitest run",
-    "test:dev": "vitest",
-    "typecheck": "tsc --noEmit",
-    "prepublishOnly": "npm run build",
-    "docs:bump": "(cd docs && npm run bump)"
-  },
-  "files": [
-    "src",
-    "dist"
-  ],
+  "author": "Ben Hatsor",
+  "license": "MIT",
+  "homepage": "https://keyframekit.berryscript.com",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/benhatsor/KeyframeKit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/benhatsor/KeyframeKit/issues"
   },
   "keywords": [
     "css",
@@ -30,22 +23,36 @@
     "performance",
     "typescript"
   ],
-  "author": "Ben Hatsor",
-  "license": "MIT",
-  "types": "./dist/index.d.ts",
-  "bugs": {
-    "url": "https://github.com/benhatsor/KeyframeKit/issues"
-  },
-  "homepage": "https://keyframekit.berryscript.com",
+
   "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+
+  "scripts": {
+    "build": "rollup -c rollup.config.ts",
+    "dev": "rollup -c rollup.config.ts --watch",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build",
+    "docs:bump": "npm --prefix docs run bump",
+    "docs:dev": "npm --prefix docs run dev"
+  },
+
   "devDependencies": {
+    "@rollup/plugin-terser": "^1.0.0",
+    "@rollup/plugin-typescript": "^12.3.0",
     "@vitest/browser-playwright": "^4.1.4",
-    "tsdown": "^0.21.7",
+    "rollup": "^4.60.1",
+    "rollup-plugin-dts": "^6.4.1",
     "typescript": "^5.9.3",
     "vitest": "^4.1.4"
-  },
-  "exports": {
-    ".": "./dist/index.js",
-    "./package.json": "./package.json"
   }
 }

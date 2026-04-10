@@ -1,6 +1,105 @@
 [
   {
-    "title": "Classes",
+    "title": "Default Export",
+    "children": [
+      {
+        "title": "KeyframesFactory",
+        "kind": 4,
+        "path": "KeyframeKit/namespaces/KeyframesFactory/index.md",
+        "isDeprecated": false,
+        "children": [
+          {
+            "title": "Sourcing Stylesheets",
+            "children": [
+              {
+                "title": "getDocumentStyleSheetsOnLoad",
+                "kind": 64,
+                "path": "KeyframeKit/namespaces/KeyframesFactory/functions/getDocumentStyleSheetsOnLoad.md",
+                "isDeprecated": false
+              },
+              {
+                "title": "importStyleSheet",
+                "kind": 64,
+                "path": "KeyframeKit/namespaces/KeyframesFactory/functions/importStyleSheet.md",
+                "isDeprecated": false
+              }
+            ]
+          },
+          {
+            "title": "Parsing Stylesheet Keyframes",
+            "children": [
+              {
+                "title": "getAllStyleSheetKeyframesRules",
+                "kind": 64,
+                "path": "KeyframeKit/namespaces/KeyframesFactory/functions/getAllStyleSheetKeyframesRules.md",
+                "isDeprecated": false
+              },
+              {
+                "title": "getStyleSheetKeyframes",
+                "kind": 64,
+                "path": "KeyframeKit/namespaces/KeyframesFactory/functions/getStyleSheetKeyframes.md",
+                "isDeprecated": false
+              },
+              {
+                "title": "parseKeyframesRule",
+                "kind": 64,
+                "path": "KeyframeKit/namespaces/KeyframesFactory/functions/parseKeyframesRule.md",
+                "isDeprecated": false
+              }
+            ]
+          },
+          {
+            "title": "Data Types",
+            "children": [
+              {
+                "title": "ParsedKeyframes",
+                "kind": 128,
+                "path": "KeyframeKit/namespaces/KeyframesFactory/classes/ParsedKeyframes.md",
+                "isDeprecated": false
+              },
+              {
+                "title": "CSSStyleSheetSource",
+                "kind": 2097152,
+                "path": "KeyframeKit/namespaces/KeyframesFactory/type-aliases/CSSStyleSheetSource.md",
+                "isDeprecated": false
+              },
+              {
+                "title": "ParsedKeyframesRules",
+                "kind": 2097152,
+                "path": "KeyframeKit/namespaces/KeyframesFactory/type-aliases/ParsedKeyframesRules.md",
+                "isDeprecated": false
+              }
+            ]
+          },
+          {
+            "title": "Errors",
+            "children": [
+              {
+                "title": "KeyframesRuleNameTypeError",
+                "kind": 128,
+                "path": "KeyframeKit/namespaces/KeyframesFactory/classes/KeyframesRuleNameTypeError.md",
+                "isDeprecated": false
+              },
+              {
+                "title": "SourceTypeError",
+                "kind": 128,
+                "path": "KeyframeKit/namespaces/KeyframesFactory/classes/SourceTypeError.md",
+                "isDeprecated": false
+              },
+              {
+                "title": "StyleSheetImportError",
+                "kind": 128,
+                "path": "KeyframeKit/namespaces/KeyframesFactory/classes/StyleSheetImportError.md",
+                "isDeprecated": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Defining Animations",
     "children": [
       {
         "title": "KeyframeEffectParameters",
@@ -9,54 +108,9 @@
         "isDeprecated": false
       },
       {
-        "title": "ParsedKeyframes",
-        "kind": 128,
-        "path": "classes/ParsedKeyframes.md",
-        "isDeprecated": false
-      }
-    ]
-  },
-  {
-    "title": "Interfaces",
-    "children": [
-      {
-        "title": "KeyframesFactory",
-        "kind": 256,
-        "path": "interfaces/KeyframesFactory.md",
-        "isDeprecated": false
-      }
-    ]
-  },
-  {
-    "title": "Type Aliases",
-    "children": [
-      {
-        "title": "CSSStyleSheetSource",
-        "kind": 2097152,
-        "path": "type-aliases/CSSStyleSheetSource.md",
-        "isDeprecated": false
-      },
-      {
         "title": "KeyframeArgument",
         "kind": 2097152,
         "path": "type-aliases/KeyframeArgument.md",
-        "isDeprecated": false
-      },
-      {
-        "title": "ParsedKeyframesRules",
-        "kind": 2097152,
-        "path": "type-aliases/ParsedKeyframesRules.md",
-        "isDeprecated": false
-      }
-    ]
-  },
-  {
-    "title": "Variables",
-    "children": [
-      {
-        "title": "default",
-        "kind": 32,
-        "path": "variables/default.md",
         "isDeprecated": false
       }
     ]

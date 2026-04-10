@@ -66,11 +66,17 @@ export default {
 
   "navigationJson": "docs/reference/navigation.json",
   "navigation": {
-    "includeCategories": true,
     "includeGroups": true,
+    "includeCategories": true,
     "includeFolders": true,
   },
 
+  "pageTitleTemplates": {
+    "member": `<div class="subheader">{keyword} {kind}</div>{name}`
+  },
+
+  "groupOrder": ["Default Export", "Sourcing Stylesheets", "Parsing Stylesheet Keyframes", "Data Types", "Errors"],
+  
   "inheritNone": true,
 
   //"pageTitleTemplates": {

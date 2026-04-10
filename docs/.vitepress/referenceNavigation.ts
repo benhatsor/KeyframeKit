@@ -13,6 +13,7 @@ import navigationJSON from '../docs/reference/navigation.json' with { type: 'jso
 const navigationJSONItems: NavigationJSON = navigationJSON;
 
 const sidebarItems = navigationJSONItems.map(convertItem);
+  //.flatMap(item => item.children?.map(convertItem) ?? []);
 
 export default sidebarItems;
 
@@ -29,7 +30,8 @@ function convertItem(
     text: inputItem.title,
     link: link,
     items: items,
-    base: '/reference/'
+    base: '/reference/',
+    collapsed: false
   };
 
   return outputItem;

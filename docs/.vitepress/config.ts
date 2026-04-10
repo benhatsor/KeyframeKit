@@ -49,7 +49,7 @@ export default defineConfig({
       { text: 'Reference', link: '/reference/' }
     ],
 
-    sidebar: {
+    sidebar: referenceNavigationItems,/*{
       '/reference/': [
         {
           text: 'Reference',
@@ -57,7 +57,7 @@ export default defineConfig({
           items: referenceNavigationItems
         }
       ]
-    },
+    },*/
 
     search: {
       provider: 'local',

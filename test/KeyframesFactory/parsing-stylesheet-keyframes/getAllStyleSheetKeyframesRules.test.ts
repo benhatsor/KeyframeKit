@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import Keyframes, { ParsedKeyframes } from '../../src/index';
-import { createStyleSheet } from '../helpers';
+import KeyframeKit from '../../../src/index';
+import { createStyleSheet } from './createStyleSheet-helper';
 
 
 describe('getAllStyleSheetKeyframesRules', () => {
@@ -18,17 +18,17 @@ describe('getAllStyleSheetKeyframesRules', () => {
       .some-class { color: red; }
     `);
 
-    const result = Keyframes.getAllStyleSheetKeyframesRules({ in: sheet });
+    const result = KeyframeKit.getAllStyleSheetKeyframesRules({ in: sheet });
 
     expect(Object.keys(result)).toHaveLength(2);
-    expect(result['fadeIn']).toBeInstanceOf(ParsedKeyframes);
-    expect(result['slideUp']).toBeInstanceOf(ParsedKeyframes);
+    expect(result['fadeIn']).toBeInstanceOf(KeyframeKit.ParsedKeyframes);
+    expect(result['slideUp']).toBeInstanceOf(KeyframeKit.ParsedKeyframes);
   });
 
   it('returns empty object when no keyframes rules exist', async () => {
     const sheet = await createStyleSheet('.foo { color: red; }');
 
-    const result = Keyframes.getAllStyleSheetKeyframesRules({ in: sheet });
+    const result = KeyframeKit.getAllStyleSheetKeyframesRules({ in: sheet });
     expect(Object.keys(result)).toHaveLength(0);
   });
 
@@ -43,10 +43,10 @@ describe('getAllStyleSheetKeyframesRules', () => {
     document.head.appendChild(style);
 
     try {
-      const result = Keyframes.getAllStyleSheetKeyframesRules({
+      const result = KeyframeKit.getAllStyleSheetKeyframesRules({
         in: document.styleSheets
       });
-      expect(result['bounce']).toBeInstanceOf(ParsedKeyframes);
+      expect(result['bounce']).toBeInstanceOf(KeyframeKit.ParsedKeyframes);
     } finally {
       document.head.removeChild(style);
     }
@@ -54,8 +54,8 @@ describe('getAllStyleSheetKeyframesRules', () => {
 
   it('throws SourceTypeError for invalid source', () => {
     expect(() => {
-      Keyframes.getAllStyleSheetKeyframesRules({ in: 'bad' as any });
-    }).toThrow(Keyframes.Error.SourceTypeError);
+      KeyframeKit.getAllStyleSheetKeyframesRules({ in: 'bad' as any });
+    }).toThrow(KeyframeKit.SourceTypeError);
   });
 
 });

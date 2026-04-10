@@ -1,6 +1,6 @@
 import { describe, it, expect, assert } from 'vitest';
-import Keyframes from '../../src/index';
-import { createStyleSheet } from '../helpers';
+import KeyframeKit from '../../../src/index';
+import { createStyleSheet } from './createStyleSheet-helper';
 
 
 describe('parseKeyframesRule - property name conversion', () => {
@@ -13,7 +13,7 @@ describe('parseKeyframesRule - property name conversion', () => {
       }
     `);
 
-    const result = Keyframes.getStyleSheetKeyframes({ of: 'test', in: sheet });
+    const result = KeyframeKit.getStyleSheetKeyframes({ of: 'test', in: sheet });
     assert(result);
     expect(result.keyframes[0]).toHaveProperty('backgroundColor');
   });
@@ -26,7 +26,7 @@ describe('parseKeyframesRule - property name conversion', () => {
       }
     `);
 
-    const result = Keyframes.getStyleSheetKeyframes({ of: 'test', in: sheet });
+    const result = KeyframeKit.getStyleSheetKeyframes({ of: 'test', in: sheet });
     assert(result);
     expect(result.keyframes[0]).toHaveProperty('cssFloat');
   });
@@ -39,7 +39,7 @@ describe('parseKeyframesRule - property name conversion', () => {
       }
     `);
 
-    const result = Keyframes.getStyleSheetKeyframes({ of: 'test', in: sheet });
+    const result = KeyframeKit.getStyleSheetKeyframes({ of: 'test', in: sheet });
     assert(result);
     expect(result.keyframes[0]).toHaveProperty('--my-color');
   });
@@ -52,7 +52,7 @@ describe('parseKeyframesRule - property name conversion', () => {
       }
     `);
 
-    const result = Keyframes.getStyleSheetKeyframes({ of: 'test', in: sheet });
+    const result = KeyframeKit.getStyleSheetKeyframes({ of: 'test', in: sheet });
     assert(result);
     // Browser may normalize -webkit- properties; check that the result is valid camelCase
     const keys = Object.keys(result.keyframes[0]).filter(k => k !== 'offset');
@@ -71,7 +71,7 @@ describe('parseKeyframesRule - property name conversion', () => {
       }
     `);
 
-    const result = Keyframes.getStyleSheetKeyframes({ of: 'test', in: sheet });
+    const result = KeyframeKit.getStyleSheetKeyframes({ of: 'test', in: sheet });
     assert(result);
     expect(result.keyframes[0]).toHaveProperty('borderTopLeftRadius');
   });
@@ -92,7 +92,7 @@ describe('parseKeyframesRule - offset conversion', () => {
       }
     `);
 
-    const result = Keyframes.getStyleSheetKeyframes({ of: 'test', in: sheet });
+    const result = KeyframeKit.getStyleSheetKeyframes({ of: 'test', in: sheet });
     assert(result);
     const offsets = result.keyframes.map(k => k.offset);
     expect(offsets).toEqual([0, 0.25, 0.5, 0.75, 1]);
@@ -106,7 +106,7 @@ describe('parseKeyframesRule - offset conversion', () => {
       }
     `);
 
-    const result = Keyframes.getStyleSheetKeyframes({ of: 'test', in: sheet });
+    const result = KeyframeKit.getStyleSheetKeyframes({ of: 'test', in: sheet });
     assert(result);
     expect(result.keyframes[0]).toMatchObject({
       offset: 0,

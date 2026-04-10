@@ -37,6 +37,21 @@
 }
 
 
+.vp-doc h1 .subheader {
+  margin: 26px 0 0;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+  line-height: 28px;
+  font-size: 20px;
+  color: var(--vp-c-text-2);
+}
+
+
+:root {
+  --vp-sidebar-width: 320px;
+}
+
+
 .VPLocalSearchBox {
 
   .shell {

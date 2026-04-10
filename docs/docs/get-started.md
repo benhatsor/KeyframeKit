@@ -120,6 +120,14 @@ attachedAnim.play();
 
 This library is fully compatable with native JS, but it also has full spec-compliant type support, including declaration files and source maps.
 
+## Developing
+
+```sh
+npm install
+npm run build
+npm run test
+```
+
 ## License
 
 [MIT](https://github.com/benhatsor/KeyframeKit/blob/main/LICENSE)

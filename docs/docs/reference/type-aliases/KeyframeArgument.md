@@ -1,12 +1,14 @@
 [KeyframeKit](../index.md) / KeyframeArgument
 
-# Type Alias: KeyframeArgument
+# <div class="subheader"> Type Alias</div>KeyframeArgument
 
 ```ts
 type KeyframeArgument = Keyframe[] | PropertyIndexedKeyframes;
 ```
 
-https://drafts.csswg.org/web-animations-1/#processing-a-keyframes-argument
+## See
+
+[Web Animations Module Level 1 - Processing a keyframes argument](https://drafts.csswg.org/web-animations-1/#processing-a-keyframes-argument)
 
 ## See Also
 
