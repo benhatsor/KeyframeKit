@@ -6,5 +6,6 @@
   "automerge": true,
   "includePaths": [
     "src/**"
-  ]
+  ],
+  "dependencyDashboard": false
 }
