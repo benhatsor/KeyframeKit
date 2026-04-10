@@ -7,7 +7,7 @@
   "rangeStrategy": "bump",
   "includePaths": [
     "package.json",
-    ".github/workflows"
+    ".github/workflows/**"
   ],
   "dependencyDashboard": false
 }
