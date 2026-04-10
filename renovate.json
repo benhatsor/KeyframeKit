@@ -5,7 +5,7 @@
   ],
   "automerge": true,
   "includePaths": [
-    "src/**"
+    "package.json"
   ],
   "dependencyDashboard": false
 }
