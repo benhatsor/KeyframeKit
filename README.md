@@ -117,12 +117,9 @@ const attachedAnim = linkTextHoverAnim.toAnimation({
 attachedAnim.play();
 ```
 
-### Full reference
+## Reference
+
 [See here.][7]
-
-## Typing
-
-This library is fully compatable with native JS, but it also has full spec-compliant type support, including declaration files and source maps.
 
 ## License
 
