@@ -1,6 +1,6 @@
 {
   "name": "keyframekit",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Unlock full playback control over your CSS animations.",
   "author": "Ben Hatsor",
   "license": "MIT",
@@ -23,7 +23,6 @@
     "performance",
     "typescript"
   ],
-
   "type": "module",
   "exports": {
     ".": {
@@ -35,7 +34,6 @@
   "files": [
     "dist"
   ],
-
   "scripts": {
     "build": "rollup -c rollup.config.ts",
     "dev": "rollup -c rollup.config.ts --watch",
@@ -45,7 +43,6 @@
     "docs:bump": "npm --prefix docs run bump",
     "docs:dev": "npm --prefix docs run dev"
   },
-
   "devDependencies": {
     "@rollup/plugin-terser": "^1.0.0",
     "@rollup/plugin-typescript": "^12.3.0",
