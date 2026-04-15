@@ -74,9 +74,7 @@ function getAllStyleSheetKeyframesRulesInStyleSheet({ styleSheet }: {
       continue;
     }
 
-    const keyframes = parseKeyframesRule({
-      rule: rule
-    });
+    const keyframes = parseKeyframesRule(rule);
 
     keyframesRules[rule.name] = keyframes;
 

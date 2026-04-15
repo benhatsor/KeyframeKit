@@ -82,7 +82,6 @@ declare class KeyframeEffectParameters {
      *   [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#options)
      *  @param obj.timeline The timeline with which to associate the animation.
      *   [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/Animation/Animation#timeline)
-     *
      * @see
      *  - [Web Animations Module Level 1 - The KeyframeEffect interface](https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface)
      *  - [Web Animations Module Level 1 - The Animation interface](https://drafts.csswg.org/web-animations-1/#the-animation-interface)
@@ -146,13 +145,10 @@ declare function getAllStyleSheetKeyframesRules({ in: source }: {
 
 /**
  * Converts a CSS keyframes rule to Web Animations API keyframes.
- * @param obj
- *  @param obj.rule The rule to convert.
+ * @param keyframesRule The rule to convert.
  * @group Parsing Stylesheet Keyframes
  */
-declare function parseKeyframesRule({ rule: keyframes }: {
-    rule: CSSKeyframesRule;
-}): ParsedKeyframes;
+declare function parseKeyframesRule(keyframesRule: CSSKeyframesRule): ParsedKeyframes;
 
 /**
  * @module KeyframesFactory

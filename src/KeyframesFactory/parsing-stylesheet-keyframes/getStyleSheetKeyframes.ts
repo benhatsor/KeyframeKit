@@ -82,9 +82,7 @@ function getStyleSheetKeyframesInStyleSheet({ of: ruleName, styleSheet }: {
 
     if (rule.name === ruleName) {
 
-      const keyframes = parseKeyframesRule({
-        rule: rule
-      });
+      const keyframes = parseKeyframesRule(rule);
 
       return keyframes;
 

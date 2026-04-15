@@ -12,13 +12,14 @@ const CHARS = {
 
 /**
  * Converts a CSS keyframes rule to Web Animations API keyframes.
- * @param obj
- *  @param obj.rule The rule to convert.
+ * @param keyframesRule The rule to convert.
  * @group Parsing Stylesheet Keyframes
  */
-export function parseKeyframesRule({ rule: keyframes }: {
-  rule: CSSKeyframesRule
-}): ParsedKeyframes {
+export function parseKeyframesRule(
+  keyframesRule: CSSKeyframesRule
+): ParsedKeyframes {
+
+  const keyframes = keyframesRule;
 
   let parsedKeyframes: Keyframe[] = [];
 

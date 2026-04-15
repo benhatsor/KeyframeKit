@@ -3,18 +3,14 @@
 # <div class="subheader"> Function</div>parseKeyframesRule()
 
 ```ts
-function parseKeyframesRule(obj: {
-  rule: CSSKeyframesRule;
-}): ParsedKeyframes;
+function parseKeyframesRule(keyframesRule: CSSKeyframesRule): ParsedKeyframes;
 ```
 
 Converts a CSS keyframes rule to Web Animations API keyframes.
 
 ## Parameters
 
-### obj
-
-#### rule
+### keyframesRule
 
 [`CSSKeyframesRule`](https://developer.mozilla.org/docs/Web/API/CSSKeyframesRule)
 

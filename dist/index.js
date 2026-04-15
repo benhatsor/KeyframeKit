@@ -109,7 +109,6 @@ class KeyframeEffectParameters {
      *   [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#options)
      *  @param obj.timeline The timeline with which to associate the animation.
      *   [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/Animation/Animation#timeline)
-     *
      * @see
      *  - [Web Animations Module Level 1 - The KeyframeEffect interface](https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface)
      *  - [Web Animations Module Level 1 - The Animation interface](https://drafts.csswg.org/web-animations-1/#the-animation-interface)
@@ -170,11 +169,11 @@ const CHARS = {
 };
 /**
  * Converts a CSS keyframes rule to Web Animations API keyframes.
- * @param obj
- *  @param obj.rule The rule to convert.
+ * @param keyframesRule The rule to convert.
  * @group Parsing Stylesheet Keyframes
  */
-function parseKeyframesRule({ rule: keyframes }) {
+function parseKeyframesRule(keyframesRule) {
+    const keyframes = keyframesRule;
     let parsedKeyframes = [];
     for (const keyframe of keyframes) {
         // remove trailing '%'
@@ -298,9 +297,7 @@ function getStyleSheetKeyframesInStyleSheet({ of: ruleName, styleSheet }) {
             continue;
         }
         if (rule.name === ruleName) {
-            const keyframes = parseKeyframesRule({
-                rule: rule
-            });
+            const keyframes = parseKeyframesRule(rule);
             return keyframes;
         }
     }
@@ -350,9 +347,7 @@ function getAllStyleSheetKeyframesRulesInStyleSheet({ styleSheet }) {
         if (!(rule instanceof CSSKeyframesRule)) {
             continue;
         }
-        const keyframes = parseKeyframesRule({
-            rule: rule
-        });
+        const keyframes = parseKeyframesRule(rule);
         keyframesRules[rule.name] = keyframes;
     }
     return keyframesRules;
