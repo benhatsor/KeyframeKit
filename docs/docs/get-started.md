@@ -3,7 +3,7 @@
 
 ## What is this?
 
-A lightweight TypeScript library that converts CSS `@keyframes` animations into [Web Animations API][2]-compatible animations, letting you play CSS-defined animations from JavaScript with full playback control and native performance. [Read more.][3]
+A lightweight TypeScript library that converts CSS `@keyframes` animations into [Web Animations API][1]-compatible animations, letting you play CSS-defined animations from JavaScript with full playback control and native performance. [Read more.][2]
 
 ## Installation
 
