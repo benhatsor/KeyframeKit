@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: KeyframeKit
-  tagline: Unlock full playback control over your CSS animations.
+  tagline: Unlock full playback control over your CSS animations with JavaScript.
   actions:
     - theme: brand
       text: Get Started

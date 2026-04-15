@@ -1,7 +1,7 @@
 {
   "name": "keyframekit",
   "version": "1.2.4",
-  "description": "Unlock full playback control over your CSS animations.",
+  "description": "Unlock full playback control over your CSS animations with JavaScript.",
   "author": "Ben Hatsor",
   "license": "MIT",
   "homepage": "https://keyframekit.berryscript.com",

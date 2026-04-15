@@ -1,6 +1,6 @@
 # [<img src="/docs/docs/public/icon.png" width="30px" height="40px"> KeyframeKit][1]
 
-Unlock full playback control over your CSS animations.
+Unlock full playback control over your CSS animations with JavaScript.
 
 [![Minified size](https://img.shields.io/github/size/benhatsor/KeyframeKit/dist/index.min.js)](/dist/index.min.js) [![NPM version](https://img.shields.io/npm/v/keyframekit.svg)](https://www.npmjs.com/package/keyframekit) [![License](https://img.shields.io/github/license/benhatsor/KeyframeKit.svg)](/LICENSE) 
 
