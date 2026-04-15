@@ -42,7 +42,6 @@ export default defineConfig([
     output: {
       file: 'dist/index.d.ts',
       format: 'es',
-      sourcemap: true,
       banner,
       // rollup-plugin-dts dosen't support es2015 syntax.
     },

@@ -5,5 +5,7 @@
  * See README.md for usage.
  */
 
-export * as default from './KeyframesFactory';
+import * as KeyframesFactory from './KeyframesFactory';
+export { KeyframesFactory as default };
+
 export { KeyframeEffectParameters, type KeyframeArgument } from './KeyframeEffectParameters';

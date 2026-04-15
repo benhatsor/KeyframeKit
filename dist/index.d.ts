@@ -181,4 +181,3 @@ declare namespace index {
 
 export { KeyframeEffectParameters, index as default };
 export type { KeyframeArgument };
-//# sourceMappingURL=index.d.ts.map

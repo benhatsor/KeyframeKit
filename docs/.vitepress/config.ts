@@ -35,7 +35,7 @@ export default defineConfig({
   ],
     
   title: 'KeyframeKit',
-  description: 'Unlock fine-grained control over your CSS animations with JavaScript.',
+  description: 'Unlock full playback control over your CSS animations.',
 
   titleTemplate: false,
 

@@ -1,9 +1,9 @@
 
 # Get Started
 
-## About
+## What is this?
 
-The [Web Animations API][1] opens the browser's animation engine to developers and provides unprecedented control and performance when animating on the web. But confusingly, it provides no easy way to use your existing CSS animations with the API. So I wrote a lightweight, typed, spec-compliant library to convert stylesheet keyframes to Web Animations API-compatible animations, letting you play your CSS-defined animations right in JS. [Read more.][2]
+A lightweight TypeScript library that converts CSS `@keyframes` animations into [Web Animations API][2]-compatible animations, letting you play CSS-defined animations from JavaScript with full playback control and native performance. [Read more.][3]
 
 ## Installation
 
