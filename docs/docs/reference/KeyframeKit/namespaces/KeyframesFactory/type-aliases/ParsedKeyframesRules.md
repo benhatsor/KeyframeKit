@@ -1,6 +1,6 @@
 [KeyframeKit](../../../../index.md) / [KeyframesFactory](../index.md) / ParsedKeyframesRules
 
-# <div class="subheader"> Type Alias</div>ParsedKeyframesRules
+# <div class="subheader"> Type Alias</div> ParsedKeyframesRules
 
 ```ts
 type ParsedKeyframesRules = {

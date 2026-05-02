@@ -1,6 +1,6 @@
 [KeyframeKit](../../../../index.md) / [KeyframesFactory](../index.md) / getAllStyleSheetKeyframesRules
 
-# <div class="subheader"> Function</div>getAllStyleSheetKeyframesRules()
+# <div class="subheader"> Function</div> getAllStyleSheetKeyframesRules()
 
 ```ts
 function getAllStyleSheetKeyframesRules(obj: {

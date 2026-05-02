@@ -1,6 +1,6 @@
 [KeyframeKit](../../../../index.md) / [KeyframesFactory](../index.md) / SourceTypeError
 
-# <div class="subheader"> Class</div>SourceTypeError
+# <div class="subheader"> Class</div> SourceTypeError
 
 Thrown if source is not a `CSSStyleSheet` or a `StyleSheetList`.
 

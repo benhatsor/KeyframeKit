@@ -37,6 +37,7 @@
 }
 
 
+/* reference symbol type subheader */
 .vp-doc h1 .subheader {
   margin: 26px 0 0;
   margin-bottom: 10px;
@@ -44,6 +45,20 @@
   line-height: 28px;
   font-size: 20px;
   color: var(--vp-c-text-2);
+}
+
+.vp-doc h1:has(.subheader) .header-anchor {
+  margin-top: 38px;
+}
+
+
+/* badges in get-started.md */
+.vp-doc .badges {
+  display: flex;
+  gap: 4px;
+  img {
+    margin: 0;
+  }
 }
 
 

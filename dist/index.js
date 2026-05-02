@@ -64,7 +64,7 @@ async function waitForDocumentLoad({ document }) {
  *    - Thrown if the stylesheet could not be imported.
  * @remarks
  *  Note: `@import` rules won't be resolved in imported stylesheets.
- *  [See here.](https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-588352418.)
+ *  [See more.](https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-588352418)
  * @group Sourcing Stylesheets
  */
 async function importStyleSheet(url) {

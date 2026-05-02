@@ -2,27 +2,22 @@
  * KeyframeKit
  * @license MIT
  */
+/** @group Data Types */
+declare type CSSStyleSheetSource = CSSStyleSheet | StyleSheetList;
+
 /**
- * Thrown if keyframes rule name is not a string.
- * @group Errors
+ * Gets all the CSS keyframes rules in a stylesheet or stylesheet list,
+ * then converts them to Web Animations API keyframes.
+ * @param obj
+ *  @param obj.in The style sheet or style sheet list to get keyframes from.
+ * @throws
+ *  - {@linkcode SourceTypeError} &nbsp;
+ *    - Thrown if source is not a `CSSStyleSheet` or a `StyleSheetList`.
+ * @group Parsing Stylesheet Keyframes
  */
-declare class KeyframesRuleNameTypeError extends TypeError {
-    message: string;
-}
-/**
- * Thrown if source is not a `CSSStyleSheet` or a `StyleSheetList`.
- * @group Errors
- */
-declare class SourceTypeError extends TypeError {
-    message: string;
-}
-/**
- * Thrown if the stylesheet could not be imported.
- * @group Errors
- */
-declare class StyleSheetImportError extends Error {
-    message: string;
-}
+declare function getAllStyleSheetKeyframesRules({ in: source }: {
+    in: CSSStyleSheetSource;
+}): ParsedKeyframesRules;
 
 /**
  * Gets a document's stylesheets when it loads,
@@ -36,6 +31,24 @@ declare function getDocumentStyleSheetsOnLoad({ document }?: {
 }): Promise<StyleSheetList>;
 
 /**
+ * Gets a CSS keyframes rule from a stylesheet or stylesheet list,
+ * then converts it to Web Animations API keyframes.
+ * @param obj
+ *  @param obj.of The name of the `@keyframes` rule to get keyframes from.
+ *  @param obj.in The stylesheet or stylesheet list where the rule resides.
+ * @throws
+ *  - {@linkcode KeyframesRuleNameTypeError} &nbsp;
+ *    - Thrown if keyframes rule name is not a string.
+ *  - {@linkcode SourceTypeError} &nbsp;
+ *    - Thrown if source is not a `CSSStyleSheet` or a `StyleSheetList`.
+ * @group Parsing Stylesheet Keyframes
+ */
+declare function getStyleSheetKeyframes({ of: ruleName, in: source }: {
+    of: string;
+    in: CSSStyleSheetSource;
+}): ParsedKeyframes | undefined;
+
+/**
  * Imports a stylesheet from a URL.
  * @param url The URL of the stylesheet to import.
  * @throws
@@ -43,7 +56,7 @@ declare function getDocumentStyleSheetsOnLoad({ document }?: {
  *    - Thrown if the stylesheet could not be imported.
  * @remarks
  *  Note: `@import` rules won't be resolved in imported stylesheets.
- *  [See here.](https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-588352418.)
+ *  [See more.](https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-588352418)
  * @group Sourcing Stylesheets
  */
 declare function importStyleSheet(url: string): Promise<CSSStyleSheet>;
@@ -53,14 +66,15 @@ declare function importStyleSheet(url: string): Promise<CSSStyleSheet>;
  *  [Web Animations Module Level 1 - Processing a keyframes argument](https://drafts.csswg.org/web-animations-1/#processing-a-keyframes-argument)
  * @group Defining Animations
  */
-type KeyframeArgument = Keyframe[] | PropertyIndexedKeyframes;
+export declare type KeyframeArgument = Keyframe[] | PropertyIndexedKeyframes;
+
 /**
  * Provides a more convenient way to define animations than is offered natively.
  * @see
  *  [Web Animations Module Level 1 - The KeyframeEffect interface](https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface)
  * @group Defining Animations
  */
-declare class KeyframeEffectParameters {
+export declare class KeyframeEffectParameters {
     #private;
     keyframes: KeyframeArgument;
     options: KeyframeEffectOptions;
@@ -93,6 +107,31 @@ declare class KeyframeEffectParameters {
     }): Animation;
 }
 
+declare namespace KeyframesFactory {
+    export {
+        getDocumentStyleSheetsOnLoad,
+        importStyleSheet,
+        getStyleSheetKeyframes,
+        getAllStyleSheetKeyframesRules,
+        parseKeyframesRule,
+        ParsedKeyframes,
+        ParsedKeyframesRules,
+        CSSStyleSheetSource,
+        KeyframesRuleNameTypeError,
+        SourceTypeError,
+        StyleSheetImportError
+    }
+}
+export default KeyframesFactory;
+
+/**
+ * Thrown if keyframes rule name is not a string.
+ * @group Errors
+ */
+declare class KeyframesRuleNameTypeError extends TypeError {
+    message: string;
+}
+
 /** @group Data Types */
 declare class ParsedKeyframes {
     keyframes: Keyframe[];
@@ -103,45 +142,11 @@ declare class ParsedKeyframes {
      */
     toKeyframeEffect(options: number | KeyframeEffectOptions | null): KeyframeEffectParameters;
 }
+
 /** @group Data Types */
-type ParsedKeyframesRules = {
+declare type ParsedKeyframesRules = {
     [ruleName: string]: ParsedKeyframes;
 };
-
-/** @group Data Types */
-type CSSStyleSheetSource = CSSStyleSheet | StyleSheetList;
-
-/**
- * Gets a CSS keyframes rule from a stylesheet or stylesheet list,
- * then converts it to Web Animations API keyframes.
- * @param obj
- *  @param obj.of The name of the `@keyframes` rule to get keyframes from.
- *  @param obj.in The stylesheet or stylesheet list where the rule resides.
- * @throws
- *  - {@linkcode KeyframesRuleNameTypeError} &nbsp;
- *    - Thrown if keyframes rule name is not a string.
- *  - {@linkcode SourceTypeError} &nbsp;
- *    - Thrown if source is not a `CSSStyleSheet` or a `StyleSheetList`.
- * @group Parsing Stylesheet Keyframes
- */
-declare function getStyleSheetKeyframes({ of: ruleName, in: source }: {
-    of: string;
-    in: CSSStyleSheetSource;
-}): ParsedKeyframes | undefined;
-
-/**
- * Gets all the CSS keyframes rules in a stylesheet or stylesheet list,
- * then converts them to Web Animations API keyframes.
- * @param obj
- *  @param obj.in The style sheet or style sheet list to get keyframes from.
- * @throws
- *  - {@linkcode SourceTypeError} &nbsp;
- *    - Thrown if source is not a `CSSStyleSheet` or a `StyleSheetList`.
- * @group Parsing Stylesheet Keyframes
- */
-declare function getAllStyleSheetKeyframesRules({ in: source }: {
-    in: CSSStyleSheetSource;
-}): ParsedKeyframesRules;
 
 /**
  * Converts a CSS keyframes rule to Web Animations API keyframes.
@@ -151,29 +156,19 @@ declare function getAllStyleSheetKeyframesRules({ in: source }: {
 declare function parseKeyframesRule(keyframesRule: CSSKeyframesRule): ParsedKeyframes;
 
 /**
- * @module KeyframesFactory
- * @group Default Export
+ * Thrown if source is not a `CSSStyleSheet` or a `StyleSheetList`.
+ * @group Errors
  */
-
-type index_CSSStyleSheetSource = CSSStyleSheetSource;
-type index_KeyframesRuleNameTypeError = KeyframesRuleNameTypeError;
-declare const index_KeyframesRuleNameTypeError: typeof KeyframesRuleNameTypeError;
-type index_ParsedKeyframes = ParsedKeyframes;
-declare const index_ParsedKeyframes: typeof ParsedKeyframes;
-type index_ParsedKeyframesRules = ParsedKeyframesRules;
-type index_SourceTypeError = SourceTypeError;
-declare const index_SourceTypeError: typeof SourceTypeError;
-type index_StyleSheetImportError = StyleSheetImportError;
-declare const index_StyleSheetImportError: typeof StyleSheetImportError;
-declare const index_getAllStyleSheetKeyframesRules: typeof getAllStyleSheetKeyframesRules;
-declare const index_getDocumentStyleSheetsOnLoad: typeof getDocumentStyleSheetsOnLoad;
-declare const index_getStyleSheetKeyframes: typeof getStyleSheetKeyframes;
-declare const index_importStyleSheet: typeof importStyleSheet;
-declare const index_parseKeyframesRule: typeof parseKeyframesRule;
-declare namespace index {
-  export { index_KeyframesRuleNameTypeError as KeyframesRuleNameTypeError, index_ParsedKeyframes as ParsedKeyframes, index_SourceTypeError as SourceTypeError, index_StyleSheetImportError as StyleSheetImportError, index_getAllStyleSheetKeyframesRules as getAllStyleSheetKeyframesRules, index_getDocumentStyleSheetsOnLoad as getDocumentStyleSheetsOnLoad, index_getStyleSheetKeyframes as getStyleSheetKeyframes, index_importStyleSheet as importStyleSheet, index_parseKeyframesRule as parseKeyframesRule };
-  export type { index_CSSStyleSheetSource as CSSStyleSheetSource, index_ParsedKeyframesRules as ParsedKeyframesRules };
+declare class SourceTypeError extends TypeError {
+    message: string;
 }
 
-export { KeyframeEffectParameters, index as default };
-export type { KeyframeArgument };
+/**
+ * Thrown if the stylesheet could not be imported.
+ * @group Errors
+ */
+declare class StyleSheetImportError extends Error {
+    message: string;
+}
+
+export { }

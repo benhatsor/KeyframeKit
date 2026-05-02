@@ -1,9 +1,15 @@
+# KeyframeKit
 
-# Get Started
+Unlock full playback control over your CSS animations with JavaScript.
+
+[![NPM version][npm-version-src]][npm-version-href] 
+[![Minified size][minified-size-src]][minified-size-href] 
+[![CI][ci-src]][ci-href]
+{class=badges}
 
 ## What is this?
 
-A lightweight TypeScript library that converts CSS `@keyframes` animations into [Web Animations API][1]-compatible animations, letting you play CSS-defined animations from JavaScript with full playback control and native performance. [Read more.][2]
+A lightweight TypeScript library that converts CSS `@keyframes` animations into [Web Animations API]-compatible animations, letting you play CSS-defined animations from JavaScript with full playback control and native performance. [Read more.][KeyframeKit article]
 
 ## Installation
 
@@ -13,7 +19,7 @@ npm install keyframekit
 ```
 ```js [CDN]
 /* Import the module directly: */
-import KeyframeKit from 'https://unpkg.com/keyframekit'
+import KeyframeKit from 'https://cdn.jsdelivr.net/npm/keyframekit/dist/index.min.js'
 ```
 :::
 
@@ -59,7 +65,7 @@ attachedAnim.playbackRate = -1;
 const progress = attachedAnim.overallProgress; // 0 to 1 (Baseline newly available)
 await attachedAnim.finished;
 ```
-[...and more.][3]
+[...and more.][Using the Web Animations API (MDN)]
 
 ### Importing animations directly from a CSS file
 
@@ -77,11 +83,11 @@ const rotateSmallAnimKeyframes = KeyframeKit.getStyleSheetKeyframes({
 });
 ```
 
-> Note: This won't resolve any `@import` rules in the stylesheet. [See more.][4]
+> Note: `@import` rules won't be resolved in imported stylesheets. [See more.][Imported stylesheet @import issue]
 
 ### Defining animations in JS
 
-The [`KeyframeEffectParameters`](reference/classes/KeyframeEffectParameters.md) class provides a more convenient way to define your animations in JS than is offered natively.  
+The [`KeyframeEffectParameters`] class provides a more convenient way to define your animations in JS than is offered natively.  
 It's useful for when you want to have all your animation code in one place.
 
 ```js
@@ -115,14 +121,26 @@ attachedAnim.play();
 
 ## Reference
 
-[See here.](/reference/index.md)
+[See here.][KeyframeKit Reference]
 
 ## License
 
-[MIT](https://github.com/benhatsor/KeyframeKit/blob/main/LICENSE)
+[MIT][KeyframeKit License]
 
 
-[1]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API
-[2]: https://benhatsor.medium.com/99573ef4738b
-[3]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API
-[4]: https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-588352418
+<!-- References -->
+[Web Animations API]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API
+[KeyframeKit article]: https://benhatsor.medium.com/99573ef4738b
+[Using the Web Animations API (MDN)]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API
+[Imported stylesheet @import issue]: https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-588352418
+[`KeyframeEffectParameters`]: /reference/classes/KeyframeEffectParameters
+[KeyframeKit Reference]: /reference/
+[KeyframeKit License]: https://github.com/benhatsor/KeyframeKit/blob/main/LICENSE
+
+<!-- Badges -->
+[minified-size-src]: https://img.shields.io/github/size/benhatsor/KeyframeKit/dist/index.min.js
+[minified-size-href]: https://github.com/benhatsor/KeyframeKit/blob/main/dist/index.min.js
+[npm-version-src]: https://img.shields.io/npm/v/keyframekit.svg
+[npm-version-href]: https://www.npmjs.com/package/keyframekit
+[ci-src]: https://github.com/benhatsor/KeyframeKit/actions/workflows/ci.yml/badge.svg
+[ci-href]: https://github.com/benhatsor/KeyframeKit/actions/workflows/ci.yml

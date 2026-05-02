@@ -1,6 +1,6 @@
 [KeyframeKit](../index.md) / KeyframeArgument
 
-# <div class="subheader"> Type Alias</div>KeyframeArgument
+# <div class="subheader"> Type Alias</div> KeyframeArgument
 
 ```ts
 type KeyframeArgument = Keyframe[] | PropertyIndexedKeyframes;

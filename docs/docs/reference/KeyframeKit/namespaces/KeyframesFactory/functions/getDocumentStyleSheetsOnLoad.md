@@ -1,6 +1,6 @@
 [KeyframeKit](../../../../index.md) / [KeyframesFactory](../index.md) / getDocumentStyleSheetsOnLoad
 
-# <div class="subheader"> Function</div>getDocumentStyleSheetsOnLoad()
+# <div class="subheader"> Function</div> getDocumentStyleSheetsOnLoad()
 
 ```ts
 function getDocumentStyleSheetsOnLoad(obj?: {

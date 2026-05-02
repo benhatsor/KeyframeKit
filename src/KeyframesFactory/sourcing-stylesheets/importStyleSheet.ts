@@ -10,7 +10,7 @@ import { StyleSheetImportError } from '../errors';
  *    - Thrown if the stylesheet could not be imported.
  * @remarks
  *  Note: `@import` rules won't be resolved in imported stylesheets.
- *  [See here.](https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-588352418.)
+ *  [See more.](https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-588352418)
  * @group Sourcing Stylesheets
  */
 export async function importStyleSheet(url: string) {

@@ -1,6 +1,6 @@
 [KeyframeKit](../index.md) / KeyframeEffectParameters
 
-# <div class="subheader"> Class</div>KeyframeEffectParameters
+# <div class="subheader"> Class</div> KeyframeEffectParameters
 
 Provides a more convenient way to define animations than is offered natively.
 

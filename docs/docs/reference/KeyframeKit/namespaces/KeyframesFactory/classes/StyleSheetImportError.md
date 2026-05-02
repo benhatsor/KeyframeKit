@@ -1,6 +1,6 @@
 [KeyframeKit](../../../../index.md) / [KeyframesFactory](../index.md) / StyleSheetImportError
 
-# <div class="subheader"> Class</div>StyleSheetImportError
+# <div class="subheader"> Class</div> StyleSheetImportError
 
 Thrown if the stylesheet could not be imported.
 

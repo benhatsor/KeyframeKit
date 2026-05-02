@@ -35,11 +35,12 @@
     "dist"
   ],
   "scripts": {
-    "build": "rollup -c rollup.config.ts",
-    "dev": "rollup -c rollup.config.ts --watch",
-    "test": "vitest run",
+    "build": "rollup -c",
+    "dev": "rollup -c --watch",
+    "test": "vitest run --project test",
+    "coverage": "vitest run --project coverage --coverage",
     "typecheck": "tsc --noEmit",
-    "prepublishOnly": "npm run build",
+    "release": "bumpp",
     "docs:bump": "npm --prefix docs run bump",
     "docs:dev": "npm --prefix docs run dev"
   },
@@ -47,8 +48,12 @@
     "@rollup/plugin-terser": "^1.0.0",
     "@rollup/plugin-typescript": "^12.3.0",
     "@vitest/browser-playwright": "^4.1.4",
+    "@vitest/coverage-v8": "^4.1.4",
+    "bumpp": "^11.0.1",
+    "conventional-changelog": "^7.2.0",
+    "conventional-changelog-angular": "^8.3.1",
     "rollup": "^4.60.1",
-    "rollup-plugin-dts": "^6.4.1",
+    "rollup-dts-bundler": "^1.0.0",
     "typescript": "^6.0.2",
     "vitest": "^4.1.4"
   }

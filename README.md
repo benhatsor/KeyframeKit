@@ -1,12 +1,14 @@
-# [<img src="/docs/docs/public/icon.png" width="30px" height="40px"> KeyframeKit][1]
+# [<img src="/docs/docs/public/icon.png" width="30px" height="40px"> KeyframeKit][KeyframeKit]
 
 Unlock full playback control over your CSS animations with JavaScript.
 
-[![Minified size](https://img.shields.io/github/size/benhatsor/KeyframeKit/dist/index.min.js)](/dist/index.min.js) [![NPM version](https://img.shields.io/npm/v/keyframekit.svg)](https://www.npmjs.com/package/keyframekit) [![License](https://img.shields.io/github/license/benhatsor/KeyframeKit.svg)](/LICENSE) 
+[![NPM version][npm-version-src]][npm-version-href]
+[![Minified size][minified-size-src]][minified-size-href]
+[![CI][ci-src]][ci-href]
 
 ## What is this?
 
-A lightweight TypeScript library that converts CSS `@keyframes` animations into [Web Animations API][2]-compatible animations, letting you play CSS-defined animations from JavaScript with full playback control and native performance. [Read more.][3]
+A lightweight TypeScript library that converts CSS `@keyframes` animations into [Web Animations API]-compatible animations, letting you play CSS-defined animations from JavaScript with full playback control and native performance. [Read more.][KeyframeKit article]
 
 ## Installation
 
@@ -18,7 +20,7 @@ npm install keyframekit
 ### CDN
 Import the module directly:
 ```js
-import KeyframeKit from 'https://unpkg.com/keyframekit'
+import KeyframeKit from 'https://cdn.jsdelivr.net/npm/keyframekit/dist/index.min.js'
 ```
 
 ## Usage
@@ -63,7 +65,7 @@ attachedAnim.playbackRate = -1;
 const progress = attachedAnim.overallProgress; // 0 to 1 (Baseline newly available)
 await attachedAnim.finished;
 ```
-[...and more.][4]
+[...and more.][Using the Web Animations API (MDN)]
 
 ### Importing animations directly from a CSS file
 
@@ -81,11 +83,11 @@ const rotateSmallAnimKeyframes = KeyframeKit.getStyleSheetKeyframes({
 });
 ```
 
-> Note: This won't resolve any `@import` rules in the stylesheet. [See more.][5]
+> Note: `@import` rules won't be resolved in imported stylesheets. [See more.][Imported stylesheet @import issue]
 
 ### Defining animations in JS
 
-The [`KeyframeEffectParameters`][6] class provides a more convenient way to define your animations in JS than is offered natively.  
+The [`KeyframeEffectParameters`] class provides a more convenient way to define your animations in JS than is offered natively.  
 It's useful for when you want to have all your animation code in one place.
 
 ```js
@@ -119,17 +121,27 @@ attachedAnim.play();
 
 ## Reference
 
-[See here.][7]
+[See here.][KeyframeKit Reference]
 
 ## License
 
-[MIT](LICENSE)
+[MIT][KeyframeKit License]
 
 
-[1]: https://keyframekit.berryscript.com
-[2]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API
-[3]: https://benhatsor.medium.com/99573ef4738b
-[4]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API
-[5]: https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-588352418
-[6]: https://keyframekit.berryscript.com/reference/classes/KeyframeEffectParameters
-[7]: https://keyframekit.berryscript.com/reference
+<!-- References -->
+[KeyframeKit]: https://keyframekit.berryscript.com
+[Web Animations API]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API
+[KeyframeKit article]: https://benhatsor.medium.com/99573ef4738b
+[Using the Web Animations API (MDN)]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API
+[Imported stylesheet @import issue]: https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-588352418
+[`KeyframeEffectParameters`]: https://keyframekit.berryscript.com/reference/classes/KeyframeEffectParameters
+[KeyframeKit Reference]: https://keyframekit.berryscript.com/reference
+[KeyframeKit License]: ./LICENSE
+
+<!-- Badges -->
+[minified-size-src]: https://img.shields.io/github/size/benhatsor/KeyframeKit/dist/index.min.js
+[minified-size-href]: /dist/index.min.js
+[npm-version-src]: https://img.shields.io/npm/v/keyframekit.svg
+[npm-version-href]: https://www.npmjs.com/package/keyframekit
+[ci-src]: https://github.com/benhatsor/KeyframeKit/actions/workflows/ci.yml/badge.svg
+[ci-href]: https://github.com/benhatsor/KeyframeKit/actions/workflows/ci.yml

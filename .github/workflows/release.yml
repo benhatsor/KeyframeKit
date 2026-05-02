@@ -1,0 +1,50 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+
+# Queue release jobs so they always release in order
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    env:
+      # Skip unnecessary browser download in `npm ci`
+      PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+
+    permissions:
+      contents: write # To write the GitHub release
+      id-token: write # To publish to NPM with provenance
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          # Fetch full branch/tag history for conventional-changelog
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 'lts/*'
+          cache: npm
+          registry-url: https://registry.npmjs.org
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      # Auto-generate changelog and publish with provenance
+      - name: Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          npm publish --provenance --access public
+          npx conventional-changelog -p angular \
+            | gh release create "$GITHUB_REF_NAME" -F -

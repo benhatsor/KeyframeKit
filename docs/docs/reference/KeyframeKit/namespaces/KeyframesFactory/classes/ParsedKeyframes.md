@@ -1,6 +1,6 @@
 [KeyframeKit](../../../../index.md) / [KeyframesFactory](../index.md) / ParsedKeyframes
 
-# <div class="subheader"> Class</div>ParsedKeyframes
+# <div class="subheader"> Class</div> ParsedKeyframes
 
 ## Constructors
 
@@ -32,10 +32,10 @@ toKeyframeEffect(options: number | KeyframeEffectOptions | null): KeyframeEffect
 
 ##### options
 
+`number` \| `KeyframeEffectOptions` \| `null`
+
 Keyframe effect options.
  [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#options)
-
-`number` | `KeyframeEffectOptions` | `null`
 
 #### Returns
 

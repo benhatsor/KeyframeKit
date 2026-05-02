@@ -1,7 +1,7 @@
 import { defineConfig } from 'rollup'
 import typescript from '@rollup/plugin-typescript'
 import terser from '@rollup/plugin-terser'
-import dts from 'rollup-plugin-dts'
+import { dts } from 'rollup-dts-bundler'
 
 const banner = `
 /**
@@ -43,7 +43,6 @@ export default defineConfig([
       file: 'dist/index.d.ts',
       format: 'es',
       banner,
-      // rollup-plugin-dts dosen't support es2015 syntax.
     },
     plugins: [dts()],
   },

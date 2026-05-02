@@ -1,6 +1,6 @@
 [KeyframeKit](../../../../index.md) / [KeyframesFactory](../index.md) / CSSStyleSheetSource
 
-# <div class="subheader"> Type Alias</div>CSSStyleSheetSource
+# <div class="subheader"> Type Alias</div> CSSStyleSheetSource
 
 ```ts
 type CSSStyleSheetSource = CSSStyleSheet | StyleSheetList;

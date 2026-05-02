@@ -1,6 +1,6 @@
 [KeyframeKit](../../../../index.md) / [KeyframesFactory](../index.md) / importStyleSheet
 
-# <div class="subheader"> Function</div>importStyleSheet()
+# <div class="subheader"> Function</div> importStyleSheet()
 
 ```ts
 function importStyleSheet(url: string): Promise<CSSStyleSheet>;
@@ -28,4 +28,4 @@ The URL of the stylesheet to import.
 ## Remarks
 
 Note: `@import` rules won't be resolved in imported stylesheets.
- [See here.](https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-588352418.)
+ [See more.](https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-588352418)

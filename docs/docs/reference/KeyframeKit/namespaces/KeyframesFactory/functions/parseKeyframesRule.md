@@ -1,6 +1,6 @@
 [KeyframeKit](../../../../index.md) / [KeyframesFactory](../index.md) / parseKeyframesRule
 
-# <div class="subheader"> Function</div>parseKeyframesRule()
+# <div class="subheader"> Function</div> parseKeyframesRule()
 
 ```ts
 function parseKeyframesRule(keyframesRule: CSSKeyframesRule): ParsedKeyframes;

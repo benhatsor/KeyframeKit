@@ -72,7 +72,7 @@ export default {
   },
 
   "pageTitleTemplates": {
-    "member": `<div class="subheader">{keyword} {kind}</div>{name}`
+    "member": `<div class="subheader">{keyword} {kind}</div> {name}`
   },
 
   "groupOrder": ["Default Export", "Sourcing Stylesheets", "Parsing Stylesheet Keyframes", "Data Types", "Errors"],

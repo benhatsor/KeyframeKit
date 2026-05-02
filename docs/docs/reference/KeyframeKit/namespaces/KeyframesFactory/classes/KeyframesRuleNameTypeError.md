@@ -1,6 +1,6 @@
 [KeyframeKit](../../../../index.md) / [KeyframesFactory](../index.md) / KeyframesRuleNameTypeError
 
-# <div class="subheader"> Class</div>KeyframesRuleNameTypeError
+# <div class="subheader"> Class</div> KeyframesRuleNameTypeError
 
 Thrown if keyframes rule name is not a string.
 
