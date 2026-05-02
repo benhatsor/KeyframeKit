@@ -2,7 +2,8 @@ name: Release
 
 on:
   push:
-    tags: ['v*']
+    tags: 
+      - 'v*'
 
 # Queue release jobs so they always release in order
 concurrency:
