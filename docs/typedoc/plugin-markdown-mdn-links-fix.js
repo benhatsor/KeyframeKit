@@ -13,10 +13,7 @@ export function load(app) {
 
     context.partials.unionType = (model) => { return unionType(context, model) };
 
-    // console.log(context);
-
     return '';
-    // return `**Generated using "page.begin" hook**`;
 
   });
 
@@ -30,7 +27,6 @@ function unionType(
   thiss,
   model,
 ) {
-  // const useCodeBlocks = thiss.options.getValue('useCodeBlocks');
   const typesOut = model.types.map((unionType) =>
     thiss.partials.someType(unionType, { forceCollapse: true }),
   );
@@ -38,6 +34,5 @@ function unionType(
     useCodeBlocks &&
     (typesOut?.join('').length > 70 || typesOut?.join('').includes('\n')); */
   const md = typesOut.join(` \\| `); // typesOut.join(shouldFormat ? `\n  \\| ` : ` \\| `);
-  // console.log(md);
   return md; // shouldFormat ? `\n  \\| ` + md : md;
 }

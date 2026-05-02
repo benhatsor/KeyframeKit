@@ -141,7 +141,7 @@ export function playground(props, previewFrame, getDefaultExample, interFontDec)
     updatePreview()
 
 
-    //const monaco = await import('monaco-editor')
+    // const monaco = await import('monaco-editor')
 
     loader.config({
       paths: {

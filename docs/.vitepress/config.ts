@@ -1,5 +1,4 @@
 import { defineConfig } from 'vitepress'
-//import monacoEditorPlugin from 'vite-plugin-monaco-editor'
 
 import referenceNavigationItems from './referenceNavigation.ts';
 
@@ -142,18 +141,13 @@ export default defineConfig({
     }
   },
 
+  /*
   vite: {
-    plugins: [
-      /*monacoEditorPlugin({
-        //publicPath: '/'
-        customDistPath: (root, buildOutDir) => `${buildOutDir}/monacoeditorwork`
-      })*/
-    ],
     ssr: {
-      //noExternal: ['monaco-editor']
+      noExternal: ['monaco-editor']
     },
     optimizeDeps: {
-      //exclude: ['monaco-editor']
+      exclude: ['monaco-editor']
     }
-  }
+  } */
 })
