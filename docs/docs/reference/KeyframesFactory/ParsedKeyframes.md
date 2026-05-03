@@ -1,4 +1,4 @@
-[KeyframeKit](../../../../index.md) / [KeyframesFactory](../index.md) / ParsedKeyframes
+[KeyframeKit](../index.md) / [KeyframesFactory](../KeyframesFactory.md) / ParsedKeyframes
 
 # <div class="subheader"> Class</div> ParsedKeyframes
 
@@ -39,7 +39,7 @@ Keyframe effect options.
 
 #### Returns
 
-[`KeyframeEffectParameters`](../../../../classes/KeyframeEffectParameters.md)
+[`KeyframeEffectParameters`](../KeyframeEffectParameters.md)
 
 ## Properties
 
@@ -52,8 +52,8 @@ keyframes: Keyframe[];
 ## See Also
 
 ### Referenced Here
-- [KeyframeEffectParameters](../../../../classes/KeyframeEffectParameters.md)
+- [KeyframeEffectParameters](../KeyframeEffectParameters.md)
 ### References This
-- [KeyframesFactory.getStyleSheetKeyframes](../functions/getStyleSheetKeyframes.md)
-- [KeyframesFactory.ParsedKeyframesRules](../type-aliases/ParsedKeyframesRules.md)
-- [KeyframesFactory.parseKeyframesRule](../functions/parseKeyframesRule.md)
+- [KeyframesFactory.getStyleSheetKeyframes](getStyleSheetKeyframes.md)
+- [KeyframesFactory.ParsedKeyframesRules](ParsedKeyframesRules.md)
+- [KeyframesFactory.parseKeyframesRule](parseKeyframesRule.md)

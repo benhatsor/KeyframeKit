@@ -1,4 +1,4 @@
-[KeyframeKit](../../../../index.md) / [KeyframesFactory](../index.md) / parseKeyframesRule
+[KeyframeKit](../index.md) / [KeyframesFactory](../KeyframesFactory.md) / parseKeyframesRule
 
 # <div class="subheader"> Function</div> parseKeyframesRule()
 
@@ -18,9 +18,9 @@ The rule to convert.
 
 ## Returns
 
-[`ParsedKeyframes`](../classes/ParsedKeyframes.md)
+[`ParsedKeyframes`](ParsedKeyframes.md)
 
 ## See Also
 
 ### Referenced Here
-- [KeyframesFactory.ParsedKeyframes](../classes/ParsedKeyframes.md)
+- [KeyframesFactory.ParsedKeyframes](ParsedKeyframes.md)

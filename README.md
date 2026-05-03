@@ -134,7 +134,7 @@ attachedAnim.play();
 [KeyframeKit article]: https://benhatsor.medium.com/99573ef4738b
 [Using the Web Animations API (MDN)]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API
 [Imported stylesheet @import issue]: https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-588352418
-[`KeyframeEffectParameters`]: https://keyframekit.berryscript.com/reference/classes/KeyframeEffectParameters
+[`KeyframeEffectParameters`]: https://keyframekit.berryscript.com/reference/KeyframeEffectParameters
 [KeyframeKit Reference]: https://keyframekit.berryscript.com/reference
 [KeyframeKit License]: ./LICENSE
 

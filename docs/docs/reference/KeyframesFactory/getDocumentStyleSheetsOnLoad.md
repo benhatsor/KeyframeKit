@@ -1,4 +1,4 @@
-[KeyframeKit](../../../../index.md) / [KeyframesFactory](../index.md) / getDocumentStyleSheetsOnLoad
+[KeyframeKit](../index.md) / [KeyframesFactory](../KeyframesFactory.md) / getDocumentStyleSheetsOnLoad
 
 # <div class="subheader"> Function</div> getDocumentStyleSheetsOnLoad()
 

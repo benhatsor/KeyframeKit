@@ -1,4 +1,4 @@
-[KeyframeKit](../../../../index.md) / [KeyframesFactory](../index.md) / StyleSheetImportError
+[KeyframeKit](../index.md) / [KeyframesFactory](../KeyframesFactory.md) / StyleSheetImportError
 
 # <div class="subheader"> Class</div> StyleSheetImportError
 

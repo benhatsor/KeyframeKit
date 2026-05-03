@@ -1,8 +1,8 @@
-[KeyframeKit](../../../../index.md) / [KeyframesFactory](../index.md) / KeyframesRuleNameTypeError
+[KeyframeKit](../index.md) / [KeyframesFactory](../KeyframesFactory.md) / SourceTypeError
 
-# <div class="subheader"> Class</div> KeyframesRuleNameTypeError
+# <div class="subheader"> Class</div> SourceTypeError
 
-Thrown if keyframes rule name is not a string.
+Thrown if source is not a `CSSStyleSheet` or a `StyleSheetList`.
 
 ## Extends
 

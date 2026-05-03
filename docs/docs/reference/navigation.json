@@ -5,7 +5,7 @@
       {
         "title": "KeyframesFactory",
         "kind": 4,
-        "path": "KeyframeKit/namespaces/KeyframesFactory/index.md",
+        "path": "KeyframesFactory.md",
         "isDeprecated": false,
         "children": [
           {
@@ -14,13 +14,13 @@
               {
                 "title": "getDocumentStyleSheetsOnLoad",
                 "kind": 64,
-                "path": "KeyframeKit/namespaces/KeyframesFactory/functions/getDocumentStyleSheetsOnLoad.md",
+                "path": "KeyframesFactory/getDocumentStyleSheetsOnLoad.md",
                 "isDeprecated": false
               },
               {
                 "title": "importStyleSheet",
                 "kind": 64,
-                "path": "KeyframeKit/namespaces/KeyframesFactory/functions/importStyleSheet.md",
+                "path": "KeyframesFactory/importStyleSheet.md",
                 "isDeprecated": false
               }
             ]
@@ -31,19 +31,19 @@
               {
                 "title": "getAllStyleSheetKeyframesRules",
                 "kind": 64,
-                "path": "KeyframeKit/namespaces/KeyframesFactory/functions/getAllStyleSheetKeyframesRules.md",
+                "path": "KeyframesFactory/getAllStyleSheetKeyframesRules.md",
                 "isDeprecated": false
               },
               {
                 "title": "getStyleSheetKeyframes",
                 "kind": 64,
-                "path": "KeyframeKit/namespaces/KeyframesFactory/functions/getStyleSheetKeyframes.md",
+                "path": "KeyframesFactory/getStyleSheetKeyframes.md",
                 "isDeprecated": false
               },
               {
                 "title": "parseKeyframesRule",
                 "kind": 64,
-                "path": "KeyframeKit/namespaces/KeyframesFactory/functions/parseKeyframesRule.md",
+                "path": "KeyframesFactory/parseKeyframesRule.md",
                 "isDeprecated": false
               }
             ]
@@ -54,19 +54,19 @@
               {
                 "title": "ParsedKeyframes",
                 "kind": 128,
-                "path": "KeyframeKit/namespaces/KeyframesFactory/classes/ParsedKeyframes.md",
+                "path": "KeyframesFactory/ParsedKeyframes.md",
                 "isDeprecated": false
               },
               {
                 "title": "CSSStyleSheetSource",
                 "kind": 2097152,
-                "path": "KeyframeKit/namespaces/KeyframesFactory/type-aliases/CSSStyleSheetSource.md",
+                "path": "KeyframesFactory/CSSStyleSheetSource.md",
                 "isDeprecated": false
               },
               {
                 "title": "ParsedKeyframesRules",
                 "kind": 2097152,
-                "path": "KeyframeKit/namespaces/KeyframesFactory/type-aliases/ParsedKeyframesRules.md",
+                "path": "KeyframesFactory/ParsedKeyframesRules.md",
                 "isDeprecated": false
               }
             ]
@@ -77,19 +77,19 @@
               {
                 "title": "KeyframesRuleNameTypeError",
                 "kind": 128,
-                "path": "KeyframeKit/namespaces/KeyframesFactory/classes/KeyframesRuleNameTypeError.md",
+                "path": "KeyframesFactory/KeyframesRuleNameTypeError.md",
                 "isDeprecated": false
               },
               {
                 "title": "SourceTypeError",
                 "kind": 128,
-                "path": "KeyframeKit/namespaces/KeyframesFactory/classes/SourceTypeError.md",
+                "path": "KeyframesFactory/SourceTypeError.md",
                 "isDeprecated": false
               },
               {
                 "title": "StyleSheetImportError",
                 "kind": 128,
-                "path": "KeyframeKit/namespaces/KeyframesFactory/classes/StyleSheetImportError.md",
+                "path": "KeyframesFactory/StyleSheetImportError.md",
                 "isDeprecated": false
               }
             ]
@@ -104,13 +104,13 @@
       {
         "title": "KeyframeEffectParameters",
         "kind": 128,
-        "path": "classes/KeyframeEffectParameters.md",
+        "path": "KeyframeEffectParameters.md",
         "isDeprecated": false
       },
       {
         "title": "KeyframeArgument",
         "kind": 2097152,
-        "path": "type-aliases/KeyframeArgument.md",
+        "path": "KeyframeArgument.md",
         "isDeprecated": false
       }
     ]

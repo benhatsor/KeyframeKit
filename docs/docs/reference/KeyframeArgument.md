@@ -1,4 +1,4 @@
-[KeyframeKit](../index.md) / KeyframeArgument
+[KeyframeKit](index.md) / KeyframeArgument
 
 # <div class="subheader"> Type Alias</div> KeyframeArgument
 
@@ -13,5 +13,5 @@ type KeyframeArgument = Keyframe[] | PropertyIndexedKeyframes;
 ## See Also
 
 ### References This
-- [KeyframeEffectParameters.constructor](../classes/KeyframeEffectParameters.md#constructor)
-- [KeyframeEffectParameters.keyframes](../classes/KeyframeEffectParameters.md#keyframes)
+- [KeyframeEffectParameters.constructor](KeyframeEffectParameters.md#constructor)
+- [KeyframeEffectParameters.keyframes](KeyframeEffectParameters.md#keyframes)

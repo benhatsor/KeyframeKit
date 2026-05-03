@@ -1,4 +1,4 @@
-[KeyframeKit](../../../../index.md) / [KeyframesFactory](../index.md) / getStyleSheetKeyframes
+[KeyframeKit](../index.md) / [KeyframesFactory](../KeyframesFactory.md) / getStyleSheetKeyframes
 
 # <div class="subheader"> Function</div> getStyleSheetKeyframes()
 
@@ -18,7 +18,7 @@ then converts it to Web Animations API keyframes.
 
 #### in
 
-[`CSSStyleSheetSource`](../type-aliases/CSSStyleSheetSource.md)
+[`CSSStyleSheetSource`](CSSStyleSheetSource.md)
 
 The stylesheet or stylesheet list where the rule resides.
 
@@ -30,17 +30,17 @@ The name of the `@keyframes` rule to get keyframes from.
 
 ## Returns
 
-[`ParsedKeyframes`](../classes/ParsedKeyframes.md) \| `undefined`
+[`ParsedKeyframes`](ParsedKeyframes.md) \| `undefined`
 
 ## Throws
 
-- [`KeyframesRuleNameTypeError`](../classes/KeyframesRuleNameTypeError.md) &nbsp;
+- [`KeyframesRuleNameTypeError`](KeyframesRuleNameTypeError.md) &nbsp;
    - Thrown if keyframes rule name is not a string.
- - [`SourceTypeError`](../classes/SourceTypeError.md) &nbsp;
+ - [`SourceTypeError`](SourceTypeError.md) &nbsp;
    - Thrown if source is not a `CSSStyleSheet` or a `StyleSheetList`.
 
 ## See Also
 
 ### Referenced Here
-- [KeyframesFactory.CSSStyleSheetSource](../type-aliases/CSSStyleSheetSource.md)
-- [KeyframesFactory.ParsedKeyframes](../classes/ParsedKeyframes.md)
+- [KeyframesFactory.CSSStyleSheetSource](CSSStyleSheetSource.md)
+- [KeyframesFactory.ParsedKeyframes](ParsedKeyframes.md)

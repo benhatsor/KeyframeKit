@@ -33,7 +33,7 @@ export default {
   
   //"flattenOutputFiles": false,
 
-  "router": "member", // "module"
+  "router": "structure", // "member" // "module"
 
   "readme": "none",
 

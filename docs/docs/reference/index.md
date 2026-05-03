@@ -2,9 +2,9 @@
 
 ## Default Export
 
-- [KeyframesFactory](KeyframeKit/namespaces/KeyframesFactory/index.md)
+- [KeyframesFactory](KeyframesFactory.md)
 
 ## Defining Animations
 
-- [KeyframeEffectParameters](classes/KeyframeEffectParameters.md)
-- [KeyframeArgument](type-aliases/KeyframeArgument.md)
+- [KeyframeEffectParameters](KeyframeEffectParameters.md)
+- [KeyframeArgument](KeyframeArgument.md)

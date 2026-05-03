@@ -1,4 +1,4 @@
-[KeyframeKit](../../../../index.md) / [KeyframesFactory](../index.md) / ParsedKeyframesRules
+[KeyframeKit](../index.md) / [KeyframesFactory](../KeyframesFactory.md) / ParsedKeyframesRules
 
 # <div class="subheader"> Type Alias</div> ParsedKeyframesRules
 
@@ -17,6 +17,6 @@ type ParsedKeyframesRules = {
 ## See Also
 
 ### Referenced Here
-- [KeyframesFactory.ParsedKeyframes](../classes/ParsedKeyframes.md)
+- [KeyframesFactory.ParsedKeyframes](ParsedKeyframes.md)
 ### References This
-- [KeyframesFactory.getAllStyleSheetKeyframesRules](../functions/getAllStyleSheetKeyframesRules.md)
+- [KeyframesFactory.getAllStyleSheetKeyframesRules](getAllStyleSheetKeyframesRules.md)

@@ -1,4 +1,4 @@
-[KeyframeKit](../index.md) / KeyframeEffectParameters
+[KeyframeKit](index.md) / KeyframeEffectParameters
 
 # <div class="subheader"> Class</div> KeyframeEffectParameters
 
@@ -25,7 +25,7 @@ new KeyframeEffectParameters(obj: {
 
 ###### keyframes
 
-[`KeyframeArgument`](../type-aliases/KeyframeArgument.md)
+[`KeyframeArgument`](KeyframeArgument.md)
 
 A keyframes object.
   [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats)
@@ -105,6 +105,6 @@ options: KeyframeEffectOptions;
 ## See Also
 
 ### Referenced Here
-- [KeyframeArgument](../type-aliases/KeyframeArgument.md)
+- [KeyframeArgument](KeyframeArgument.md)
 ### References This
-- [KeyframesFactory.ParsedKeyframes.toKeyframeEffect](../KeyframeKit/namespaces/KeyframesFactory/classes/ParsedKeyframes.md#tokeyframeeffect)
+- [KeyframesFactory.ParsedKeyframes.toKeyframeEffect](KeyframesFactory/ParsedKeyframes.md#tokeyframeeffect)
