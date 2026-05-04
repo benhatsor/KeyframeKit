@@ -62,7 +62,7 @@ export default defineConfig({
     search: {
       provider: 'local',
       options: {
-        // detailedView: false,
+        detailedView: false,
         async _render(src, env, md) {
           if (
             // !env.relativePath.startsWith('reference') ||
