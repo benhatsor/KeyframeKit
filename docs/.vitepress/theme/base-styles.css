@@ -1,4 +1,9 @@
 
+:root {
+  --vp-font-family-mono: ui-monospace, "SF Mono", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
+}
+
+
 .monaco-editor .iPadShowKeyboard {
   display: none;
 }
@@ -37,6 +42,15 @@
 }
 
 
+:root {
+  --vp-code-color: inherit;
+}
+
+.vp-doc ul li::marker {
+  color: var(--vp-c-text-2);
+}
+
+
 /* reference symbol type subheader */
 .vp-doc h1 .subheader {
   margin: 26px 0 0;
@@ -49,6 +63,16 @@
 
 .vp-doc h1:has(.subheader) .header-anchor {
   margin-top: 38px;
+}
+
+
+/* breadcrumbs */
+.vp-doc[class*="_reference_"]:not([class~="_reference_"]) p:has(+ h1) {
+  font-size: 14px;
+  a {
+    color: inherit;
+    font-weight: inherit;
+  }
 }
 
 
