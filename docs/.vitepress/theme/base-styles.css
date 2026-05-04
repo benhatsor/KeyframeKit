@@ -72,6 +72,9 @@
   a {
     color: inherit;
     font-weight: inherit;
+    &:hover {
+      color: var(--vp-c-text-2);
+    }
   }
 }
 
