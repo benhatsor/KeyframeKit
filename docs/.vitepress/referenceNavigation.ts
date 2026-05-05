@@ -26,12 +26,15 @@ function convertItem(
 
   const items = inputItem.children?.map(convertItem);
 
+  const isCollapsible = (link && items);
+  const collapsedValue = isCollapsible ? true : undefined;
+
   let outputItem: DefaultTheme.SidebarItem = {
     text: inputItem.title,
     link: link,
     items: items,
     base: '/reference/',
-    collapsed: false
+    collapsed: collapsedValue
   };
 
   return outputItem;

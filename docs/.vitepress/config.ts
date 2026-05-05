@@ -49,14 +49,14 @@ export default defineConfig({
     ],
 
     sidebar: {
-      '/reference/': referenceNavigationItems,
-      /*'/reference/': [
+      // '/reference/': referenceNavigationItems,
+      '/reference/': [
         {
-          text: 'Reference',
+          text: 'KeyframeKit',
           link: '/reference/',
           items: referenceNavigationItems
         }
-      ]*/
+      ]
     },
 
     search: {

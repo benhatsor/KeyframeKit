@@ -93,6 +93,35 @@
   --vp-sidebar-width: 320px;
 }
 
+.VPSidebar .item .link {
+  overflow: hidden;
+}
+
+.VPSidebar .item .text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.VPSidebarItem > .item .text {
+  font-weight: 400;
+}
+
+.VPSidebarItem.level-0 > .item .text,
+.VPSidebarItem.is-active > .item .text,
+.VPSidebarItem.has-active > .item:has(> .caret) .text {
+  font-weight: 600;
+}
+
+.VPSidebarItem.is-link > .item .text {
+  color: var(--vp-c-text-1);
+}
+
+.VPSidebarItem:not(.is-link) > .item .text {
+  font-weight: 600 !important;
+  color: var(--vp-c-text-2) !important;
+}
+
 
 .VPLocalSearchBox {
 
