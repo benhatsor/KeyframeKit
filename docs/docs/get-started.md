@@ -3,13 +3,14 @@
 Unlock full playback control over your CSS animations with JavaScript.
 
 [![NPM version][npm-version-src]][npm-version-href] 
+[![NPM downloads][npm-downloads-src]][npm-downloads-href]
 [![Minified size][minified-size-src]][minified-size-href] 
 [![CI][ci-src]][ci-href]
 {class=badges}
 
 ## What is this?
 
-A lightweight TypeScript library that converts CSS `@keyframes` animations into [Web Animations API]-compatible animations, letting you play CSS-defined animations from JavaScript with full playback control and native performance. [Read more.][KeyframeKit article]
+A lightweight TypeScript library that converts CSS `@keyframes` animations into [Web Animations API]-compatible animations, letting you play CSS-defined animations from JavaScript with full playback control and hardware-accelerated performance. [Read more.][KeyframeKit article]
 
 ## Installation
 
@@ -138,9 +139,11 @@ attachedAnim.play();
 [KeyframeKit License]: https://github.com/benhatsor/KeyframeKit/blob/main/LICENSE
 
 <!-- Badges -->
-[minified-size-src]: https://img.shields.io/github/size/benhatsor/KeyframeKit/dist/index.min.js
-[minified-size-href]: https://github.com/benhatsor/KeyframeKit/blob/main/dist/index.min.js
 [npm-version-src]: https://img.shields.io/npm/v/keyframekit.svg
 [npm-version-href]: https://www.npmjs.com/package/keyframekit
+[npm-downloads-src]: https://img.shields.io/npm/d18m/keyframekit
+[npm-downloads-href]: https://www.npmjs.com/package/keyframekit
+[minified-size-src]: https://img.shields.io/github/size/benhatsor/KeyframeKit/dist/index.min.js
+[minified-size-href]: https://github.com/benhatsor/KeyframeKit/blob/main/dist/index.min.js
 [ci-src]: https://github.com/benhatsor/KeyframeKit/actions/workflows/ci.yml/badge.svg
 [ci-href]: https://github.com/benhatsor/KeyframeKit/actions/workflows/ci.yml
