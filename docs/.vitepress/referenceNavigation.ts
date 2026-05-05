@@ -27,7 +27,7 @@ function convertItem(
   const items = inputItem.children?.map(convertItem);
 
   const isCollapsible = (link && items);
-  const collapsedValue = isCollapsible ? true : undefined;
+  const collapsedValue = isCollapsible ? false : undefined;
 
   let outputItem: DefaultTheme.SidebarItem = {
     text: inputItem.title,
