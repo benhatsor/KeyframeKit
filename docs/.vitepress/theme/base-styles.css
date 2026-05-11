@@ -242,6 +242,10 @@
 }
 */
 
+.VPNavBarSearchButton {
+  outline: none;
+}
+
 
 :root {
   -webkit-tap-highlight-color: transparent;
