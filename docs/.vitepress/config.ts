@@ -60,6 +60,16 @@ export default defineConfig({
     },
 
     search: {
+      provider: 'algolia',
+      options: {
+        appId: 'Y6JDLDXBTW',
+        apiKey: 'e4f068056351821fc5a1613faec5fac9',
+        indexName: 'KeyframeKit'
+      }
+    },
+
+    /*
+    search: {
       provider: 'local',
       options: {
         detailedView: false,
@@ -78,6 +88,7 @@ export default defineConfig({
         }
       }
     },
+    */
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/benhatsor/KeyframeKit' }
