@@ -9,7 +9,8 @@ Unlock full playback control over your CSS animations with JavaScript.
 
 ## What is this?
 
-A lightweight TypeScript library that converts CSS `@keyframes` animations into [Web Animations API]-compatible animations, letting you play CSS-defined animations from JavaScript with full playback control and hardware-accelerated performance. [Read more.][KeyframeKit article]
+A lightweight TypeScript library that converts CSS `@keyframes` animations into [Web Animations API]-compatible animations, letting you play CSS-defined animations from JavaScript with full playback control and hardware-accelerated performance.  
+[Read more][KeyframeKit article] | [Live Demo]
 
 ## Installation
 
@@ -133,6 +134,7 @@ attachedAnim.play();
 [KeyframeKit]: https://keyframekit.berryscript.com
 [Web Animations API]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API
 [KeyframeKit article]: https://benhatsor.medium.com/99573ef4738b
+[Live Demo]: https://codepen.io/benhatsor/pen/JoRPNmz
 [Using the Web Animations API (MDN)]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API
 [Imported stylesheet @import issue]: https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-588352418
 [`KeyframeEffectParameters`]: https://keyframekit.berryscript.com/reference/KeyframeEffectParameters
