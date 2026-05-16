@@ -1,3 +1,7 @@
+---
+title: Get Started
+---
+
 # KeyframeKit
 
 Unlock full playback control over your CSS animations with JavaScript.
