@@ -67,6 +67,8 @@ function getStyleSheetKeyframesInStyleSheetList({ of: ruleName, styleSheetList }
 
   }
 
+  return undefined;
+
 }
 
 function getStyleSheetKeyframesInStyleSheet({ of: ruleName, styleSheet }: {
@@ -89,5 +91,7 @@ function getStyleSheetKeyframesInStyleSheet({ of: ruleName, styleSheet }: {
     }
 
   }
+
+  return undefined;
 
 }
