@@ -1,17 +1,16 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "moduleDetection": "force",
+    // necessary for @rollup/plugin-typescript (see https://github.com/rollup/plugins/pull/2004)
     "moduleResolution": "bundler",
-    "strict": true,
-    "noUnusedLocals": true,
-    "declaration": true,
-    "declarationMap": true,
-    "emitDeclarationOnly": true,
-    "esModuleInterop": true,
-    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noUncheckedIndexedAccess": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
     "verbatimModuleSyntax": true,
+    "noImplicitReturns": true,
+    "exactOptionalPropertyTypes": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "erasableSyntaxOnly": true,
     "skipLibCheck": true
   },
   "include": ["src"]
