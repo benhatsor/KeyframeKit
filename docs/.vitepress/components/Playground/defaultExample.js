@@ -10,6 +10,7 @@ const js = `import KeyframeKit from 'keyframekit';
 const documentStyleSheets = await KeyframeKit.getDocumentStyleSheetsOnLoad();
 
 // get animation keyframes from the document's stylesheets
+// and convert to Web Animations API keyframes
 const rotateAnimKeyframes = KeyframeKit.getStyleSheetKeyframes({
   of: 'rotate',
   in: documentStyleSheets
