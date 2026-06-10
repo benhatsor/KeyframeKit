@@ -116,6 +116,8 @@ export declare class KeyframeEffectParameters {
 
 declare namespace KeyframesFactory {
     export {
+        KeyframesRuleNameTypeError,
+        SourceTypeError,
         getDocumentStyleSheetsOnLoad,
         importStyleSheet,
         getStyleSheetKeyframes,
@@ -123,9 +125,7 @@ declare namespace KeyframesFactory {
         parseKeyframesRule,
         ParsedKeyframes,
         ParsedKeyframesRules,
-        CSSStyleSheetSource,
-        KeyframesRuleNameTypeError,
-        SourceTypeError
+        CSSStyleSheetSource
     }
 }
 export default KeyframesFactory;
