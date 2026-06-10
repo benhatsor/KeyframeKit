@@ -39,7 +39,7 @@ async function waitForDocumentLoad({ document }) {
     const isLoaded = () => (document.readyState === 'complete');
     if (isLoaded())
         return;
-    const { promise, signal, abort } = new AbortablePromise();
+    const { promise, signal, abort } = abortablePromise();
     // 'signal' removes listener after abortion
     document.addEventListener('readystatechange', () => {
         if (isLoaded())
@@ -47,18 +47,11 @@ async function waitForDocumentLoad({ document }) {
     }, { signal });
     await promise;
 }
-class AbortablePromise extends AbortController {
-    promise;
-    // bind method to allow destructuring
-    // (see: https://stackoverflow.com/a/10743608)
-    abort = super.abort.bind(this);
-    constructor() {
-        super();
-        const { promise, resolve } = Promise.withResolvers();
-        this.promise = promise;
-        // 'once' removes listener after invocation
-        this.signal.addEventListener('abort', () => resolve(this.signal.reason), { once: true });
-    }
+function abortablePromise() {
+    const abortController = new AbortController(), signal = abortController.signal, abort = abortController.abort.bind(abortController);
+    const { promise, resolve } = Promise.withResolvers();
+    signal.addEventListener('abort', () => resolve(signal.reason), { once: true });
+    return { promise, signal, abort };
 }
 
 /**
