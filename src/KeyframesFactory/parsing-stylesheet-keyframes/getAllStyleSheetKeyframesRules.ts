@@ -19,22 +19,17 @@ export function getAllStyleSheetKeyframesRules({ in: source }: {
   in: CSSStyleSheetSource
 }): ParsedKeyframesRules {
 
-  if (source instanceof StyleSheetList) {
-
-    return getAllStyleSheetKeyframesRulesInStyleSheetList({
-      styleSheetList: source
-    });
-
-  } else if (source instanceof CSSStyleSheet) {
-
-    return getAllStyleSheetKeyframesRulesInStyleSheet({
-      styleSheet: source
-    });
-
-  } else {
-
-    throw new SourceTypeError();
-
+  switch (true) {
+    case source instanceof StyleSheetList:
+      return getAllStyleSheetKeyframesRulesInStyleSheetList({
+        styleSheetList: source
+      });
+    case source instanceof CSSStyleSheet:
+      return getAllStyleSheetKeyframesRulesInStyleSheet({
+        styleSheet: source
+      });
+    default:
+      throw new SourceTypeError();
   }
 
 }
