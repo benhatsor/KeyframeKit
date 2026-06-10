@@ -27,24 +27,19 @@ export function getStyleSheetKeyframes({ of: ruleName, in: source }: {
     throw new KeyframesRuleNameTypeError();
   }
 
-  if (source instanceof StyleSheetList) {
-
-    return getStyleSheetKeyframesInStyleSheetList({
-      of: ruleName,
-      styleSheetList: source
-    });
-
-  } else if (source instanceof CSSStyleSheet) {
-
-    return getStyleSheetKeyframesInStyleSheet({
-      of: ruleName,
-      styleSheet: source
-    });
-
-  } else {
-
-    throw new SourceTypeError();
-
+  switch (true) {
+    case source instanceof StyleSheetList:
+      return getStyleSheetKeyframesInStyleSheetList({
+        of: ruleName,
+        styleSheetList: source
+      });
+    case source instanceof CSSStyleSheet:
+      return getStyleSheetKeyframesInStyleSheet({
+        of: ruleName,
+        styleSheet: source
+      });
+    default:
+      throw new SourceTypeError();
   }
 
 }
@@ -66,6 +61,8 @@ function getStyleSheetKeyframesInStyleSheetList({ of: ruleName, styleSheetList }
     }
 
   }
+
+  return undefined;
 
 }
 
@@ -89,5 +86,7 @@ function getStyleSheetKeyframesInStyleSheet({ of: ruleName, styleSheet }: {
     }
 
   }
+
+  return undefined;
 
 }

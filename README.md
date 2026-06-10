@@ -22,7 +22,7 @@ npm install keyframekit
 ### CDN
 Import the module directly:
 ```js
-import KeyframeKit from 'https://cdn.jsdelivr.net/npm/keyframekit/dist/index.min.js'
+import KeyframeKit from 'https://unpkg.com/keyframekit/dist/index.min.js'
 ```
 
 ## Usage
@@ -41,6 +41,7 @@ import KeyframeKit from 'keyframekit';
 const documentStyleSheets = await KeyframeKit.getDocumentStyleSheetsOnLoad();
 
 // get animation keyframes from the document's stylesheets
+// and convert to Web Animations API keyframes
 const rotateSmallAnimKeyframes = KeyframeKit.getStyleSheetKeyframes({
   of: 'rotate-small',
   in: documentStyleSheets
@@ -76,12 +77,15 @@ Instead of getting an animation from the document's stylesheets, you can also im
 ```js
 import KeyframeKit from 'keyframekit';
 
-const styleSheet = await KeyframeKit.importStyleSheet('./styles.css');
+const styles = await KeyframeKit.importStyleSheet('./styles.css');
+// note: on Chrome, Edge or Firefox (not Safari), you can just write:
+// import styles from './styles.css' with { type: 'css' };
 
 // get animation keyframes from stylesheet
+// and convert to Web Animations API keyframes
 const rotateSmallAnimKeyframes = KeyframeKit.getStyleSheetKeyframes({
   of: 'rotate-small',
-  in: styleSheet
+  in: styles
 });
 ```
 

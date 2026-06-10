@@ -1,24 +1,24 @@
 
+import type { getStyleSheetKeyframes } from './parsing-stylesheet-keyframes/getStyleSheetKeyframes';
+import type { getAllStyleSheetKeyframesRules } from './parsing-stylesheet-keyframes/getAllStyleSheetKeyframesRules';
+
 /**
  * Thrown if keyframes rule name is not a string.
+ * @see
+ *  - {@linkcode getStyleSheetKeyframes}
  * @group Errors
  */
 export class KeyframesRuleNameTypeError extends TypeError {
-  message = `Keyframes rule name must be a string.`;
+  override message = `Keyframes rule name must be a string.`;
 }
 
 /**
  * Thrown if source is not a `CSSStyleSheet` or a `StyleSheetList`.
+ * @see
+ *  - {@linkcode getStyleSheetKeyframes}
+ *  - {@linkcode getAllStyleSheetKeyframesRules}
  * @group Errors
  */
 export class SourceTypeError extends TypeError {
-  message = `Source must be either a CSSStyleSheet or a StyleSheetList.`;
-}
-
-/**
- * Thrown if the stylesheet could not be imported.
- * @group Errors
- */
-export class StyleSheetImportError extends Error {
-  message = `The stylesheet could not be imported.`;
+  override message = `Source must be either a CSSStyleSheet or a StyleSheetList.`;
 }

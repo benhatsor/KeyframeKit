@@ -4,6 +4,8 @@
  */
 /**
  * Thrown if keyframes rule name is not a string.
+ * @see
+ *  - {@linkcode getStyleSheetKeyframes}
  * @group Errors
  */
 class KeyframesRuleNameTypeError extends TypeError {
@@ -11,17 +13,13 @@ class KeyframesRuleNameTypeError extends TypeError {
 }
 /**
  * Thrown if source is not a `CSSStyleSheet` or a `StyleSheetList`.
+ * @see
+ *  - {@linkcode getStyleSheetKeyframes}
+ *  - {@linkcode getAllStyleSheetKeyframesRules}
  * @group Errors
  */
 class SourceTypeError extends TypeError {
     message = `Source must be either a CSSStyleSheet or a StyleSheetList.`;
-}
-/**
- * Thrown if the stylesheet could not be imported.
- * @group Errors
- */
-class StyleSheetImportError extends Error {
-    message = `The stylesheet could not be imported.`;
 }
 
 /**
@@ -38,54 +36,55 @@ async function getDocumentStyleSheetsOnLoad({ document = window.document } = {})
     return document.styleSheets;
 }
 async function waitForDocumentLoad({ document }) {
-    if (document.readyState === 'complete') {
+    const isLoaded = () => (document.readyState === 'complete');
+    if (isLoaded())
         return;
-    }
-    const { promise, resolve } = Promise.withResolvers();
-    function onReadyStateChange() {
-        if (document.readyState === 'complete') {
-            resolve(null);
-        }
-    }
-    const listener = [
-        'readystatechange',
-        onReadyStateChange
-    ];
-    document.addEventListener(...listener);
+    const { promise, signal, abort } = abortablePromise();
+    // 'signal' removes listener after abortion
+    document.addEventListener('readystatechange', () => {
+        if (isLoaded())
+            abort();
+    }, { signal });
     await promise;
-    document.removeEventListener(...listener);
+}
+function abortablePromise() {
+    const abortController = new AbortController(), signal = abortController.signal, abort = abortController.abort.bind(abortController);
+    const { promise, resolve } = Promise.withResolvers();
+    signal.addEventListener('abort', () => resolve(signal.reason), { once: true });
+    return { promise, signal, abort };
 }
 
 /**
  * Imports a stylesheet from a URL.
  * @param url The URL of the stylesheet to import.
  * @throws
- *  - {@linkcode StyleSheetImportError} &nbsp;
+ *  - `TypeError` &nbsp;
  *    - Thrown if the stylesheet could not be imported.
  * @remarks
- *  Note: `@import` rules won't be resolved in imported stylesheets.
- *  [See more.](https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-588352418)
+ *  - `@import` rules won't be resolved in imported stylesheets.
+ *    [See more.](https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-588352418)
+ *  - This polyfill exists because [Safari dosen't support](https://caniuse.com/mdn-javascript_statements_import_import_attributes_type_css)
+ *    CSS Modules (see [this bug](https://bugs.webkit.org/show_bug.cgi?id=227967)).
+ * @see
+ *  - [Creating a CSS module script - HTML Spec](https://html.spec.whatwg.org/multipage/webappapis.html#creating-a-css-module-script)
+ *  - [import() return value - MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import#return_value)
  * @group Sourcing Stylesheets
  */
 async function importStyleSheet(url) {
     const resp = await fetch(url);
     if (!resp.ok) {
-        throw new StyleSheetImportError();
+        throw new TypeError(`Failed to fetch dynamically imported module: ${url}`);
     }
     const respText = await resp.text();
-    // remove file name from URL to get base URL
-    const baseURL = url.split('/').slice(0, -1).join('/');
-    const styleSheet = new CSSStyleSheet({
-        baseURL: baseURL
-    });
-    await styleSheet.replace(respText);
+    const styleSheet = new CSSStyleSheet();
+    styleSheet.replaceSync(respText);
     return styleSheet;
 }
 
 /**
  * Provides a more convenient way to define animations than is offered natively.
  * @see
- *  [Web Animations Module Level 1 - The KeyframeEffect interface](https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface)
+ *  [The KeyframeEffect interface - Web Animations Spec](https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface)
  * @group Defining Animations
  */
 class KeyframeEffectParameters {
@@ -110,8 +109,8 @@ class KeyframeEffectParameters {
      *  @param obj.timeline The timeline with which to associate the animation.
      *   [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/Animation/Animation#timeline)
      * @see
-     *  - [Web Animations Module Level 1 - The KeyframeEffect interface](https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface)
-     *  - [Web Animations Module Level 1 - The Animation interface](https://drafts.csswg.org/web-animations-1/#the-animation-interface)
+     *  - [The KeyframeEffect interface - Web Animations Spec](https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface)
+     *  - [The Animation interface - Web Animations Spec](https://drafts.csswg.org/web-animations-1/#the-animation-interface)
      */
     toAnimation({ target, options: additionalOptions = {}, timeline = document.timeline }) {
         additionalOptions = this.#parseOptionsArg(additionalOptions);
@@ -264,20 +263,19 @@ function getStyleSheetKeyframes({ of: ruleName, in: source }) {
     if (typeof ruleName !== 'string') {
         throw new KeyframesRuleNameTypeError();
     }
-    if (source instanceof StyleSheetList) {
-        return getStyleSheetKeyframesInStyleSheetList({
-            of: ruleName,
-            styleSheetList: source
-        });
-    }
-    else if (source instanceof CSSStyleSheet) {
-        return getStyleSheetKeyframesInStyleSheet({
-            of: ruleName,
-            styleSheet: source
-        });
-    }
-    else {
-        throw new SourceTypeError();
+    switch (true) {
+        case source instanceof StyleSheetList:
+            return getStyleSheetKeyframesInStyleSheetList({
+                of: ruleName,
+                styleSheetList: source
+            });
+        case source instanceof CSSStyleSheet:
+            return getStyleSheetKeyframesInStyleSheet({
+                of: ruleName,
+                styleSheet: source
+            });
+        default:
+            throw new SourceTypeError();
     }
 }
 function getStyleSheetKeyframesInStyleSheetList({ of: ruleName, styleSheetList }) {
@@ -290,6 +288,7 @@ function getStyleSheetKeyframesInStyleSheetList({ of: ruleName, styleSheetList }
             return keyframesRule;
         }
     }
+    return undefined;
 }
 function getStyleSheetKeyframesInStyleSheet({ of: ruleName, styleSheet }) {
     for (const rule of styleSheet.cssRules) {
@@ -301,6 +300,7 @@ function getStyleSheetKeyframesInStyleSheet({ of: ruleName, styleSheet }) {
             return keyframes;
         }
     }
+    return undefined;
 }
 
 /**
@@ -314,18 +314,17 @@ function getStyleSheetKeyframesInStyleSheet({ of: ruleName, styleSheet }) {
  * @group Parsing Stylesheet Keyframes
  */
 function getAllStyleSheetKeyframesRules({ in: source }) {
-    if (source instanceof StyleSheetList) {
-        return getAllStyleSheetKeyframesRulesInStyleSheetList({
-            styleSheetList: source
-        });
-    }
-    else if (source instanceof CSSStyleSheet) {
-        return getAllStyleSheetKeyframesRulesInStyleSheet({
-            styleSheet: source
-        });
-    }
-    else {
-        throw new SourceTypeError();
+    switch (true) {
+        case source instanceof StyleSheetList:
+            return getAllStyleSheetKeyframesRulesInStyleSheetList({
+                styleSheetList: source
+            });
+        case source instanceof CSSStyleSheet:
+            return getAllStyleSheetKeyframesRulesInStyleSheet({
+                styleSheet: source
+            });
+        default:
+            throw new SourceTypeError();
     }
 }
 function getAllStyleSheetKeyframesRulesInStyleSheetList({ styleSheetList }) {
@@ -363,7 +362,6 @@ const index = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
     KeyframesRuleNameTypeError,
     ParsedKeyframes,
     SourceTypeError,
-    StyleSheetImportError,
     getAllStyleSheetKeyframesRules,
     getDocumentStyleSheetsOnLoad,
     getStyleSheetKeyframes,

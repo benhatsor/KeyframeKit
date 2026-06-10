@@ -1,14 +1,14 @@
-import { defineConfig } from 'rollup'
-import typescript from '@rollup/plugin-typescript'
-import terser from '@rollup/plugin-terser'
-import { dts } from 'rollup-dts-bundler'
+import { defineConfig } from 'rollup';
+import typescript from '@rollup/plugin-typescript';
+import terser from '@rollup/plugin-terser';
+import { dts } from 'rollup-dts-bundler';
 
 const banner = `
 /**
  * KeyframeKit
  * @license MIT
  */
-`.trim()
+`.trim();
 
 export default defineConfig([
   {
@@ -16,34 +16,31 @@ export default defineConfig([
     output: [
       {
         file: 'dist/index.js',
-        format: 'es',
+        format: 'esm',
         sourcemap: true,
-        banner,
-        generatedCode: 'es2015',
+        banner: banner,
+        generatedCode: 'es2015'
       },
       {
         file: 'dist/index.min.js',
-        format: 'es',
+        format: 'esm',
         sourcemap: true,
-        banner,
+        banner: banner,
         generatedCode: 'es2015',
         plugins: [terser({
           compress: { passes: 2 }
-        })],
-      },
+        })]
+      }
     ],
-    plugins: [typescript({
-      declaration: false,
-      declarationMap: false
-    })],
+    plugins: [typescript()]
   },
   {
     input: 'src/index.ts',
     output: {
       file: 'dist/index.d.ts',
-      format: 'es',
-      banner,
+      format: 'esm',
+      banner: banner
     },
-    plugins: [dts()],
-  },
-])
+    plugins: [dts()]
+  }
+]);

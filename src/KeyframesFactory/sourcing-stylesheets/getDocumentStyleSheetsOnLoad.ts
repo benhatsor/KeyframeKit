@@ -22,27 +22,33 @@ async function waitForDocumentLoad({ document }: {
   document: Document
 }) {
 
-  if (document.readyState === 'complete') {
-    return;
-  }
+  const isLoaded = () => (document.readyState === 'complete');
 
-  const { promise, resolve } = Promise.withResolvers();
+  if (isLoaded()) return;
 
-  function onReadyStateChange() {
-    if (document.readyState === 'complete') {
-      resolve(null);
-    }
-  }
+  const { promise, signal, abort } = abortablePromise();
 
-  const listener = [
-    'readystatechange',
-    onReadyStateChange
-  ] as const;
-
-  document.addEventListener(...listener);
+  // 'signal' removes listener after abortion
+  document.addEventListener('readystatechange', () => {
+    if (isLoaded()) abort();
+  }, { signal });
 
   await promise;
 
-  document.removeEventListener(...listener);
+}
+
+function abortablePromise() {
+
+  const abortController = new AbortController(),
+        signal = abortController.signal,
+        abort = abortController.abort.bind(abortController);
+
+  const { promise, resolve } = Promise.withResolvers<typeof signal.reason>();
+
+  signal.addEventListener(
+    'abort', () => resolve(signal.reason), { once: true }
+  );
+
+  return { promise, signal, abort };
 
 }
