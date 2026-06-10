@@ -1,7 +1,9 @@
 
 /**
+ * A keyframes object.
+ *  [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats)
  * @see
- *  [Web Animations Module Level 1 - Processing a keyframes argument](https://drafts.csswg.org/web-animations-1/#processing-a-keyframes-argument)
+ *  [Processing a keyframes argument - Web Animations Spec](https://drafts.csswg.org/web-animations-1/#processing-a-keyframes-argument)
  * @group Defining Animations
  */
 export type KeyframeArgument = Keyframe[] | PropertyIndexedKeyframes;
@@ -9,7 +11,7 @@ export type KeyframeArgument = Keyframe[] | PropertyIndexedKeyframes;
 /**
  * Provides a more convenient way to define animations than is offered natively.
  * @see
- *  [Web Animations Module Level 1 - The KeyframeEffect interface](https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface)
+ *  [The KeyframeEffect interface - Web Animations Spec](https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface)
  * @group Defining Animations
  */
 export class KeyframeEffectParameters {
@@ -40,8 +42,8 @@ export class KeyframeEffectParameters {
    *  @param obj.timeline The timeline with which to associate the animation.
    *   [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/Animation/Animation#timeline)
    * @see
-   *  - [Web Animations Module Level 1 - The KeyframeEffect interface](https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface)
-   *  - [Web Animations Module Level 1 - The Animation interface](https://drafts.csswg.org/web-animations-1/#the-animation-interface)
+   *  - [The KeyframeEffect interface - Web Animations Spec](https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface)
+   *  - [The Animation interface - Web Animations Spec](https://drafts.csswg.org/web-animations-1/#the-animation-interface)
    */
   toAnimation({ target, options: additionalOptions = {}, timeline = document.timeline }: {
     target: Element | null,
