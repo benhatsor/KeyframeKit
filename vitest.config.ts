@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitest/config';
-import { type BrowserInstanceOption } from 'vitest/node';
+import type { BrowserInstanceOption } from 'vitest/node';
 import { playwright } from '@vitest/browser-playwright';
 
 type BrowserName = BrowserInstanceOption['browser'];
