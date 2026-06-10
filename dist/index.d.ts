@@ -52,18 +52,25 @@ declare function getStyleSheetKeyframes({ of: ruleName, in: source }: {
  * Imports a stylesheet from a URL.
  * @param url The URL of the stylesheet to import.
  * @throws
- *  - {@linkcode StyleSheetImportError} &nbsp;
+ *  - `TypeError` &nbsp;
  *    - Thrown if the stylesheet could not be imported.
  * @remarks
- *  Note: `@import` rules won't be resolved in imported stylesheets.
- *  [See more.](https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-588352418)
+ *  - `@import` rules won't be resolved in imported stylesheets.
+ *    [See more.](https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-588352418)
+ *  - This polyfill exists because [Safari dosen't support](https://caniuse.com/mdn-javascript_statements_import_import_attributes_type_css)
+ *    CSS Modules (see [this bug](https://bugs.webkit.org/show_bug.cgi?id=227967)).
+ * @see
+ *  - [Creating a CSS module script - HTML Spec](https://html.spec.whatwg.org/multipage/webappapis.html#creating-a-css-module-script)
+ *  - [import() return value - MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import#return_value)
  * @group Sourcing Stylesheets
  */
 declare function importStyleSheet(url: string): Promise<CSSStyleSheet>;
 
 /**
+ * A keyframes object.
+ *  [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats)
  * @see
- *  [Web Animations Module Level 1 - Processing a keyframes argument](https://drafts.csswg.org/web-animations-1/#processing-a-keyframes-argument)
+ *  [Processing a keyframes argument - Web Animations Spec](https://drafts.csswg.org/web-animations-1/#processing-a-keyframes-argument)
  * @group Defining Animations
  */
 export declare type KeyframeArgument = Keyframe[] | PropertyIndexedKeyframes;
@@ -71,7 +78,7 @@ export declare type KeyframeArgument = Keyframe[] | PropertyIndexedKeyframes;
 /**
  * Provides a more convenient way to define animations than is offered natively.
  * @see
- *  [Web Animations Module Level 1 - The KeyframeEffect interface](https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface)
+ *  [The KeyframeEffect interface - Web Animations Spec](https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface)
  * @group Defining Animations
  */
 export declare class KeyframeEffectParameters {
@@ -97,8 +104,8 @@ export declare class KeyframeEffectParameters {
      *  @param obj.timeline The timeline with which to associate the animation.
      *   [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/Animation/Animation#timeline)
      * @see
-     *  - [Web Animations Module Level 1 - The KeyframeEffect interface](https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface)
-     *  - [Web Animations Module Level 1 - The Animation interface](https://drafts.csswg.org/web-animations-1/#the-animation-interface)
+     *  - [The KeyframeEffect interface - Web Animations Spec](https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface)
+     *  - [The Animation interface - Web Animations Spec](https://drafts.csswg.org/web-animations-1/#the-animation-interface)
      */
     toAnimation({ target, options: additionalOptions, timeline }: {
         target: Element | null;
@@ -118,14 +125,15 @@ declare namespace KeyframesFactory {
         ParsedKeyframesRules,
         CSSStyleSheetSource,
         KeyframesRuleNameTypeError,
-        SourceTypeError,
-        StyleSheetImportError
+        SourceTypeError
     }
 }
 export default KeyframesFactory;
 
 /**
  * Thrown if keyframes rule name is not a string.
+ * @see
+ *  - {@linkcode getStyleSheetKeyframes}
  * @group Errors
  */
 declare class KeyframesRuleNameTypeError extends TypeError {
@@ -157,17 +165,12 @@ declare function parseKeyframesRule(keyframesRule: CSSKeyframesRule): ParsedKeyf
 
 /**
  * Thrown if source is not a `CSSStyleSheet` or a `StyleSheetList`.
+ * @see
+ *  - {@linkcode getStyleSheetKeyframes}
+ *  - {@linkcode getAllStyleSheetKeyframesRules}
  * @group Errors
  */
 declare class SourceTypeError extends TypeError {
-    message: string;
-}
-
-/**
- * Thrown if the stylesheet could not be imported.
- * @group Errors
- */
-declare class StyleSheetImportError extends Error {
     message: string;
 }
 
