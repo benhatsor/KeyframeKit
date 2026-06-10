@@ -85,12 +85,6 @@
                 "kind": 128,
                 "path": "KeyframesFactory/SourceTypeError.md",
                 "isDeprecated": false
-              },
-              {
-                "title": "StyleSheetImportError",
-                "kind": 128,
-                "path": "KeyframesFactory/StyleSheetImportError.md",
-                "isDeprecated": false
               }
             ]
           }

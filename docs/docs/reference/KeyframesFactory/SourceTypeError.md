@@ -4,6 +4,11 @@
 
 Thrown if source is not a `CSSStyleSheet` or a `StyleSheetList`.
 
+## See
+
+- [`getStyleSheetKeyframes`](getStyleSheetKeyframes.md)
+ - [`getAllStyleSheetKeyframesRules`](getAllStyleSheetKeyframesRules.md)
+
 ## Extends
 
 - [`TypeError`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError)

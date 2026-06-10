@@ -23,4 +23,3 @@
 
 - [KeyframesRuleNameTypeError](KeyframesFactory/KeyframesRuleNameTypeError.md)
 - [SourceTypeError](KeyframesFactory/SourceTypeError.md)
-- [StyleSheetImportError](KeyframesFactory/StyleSheetImportError.md)

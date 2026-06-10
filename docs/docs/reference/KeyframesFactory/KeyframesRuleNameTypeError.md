@@ -4,6 +4,10 @@
 
 Thrown if keyframes rule name is not a string.
 
+## See
+
+- [`getStyleSheetKeyframes`](getStyleSheetKeyframes.md)
+
 ## Extends
 
 - [`TypeError`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError)
