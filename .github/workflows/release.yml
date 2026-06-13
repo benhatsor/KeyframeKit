@@ -44,5 +44,5 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           npm publish --provenance --access public
-          npx conventional-changelog -p angular \
+          npx git-cliff --latest \
             | gh release create "$GITHUB_REF_NAME" -F -
