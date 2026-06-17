@@ -67,8 +67,8 @@ export function playground(props, previewFrame, getDefaultExample, interFontDec)
 
     // compiler options
     monaco.languages.typescript.typescriptDefaults.setCompilerOptions({
-      target: 'esnext',
-      module: 'esnext',
+      target: monaco.languages.typescript.ScriptTarget.ESNext,
+      module: monaco.languages.typescript.ModuleKind.ESNext,
       allowNonTsExtensions: true,
       allowImportingTsExtensions: true,
       paths: {
@@ -145,7 +145,7 @@ export function playground(props, previewFrame, getDefaultExample, interFontDec)
 
     loader.config({
       paths: {
-        vs: 'https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs'
+        vs: 'https://cdn.jsdelivr.net/npm/monaco-editor@0.55.1/min/vs'
       }
     })
 
