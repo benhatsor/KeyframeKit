@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress'
 
-import referenceNavigationItems from './referenceNavigation.ts';
+import referenceNavigationItems from './referenceNavigation';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -150,15 +150,5 @@ export default defineConfig({
         return defaultCodeInline(tokens, idx, options, env, self)
       }
     }
-  },
-
-  /*
-  vite: {
-    ssr: {
-      noExternal: ['monaco-editor']
-    },
-    optimizeDeps: {
-      exclude: ['monaco-editor']
-    }
-  } */
+  }
 })

@@ -1,6 +1,10 @@
 
+import type { Tab } from '../types'
+
 // const isTouchDevice = window.matchMedia('(hover: none)').matches;
-export function getDefaultExample({ isTouchDevice }) {
+export function getDefaultExample({ isTouchDevice }: {
+  isTouchDevice: boolean
+}): Record<Tab, string> {
 
 const jsAnimActivateEvent = isTouchDevice ? 'touchstart' : 'mouseenter';
 const jsAnimDeactivateEvent = isTouchDevice ? 'touchend' : 'mouseleave';

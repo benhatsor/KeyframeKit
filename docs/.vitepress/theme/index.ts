@@ -2,9 +2,8 @@ import type { EnhanceAppContext } from 'vitepress'
 
 import DefaultTheme from 'vitepress/theme'
 
-import Playground from '../components/Playground/Playground.vue'
+import Playground from '../components/Playground/components/Playground.vue'
 
-// @ts-ignore
 import './base-styles.css'
 
 export default {
