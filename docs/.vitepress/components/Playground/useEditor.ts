@@ -5,7 +5,7 @@ import type { Tab, Playground, PlaygroundOptions } from './types'
 
 /**
  * Owns the playground's monaco editor: loads it lazily on the client
- * (monaco can't run during SSR — everything SSR-unsafe stays behind
+ * (monaco can't run during SSR; everything SSR-unsafe stays behind
  * the `./monaco` dynamic import), keeps it in sync with the active
  * tab and the site theme, and disposes it on unmount.
  */

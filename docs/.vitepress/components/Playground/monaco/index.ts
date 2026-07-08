@@ -1,5 +1,5 @@
 // Client-only: monaco and its workers can't run during SSR, so this
-// directory is only ever loaded through useEditor's dynamic import.
+// directory is only loaded through `useEditor`'s dynamic import.
 
 import * as monaco from 'monaco-editor'
 

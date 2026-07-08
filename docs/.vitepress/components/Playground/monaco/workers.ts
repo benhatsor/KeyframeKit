@@ -1,4 +1,4 @@
-// Wires up monaco's web workers the Vite way (`?worker` imports).
+// Wires up monaco's web workers (using Vite `?worker` imports).
 // Importing this module registers the global MonacoEnvironment.
 
 import EditorWorker from 'monaco-editor/esm/vs/editor/editor.worker?worker'

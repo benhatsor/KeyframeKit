@@ -1,4 +1,4 @@
-// Highlights with the same shiki engine and grammars VitePress
+// Highlights with the shiki engine and grammars VitePress
 // uses for code blocks.
 
 import * as monaco from 'monaco-editor'
@@ -10,8 +10,8 @@ import { shikiToMonaco } from '@shikijs/monaco'
 import githubDark from '@shikijs/themes/github-dark'
 import githubLight from '@shikijs/themes/github-light'
 
-// VitePress's default code block themes (github-dark/github-light),
-// with backgrounds adjusted to blend into --vp-code-block-bg.
+// VitePress' default code block syntax themes (github-dark/light),
+// with backgrounds modified to blend with the vitepress theme (--vp-code-block-bg, etc.)
 const themes = {
   dark: {
     ...githubDark,
