@@ -6,10 +6,6 @@ import referenceNavigationItems from './referenceNavigation';
 export default defineConfig({
   srcDir: 'docs',
 
-  rewrites: {
-    //'reference/:slug*': ':slug*'
-  },
-
   cleanUrls: true,
 
   head: [
@@ -106,15 +102,17 @@ export default defineConfig({
     sidebarMenuLabel: 'Reference'
   },
 
+  // https://vitepress.dev/reference/site-config#transformpagedata
+  // https://vitepress.dev/reference/frontmatter-config
   transformPageData(pageData, ctx) {
 
     const siteTitle = ctx.siteConfig.site.title;
 
     let title;
 
-    if (pageData.frontmatter.layout === 'home') {
+    if (pageData.frontmatter['layout'] === 'home') {
 
-      title = `${pageData.frontmatter.hero.name} | ${pageData.frontmatter.hero.tagline}`;
+      title = `${pageData.frontmatter['hero'].name} | ${pageData.frontmatter['hero'].tagline}`;
 
     } else if (pageData.relativePath.startsWith('reference')) {
 
@@ -129,15 +127,16 @@ export default defineConfig({
     pageData.title = title;
 
 
-    pageData.frontmatter.head ??= []
+    pageData.frontmatter['head'] ??= [];
 
-    pageData.frontmatter.head.push([
+    pageData.frontmatter['head'].push([
       'meta',
       {
         name: 'og:title',
         content: pageData.title
       }
-    ])
+    ]);
+    
   },
 
   // fix vue parsing errors in code blocks
@@ -146,7 +145,7 @@ export default defineConfig({
     config(md) {
       const defaultCodeInline = md.renderer.rules.code_inline!
       md.renderer.rules.code_inline = (tokens, idx, options, env, self) => {
-        tokens[idx].attrSet('v-pre', '')
+        tokens[idx]!.attrSet('v-pre', '')
         return defaultCodeInline(tokens, idx, options, env, self)
       }
     }

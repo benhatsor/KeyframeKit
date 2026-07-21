@@ -2,16 +2,22 @@
   "compilerOptions": {
     // necessary for @rollup/plugin-typescript (see https://github.com/rollup/plugins/pull/2004)
     "moduleResolution": "bundler",
+
     "moduleDetection": "force",
+
     "noUncheckedIndexedAccess": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitOverride": true,
     "verbatimModuleSyntax": true,
+
     "noImplicitReturns": true,
     "exactOptionalPropertyTypes": true,
     "noPropertyAccessFromIndexSignature": true,
+
     "erasableSyntaxOnly": true,
-    "skipLibCheck": true
+
+    "skipLibCheck": true,
+    "noEmit": true
   },
   "include": ["src"]
 }

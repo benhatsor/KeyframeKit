@@ -1,13 +1,9 @@
 {
+  "extends": "../tsconfig.json",
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "lib": ["esnext", "dom"],
-    "types": ["vite/client"],
-    "strict": true,
-    "noEmit": true,
-    "skipLibCheck": true
+    "module": "esnext", // TS requires this for import attributes
+    "exactOptionalPropertyTypes": false,
+    "types": ["vite/client"]
   },
   "include": [".vitepress/**/*"],
   "exclude": [".vitepress/cache", ".vitepress/dist"]

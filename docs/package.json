@@ -5,23 +5,23 @@
     "dev": "vitepress dev",
     "build": "vitepress build",
     "preview": "vitepress preview",
-    "typecheck": "vue-tsc --noEmit",
+    "typecheck": "vue-tsc",
     "bump": "npm run reference && npm run playground:bumplib",
     "reference": "typedoc",
     "playground:bumplib": "mkdir -p ./docs/public/playground/KeyframeKit && cp -r ../dist ./docs/public/playground/KeyframeKit/"
   },
   "dependencies": {
     "@shikijs/monaco": "^4.3.1",
-    "monaco-editor": "^0.55.1",
+    "monaco-editor": "^0.56.0",
     "shiki": "^4.3.1",
-    "vue": "^3.5.39"
+    "vue": "^3.5.40"
   },
   "devDependencies": {
     "typedoc": "^0.28.20",
     "typedoc-plugin-markdown": "^4.12.0",
     "typedoc-plugin-mdn-links": "^5.1.1",
     "typedoc-plugin-no-inherit": "^1.6.1",
-    "typescript": "^5.9.3",
+    "typescript": "^6.0.3",
     "vitepress": "^2.0.0-alpha.18",
     "vue-tsc": "^3.3.7"
   }
