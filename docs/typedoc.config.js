@@ -1,7 +1,10 @@
 // @ts-check
 
 /**
- * @type {import('typedoc').TypeDocOptions & import('typedoc-plugin-markdown').PluginOptions & { inheritNone?: boolean }}
+ * // Note: `inheritNone` is from `typedoc-plugin-no-inherit`
+ * @type { import('typedoc').TypeDocOptions & 
+ *         import('typedoc-plugin-markdown').PluginOptions &
+ *         { inheritNone?: boolean } }
  */
 export default {
   "name": "KeyframeKit",

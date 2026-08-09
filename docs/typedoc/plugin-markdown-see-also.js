@@ -1,5 +1,4 @@
 // @ts-check
-import { MarkdownPageEvent } from 'typedoc-plugin-markdown';
 import { Reflection, ReflectionKind } from 'typedoc';
 
 /**
