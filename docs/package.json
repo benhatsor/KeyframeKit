@@ -11,10 +11,10 @@
     "playground:bumplib": "mkdir -p ./docs/public/playground/KeyframeKit && cp -r ../dist ./docs/public/playground/KeyframeKit/"
   },
   "dependencies": {
-    "@shikijs/monaco": "^4.3.1",
+    "@shikijs/monaco": "^4.4.2",
     "monaco-editor": "^0.56.0",
-    "shiki": "^4.3.1",
-    "vue": "^3.5.40"
+    "shiki": "^4.4.2",
+    "vue": "^3.5.41"
   },
   "devDependencies": {
     "typedoc": "^0.28.20",
@@ -22,7 +22,7 @@
     "typedoc-plugin-mdn-links": "^5.1.1",
     "typedoc-plugin-no-inherit": "^1.6.1",
     "typescript": "^6.0.3",
-    "vitepress": "^2.0.0-alpha.18",
-    "vue-tsc": "^3.3.7"
+    "vitepress": "^2.0.0-alpha.19",
+    "vue-tsc": "^3.3.9"
   }
 }

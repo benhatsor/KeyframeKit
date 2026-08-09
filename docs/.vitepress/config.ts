@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress'
 
-import referenceNavigationItems from './referenceNavigation';
+import referenceNavigationItems from './referenceNavigation.js';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({

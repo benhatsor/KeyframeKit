@@ -30,7 +30,7 @@ export function usePreview(
 
   function scheduleUpdate() {
     clearTimeout(timer)
-    timer = setTimeout(update, 300)
+    timer = setTimeout(update, 700)
   }
 
   onBeforeUnmount(() => {
